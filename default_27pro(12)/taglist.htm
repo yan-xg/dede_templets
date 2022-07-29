@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>{dede:field.title/} - {dede:global.cfg_webname/}</title>
+    <meta name="keywords" content="{dede:field.keywords/}" />
+    <meta name="description" content="{dede:field.description function='html2text(@me)'/}" />
+    {dede:include filename="meta.htm"/}
+    <style>
+        .pagenavi ul li{ display:inline}
+    </style>
+ </head> 
+ <body> 
+   <!--公共头部-->
+   {dede:include filename="header.htm"/}
+   <div id="container">
+   <!--公共头部--> 
+   <div class="content"> 
+    <div class="nbcontent"> 
+     <div class="postt"> 
+      <div class="author">
+          <h3>{dede:field.typename/}</h3>
+          <div class="author-info">{dede:field.description function='html2text(@me)'/}</div>
+      </div>
+     </div>
+     <div id="post-list-news">
+      <ul></ul>
+     </div>
+        {dede:list orderby='sortrank' pagesize='10'}
+        <div class="post">
+            <h2>
+                <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]" target="_blank" rel="bookmark">[field:title/]</a></h2>
+            <h6>[field:pubdate function="MyDate('Y-m-d ',@me)"/] | 栏目：<a href='[field:typedir/]'>[field:typename/]</a>| 浏览:[field:click/]<div class="clear"></div></h6>
+            <div class="intro">
+                      <span id="img">
+                        <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">
+                          <img alt="[field:title/]" src="[field:litpic/]" /></a>
+                      </span>
+                <p>[field:description /]...</p>
+                </a>
+            </div>
+        </div>
+        {/dede:list}
+
+    <div class="pagenavi" id="comment">
+        <ul>
+            {dede:pagelist listitem="info,index,end,pre,next,pageno,option" listsize="3"/}
+        </ul>
+    </div>
+
+    </div>
+   </div>
+
+   <div class="sidebar">
+       <div class="sidebar-inner">
+           <dl class="function" id="divCalendar">
+               <dt style="display:none;"></dt>
+               <dd class="function_c"></dd>
+           </dl>
+           <dl class="function" id="divPrevious">
+               <dt class="function_t">推荐文章</dt>
+               <dd class="function_c">
+                   <ul>
+                       {dede:arclist row='10' titlelen='80' typeid='top' flag='a'}
+                       <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title/]</a></li>
+                       {/dede:arclist}
+                   </ul>
+               </dd>
+           </dl>
+           <dl class="function" id="kandydigguplog">
+               <dt class="function_t">文章阅读排行</dt>
+               <dd class="function_c">
+                   <ul>
+                       {dede:arclist row='10' titlelen='80' typeid='top' orderby='click'}
+                       <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title/]</a><span class="kandyDiggUp">[field:click/]</span></li>
+                       {/dede:arclist}
+                   </ul>
+               </dd>
+           </dl>
+           <dl class="function" id="divComments">
+               <dt class="function_t">最新文章</dt>
+               <dd class="function_c">
+                   <ul>
+                       {dede:arclist row='10' titlelen='80' typeid='top'}
+                       <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title/]</a></li>
+                       {/dede:arclist}
+                   </ul>
+               </dd>
+           </dl>
+           <dl class="function" id="divLinkage">
+               <dt class="function_t">友情链接</dt>
+               <dd class="function_c">
+                   <ul>
+                       {dede:flink row='24' type='text' titlelen="24"  typeid="0"}
+                       <li>[field:link /]</li>
+                       {/dede:flink}
+
+                   </ul>
+               </dd>
+           </dl>
+
+           <div id="box" class="sjwu1">
+               <div id="float" class="div1">
+                   <div class="clear"></div>
+               </div>
+           </div>
+       </div>
+   </div>
+
+  <!--公共底部-->
+   {dede:include filename="footer.htm"/}
+   <script type="text/javascript">
+(function(){document.write(unescape('%3Cdiv id="bdcs"%3E%3C/div%3E'));var bdcs = document.createElement('script');bdcs.type = 'text/javascript';bdcs.async = true;bdcs.src = 'http://znsv.baidu.com/customer_search/api/js?sid=17373017318830164705' + '&plate_url=' + encodeURIComponent(window.location.href) + '&t=' + Math.ceil(new Date()/3600000);var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(bdcs, s);})();
+</script>   
+  </div>
+ </body>
+</html>

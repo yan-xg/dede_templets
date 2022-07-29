@@ -1,0 +1,29 @@
+<nav id="navs-wrap">
+    <div id="logos">
+        <h1><a title="{dede:global.cfg_webname/}" href="/">{dede:global.cfg_webname/}</a></h1>
+    </div>
+    <ul id="navs" class="menu">
+        <li><a href="/">首页</a></li>
+        {dede:channel type='top'}
+        <li><a href="[field:typelink /]">[field:typename/]</a></li>
+        {/dede:channel}
+    </ul>
+</nav>
+
+<div class="header">
+    <div class="cen">
+        <h1 class="logo">
+            <a title="XXX" href="/">XXX</a>
+        </h1>
+        <ul class="nav">
+            <li>
+                <a href="/">
+            <span>
+              <img alt="{dede:global.cfg_webname/}" src="{dede:global.cfg_templets_skin/}/static/img/home.png" /></span>全站首页</a>
+            </li>
+            {dede:channel type='top'}
+            <li><a href="[field:typelink /]">[field:typename/]</a></li>
+            {/dede:channel}
+        </ul>
+    </div>
+</div>
