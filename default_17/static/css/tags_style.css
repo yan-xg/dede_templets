@@ -1,0 +1,17 @@
+.tag-label{ clear:both;}
+.tag-label, .tag-label dd{padding:2% 2% 0 2%;}
+.tag-label ul li, .tag-label dd ul li{display:inline-block; verticle-align:top;overflow: hidden;border-top-width: 0px;border-right-width: 0px;border-bottom-width: 0px;border-left-width: 0px;margin: 0px;padding: 0px;width: auto!important;}
+.tag-label ul{clear:both;width:100%;}
+.tag-label li{line-height:1.5; font-size:1em;padding:7px 2% 7px 2%;border-bottom:1px dotted #ddd;}
+
+.tag-label ul li a, .tag-label dd ul li a{display: block;margin-right: 5px;padding:0 6px 0 6px;line-height: 30px;height: 30px;overflow: hidden;color: #FFFFFF;border-radius:2px;}
+.tag-label ul li a, .tag-label dd ul li a{background-color: #21A366;}
+.tag-label ul li a:hover, .tag-label dd ul li a:hover{color: #FFFFFF;background-color: #04a5f7;}
+.tag-label .tags0{background-color: #efac82!important;}
+.tag-label .tags1{background-color: #84c7cf!important;}
+.tag-label .tags2{background-color: #d69899!important;}
+.tag-label .tags3{background-color: #d59ad4!important;}
+.tag-label .tags4{background-color: #c9b070!important;}
+.tag-label .tags5{background-color: #b0d699!important;}
+.tag-label .tags6{background-color: #eda29e!important;}
+.tag-label .tags7{background-color: #F2DD8C!important;}

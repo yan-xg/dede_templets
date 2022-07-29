@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>{dede:global.cfg_webname/}</title>
+    <meta name="description" content="{dede:global.cfg_description/}" />
+    <meta name="keywords" content="{dede:global.cfg_keywords/}" />
+    {dede:include filename="meta.htm"/}
+</head>
+<body class="home blog el-boxed">
+    {dede:include filename="header.htm"/}
+
+<div id="wrap">
+  <div class="wrap container">
+    <div class="main">
+      <div class="slider-wrap clearfix">
+        <div class="main-slider wpcom-slider swiper-container pull-left">
+          <ul class="swiper-wrapper">
+
+              {dede:arclist row='5' titlelen='80' flag='f' typeid='top'}
+              <li class="swiper-slide">
+                  <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank"><img src="[field:litpic/]" alt="[field:title/]"></a>
+                  <h3 class="slide-title"><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title/]</a></h3>
+              </li>
+              {/dede:arclist}
+
+          </ul>
+          <!-- Add Pagination -->
+          <div class="swiper-pagination"></div>
+          <!-- Add Navigation -->
+          <div class="swiper-button-prev swiper-button-white"></div>
+          <div class="swiper-button-next swiper-button-white"></div>
+        </div>
+
+        <ul class="feature-post pull-right">
+            {dede:arclist row='3' titlelen='80' flag='c,p' typeid='top'}
+            <li>
+                <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">
+                    <img class="j-lazy" src="[field:litpic/]" data-original="[field:litpic/]" alt="[field:title/]">
+                </a>
+                <span>[field:title/]</span>
+            </li>
+            {/dede:arclist}
+        </ul>
+
+      </div>
+
+      <div class="sec-panel main-list">
+        <div class="sec-panel-head">
+          <ul class="list tabs j-newslist">
+            <li class="tab active"><a data-id="0" href="javascript:;">最新文章</a></li>
+            {dede:channelartlist type ='top'}
+            <li class="tab"><a href="javascript:;">{dede:field name='typename'/}</a></li>
+            {/dede:channelartlist}
+          </ul>
+        </div>
+
+        <ul class="post-loop post-loop-default tab-wrap clearfix active">
+            {dede:arclist typeid='top' orderby='pubdate' titlelen='80' row=15}
+            <li class="item">
+                <div class="item-img">
+                    <a class="item-img-inner" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]" target="_blank">
+                        <img class="j-lazy" src="[field:litpic/]" data-original="[field:litpic/]" width="480" height="300" alt="[field:title/]">
+                    </a>
+                    <a class="item-category" href="[field:typedir/]" target="_blank">[field:typename/]</a> </div>
+                <div class="item-content">
+                    <h2 class="item-title">
+                        <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]" target="_blank"> [field:title/] </a>
+                    </h2>
+                    <div class="item-excerpt">
+                        <p>&nbsp;  [field:description /]...</p>
+                    </div>
+                    <div class="item-meta">
+                        <span class="item-meta-li date"></span>
+                        <span class="item-meta-li views" title="[field:title/]">
+                            <i class="fa fa-eye"></i> [field:click/]
+                        </span>
+                    </div>
+                </div>
+            </li>
+            {/dede:arclist}
+        </ul>
+
+          {dede:channelartlist type ='top'}
+          <ul class="post-loop post-loop-default tab-wrap clearfix">
+              {dede:arclist titlelen='80' row='15'}
+              <li class="item">
+                  <div class="item-img">
+                      <a class="item-img-inner" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]" target="_blank">
+                      <img class="j-lazy" src="[field:litpic/]" data-original="[field:litpic/]" width="480" height="300" alt="[field:title/]">
+                      </a>
+                      <a class="item-category" href="[field:typedir/]" target="_blank">[field:typename/]</a> </div>
+                  <div class="item-content">
+                      <h2 class="item-title">
+                          <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]" target="_blank"> [field:title/] </a>
+                      </h2>
+                      <div class="item-excerpt">
+                          <p>&nbsp;  [field:description /]...</p>
+                      </div>
+                      <div class="item-meta">
+                          <span class="item-meta-li date"></span>
+                          <span class="item-meta-li views" title="[field:title/]">
+                            <i class="fa fa-eye"></i> [field:click/]
+                        </span>
+                      </div>
+                  </div>
+              </li>
+              {/dede:arclist}
+          </ul>
+          {/dede:channelartlist}
+
+      </div>
+    </div>
+
+  <aside class="sidebar">
+
+      <div id="wpcom-post-thumb-2" class="widget widget_post_thumb">
+        <h3 class="widget-title">热门文章</h3>
+        <ul>
+            {dede:arclist row='3' titlelen='80' typeid='top' orderby='click'}
+            <li class="item">
+                <div class="item-img"> <a class="item-img-inner" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]"> <img class="j-lazy" src="[field:litpic/]" data-original="[field:litpic/]" width="480" height="300" alt="[field:title/]"> </a> </div>
+                <div class="item-content">
+                    <p class="item-title"><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a></p>
+                    <p class="item-date">[field:pubdate function="MyDate('Y年m月d日',@me)"/]</p>
+                </div>
+            </li>
+            {/dede:arclist}
+
+        </ul>
+      </div>
+
+      <div id="wpcom-post-thumb-8" class="widget widget_post_thumb">
+        <h3 class="widget-title">推荐文章</h3>
+        <ul>
+            {dede:arclist row='3' titlelen='80' typeid='top' flag='a'}
+            <li class="item">
+                <div class="item-img"> <a class="item-img-inner" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]"> <img class="j-lazy" src="[field:litpic/]" data-original="[field:litpic/]" width="480" height="300" alt="[field:title/]"> </a> </div>
+                <div class="item-content">
+                    <p class="item-title"><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a></p>
+                    <p class="item-date">[field:pubdate function="MyDate('Y年m月d日',@me)"/]</p>
+                </div>
+            </li>
+            {/dede:arclist}
+        </ul>
+      </div>
+
+      <div id="wpcom-post-thumb-3" class="widget widget_post_thumb">
+        <h3 class="widget-title">经典文章</h3>
+        <ul>
+            {dede:arclist row='10' titlelen='80' typeid='top'}
+            <li class="item">
+                <div class="item-img"> <a class="item-img-inner" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]"> <img class="j-lazy" src="[field:litpic/]" data-original="[field:litpic/]" width="480" height="300" alt="[field:title/]"> </a> </div>
+                <div class="item-content">
+                    <p class="item-title"><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a></p>
+                    <p class="item-date">[field:pubdate function="MyDate('Y年m月d日',@me)"/]</p>
+                </div>
+            </li>
+            {/dede:arclist}
+        </ul>
+      </div>
+
+    </aside>
+  </div>
+
+  <div class="container hidden-xs j-partner">
+    <div class="sec-panel">
+      <div class="sec-panel-head">
+        <h2><span>友情链接</span></h2>
+      </div>
+      <div class="sec-panel-body">
+        <div class="list list-links">
+            {dede:flink row='24' type='text' titlelen="24"  typeid="0"}
+            [field:link /]
+            {/dede:flink}
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+{dede:include filename="footer.htm"/}
+</body>
+</html>

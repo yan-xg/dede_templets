@@ -1,0 +1,28 @@
+<header>
+    <div class="header">
+        <div class="inner">
+            <div class="logo">
+                <h1><a title="{dede:global.cfg_webname/}" href="/" style="background-image:url({dede:global.cfg_basehost/}/images/logo.png);">{dede:global.cfg_webname/}</a></h1>
+            </div>
+
+            <div class="navBtn">
+                <span></span>
+            </div>
+            <div class="schBtn">
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</header>
+
+<nav class="nav">
+    <div class="inner">
+        <ul>
+            <li id="nvabar-item-index" class="{dede:field name=typeid runphp='yes'}(@me=='0') ? @me='on' : @me=''; {/dede:field}"><a href="/">首页</a></li>
+            {dede:channel type='top' currentstyle='<li><a href="~typelink~" class="on">~typename~</a></li>'}
+            <li id="navbar-category-[field:global name=autoindex runphp= 'yes' ] @me=@me+1; [/field:global]" ><a href="[field:typelink /]" class="" >[field:typename/]</a></li>
+            {/dede:channel}
+        </ul>
+    </div>
+</nav>

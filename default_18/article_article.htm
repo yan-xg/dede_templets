@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <title>{dede:field.title/}_{dede:field name='typename'/} - {dede:global.cfg_webname/}</title>
+    <meta name="keywords" content="{dede:field.keywords/}" />
+    <meta name="description" content="{dede:field.description function='html2text(@me)'/}" />
+    {dede:include filename="meta.htm"/}
+ </head> 
+ <body> 
+  <div class="wrapper-outer"> 
+   <!--公共头部-->
+      {dede:include filename="header.htm"/}
+   <!--公共头部-->
+   <!--顶部广告-->
+    <div class="wrapper clearfix pt20"> 
+     <div class="con-left pb15"> 
+      <!--当前位置--> 
+      <div class="positionbar"> 
+       <h3><i class="iconfont"></i><a href="/">首页</a>&nbsp;>&nbsp;<a href="{dede:field.typedir/}/">{dede:field.typename/}</a> > 正文</h3>
+      </div> 
+      <h1 class="art-62">{dede:field.title/}</h1>
+      <p class="info">
+          <span><i class="iconfont"></i>{dede:field.pubdate function="MyDate('Y-m-d H:i',@me)"/}</span>
+          <span><i class="iconfont"></i>{dede:field.click/}浏览量</span>
+      </p>
+      <div class="art-62 art-content lh150">
+          {dede:field.body/}
+      </div> 
+
+      <!--内容tags--> 
+      <div class="arttags">关键字：{dede:tag row='30' sort='new' getall='0'}<a href='/tags/[field:tag /]/'>[field:tag /]</a>&nbsp;/&nbsp;{/dede:tag}</div>
+      <div class="lh200 mt15 mb15"> 
+       <p>{dede:prenext get='next' /}</p>
+       <p>{dede:prenext get='pre'/}</p>
+      </div> 
+      <div class="gengxin"> 
+       <h3>最新</h3>
+       <ul>
+           {dede:arclist row='10' titlelen='80' typeid='top'}
+           <li><span>[field:pubdate function="MyDate('m-d',@me)"/]</span><a  href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a></li>
+           {/dede:arclist}
+       </ul>
+      </div> 
+      <div class="clearfix"></div> 
+
+     </div> 
+     <!--侧边栏-->
+        <div class="con-right scrollBox pc">
+            <div class="box-b mb20 cb">
+                <h3>热门文章</h3>
+                <ul class="remen">
+                    {dede:arclist row='10' titlelen='80' typeid='top' orderby='click'}
+                    <li><i class="iconfont">&#xe6f1;</i><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html"> [field:title/]</a></li>
+                    {/dede:arclist}
+                </ul>
+            </div>
+            <!--右侧广告一-->
+            <div class="box-b mb20 cb">
+                <h3>推荐文章</h3>
+                <ul class="remen">
+                    {dede:arclist titlelen='80' flag='c,p' typeid='top' limit='5,10'}
+                    <li><i class="iconfont">&#xe6f1;</i><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html"> [field:title/]</a></li>
+                    {/dede:arclist}
+                </ul>
+            </div>
+
+        </div>
+    </div> 
+   </div>
+  <!--公共底部-->
+  {dede:include filename="footer.htm"/}
+  </div>  
+ </body>
+</html>

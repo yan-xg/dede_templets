@@ -1,0 +1,13 @@
+<div class="header clearfix">
+    <div class="logo"><a href="/"><img src="{dede:global.cfg_basehost/}/images/logo.png" alt="{dede:global.cfg_webname/}" title="{dede:global.cfg_webname/}"/></a></div>
+</div>
+
+<div class="wrapper">
+    <div class="navbar clearfix">
+        <ul id="navul" class="cl">
+            <li class=""><a href="/">首页</a></li>
+            {dede:channel type='top' currentstyle='<li class=""><a href="~typelink~">~typename~</a></li>'}
+            <li class=""><a href="[field:typelink /]/">[field:typename/]</a></li>
+            {/dede:channel}
+        </ul>
+    </div>

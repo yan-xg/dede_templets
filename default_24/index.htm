@@ -1,0 +1,120 @@
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>{dede:global.cfg_webname/}</title>
+    <meta name="description" content="{dede:global.cfg_description/}" />
+    <meta name="keywords" content="{dede:global.cfg_keywords/}" />
+    {dede:include filename="meta.htm"/}
+    <script src="{dede:global.cfg_templets_skin/}/static/js/swiper.min.js"></script>
+</head>
+<body>
+{dede:include filename="header.htm"/}
+<main>
+  <div class="lbox">
+  <div class="banner">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+          {dede:arclist flag='f' typeid='top' row='5'}
+          <div class="swiper-slide">
+              <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank"><img src="[field:litpic/]" alt="[field:title/]"><section><h4>[field:title/]</h4></section></a>
+          </div>
+          {/dede:arclist}
+      </div>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+    <script>
+    //banner	
+	 var swiper = new Swiper('.swiper-container', {
+            pagination: '.swiper-pagination',
+            nextButton: '.swiper-button-next',
+            prevButton: '.swiper-button-prev',
+            paginationClickable: true,
+            spaceBetween: 100,
+            centeredSlides: true,
+            autoplay: 8000,
+            autoplayDisableOnInteraction: false,
+        });
+    </script> 
+</div>
+    <!-- banner end-->
+    <div class="headline">
+      <ul>
+          {dede:arclist titlelen='80' flag='c,p' typeid='top' row='2'}
+          <li>
+              <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">
+                <img src="[field:litpic/]" alt="[field:title/]">
+                <span><h4>[field:title/]</h4></span>
+              </a>
+          </li>
+          {/dede:arclist}
+      </ul>
+    </div>
+    <!--headline end-->
+    <div class="clear"></div>
+    <div class="h_title">最新文章</div>
+    <div class="blogs">
+      <ul>
+
+          {dede:arclist typeid='top' orderby='pubdate' titlelen='80' row=20}
+          <li class="blogs_list"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank"><i><img src="[field:litpic /]" alt="[field:title /]"></i>
+              <h2>[field:title /]</h2></a>
+              <p>[field:description /]...</p>
+              <div class="blogs_writer">[field:click /]<span class="blogs_time">[field:pubdate function="MyDate('Y-m-d',@me)"/]</span></div>
+              <div class="blogs_tags"><a href='[field:typedir /]' target='_blank'>[field:typename /]</a></div>
+              <span class="blogs_lm"><a href="[field:typedir /]" target="_blank">[field:typename /]</a></span>
+          </li>
+          {/dede:arclist}
+
+      </ul>
+    </div>
+</div>
+  <aside class="rbox">
+    <div class="news_kx">
+      <h2>7x24小时头条</h2>
+      <ul>
+          {dede:arclist typeid='top' orderby='pubdate' titlelen='80' limit="20,5"}
+          <li><i></i><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title /]</a><span>[field:pubdate function="MyDate('Y-m-d',@me)"/]</span></li>
+          {/dede:arclist}
+      </ul>
+    </div>
+    <div class="lm_hot">
+      <p class="h_title">精选标签</p>
+      <ul>
+          {dede:tag row='40' sort='total'}
+          <a href="/tags/[field:tag /]/" class="tags[field:id runphp='yes']@me = rand(0,7);[/field:id] tagc[field:highlight /]">[field:tag /]</a>
+          {/dede:tag}
+      </ul>
+    </div>
+
+    <div class="hot_news">
+      <p class="h_title">文章热榜</p>
+      <ul>
+          {dede:arclist row='10' titlelen='80' typeid='top' orderby='click'}
+          <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title /]" target="_blank">
+              <i><img src="[field:litpic /]" alt="[field:title /]"></i><em>[field:global name=autoindex runphp= 'yes' ] @me; [/field:global]</em>
+              <h2>[field:title /]</h2>
+              <span>[field:pubdate function="MyDate('Y-m-d',@me)"/]</span>
+          </a>
+          </li>
+          {/dede:arclist}
+      </ul>
+    </div>
+  </aside>
+  </main>
+<div class="clear"></div>
+<div class="links">
+  <ul class="box">
+    <p>友情链接</p>
+      {dede:flink row='24' type='text' titlelen="24"  typeid="0"}
+      <li>[field:link /]</li>
+      {/dede:flink}
+  </ul>
+</div>
+{dede:include filename="footer.htm"/}
+</body>
+</html>

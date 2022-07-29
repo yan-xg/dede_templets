@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>{dede:global.cfg_webname/}</title>
+    <meta name="description" content="{dede:global.cfg_description/}" />
+    <meta name="keywords" content="{dede:global.cfg_keywords/}" />
+    {dede:include filename="meta.htm"/}
+    <link rel='stylesheet' href='{dede:global.cfg_templets_skin/}/static/css/tags_style.css' type='text/css'/>
+</head>
+
+<body>
+    <!--GJ-UI组件模块html代码开始-->
+    {dede:include filename="header.htm"/}
+
+    <div class="gcont">
+        <div class="row">
+            <div class="gj-lg-8">
+                <div class="gj-slide1 gcl-hb">
+                    <!--响应式轮播图-->
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            {dede:arclist titlelen='80' flag='c,p' typeid='top' row='5'}
+                            <div class="swiper-slide">
+                                <a href="[field:typedir /]/[field:pubdate function="MyDate('Y/m-d',@me)"/]/[field:id /].html"><img src="[field:litpic/]" alt="[field:title/]" style="width: 750px;height: 299px;">
+                                    <p>[field:title/]</p>
+                                </a>
+                            </div>
+                            {/dede:arclist}
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        <!--分页器-->
+                        <div class="swiper-button-prev">
+                            <!--导航小按钮-->
+                            <i class="fa fa-chevron-circle-left fa-2x" aria-hidden="true"></i></div>
+                        <div class="swiper-button-next">
+                            <!--导航小按钮-->
+                            <i class="fa fa-chevron-circle-right fa-2x" aria-hidden="true"></i></div>
+                    </div>
+                </div>
+
+                <div class="gj-wk gcl-hb">
+                    <div class="gj-bt">
+                        <h3><i class="fa fa-html5" aria-hidden="true"></i> 热门文章</h3>
+                    </div>
+
+                    <div class="gj-body gul-tuw2">
+                        {dede:arclist row='3' titlelen='80' typeid='top' orderby='click'}
+                        <div class="gj-lg-4 gj-md-3 gj-sm-4 gj-xs-6">
+                            <div class="gtw-ul">
+                                <div class="gtw-img"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Y/m-d',@me)"/]/[field:id /].html"><img src="[field:litpic/]" alt="[field:title/]"></a> <span>[field:typename/]</span> </div>
+                                <div class="gtw-body"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Y/m-d',@me)"/]/[field:id /].html">
+                                    <h4>[field:title/]</h4>
+                                </a>
+                                    <p>[field:description /]...</p>
+                                    <div class="gtw-sx"> <span>阅读：[field:click/]</span> | <span>发布时间：[field:pubdate function="MyDate('Y/m/d',@me)"/]</span> </div>
+                                </div>
+                            </div>
+                        </div>
+                        {/dede:arclist}
+                    </div>
+                    <!--gj-body-结束-->
+                </div>
+
+                <div class="gj-wk gcl-hb">
+                    <!--媒体列表-->
+                    <div class="gj-body gul-tuw1">
+
+                        {dede:arclist typeid='top' orderby='pubdate' titlelen='80' row=15}
+
+                        <div class="gtw-ul gclear">
+                            <div class="gtw-img">
+                                <a href="[field:typedir /]/[field:pubdate function="MyDate('Y/m-d',@me)"/]/[field:id /].html"><img src="[field:litpic/]" alt="[field:title/]" style="width: 240px;height: 150px;"></a>
+                            </div>
+                            <div class="gtw-body">
+                                <a href="[field:typedir /]/[field:pubdate function="MyDate('Y/m-d',@me)"/]/[field:id /].html">
+                                    <h4>[field:title /]</h4>
+                                </a>
+                                <p>[field:description /]...</p>
+                                <div class="gtw-sx">
+                                    <i class="fa fa-clock-o" aria-hidden="true"> [field:pubdate function="MyDate('Y年m月d日 ',@me)"/]</i>
+                                    <i class="fa fa-eye" aria-hidden="true"> [field:click/]</i>
+                                    <a href="[field:typedir /]"><i class="fa fa-folder-open" aria-hidden="true"> [field:typename/]</i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/dede:arclist}
+                    </div>
+                </div>
+
+            </div>
+            <div class="gj-lg-4">
+                <div class="gj-wk gcl-hb">
+                    <!--标签模块-->
+                    <div class="gj-bt">
+                        <h3><i class="fa fa-tags" aria-hidden="true"></i> 热门标签</h3>
+                    </div>
+                    <div class="gj-body gj-link3 tag-label">
+                        <ul>
+                            {dede:tag row='40' sort='total'}
+                            <li><a href="/tags/[field:tag /]/" class="tags[field:id runphp='yes']@me = rand(0,7);[/field:id] tagc[field:highlight /]">[field:tag /]</a></li>
+                            {/dede:tag}
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="gj-wk gcl-hb">
+    <!--侧栏-图文列表-->
+        <div class="gj-bt">
+            <h3><i class="fa fa-thumbs-up" aria-hidden="true"></i> 头条推荐</h3>
+        </div>
+        {dede:arclist row='5' titlelen='80' typeid='top' flag='a'}
+        <div class="gj-body gli-tuw1">
+            <div class="gtw-li gclear">
+                <div class="gtw-img gj-left"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Y/m-d',@me)"/]/[field:id /].html"><img src="[field:litpic/]" alt=""></a> </div>
+                <div class="gtw-body"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Y/m-d',@me)"/]/[field:id /].html">
+                    <h4>[field:title /]</h4>
+                </a> <span><i class="fa fa-clock-o">[field:pubdate function="MyDate('Y/m/d',@me)"/]</i></span> <span><i class="fa fa-eye"> [field:click /]</i></span> </div>
+            </div>
+        </div>
+        {/dede:arclist}
+
+    </div>
+
+                <div class="gj-wk gcl-hb">
+                    <!--侧栏-图文列表-->
+                    <div class="gj-bt">
+                        <h3><i class="fa fa-thumbs-up" aria-hidden="true"></i> 最新文章</h3>
+                    </div>
+                    {dede:arclist row='5' titlelen='80' typeid='top'}
+                    <div class="gj-body gli-tuw1">
+                        <div class="gtw-li gclear">
+                            <div class="gtw-img gj-left"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Y/m-d',@me)"/]/[field:id /].html"><img src="[field:litpic/]" alt=""></a> </div>
+                            <div class="gtw-body"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Y/m-d',@me)"/]/[field:id /].html">
+                                <h4>[field:title /]</h4>
+                                </a> <span><i class="fa fa-clock-o">[field:pubdate function="MyDate('Y/m/d',@me)"/]</i></span> <span><i class="fa fa-eye"> [field:click /]</i></span> </div>
+                        </div>
+                    </div>
+                    {/dede:arclist}
+
+                </div>
+
+                <div class="gj-wk gcl-hb">
+                    <div class="gj-bt">
+                        <h3><i class="fa fa-user-plus" aria-hidden="true"></i> 友情链接</h3>
+                    </div>
+                    <div class="gj-body gj-link2">
+                        <ul>
+                            {dede:flink row='24' type='text' titlelen="24"  typeid="0"}
+                            <li>[field:link /]</li>
+                            {/dede:flink}
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    {dede:include filename="footer.htm"/}
+    <script>
+        //轮播图
+        var mySwiper = new Swiper('.swiper-container', {
+            loop: true, //循环切换
+            autoplay: true, //自动切换
+
+            autoplay: {
+                disableOnInteraction: false,
+            },
+
+            // 如果需要分页器
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            // 如果需要前进后退按钮
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+        })
+    </script>
+    <!--GJ-UI组件模块js代码结束-->
+</body>
+
+</html>

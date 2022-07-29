@@ -1,0 +1,65 @@
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>{dede:field.title/} - {dede:global.cfg_webname/}</title>
+    <meta name="keywords" content="{dede:field.keywords/}" />
+    <meta name="description" content="{dede:field.description function='html2text(@me)'/}" />
+    {dede:include filename="meta.htm"/}
+    <style>
+        .pagebar ul li{ display:inline}
+    </style>
+</head>
+<body>
+{dede:include filename="header.htm"/}
+<main>
+  <div class="lbox">
+    <div class="weizhi">您现在的位置是：<a href="/">首页</a>&nbsp;>&nbsp;<a href='#'>TAG标签</a> &gt; {dede:field.title /}</div>
+    <div class="blogs">
+      <ul>
+          {dede:list pagesize='10'}
+          <li class="blogs_list"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank"><i><img src="[field:litpic /]" alt="[field:title /]"></i>
+              <h2>[field:title /]</h2></a>
+              <p>[field:description /]...</p>
+              <div class="blogs_writer">[field:click /]<span class="blogs_time">[field:pubdate function="MyDate('Y-m-d',@me)"/]</span></div>
+              <div class="blogs_tags"><a href='[field:typedir /]' target='_blank'>[field:typename /]</a></div>
+              <span class="blogs_lm"><a href="[field:typedir /]" target="_blank">[field:typename /]</a></span>
+          </li>
+          {/dede:list}
+      </ul>
+    </div>
+      <div class="pagelist">
+          <div class="pagebar">
+              <ul>{dede:pagelist listitem="info,index,end,pre,next,pageno,option"/}</ul>
+          </div>
+      </div>
+  </div>
+  <aside class="rbox">
+      <div class="news_kx">
+          <h2>7x24小时头条</h2>
+          <ul>
+              {dede:arclist typeid='top' orderby='pubdate' titlelen='80' row=5}
+              <li><i></i><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title /]</a><span>[field:pubdate function="MyDate('Y-m-d',@me)"/]</span></li>
+              {/dede:arclist}
+          </ul>
+      </div>
+
+    <div class="hot_news">
+      <p class="h_title">文章热榜</p>
+      <ul>
+          {dede:arclist row='10' titlelen='80' typeid='top' orderby='click'}
+          <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title /]" target="_blank">
+              <i><img src="[field:litpic /]" alt="[field:title /]"></i><em>[field:global name=autoindex runphp= 'yes' ] @me; [/field:global]</em>
+              <h2>[field:title /]</h2>
+              <span>[field:pubdate function="MyDate('Y-m-d',@me)"/]</span>
+              </a>
+          </li>
+          {/dede:arclist}
+      </ul>
+    </div>
+  </aside>
+</main>
+{dede:include filename="footer.htm"/}
+</body>
+</html>

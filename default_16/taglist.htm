@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <title>{dede:field.title/} - {dede:global.cfg_webname/}</title>
+    <meta name="keywords" content="{dede:field.keywords/}" />
+    <meta name="description" content="{dede:field.description function='html2text(@me)'/}" />
+    {dede:include filename="meta.htm"/}
+    <style>
+        .pagebar ul li{ display:inline}
+    </style>
+</head>
+
+<body>
+<!--头部开始-->
+{dede:include filename="header.htm"/}
+<!--头部结束-->
+<nav class="breadcrumb container"> <a href="/">首页</a> &gt; <a href='#'>TAG标签</a> &gt; {dede:field.title /}</nav>
+<div id="content" class="content container clearfix">
+  <section id="mainbox" class="fl br mb"> 
+    <div class="new-post">
+        {dede:list orderby='sortrank' pagesize='10'}
+        <article class="article-list sb clearfix">
+            <figure class="figure fl br"> <a class="thumbnail" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title /]"> <img class="img-cover br" src="[field:litpic /]" alt="[field:title /]" title="[field:title /]"></a> </figure>
+            <div class="content">
+                <h2 class="title ellipsis m-multi-ellipsis"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title /]">[field:title /]</a></h2>
+                <p class="intro hidden-sm">[field:description /]...</p>
+                <p class="data clearfix"> <a class="cate fl br" href="[field:typedir /]/" target="_blank">
+                    <i class="iconfont icon-cate"></i>[field:typename /]</a> <span class="hidden-sm-md-lg author fl">
+                    <span class="hidden-sm-md-lg view fl font-oswald"> <i class="iconfont icon-view"></i>[field:click /]</span>
+                    <time class="time fl font-oswald" datetime="[field:pubdate function="MyDate('Y-m-d',@me)"/]" title="[field:pubdate function="MyDate('Y-m-d',@me)"/]"> <i class="iconfont icon-time"></i>[field:pubdate function="MyDate('Y-m-d',@me)"/]</time>
+                </p>
+            </div>
+        </article>
+        {/dede:list}
+    </div>
+    <div class="pagebar">
+      <div class="nav-links">
+          <ul>{dede:pagelist listitem="info,index,end,pre,next,pageno,option"/}</ul>
+      </div>
+    </div>
+  </section>
+  <aside id="sidebar" class="hidden-sm-md-lg fr">
+    <div class="theiaStickySidebar">
+      <section id="aside_hot_comment" class="widget widget_aside_hot_comment sb br mb">
+        <p class="c-title mb"> <span class="name">热门文章</span></p>
+        <ul class="widget-content aside_hot_comment">
+            {dede:arclist row='5' titlelen='80' typeid='top' orderby='click'}
+            <li class="list clearfix"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]"> <span class="img-wrap br"> <img src="[field:litpic/]" alt="[field:title/]" class="img-cover br random-img"></span>
+                <div class="new-text">
+                    <p class="title">[field:title/]</p>
+                    <div class="info"> <span class="time"> <i class="iconfont icon-time"></i> <span class="font-oswald">[field:pubdate function="MyDate('Y-m-d',@me)"/]</span></span> <span class="comment"> <i class="iconfont icon-comment"></i> <span class="font-oswald">[field:click/]</span></span> </div>
+                </div>
+            </a> </li>
+            {/dede:arclist}
+        </ul>
+      </section>
+      <section id="aside_new" class="widget widget_aside_new sb br mb">
+        <p class="c-title mb"> <span class="name">推荐阅读</span></p>
+        <ul class="widget-content aside_new">
+            {dede:arclist row='5' titlelen='80' typeid='top' flag='a'}
+            <li class="list clearfix"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]"> <span class="img-wrap br"> <img src="[field:litpic/]" alt="[field:title/]" class="img-cover br random-img"></span>
+                <div class="new-text">
+                    <p class="title">[field:title/]</p>
+                    <div class="info"> <span class="time"> <i class="iconfont icon-time"></i> <span class="font-oswald">2016-01-01</span></span> <span class="comment"> <i class="iconfont icon-comment"></i> <span class="font-oswald">[field:click/]</span></span> </div>
+                </div>
+            </a>
+            </li>
+            {/dede:arclist}
+        </ul>
+      </section>
+
+    </div>
+  </aside>
+</div>
+<!--底部开始-->
+{dede:include filename="footer.htm"/}
+</body>
+</html>

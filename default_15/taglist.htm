@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>{dede:field.title/} - {dede:global.cfg_webname/}</title>
+  <meta name="keywords" content="{dede:field.keywords/}" />
+  <meta name="description" content="{dede:field.description function='html2text(@me)'/}" />
+  {dede:include filename="meta.htm"/}
+</head>
+  
+  <body class="home-category">
+   <!--头部开始-->
+   {dede:include filename="header.htm"/}
+   <!--头部结束-->
+
+    <div class="container place">
+      <nav class="place_nav box-shadow">您现在的位置：
+        <i class="fa fa-home"></i>
+        <a href="/">首页</a> &gt; <a href='#'>TAG标签</a> &gt; {dede:field.title /}</nav>
+    </div>
+    <div class="container wrapper category-wrap">
+      <div class="side-hot wrap-multi">
+        <div class="home-main">
+          <!--页面主体信息-->
+          {dede:list orderby='sortrank' pagesize='10'}
+          <article class="post-list wow fadeInDown" id="list2">
+            <div class="post-item-box goods-box">
+              <div class="post-img-wp">
+                <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">
+                <img class="goods-img" src="[field:litpic/]" alt="[field:title/]" /></a>
+              </div>
+              <div class="post-user-info">
+                <a><span class="post-fbtime">[field:pubdate function="MyDate('Y-m-d',@me)"/]</span></a>
+              </div>
+              <div class="post-title">
+                <h3>
+                  <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]" target="_blank">[field:title/]</a></h3>
+              </div>
+              <div class="post-item-meta">
+                <a class="post-item-catename" href="[field:typedir /]/">
+                  <i class="fa fa-columns"></i>[field:typename /]</a>
+                <span class="post-item-viewnums">
+                  <i class="fa fa-eye"></i>[field:click /]次</span>
+              </div>
+            </div>
+          </article>
+          {/dede:list}
+        </div>
+        <footer class="pagination wow fadeInDown">
+          <ul>
+            {dede:pagelist listitem="info,index,end,pre,next,pageno,option"/}
+          </ul>
+        </footer>
+      </div>
+    </div>
+    <script src='{dede:global.cfg_templets_skin/}/static/js/jquery.ias.min.js'></script>
+   <!--底部开始-->
+   {dede:include filename="footer.htm"/}
+   <!--底部结束-->
+    <div class="none">
+      <script src="{dede:global.cfg_templets_skin/}/static/js/custom.js"></script>
+      <script src="{dede:global.cfg_templets_skin/}/static/js/sticky-sidebar.js"></script>
+      <script src="{dede:global.cfg_templets_skin/}/static/js/wow.min.js"></script>
+    </div>
+  </body>
+
+</html>

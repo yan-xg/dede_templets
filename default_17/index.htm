@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <title>{dede:global.cfg_webname/}</title>
+    <meta name="description" content="{dede:global.cfg_description/}" />
+    <meta name="keywords" content="{dede:global.cfg_keywords/}" />
+    {dede:include filename="meta.htm"/}
+</head>
+<body>
+{dede:include filename="header.htm"/}
+
+<p class="index-breadcrumb"></p>
+<div class="wrap">
+  <div id="content">
+    <div id="contentleft">
+      <div class="itbox card" id="croll">
+        <h3><img src="{dede:global.cfg_templets_skin/}/static/img/tt.png" /></h3>
+        <div id="itscroll" class="itscroll">
+          <div class="con">
+            <ul>
+                {dede:arclist titlelen='80' flag='a' typeid='top' row='5'}
+                <li> <i class="fa fa-newspaper-o"></i> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html">[field:title/]</a> </li>
+                {/dede:arclist}
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- 幻灯片  -->
+      
+      <div class="swiper-container card">
+        <ul class="swiper-wrapper">
+            {dede:arclist titlelen='80' flag='c,p' typeid='top' row='5'}
+            <li class="swiper-slide"> <a class="link" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">
+                <p class="p ellipsis">[field:title/]</p>
+                <img src="[field:litpic/]" alt="[field:title/]" /> <i class="mask"></i> </a>
+            </li>
+            {/dede:arclist}
+        </ul>
+        <p class="swiper-pagination"></p>
+      </div>
+      <div class="ui-banner_lists card" id="listBox"> <span class="tips">推荐</span>
+        <ul>
+            {dede:arclist titlelen='80' flag='c,p' typeid='top' limit='5,3'}
+            <li class="clearfix">
+                <div> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html"><img class="img-cover br" src="[field:litpic/]" alt="[field:title/]" title="[field:title/]"></a> </div>
+                <h2 class="ellipsis"><a href="/cyzd/135.html" title="[field:title/]">[field:title/]</a></h2>
+                <p> [field:description /] </p>
+            </li>
+            {/dede:arclist}
+        </ul>
+      </div>
+      <div class="clear"></div>
+      <div class="cmsbox card clearfix">
+          {dede:channelartlist type ='top'}
+          <div class="cmslist">
+              <div class="xyti">
+                  <h3> <a href="{dede:field name='typedir'/}/" class="mcolor">{dede:field name='typename'/}</a></h3>
+              </div>
+              <ul>
+                  {dede:arclist titlelen='80' row='1'}
+                  <li class="first"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]" class="pic"> <img class="img-cover br" src="[field:litpic/]" alt="[field:title/]" title="[field:title/]"> </a> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]" class="text">[field:title/]</a>
+                      <div class="des"> [field:description/]</div>
+                  </li>
+                  {/dede:arclist}
+
+                  {dede:arclist titlelen='80' limit='1,5'}
+                  <li> <i class="fa fa-caret-right"></i> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a> </li>
+                  {/dede:arclist}
+              </ul>
+          </div>
+          {/dede:channelartlist}
+      </div>
+      
+      <!-- 文章列表 -->
+      <div id="imgbox">
+          {dede:arclist row='12' titlelen='80' typeid='top'}
+          <div class="wapost card">
+              <h2 class="multi-ellipsis"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title /]">[field:title /]</a> </h2>
+              <p class="img"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank"> <img class="img-cover br" src="[field:litpic /]" alt="[field:title /]" title="[field:title /]"> </a> </p>
+              <p class="text">[field:description /]</p>
+              <div class="count"> <span><i class="fa fa-eye"></i>[field:click /]</span>
+                  <span class="edit"><i class="fa fa-clock-o"></i>[field:pubdate function="MyDate('Y-m-d',@me)"/] </span> </div>
+          </div>
+          {/dede:arclist}
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div id="sidebar">
+        <section id="divTags" class="widget widget_tags sb br mb">
+            <h3><span>标签列表</span></h3>
+            <div class="widget-content divTags tag-label">
+                <ul>
+                    {dede:tag row='40' sort='total'}
+                    <li><a href="/tags/[field:tag /]/" class="tags[field:id runphp='yes']@me = rand(0,7);[/field:id] tagc[field:highlight /]">[field:tag /]</a></li>
+                    {/dede:tag}
+                </ul>
+            </div>
+        </section>
+      <section id="aside_hot" class="widget widget_aside_hot sb br mb">
+        <h3><span>热门文章</span></h3>
+        <ul class="widget-content aside_hot">
+            {dede:arclist row='5' titlelen='80' typeid='top' orderby='click'}
+            <li class="clearfix"><span class="list list-1">[field:global name=autoindex runphp= 'yes' ] @me; [/field:global]</span><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a></li>
+            {/dede:arclist}
+        </ul>
+      </section>
+
+      <section id="aside_new" class="widget widget_aside_new sb br mb">
+        <h3><span>推荐文章</span></h3>
+        <ul class="widget-content aside_new">
+            {dede:arclist titlelen='80' flag='c,p' typeid='top' limit='8,5'}
+            <li class="clearfix"><i class="fa fa-caret-right"></i><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a></li>
+            {/dede:arclist}
+        </ul>
+      </section>
+
+      <section id="divLinkage" class="widget widget_link sb br mb">
+        <h3><span>友情链接</span></h3>
+        <ul class="widget-content divLinkage">
+            {dede:flink row='24' type='text' titlelen="24"  typeid="0"}
+            <li>[field:link /]</li>
+            {/dede:flink}
+              </ul>
+      </section>
+    </div>
+  </div>
+</div>
+
+{dede:include filename="footer.htm"/}
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+<div class="topmenu" id="tophead">
+    <div class="wrap">
+        <div id="mobilemenu"></div>
+        <div class="mask"></div>
+        <div class="logo"><a href="/" title="{dede:global.cfg_webname/}"><img src="{dede:global.cfg_basehost/}/images/logo.png" width="280" height="70" border="0" alt=""></a></div>
+        <div class="menu">
+            <ul id="nav">
+                <li class="mainlevel"><a  class='{dede:field name=typeid runphp='yes'}(@me=='0') ? @me='hover' : @me=''; {/dede:field}' href="/">首页</a></li>
+                {dede:channel type='top' currentstyle='<li class="mainlevel"><a href="~typelink~" class="hover">~typename~</a></li>'}
+                <li class="mainlevel"><a href="[field:typelink /]">[field:typename/]</a></li>
+                {/dede:channel}
+                <div class="clear"></div>
+            </ul>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>{dede:field.title/} - {dede:global.cfg_webname/}</title>
+  <meta name="keywords" content="{dede:field.keywords/}" />
+  <meta name="description" content="{dede:field.description function='html2text(@me)'/}" />
+  {dede:include filename="meta.htm"/}
+</head>
+<body>
+{dede:include filename="header.htm"/}
+
+<div class="subbody">
+  <div class="wrap">
+    <div class="row">
+      <div class="left">
+
+        <div class="article_box">
+          {dede:list orderby='sortrank' pagesize='10'}
+          <div class="items">
+            <div class="content-box">
+              <div class="posts-gallery-img"> <a href='[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html'><img class='thumbnail' src='[field:litpic/]' alt='[field:title/]'/></a> </div>
+              <div class="posts-gallery-content">
+                <h2><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title/]</a></h2>
+                <div class="posts-gallery-text">[field:description /]...</div>
+                <div class="posts-default-info posts-gallery-info">
+                  <ul>
+                    <li class="ico-cat"><i class="iconfont icon-liebiao"></i> <a href="[field:typedir/]">[field:typename/]</a></li>
+                    <li class="ico-time"><i class="iconfont icon-iconfontshijian"></i> [field:pubdate function="MyDate('Y年m月d日 ',@me)"/]</li>
+                    <li class="ico-eye"><i class="iconfont icon-yanjing1"></i> [field:click/]</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/dede:list}
+         </div>
+        <div class="pages">
+          <ul>
+            {dede:pagelist listitem="info,index,end,pre,next,pageno,option"/}
+          </ul>
+        </div>
+      </div>
+      <!-- 右侧 -->
+      <div class="right">
+        <div class="widget">
+          <h3><span>热门标签</span></h3>
+          <div class="widge_tags">
+            <div class="tag-items">
+              {dede:tag row='40' sort='total'}
+              <a href="/tags/[field:tag /]/" class="tags[field:id runphp='yes']@me = rand(0,7);[/field:id] tagc[field:highlight /]">[field:tag /]</a>
+              {/dede:tag}
+            </div>
+          </div>
+        </div>
+        <div class="widget">
+          <h3><span>随便看看</span></h3>
+          <ul class="recent-posts-widget">
+            {dede:arclist row='5'  titlelen='35' orderby='rand'}
+            <li>
+              <div class="recent-posts-img"><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html"><img src="[field:litpic/]" class="thumbnail" alt="[field:title/]"></a></div>
+              <div class="recent-posts-title">
+                <h4 class="tit"><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html">[field:title/]</a></h4>
+                <span class="info"><i class="iconfont icon-yanjing1"></i> [field:click/]</span> </div>
+            </li>
+            {/dede:arclist}
+          </ul>
+        </div>
+
+        <div class="widget">
+          <h3><span>热门排行</span></h3>
+          <ul class="recent-posts-widget">
+            {dede:arclist row='5' titlelen='80' typeid='top' orderby='click'}
+            <li>
+              <div class="recent-posts-img"><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html"><img src="[field:litpic/]" class="thumbnail" alt="[field:title/]"></a></div>
+              <div class="recent-posts-title">
+                <h4 class="tit"><a href="/meirong/hufu/405.html">[field:title/]</a></h4>
+                <span class="info"><i class="iconfont icon-yanjing1"></i> [field:click/]</span> </div>
+            </li>
+            {/dede:arclist}
+          </ul>
+        </div>
+      </div>
+ </div>
+  </div>
+</div>
+{dede:include filename="footer.htm"/}
+</body>
+</html>

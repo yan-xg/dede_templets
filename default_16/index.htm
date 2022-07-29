@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>{dede:global.cfg_webname/}</title>
+  <meta name="description" content="{dede:global.cfg_description/}" />
+  <meta name="keywords" content="{dede:global.cfg_keywords/}" />
+  {dede:include filename="meta.htm"/}
+</head>
+<body>
+<!--头部开始-->
+{dede:include filename="header.htm"/}
+<!--头部结束-->
+<p class="index-breadcrumb"></p>
+<div id="content" class="content container">
+  <div class="clearfix">
+    <div id="index-main" class="fl">
+      <div class="clearfix">
+        <div class="index-slider fl"> 
+          <!-- 幻灯片 -->
+          <div class="swiper-container br">
+            <ul class="swiper-wrapper ">
+              {dede:arclist titlelen='80' flag='c,p' typeid='top' row='5'}
+              <li class="swiper-slide"> <a class="link" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].htmll" title="[field:title/]">
+                <p class="p ellipsis">[field:title/]</p>
+                <img src="[field:litpic/]" alt="[field:title/]" /> <i class="mask"></i> </a>
+              </li>
+              {/dede:arclist}
+            </ul>
+            <p class="swiper-pagination"></p>
+            <i class="hidden-sm-md-lg swiper-button-next iconfont icon-right"></i> <i class="hidden-sm-md-lg swiper-button-prev iconfont icon-left"></i> </div>
+          <!-- 幻灯片下方文章 -->
+          <div class="recommend-a sb br mb"> 
+            <!-- <p class="c-title"><span></span></p>-->
+            <div class="wrap">
+              {dede:arclist titlelen='80' flag='a' typeid='top' row='5'}
+              <article class="item">
+                <p class="title ellipsis"> <i class=" iconfont icon-jian"></i> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a></p>
+              </article>
+              {/dede:arclist}
+            </div>
+          </div>
+        </div>
+        <div class="new-box fl"> 
+          <!-- 最新文章 -->
+          <div class="new-post">
+            <p class="c-title"> <span>最近更新</span></p>
+            {dede:arclist row='12' titlelen='80' typeid='top'}
+            <article class="article-list clearfix">
+              <h2 class="title ellipsis"> <i class="iconfont icon-dot"></i> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title function="cn_substr(@me,10)"/]</a></h2>
+              <time class="time fr font-oswald" datetime="[field:pubdate function="MyDate('Y-m-d',@me)"/]" title="[field:pubdate function="MyDate('Y-m-d',@me)"/]"> <span> <i class="iconfont icon-time"></i>[field:pubdate function="MyDate('Y-m-d',@me)"/]</span> </time>
+            </article>
+            {/dede:arclist}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <aside id="sidebar" class="hidden-sm-md-lg fr">
+      <div class="theiaStickySidebar tag-label">
+
+        <section id="divTags" class="widget widget_tags sb br mb">
+          <p class="c-title mb"> <span class="name">标签列表</span></p>
+          <ul class="widget-content divTags">
+            {dede:tag row='40' sort='total'}
+            <li><a href="/tags/[field:tag /]/" class="tags[field:id runphp='yes']@me = rand(0,7);[/field:id] tagc[field:highlight /]">[field:tag /]</a></li>
+            {/dede:tag}
+          </ul>
+        </section>
+
+        <section id="aside_random" class="widget widget_aside_random sb br mb">
+          <p class="c-title mb"> <span class="name">推荐图文</span></p>
+          <ul class="widget-content aside_random">
+            {dede:arclist titlelen='80' flag='c,p' typeid='top' limit='5,5'}
+            <li class="list clearfix"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]"> <span class="img-wrap br"> <img src="[field:litpic/]" alt="[field:title/]" class="img-cover br random-img"></span>
+              <div class="new-text">
+                <p class="title">[field:title/]</p>
+                <div class="info"> <span class="time"> <i class="iconfont icon-time"></i> <span class="font-oswald">2018-04-28</span></span> <span class="view"> <i class="iconfont icon-view"></i> <span class="font-oswald">[field:click/]</span></span> </div>
+              </div>
+            </a>
+            </li>
+            {/dede:arclist}
+          </ul>
+        </section>
+      </div>
+    </aside>
+  </div>
+
+  <!-- 通栏文章 -->
+  {dede:channelartlist type ='top'}
+  <div class="full-post sb br mb">
+    <p class="c-title mb"> <span>{dede:field name='typename'/}</span> <a class="more" href="{dede:field name='typedir'/}/" title="更多{dede:field name='typename'/}的文章"> <i class="iconfont icon-more"></i> </a> </p>
+    <div class="clearfix">
+
+      {dede:arclist titlelen='80' row='9'}
+      <article class="img-list br mt fl jq-remove-mb">
+        <div class="clearfix">
+          <figure class="figure br fl"> <a class="thumbnail" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]"> <img class="img-cover br" src="[field:litpic/]" alt="[field:title/]" title="[field:title/]"></a> </figure>
+          <div class="content">
+            <h2 class="title ellipsis m-multi-ellipsis"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a></h2>
+            <div class="intro hidden-sm">[field:description /]...</div>
+            <p class="info clearfix">
+              <time class="time fl font-oswald" datetime="[field:pubdate function="MyDate('Y-m-d',@me)"/]" title="[field:pubdate function="MyDate('Y-m-d',@me)"/]"> <i class="iconfont icon-time"></i>2016-01-01</time>
+              <span class="hidden-sm-md-lg view fl font-oswald"> <i class="iconfont icon-view"></i>[field:click /]</span> </p>
+          </div>
+        </div>
+      </article>
+      {/dede:arclist}
+    </div>
+  </div>
+  {/dede:channelartlist}
+</div>
+
+<!--底部开始-->
+{dede:include filename="footer.htm"/}
+<!--底部结束-->
+
+<script>var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        centeredSlides: true,
+        autoplay: 3500,
+        slidesPerView: 1,
+        paginationClickable: true,
+        autoplayDisableOnInteraction: false,
+        spaceBetween: 0,
+        loop: true
+      });</script>
+<style>
+.copyrights{text-indent:-9999px;height:0;line-height:0;font-size:0;overflow:hidden;}
+</style>
+<div class="copyrights">
+	Collect from <a href="http://www.cssmoban.com/"  title="网站模板">模板之家</a>
+	<a href="https://www.chazidian.com/"  title="查字典">查字典</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>{dede:field.title/} - {dede:global.cfg_webname/}</title>
+    <meta name="keywords" content="{dede:field.keywords/}" />
+    <meta name="description" content="{dede:field.description function='html2text(@me)'/}" />
+    {dede:include filename="meta.htm"/}
+    <style>
+        .gj-page ul li{ display:inline}
+    </style>
+</head>
+
+<body>
+    <!--GJ-UI组件模块html代码开始-->
+    {dede:include filename="header.htm"/}
+
+    <div class="gcont">
+        <div class="row">
+            <div class="gj-lg-8">
+
+                <div class="gj-wk gcl-hb">
+                    <nav class="gj-ljdh">
+                        <!--路径导航模块-->
+                        <i class="fa fa-home" aria-hidden="true"></i>
+                        <a href="/">首页</a> &gt; <a href='#'>TAG标签</a> &gt; {dede:field.title /}
+                    </nav>
+
+                    <div class="gj-body gul-tuw1">
+                        {dede:list orderby='sortrank' pagesize='10'}
+                        <div class="gtw-ul gclear">
+                            <div class="gtw-img">
+                                <a href="[field:typedir /]/[field:pubdate function="MyDate('Y/m-d',@me)"/]/[field:id /].html"><img src="[field:litpic/]" alt="[field:title/]" style="width: 240px;height: 150px;"></a>
+                            </div>
+                            <div class="gtw-body">
+                                <a href="[field:typedir /]/[field:pubdate function="MyDate('Y/m-d',@me)"/]/[field:id /].html">
+                                <h4>[field:title /]</h4>
+                                </a>
+                                <p>[field:description /]...</p>
+                                <div class="gtw-sx">
+                                    <i class="fa fa-clock-o" aria-hidden="true"> [field:pubdate function="MyDate('Y年m月d日 ',@me)"/]</i>
+                                    <i class="fa fa-eye" aria-hidden="true"> [field:click/]</i>
+                                    <a href="[field:typedir /]"><i class="fa fa-folder-open" aria-hidden="true"> [field:typename/]</i></a>
+                                </div>
+                            </div>
+                        </div>
+                        {/dede:list}
+                    </div>
+                    <!--gul-tuw1-结束-->
+                    <nav class="gj-page">
+                        <ul>{dede:pagelist listitem="info,index,end,pre,next,pageno,option"/}</ul>
+                    </nav>
+                    <!--nav-结束-->
+                </div>
+
+            </div>
+
+            <div class="gj-lg-4">
+                <div class="gj-wk gcl-hb">
+                    <!--侧栏-图文列表-->
+                    <div class="gj-bt">
+                        <h3><i class="fa fa-thumbs-up" aria-hidden="true"></i> 头条推荐</h3>
+                    </div>
+                    {dede:arclist row='5' titlelen='80' typeid='top' flag='a'}
+                    <div class="gj-body gli-tuw1">
+                        <div class="gtw-li gclear">
+                            <div class="gtw-img gj-left"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Y/m-d',@me)"/]/[field:id /].html"><img src="[field:litpic/]" alt=""></a> </div>
+                            <div class="gtw-body"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Y/m-d',@me)"/]/[field:id /].html">
+                                <h4>[field:title /]</h4>
+                                </a> <span><i class="fa fa-clock-o">[field:pubdate function="MyDate('Y/m/d',@me)"/]</i></span> <span><i class="fa fa-eye"> [field:click /]</i></span> </div>
+                        </div>
+                    </div>
+                    {/dede:arclist}
+
+                </div>
+
+                <div class="gj-wk gcl-hb">
+                    <!--侧栏-图文列表-->
+                    <div class="gj-bt">
+                        <h3><i class="fa fa-thumbs-up" aria-hidden="true"></i> 最新文章</h3>
+                    </div>
+                    {dede:arclist row='5' titlelen='80' typeid='top'}
+                    <div class="gj-body gli-tuw1">
+                        <div class="gtw-li gclear">
+                            <div class="gtw-img gj-left"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Y/m-d',@me)"/]/[field:id /].html"><img src="[field:litpic/]" alt=""></a> </div>
+                            <div class="gtw-body"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Y/m-d',@me)"/]/[field:id /].html">
+                                <h4>[field:title /]</h4>
+                                </a> <span><i class="fa fa-clock-o">[field:pubdate function="MyDate('Y/m/d',@me)"/]</i></span> <span><i class="fa fa-eye"> [field:click /]</i></span> </div>
+                        </div>
+                    </div>
+                    {/dede:arclist}
+
+                </div>
+
+                <div class="gj-wk gcl-hb">
+                    <div class="gj-bt">
+                        <h3><i class="fa fa-user-plus" aria-hidden="true"></i> 友情链接</h3>
+                    </div>
+                    <div class="gj-body gj-link2">
+                        <ul>
+                            {dede:flink row='24' type='text' titlelen="24"  typeid="0"}
+                            <li>[field:link /]</li>
+                            {/dede:flink}
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    {dede:include filename="footer.htm"/}
+</body>
+
+</html>
