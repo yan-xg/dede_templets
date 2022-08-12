@@ -1,0 +1,1 @@
+<li id="one2" onclick="setTab('one',2)">{dede:field name='typename'/}</li>

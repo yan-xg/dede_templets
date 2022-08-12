@@ -1,0 +1,12 @@
+<div class="cmslist">
+                <div class="cmsbb">
+                <h3>{dede:field name='typename'/}</h3>
+                <a href="{dede:field name='typedir'/}/" class="more">更多</a>
+            </div>
+
+                <ul>
+                    {dede:arclist titlelen='80' row='5'}
+                    <li><span>[field:pubdate function="MyDate('m-d',@me)"/]</span><a  href="[field:typedir /]/[field:pubdate function="MyDate('Y/md',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a></li>
+                    {/dede:arclist}
+                </ul>
+            </div>

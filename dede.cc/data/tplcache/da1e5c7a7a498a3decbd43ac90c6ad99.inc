@@ -1,0 +1,1 @@
+<a href="[field:typedir /]/[field:id /].html">[field:title/]</a>

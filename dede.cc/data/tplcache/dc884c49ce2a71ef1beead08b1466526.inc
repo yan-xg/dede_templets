@@ -1,0 +1,1 @@
+<li class="clearfix"><span class="list list-1">[field:global name=autoindex runphp= 'yes' ] @me=@me+1; [/field:global]</span><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a></li>

@@ -1,0 +1,1 @@
+<li id="one{field:global name=autoindex runphp="yes"}@me=@me+1;{/field:global}" onclick="setTab('one',2)">{dede:field name='typename'/}</li>

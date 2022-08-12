@@ -1,0 +1,1 @@
+<li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title/]</a><span class="kandyDiggUp">[field:click/]</span></li>

@@ -1,0 +1,1 @@
+<li class=''>{dede:field name='typename'/}</li>

@@ -1,0 +1,1 @@
+<li class="clearfix"><i class="fa fa-caret-right"></i><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a></li>

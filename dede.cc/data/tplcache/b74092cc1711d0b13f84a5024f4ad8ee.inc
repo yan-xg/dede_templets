@@ -1,0 +1,1 @@
+<li class="slide"><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]"><img src="[field:litpic/]" alt="[field:title/]" style="width: 620px;height: 260px;"></a></li>

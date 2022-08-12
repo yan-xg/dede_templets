@@ -1,0 +1,1 @@
+<a href='/tags/[field:tag /]/'>[field:tag /]</a>&nbsp;&nbsp;

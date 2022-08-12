@@ -1,0 +1,1 @@
+<section class="topnews imgscale"><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html"><img src="[field:litpic /]"><span>[field:title /]</span></a></section>

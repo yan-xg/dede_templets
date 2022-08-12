@@ -1,0 +1,1 @@
+<div class="top-img"><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html"><img src="[field:litpic/]" alt="[field:title/]？" width="370" height="180"></a> </div>

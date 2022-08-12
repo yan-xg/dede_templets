@@ -1,0 +1,3 @@
+<li class="first"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]" class="pic"> <img class="img-cover br" src="[field:litpic/]" alt="[field:title/]" title="[field:title/]"> </a> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]" class="text">[field:title/]</a>
+                      <div class="des"> [field:description/]</div>
+                  </li>

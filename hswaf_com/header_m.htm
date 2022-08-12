@@ -1,0 +1,14 @@
+<header id="header">
+    <div class="navbox">
+        <h2 id="mnavh"><span class="navicon"></span></h2>
+        <div class="logo"><a href="/">{dede:global.cfg_webname/}</a></div>
+        <nav>
+            <ul id="starlist">
+                <li><a href="/" id="selected">网站首页</a></li>
+                {dede:channel type='top' currentstyle='<li class="menu"><a href="~typelink~">~typename~</a></li>'}
+                <li class="menu" ><a href="[field:typelink /]">[field:typename/]</a></li>
+                {/dede:channel}
+            </ul>
+        </nav>
+    </div>
+</header>

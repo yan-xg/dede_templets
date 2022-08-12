@@ -1,0 +1,1 @@
+<li><span class="date">[field:click /]</span><i>[field:global name=autoindex runphp="yes"] @me; [/field:global]</i><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a></li>

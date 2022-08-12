@@ -1,0 +1,1 @@
+<li><i class="iconfont">&#xe6f1;</i><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html"> [field:title/]</a></li>

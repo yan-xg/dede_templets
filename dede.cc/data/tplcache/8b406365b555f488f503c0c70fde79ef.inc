@@ -1,0 +1,1 @@
+<li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title /]"><i><img src="[field:litpic /]"></i><p>[field:title /]</p></a></li>

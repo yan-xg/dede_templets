@@ -1,0 +1,68 @@
+.cont {
+	overflow: hidden;
+	padding: 20px;
+	background: #fff;
+	zoom: 1;border-radius: 3px;margin-bottom: 15px;
+}
+
+
+.game_flink .hd {
+	position: relative;
+	overflow: visible;
+	height: 35px;
+	border-bottom: 1px solid #e8e7ed;
+}
+.flink_tab {
+	height: 30px;
+	color: #333;
+	line-height: 30px;
+}
+.flink_tab li {
+	float: left;
+	display: inline-block;
+	font-weight: bold;
+	font-size: 20px;
+	padding-right: 26px;
+}
+.flink_tab li p {
+	cursor: pointer;
+}
+.flink_tab li .on {
+	cursor: default;
+}
+.flink_tab b.line {
+	position: absolute;
+	bottom: -1px;
+	left: 0;
+	display: block;
+	overflow: hidden;
+	width: 80px;
+	height: 2px;
+	background: #ff4939;
+}
+.flink_tips {
+	position: absolute;
+	top: 0;
+	right: 0;
+	color: #999;
+}
+.flink_con {
+	position: relative;
+	overflow: hidden;
+	padding-top: 10px;
+	width: 100%;
+}
+.flink_con ul {}
+.flink_con li {
+	float: left;
+	overflow: hidden;
+	height: 36px;
+}
+.flink_con li a {
+	display: inline-block;
+	overflow: hidden;
+	margin: 10px 0;
+	margin-right: 10px;
+	height: 16px;
+	line-height: 16px;
+}

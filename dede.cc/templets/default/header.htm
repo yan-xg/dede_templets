@@ -1,0 +1,15 @@
+<header id="header">
+    <div class="navbox">
+        <h2 id="mnavh"><span class="navicon"></span></h2>
+        <div class="logo"><a href="/"><img src="{dede:global.cfg_basehost/}/images/logo.png" alt="{dede:global.cfg_webname/}" title="{dede:global.cfg_webname/}"/></a></div>
+        <nav>
+            <ul id="starlist">
+                <li><a href="/" id="{dede:field name=typeid runphp='yes'}(@me=='0') ? @me='selected' : @me=''; {/dede:field}">首页</a></li>
+                {dede:channel type='top' currentstyle='<li><a href="~typelink~" id="selected">~typename~</a></li>'}
+                <li><a href="[field:typelink /]">[field:typename/]</a></li>
+                {/dede:channel}
+                </ul>
+        </nav>
+    </div>
+</header>
+<div class="searchbox"></div>

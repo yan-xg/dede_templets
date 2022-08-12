@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{dede:global.cfg_webname/}</title>
+    <meta name="description" content="{dede:global.cfg_description/}" />
+    <meta name="keywords" content="{dede:global.cfg_keywords/}" />
+    {dede:include filename="meta_m.htm"/}
+    <link href="{dede:global.cfg_templets_skin/}/static_m/css/biao.css" rel="stylesheet" />
+</head>
+<body>
+{dede:include filename="header_m.htm"/}
+
+<div class="searchbox">
+<div class="searchclose"></div>
+</div>
+<article style="transform: none;">
+<div class="lbox">
+<div class="whitebg bloglist">
+<h2 class="htitle">最新资讯</h2>
+<ul>
+    {dede:arclist typeid='top' orderby='pubdate' titlelen='80' row=20}
+    <li>
+        <h3 class="blogtitle"><a href="/article/[field:id /].html"><font>[field:title/]</font></a></h3>
+        <p class="blogtext">[field:description/]</p>
+        <p class="bloginfo">发布日期：[field:pubdate function="MyDate('Y-m-d ',@me)"/]<span>所属栏目：[field:typename /]</span></p>
+    </li>
+    {/dede:arclist}
+</ul>
+</div>
+</div>
+<div class="cont">
+<div class="game_flink">
+<div class="hd">
+<div class="flink_tab">
+<ul>
+<li>
+<p class="on">标签列表</p>
+</li>
+</ul>
+<b class="line"></b></div>
+</div>
+<div class="bd">
+<div class="flink_con clearfix">
+<ul>
+    {dede:tag row='40' sort='total'}
+    <li><a href="/tags/[field:tag /]/">[field:tag /]</a></li>
+    {/dede:tag}
+</ul>
+</div>
+</div>
+</div>
+</div>
+</article>
+{dede:include filename="footer_m.htm"/}
+
+</body>
+</html>

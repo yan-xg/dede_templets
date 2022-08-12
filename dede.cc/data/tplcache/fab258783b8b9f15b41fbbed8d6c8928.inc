@@ -1,0 +1,1 @@
+<li> <a href="[field:typedir /]/[field:id /].html" title="[field:title/]" target="_blank"><img src="[field:litpic/]"></a> </li>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{dede:field.title/} - {dede:global.cfg_webname/}</title>
+    <meta name="keywords" content="{dede:field.keywords/}" />
+    <meta name="description" content="{dede:field.description function='html2text(@me)'/}" />
+    {dede:include filename="meta_m.htm"/}
+    <style>
+        .pages {
+            clear: both;
+            margin: 20px auto 20px auto;
+            padding-top: 10px;
+            overflow: hidden;
+            text-align: center;
+            font-size: 14px;
+        }
+        .pages ul li {
+            display: inline-block;
+            border: 1px solid #ccc;
+            padding: 6px 15px;
+            margin: 0 1px;
+            line-height: 24px;
+            background: #fff;
+            color: #999;
+            border-radius: 2px;
+            min-height: 20px!important;
+        }
+        .pages ul li:hover {
+            background: #090;
+            color: #fff;
+            border: 1px solid #090
+        }
+        .pages ul li:hover a {
+            color: #fff;
+        }
+        .pages ul li.thisclass {
+            display: inline-block;
+            border: 1px solid #090;
+            padding: 6px 15px;
+            margin: 0 1px;
+            background: #090;
+            color: #fff;
+        }
+        .pages ul li.thisclass a {
+            color: #fff;
+        }
+        .pages ul li a {
+            display: block;
+            color: #999
+        }
+        .pages ul li a:hover {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+{dede:include filename="header_m.htm"/}
+
+<div class="searchbox">
+<div class="searchclose"></div>
+</div>
+<article style="transform: none;">
+<div class="lbox">
+<div class="whitebg bloglist">
+<h2 class="htitle"><span class="con_nav">您现在的位置是：<a href="/">首页</a>&nbsp;>>&nbsp;<a href="{dede:field.typedir/}/">{dede:field.typename/}</a></span>{dede:field.typename/}</h2>
+<ul>
+    {dede:list pagesize='10'}
+    <li>
+        <h3 class="blogtitle"><a href="/article/[field:id /].html"><font>[field:title/]</font></a></h3>
+        <p class="blogtext">[field:description/]</p>
+        <p class="bloginfo">发布日期：[field:pubdate function="MyDate('Y-m-d ',@me)"/]<span>所属栏目：[field:typename /]</span></p>
+        <a href="/article/[field:id /].html" class="viewmore">阅读更多</a>
+    </li>
+    {/dede:list}
+</ul>
+    <div class="pages">
+        <ul>
+            {dede:pagelist listsize='1' listitem="info,index,end,pre,next,pageno,option"/}
+        </ul>
+    </div>
+</div>
+</div>
+</article>
+
+{dede:include filename="footer_m.htm"/}
+
+</body>
+</html>

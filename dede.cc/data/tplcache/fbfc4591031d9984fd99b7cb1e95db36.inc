@@ -1,0 +1,1 @@
+<li class="{field:global name=autoindex runphp= 'yes' } if(@me==1) @me='newscurrent'; else @me='' {/field:global}">{dede:field name='typename'/}</li>

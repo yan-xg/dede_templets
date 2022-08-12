@@ -1,0 +1,18 @@
+<header class="header">
+    <div class="inner">
+        <div class="logo"><li><img src="{dede:global.cfg_templets_skin/}/static/picture/favicon.ico"></li><span>{dede:global.cfg_webname/}</span></div>
+        <nav class="nava">
+            <div class="menua">
+                <ul>
+                    <li><a href="/">网站首页</a></li>
+                    {dede:channel type='top' currentstyle='<li class="menu"><a href="~typelink~">~typename~</a></li>'}
+                    <li class="menu" ><a href="[field:typelink /]">[field:typename/]</a></li>
+                    {/dede:channel}
+                    <span></span>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="clear"></div>
+    </div>
+</header>

@@ -1,0 +1,1 @@
+<li class='newscurrent'>{dede:field name='typename'/}</li>

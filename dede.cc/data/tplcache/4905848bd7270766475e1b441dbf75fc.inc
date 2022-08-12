@@ -1,0 +1,1 @@
+<li><span class="date">[field:click/]</span><i>[dede:global name='itemindex' runphp='yes'] @me=@me+1;[/dede:global]</i><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">千[field:title/]</a></li>

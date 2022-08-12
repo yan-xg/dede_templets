@@ -1,0 +1,1 @@
+<li id="one{dede:global name='itemindex'/}" onclick="setTab('one',2)">{dede:field name='typename'/}</li>

@@ -1,0 +1,26 @@
+rewrite ^/$ /index.php last;
+rewrite "^/index.html$" /index.php last;
+rewrite "^/sitemap.xml$" /sitemap.php last;
+rewrite "^/tags/(.+)" /tags.php?/$1 last;
+
+rewrite "^/shenghuo/$" /plus/list.php?tid=1 last;
+rewrite "^/shenghuo$" /plus/list.php?tid=1 last;
+rewrite "^/shenghuo/list_1_([0-9]+).html$" /plus/list.php?tid=1&PageNo=$1 last;
+rewrite "^/shenghuo/([0-9]+)/([0-9]+).html$" /plus/view.php?tid=1&aid=$2 last;
+
+
+rewrite "^/keji/$" /plus/list.php?tid=2 last;
+rewrite "^/keji$" /plus/list.php?tid=2 last;
+rewrite "^/keji/list_2_([0-9]+).html$" /plus/list.php?tid=2&PageNo=$1 last;
+rewrite "^/keji/([0-9]+)/([0-9]+).html$" /plus/view.php?tid=2&aid=$2 last;
+
+rewrite "^/zixun/$" /plus/list.php?tid=3 last;
+rewrite "^/zixun$" /plus/list.php?tid=3 last;
+rewrite "^/zixun/list_3_([0-9]+).html$" /plus/list.php?tid=3&PageNo=$1 last;
+rewrite "^/zixun/([0-9]+)/([0-9]+).html$" /plus/view.php?tid=3&aid=$2 last;
+
+#ALTER TABLE `dede_tagindex` ENGINE=InnoDB;
+#ALTER TABLE `dede_taglist` ENGINE=InnoDB;
+#ALTER TABLE `dede_archives` MODIFY COLUMN `title`  char(180) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '' AFTER `money`;
+#UPDATE dede_arcrank set adminrank=1 where membername='¿ª·Åä¯ÀÀ'
+
