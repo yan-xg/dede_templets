@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>{dede:field.title/} - {dede:global.cfg_webname/}</title>
+  <meta name="keywords" content="{dede:field.keywords/}" />
+  <meta name="description" content="{dede:field.description function='html2text(@me)'/}" />
+  {dede:include filename="meta.htm"/}
+  <style>
+    .pagenavi ul li{ display:inline}
+  </style>
+</head>
+  
+  <body>
+   <!--公共头部-->
+   {dede:include filename="header.htm"/}
+   <!--公共头部-->
+    <div class="breadcrumb">
+      <div class="inner"><i class="fas fa-home"></i><a href="/">首页</a> &gt; <a href='#'>TAG标签</a> &gt; {dede:field.title /}</div>
+    </div>
+    <div class="wrapper">
+      <div class="inner">
+        <main class="main">
+          {dede:list orderby='sortrank' pagesize='10'}
+          <article class="newsitem">
+            <figure class="thumbnail">
+              <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title /]">
+                <img src="[field:litpic/]" alt="[field:title /]" /></a>
+            </figure>
+            <div class="info">
+              <h2>
+                <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title /]">[field:title /]</a></h2>
+              <div class="meta">
+                <span>
+                  <time datetime="[field:pubdate function="MyDate('Y-m-d',@me)"/]">
+                    <i class="far fa-calendar-alt"></i>[field:pubdate function="MyDate('Y-m-d',@me)"/]</time>
+                </span>
+                <span class="cat">
+                  <i class="fas fa-columns"></i>
+                  <a href="[field:typedir /]" title="[field:typename /]" target="_blank">[field:typename /]</a></span>
+                <span><i class="fas fa-fire"></i>[field:click /]</span>
+              </div>
+              <p>　　[field:description /]...</p>
+            </div>
+          </article>
+          {/dede:list}
+
+          <div class="pagenavi">
+            <ul>{dede:pagelist listitem="info,index,end,pre,next,pageno,option"/}</ul>
+          </div>
+        </main>
+
+        <aside class="sidebar">
+          <section class="widget hotpost">
+            <h3>热门文章</h3>
+            <ul>
+              {dede:arclist row='5' titlelen='80' typeid='top' orderby='click'}
+              <li class="pic">
+                <figure class="thumbnail">
+                  <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">
+                  <img src="[field:litpic/]" alt="[field:title/]" /></a>
+                </figure>
+                <p>
+                  <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a></p>
+              </li>
+              {/dede:arclist}
+            </ul>
+          </section>
+          <section class="widget divLinkage">
+            <h3>推荐文章</h3>
+            <ul>
+              {dede:arclist row='5' titlelen='80' typeid='top' flag='a'}
+              <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title/]</a></li>
+              {/dede:arclist}
+            </ul>
+          </section>
+          <section class="widget newpost">
+            <h3>最新文章</h3>
+            <ul>
+              {dede:arclist row='10' titlelen='80' typeid='top'}
+              <li class="text">
+                <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a>
+                <time datetime="[field:pubdate function="MyDate('Y-m-d',@me)"/]">
+                <i class="far fa-calendar-alt"></i>[field:pubdate function="MyDate('Y-m-d',@me)"/]</time>
+              </li>
+              {/dede:arclist}
+            </ul>
+          </section>
+
+        </aside>
+        <div class="clear"></div>
+      </div>
+    </div>
+  <!--公共底部-->
+   {dede:include filename="footer.htm"/}
+  <!--公共底部--> 
+    <script type="text/javascript" src="{dede:global.cfg_templets_skin/}/static/js/global.js"></script>
+  </body>
+
+</html>
+<!--13.71 ms , 14 query , 804kb memory , 0 error-->

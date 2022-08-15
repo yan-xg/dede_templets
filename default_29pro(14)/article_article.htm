@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <title>{dede:field.title/}_{dede:field name='typename'/} - {dede:global.cfg_webname/}</title>
+    <meta name="keywords" content="{dede:field.keywords/}" />
+    <meta name="description" content="{dede:field.description function='html2text(@me)'/}" />
+    {dede:include filename="meta.htm"/}
+ </head> 
+ <body> 
+   <!--公共头部-->
+   {dede:include filename="header.htm"/}
+   <!--公共头部--> 
+  <p class="pheaderpad"></p> 
+  <div id="divMain"> 
+   <section> 
+    <div class="container" style="margin-top:20px;"> 
+     <div class="row"> 
+      <!--left--> 
+      <div class="col-md-9 col-xs-12"> 
+       <div class=""> 
+        <section> 
+         <div class=""> 
+          <div class="thjingxuan"> 
+           <div class="thjingxuan_title categorylist"> 
+            <i></i>
+               <a href="/">首页</a>&nbsp;>&nbsp;<a href="{dede:field.typedir/}/">{dede:field.typename/}</a> > <span>正文</span>
+           </div> 
+           <section class="thjingxuan_sec"> 
+            <div class="detail-title">{dede:field.title/}</div>
+            <div class="detail-icon"> 
+             <p class="meta"> <span><i class="iconfont icon-shijian"></i>&nbsp;{dede:field.pubdate function="MyDate('Y-m-d H:i',@me)"/}</span>
+                 <span><i class="iconfont icon-liulan"></i>&nbsp;阅读&nbsp;{dede:field.click/}</span>
+
+</span> </p> 
+            </div>
+            <!--摘要-->
+            <div class="detail-zhaiyao"> 
+             <span style="color:#3297fc;">摘要：</span>{dede:field.description/}</div>
+			<!--摘要-->
+			<!--正文--> 
+            <div class="detail-con">{dede:field.body/} </div>
+			<!--正文-->
+
+               <div class="detail-tags">
+                   <i class="iconfont icon-x-tags"></i> 关键字：
+                   {dede:tag row='30' sort='new' getall='0'}<a href='/tags/[field:tag /]/'>[field:tag /]</a>&nbsp;/&nbsp;{/dede:tag}
+               </div>
+
+            <div class="detail-arr"> 
+             <div class="detail-arr-left"><span>{dede:prenext get='next' /}</span></div>
+             <div class="detail-arr-right"><span>{dede:prenext get='pre'/}</span></div>
+            </div>
+
+
+
+           </section> 
+
+          </div> 
+         </div> 
+        </section> 
+       </div> 
+      </div> 
+      <!--left end--> 
+      <!--right--> 
+      <!--right-->
+         <div class="col-md-3 col-xs-12 wap_margintop">
+             <div class="">
+                 <section>
+                     <div class="thleftcon" style="height:336px;">
+                         <div class="thleftbt">
+                             <span>最新文章</span>
+                         </div>
+                         <ul class="th-5">
+                             {dede:arclist row='7' titlelen='80' typeid='top'}
+                             <li><span class="date">[field:click/]</span><i>[field:global name=autoindex runphp="yes"] @me; [/field:global]</i><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a></li>
+                             {/dede:arclist}
+                         </ul>
+                     </div>
+                 </section>
+             </div>
+             <div class="th_margintop">
+                 <section>
+                     <div class="thleftcon" style="height:363px;">
+                         <div class="thleftbt">
+                             <span>排行榜</span>
+                         </div>
+                         <ul class="th-5">
+                             {dede:arclist row='8' titlelen='80' typeid='top' orderby='click'}
+                             <li><span class="date">[field:click /]</span><i>[field:global name=autoindex runphp="yes"] @me; [/field:global]</i><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a></li>
+                             {/dede:arclist}
+                         </ul>
+                     </div>
+                 </section>
+             </div>
+
+             <div class="th_margintop">
+                 <section class="th_margintop">
+                     <div class="thleftcon">
+                         <div class="thleftbt">
+                             <span>热门专题</span>
+                         </div>
+                         <!--热门文章-->
+                         <ul class="th-6">
+                             {dede:arclist limit='8,6' titlelen='80' typeid='top' orderby='click'}
+                             <li>
+                                 <div class="gundongimg">
+                                     <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title /]"><img class="th-img zhuti-img-height" src="[field:litpic /]" />
+                                     <div class="zhuantiinfo">
+                                         [field:title /]
+                                     </div> </a>
+                                 </div> </li>
+                             {/dede:arclist}
+                         </ul>
+                         <!--热门文章-->
+                     </div>
+                 </section>
+             </div>
+
+<!--             <div class="th_margintop">-->
+<!--                 <section>-->
+<!--                     <div class="">-->
+<!--                         <section>-->
+<!--                             <div class="thleftcon">-->
+<!--                                 <div class="thleftbt">-->
+<!--                                     <span>热门标签</span>-->
+<!--                                 </div>-->
+<!--                                 <ul class="th-7">-->
+<!--                                     <li><a target="_blank" href="/tags-101-0.html" target="_blank" title="6个话题">互联网</a></li>-->
+<!--                                 </ul>-->
+<!--                             </div>-->
+<!--                         </section>-->
+<!--                     </div>-->
+<!--                 </section>-->
+<!--             </div>-->
+         </div>
+      <!--right end--> 
+      <!--right end--> 
+     </div> 
+    </div> 
+   </section> 
+  </div> 
+  <!--公共底部-->
+   {dede:include filename="footer.htm"/}
+ </body>
+</html>

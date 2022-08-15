@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <title>{dede:global.cfg_webname/}</title>
+    <meta name="description" content="{dede:global.cfg_description/}" />
+    <meta name="keywords" content="{dede:global.cfg_keywords/}" />
+    {dede:include filename="meta.htm"/}
+    <link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/static/css/tags_style.css" />
+</head>
+<body>
+<!--公共头部-->
+{dede:include filename="header.htm"/}
+<div class="blank"></div>
+
+<div class="inner container">
+  <main class="main">
+    <div class="focus wow fadeIn">
+      <div class="flexslider">
+        <ul class="slides">
+            {dede:arclist titlelen='80' flag='f' typeid='top' row='5'}
+            <li>
+                <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">
+                    <img src="[field:litpic/]" alt="[field:title/]"/>
+                    <p class="flex-caption">[field:title/]</p>
+                </a>
+            </li>
+            {/dede:arclist}
+        </ul>
+      </div>
+    </div>
+    <section class="top wow fadeIn">
+      <h3>头条推荐</h3>
+      <ul>
+          {dede:arclist titlelen='80' flag='h' typeid='top' row='3'}
+          <li>
+              <h4><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a></h4>
+              <p>[field:description /]...</p>
+          </li>
+          {/dede:arclist}
+      </ul>
+    </section>
+    <div class="clear"></div>
+    <section class="hots wow fadeInUp">
+      <div class="section-title">
+        <h3>人气推荐</h3>
+      </div>
+      <ul>
+          {dede:arclist titlelen='80' flag='c' typeid='top' row='4'}
+          <li>
+              <div class="thumbnail"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]"><img src="[field:litpic/]" alt="[field:title/]"/></a> </div>
+              <h4><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a></h4>
+              <p> [field:description /]...</p>
+          </li>
+          {/dede:arclist}
+      </ul>
+    </section>
+    <div class="mainad wow fadeIn"> </div>
+    <div class="content">
+      <div class="section-title">
+        <h3>最新资讯</h3>
+      </div>
+        {dede:arclist row='10' titlelen='80' typeid='top'}
+        <section class="section wow fadeIn">
+            <div class="thumbnail"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]" target="_blank"><img src="[field:litpic/]g" alt="[field:title/]"/></a> </div>
+            <h2><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]" target="_blank">[field:title/]</a></h2>
+            <div class="postmeta">
+                <span><i class="icon-calendar"></i><time>[field:pubdate function="MyDate('Y-m-d',@me)"/]</time></span>
+                <span><i class="icon-eye"></i> [field:click /]</span>
+            </div>
+            <div class="excerpt">
+                <p> [field:description /]...</p>
+            </div>
+        </section>
+        {/dede:arclist}
+    </div>
+  </main>
+  <aside class="sidebar">
+    <section class="widget wow fadeInUp">
+      <div class="section-title">
+        <h3>热门文章</h3>
+      </div>
+      <ul>
+          {dede:arclist row='8' titlelen='80' typeid='top' orderby='click'}
+          <li> <i class="a[field:global name=autoindex runphp="yes"] @me; [/field:global]">[field:global name=autoindex runphp="yes"] @me; [/field:global]</i> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]" target="_blank">[field:title/]</a> </li>
+          {/dede:arclist}
+      </ul>
+    </section>
+    <section class="widget theme-widget wow fadeInUp tag-label">
+      <div class="section-title ">
+        <h3>标签列表</h3>
+      </div>
+      <ul >
+          {dede:tag row='40' sort='total'}
+          <li><a href="/tags/[field:tag /]/" class="tags[field:id runphp='yes']@me = rand(0,7);[/field:id] tagc[field:highlight /]">[field:tag /]</a></li>
+          {/dede:tag}
+      </ul>
+    </section>
+  </aside>
+</div>
+
+<div class="inner friendlinks wow fadeIn">
+  <div class="section-title"> 友情链接</div>
+  <ul>
+      {dede:flink row='24' type='text' titlelen="24"  typeid="0"}
+      <li>[field:link /]</li>
+      {/dede:flink}
+  </ul>
+</div>
+
+<!--公共底部-->
+{dede:include filename="footer.htm"/}
+</body>
+</html>

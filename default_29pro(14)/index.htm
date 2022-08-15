@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>{dede:global.cfg_webname/}</title>
+  <meta name="description" content="{dede:global.cfg_description/}" />
+  <meta name="keywords" content="{dede:global.cfg_keywords/}" />
+  {dede:include filename="meta.htm"/}>
+</head>
+
+<body>
+  <!--公共头部-->
+  {dede:include filename="header.htm"/}
+  <!--公共头部-->
+  <p class="pheaderpad"></p>
+  <div class="container" style="margin-top:15px;">
+    <div class="row">
+      <div class="col-md-8 col-xs-12">
+        <section>
+          <div class="swiper-container thbanner">
+            <!--头条幻灯-->
+            <div class="swiper-wrapper">
+              {dede:arclist titlelen='80' flag='c,p' typeid='top' row='5'}
+              <div class="swiper-slide">
+                <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]" target="_blank"> <img class="th-img thbanner-img-height" src="[field:litpic/]" />
+                <div class="thbn-title">
+                  <span>[field:title/]</span>
+                </div>
+                </a>
+              </div>
+              {/dede:arclist}
+            </div>
+            <!--头条幻灯-->
+            <div class="swiper-pagination"></div>
+            <!--分页器。如果放置在swiper-container外面，需要自定义样式。-->
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </section>
+      </div>
+      <div class="col-md-4 col-xs-12 wap_margintop">
+        <section>
+          <div class="thhotnews">
+            <div class="thhotnews_title">
+              <div class="iconhot">
+                <i class="iconfont  icon-hot"></i>头条资讯
+              </div>
+            </div>
+            <!--二级头条-->
+            <div class="thhotnews_con">
+              {dede:arclist titlelen='80' flag='c' typeid='top' limit='5,3'}
+              <dl>
+                <dt>
+                  <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a>
+                </dt>
+                <dd>
+                  <i class="iconfont  icon-quotes-after icon_yin"></i>
+                  <p>[field:description /]...</p>
+                  <i class="iconfont  icon-yinhao2 icon_yin"></i>
+                </dd>
+              </dl>
+              {/dede:arclist}
+            </div>
+            <!--二级头条-->
+          </div>
+        </section>
+      </div>
+      <div class="col-md-3 col-xs-12 wap_margintop">
+        <!--站点介绍-->
+        <!--站点介绍-->
+      </div>
+    </div>
+  </div>
+  <div class="container th_margintop wap_isnone">
+    <div class="row">
+      <div class="col-md-12 col-xs-12 ">
+        <section>
+          <div class="thleftcon">
+            <div class="thleftbt">
+              <span>随机播报</span>
+              <div class="th-button-next">
+                <i class="iconfont  icon-jiantou_zuo"></i>
+              </div>
+              <div class="th-button-prev">
+                <i class="iconfont  icon-jiantou_you"></i>
+              </div>
+            </div>
+            <!--随机文章-->
+            <div class="swiper-container thslide2">
+              <div class="swiper-wrapper">
+                {dede:arclist row='10'  titlelen='35' orderby='rand'}
+                <div class="swiper-slide">
+                  <div class="thslidelist gundongimg ">
+                    <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" class="silde_a_border"> <img class="th-img thslide2-img-height" src="[field:litpic/]" alt="[field:title/]" title="[field:title/]" /> </a>
+                    <div class="thslidetitle">
+                      <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a>
+                    </div>
+                  </div>
+                </div>
+                {/dede:arclist}
+              </div>
+            </div>
+            <!--随机文章-->
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+  <!-- daodu start -->
+  <div class="container th_margintop">
+    <div class="row">
+      <div class="col-md-12 col-xs-12">
+        <section>
+          <div class="thjingxuan">
+            <div class="thjingxuan_title">
+              <i></i>精彩推荐
+            </div>
+            <!--二级推荐阅读-->
+            <section class="thjingxuan_sec">
+              {dede:arclist limit='0,6' titlelen='80' typeid='top' flag='a'}
+              <div class="col-md-4 col-xs-6  th_padding">
+                <div class="thliorder1">
+                  <div class="gundongimg">
+                    <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]"><img class="th-img gundong-img-height" src="[field:litpic /]" /></a>
+                  </div>
+                  <div class="daodu">
+                    <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a>
+                  </div>
+                  <div class="daoducon">
+                    <p>[field:description /]...</p>
+                  </div>
+                  <div class="thinfo">
+                    时间：[field:pubdate function="MyDate('Y-m-d',@me)"/]&nbsp;&nbsp;阅读：[field:click/]
+                  </div>
+                </div>
+              </div>
+              {/dede:arclist}
+            </section>
+            <!--二级推荐阅读-->
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+  <div class="container th_margintop">
+    <div class="row">
+      <div class="col-md-6 col-xs-12">
+        <section>
+          <div class="thjingxuan">
+            <div class="thjingxuan_title">
+              <i></i>精选推荐
+            </div>
+            <!--一级推荐阅读-->
+            <section class="thjingxuan_sec">
+              {dede:arclist row='6' titlelen='80' typeid='top' flag='a'}
+              <div class="col-md-4 col-xs-6 ">
+                <div class="thliorder1">
+                  <div class="thliorder1_title">
+                    <span><a href="[field:typedir /]/" title="[field:typename /]">[field:typename /]</a></span>
+                    <div class="thtime">[field:pubdate function="MyDate('m-d',@me)"/]          </div>
+                  </div>
+                  <div class="daodu">
+                    <a href="field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a>
+                  </div>
+                  <div class="daoducon">
+                    <p>[field:description /]...</p>
+                  </div>
+                </div>
+              </div>
+              {/dede:arclist}
+            </section>
+            <!--一级推荐阅读-->
+          </div>
+        </section>
+      </div>
+      <div class="col-md-6 col-xs-12 wap_margintop">
+        <section>
+          <div class="thleftcon" style="height:363px;">
+            <div class="thleftbt">
+              <span>排行榜</span>
+            </div>
+            <ul class="th-5">
+              {dede:arclist row='8' titlelen='80' typeid='top' orderby='click'}
+              <li><span class="date">[field:click /]</span><i>[field:global name=autoindex runphp="yes"] @me; [/field:global]</i><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a></li>
+              {/dede:arclist}
+            </ul>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <div class="container" style="margin-top:5px;">
+    <div class="row">
+      {dede:channelartlist type ='top'}
+      <div class="col-md-6 col-xs-12  pc_margintop">
+        <section>
+          <div class="thleftcon" style="height:363px;">
+            <div class="thleftbt thwenzhang">
+              <span>{dede:field name='typename'/}</span>
+              <div class="listMore">
+                <a href="{dede:field name='typedir'/}/">More +</a>
+              </div>
+            </div>
+            <ul class="th-5">
+              {dede:arclist titlelen='80' row='8'}
+              <li><span class="date">[field:pubdate function="MyDate('Y-m-d',@me)"/]</span><i>[field:global name=autoindex runphp="yes"] @me; [/field:global]</i><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]" target="_blank">[field:title/]</a></li>
+              {/dede:arclist}
+            </ul>
+          </div>
+        </section>
+      </div>
+      {/dede:channelartlist}
+    </div>
+  </div>
+
+  <section>
+    <div class="container th_margintop">
+      <div class="row">
+        <!--line-->
+        <div class="col-md-12 col-xs-12">
+          <section>
+            <div class="thleftcon">
+              <div class="thleftbt">
+                <span>友情链接</span>
+              </div>
+              <ul class="th-8">
+                {dede:flink row='24' type='text' titlelen="24"  typeid="0"}
+                <li>[field:link /]</li>
+                {/dede:flink}
+              </ul>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--公共底部-->
+    {dede:include filename="footer.htm"/}
+</body>
+
+</html>
