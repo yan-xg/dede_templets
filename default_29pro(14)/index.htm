@@ -90,7 +90,7 @@
             <!--随机文章-->
             <div class="swiper-container thslide2">
               <div class="swiper-wrapper">
-                {dede:arclist row='10'  titlelen='35' orderby='rand'}
+                {dede:arclist typeid='top' orderby='pubdate' titlelen='80' limit='15,10'}
                 <div class="swiper-slide">
                   <div class="thslidelist gundongimg ">
                     <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" class="silde_a_border"> <img class="th-img thslide2-img-height" src="[field:litpic/]" alt="[field:title/]" title="[field:title/]" /> </a>

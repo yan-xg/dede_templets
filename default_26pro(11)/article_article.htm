@@ -49,7 +49,7 @@
         <div class="widget">
           <h3><span>随便看看</span></h3>
           <ul class="recent-posts-widget">
-            {dede:arclist row='5'  titlelen='35' orderby='rand'}
+            {dede:arclist typeid='top' orderby='pubdate' titlelen='80' limit='15,5'}
             <li>
               <div class="recent-posts-img"><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html"><img src="[field:litpic/]" class="thumbnail" alt="[field:title/]"></a></div>
               <div class="recent-posts-title">
