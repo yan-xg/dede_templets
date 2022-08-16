@@ -14,3 +14,7 @@ UPDATE dede_arcrank set adminrank=1 where membername='开放浏览'
 
 5、创建栏目，生成对应伪静态规则，检查模板中url规则是否与伪静态对应
 6、宝塔站点配置文件修改，新增重定向到m端
+     #根据ua判断，如果手机端访问时，重定向到m
+     if ($http_user_agent ~* "(Android|iPhone|Windows Phone|iPad|webOS|BlackBerry|mobile)" ) {
+         rewrite ^/(.*)$ http://m.fzkb.cn/$1 permanent;
+     }
