@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>{dede:field.title/} - {dede:global.cfg_webname/}</title>
+    <meta name="keywords" content="{dede:field.keywords/}" />
+    <meta name="description" content="{dede:field.description function='html2text(@me)'/}" />
+    {dede:include filename="meta.htm"/}
+    <style>
+        .pagenavi ul li{ display:inline}
+    </style>
+</head>
+<body>
+<div id="wrapper">
+    <!--公共头部-->
+    {dede:include filename="header.htm"/}
+  <div id="main">
+    <div class="wrap">
+      <div class="breadcrumb"><a href="/">首页</a>&nbsp;>&nbsp;<a href="{dede:field.typedir/}/">{dede:field.typename/}</a></div>
+      <!-- .breadcrumbs -->
+      <div class="posts">
+          {dede:list pagesize='15'}
+          <div class="content">
+              <div class="content-header">
+                  <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title /]" target="_blank"><h2>[field:title /]</h2></a>
+                  <div class="content-info">
+                      <span class="mr10 postclock">[field:pubdate function="MyDate('Y-m-d ',@me)"/]</span>
+                      <span class="mr10 postuser">[field:typename/]<a></a></span>
+                      <span class="mr10 posteye"><i class=" icon-eye" ></i>[field:click/]</span>
+                  </div>
+              </div>
+
+              <div class="content-img"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title /]" target="_blank"> <img class="lazy thumbnail" src="[field:litpic /]" data-original="[field:litpic /]" alt="[field:title /]" /> </a> </div>
+              <div class="content-note">
+                  <p>[field:description /]...</p>
+                  <span class="category-color"><a href="[field:typedir /]">[field:typename /]</a></span>
+              </div>
+          </div>
+          {/dede:list}
+      </div>
+      <div class="post-read-more clearfix mb30 pagenavi">
+          <ul>{dede:pagelist listsize="2" listitem="info,index,end,pre,next,pageno,option"/}</ul>
+      </div>
+    </div>
+  </div>
+    <div class="sidebar">
+        <div class="widget widget_suxingme_hotpost">
+            <div class="w_title">
+                <h3>热门文章</h3>
+            </div>
+            {dede:arclist row='3' titlelen='80' typeid='top' orderby='click'}
+            <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" rel="bookmark" title="[field:title /]">
+                <div class="overlay"></div>
+                <img src="[field:litpic /]" alt="[field:title /]" class="thumbnail" /><span><i class="icon-eye"></i>[field:click/]</span>
+                <p class="title">[field:title /]</p>
+                </a></li>
+            {/dede:arclist}
+        </div>
+
+        <div class="widget widget_suxingme_mostviews">
+            <div class="w_title">
+                <h3>随便看看</h3>
+            </div>
+            {dede:arclist limit='15,3' titlelen='80' typeid='top'}
+            <li>
+                <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" rel="bookmark" title="[field:title /]">
+                <div class="overlay"></div>
+                <img src="[field:litpic /]" alt="[field:title /]" class="thumbnail" /><span></span>
+                <p class="title">[field:title /]</p>
+                </a>
+            </li>
+            {/dede:arclist}
+        </div>
+
+        <div class="widget suxingme_tag">
+            <div class="w_title">
+                <h3>热门标签</h3>
+            </div>
+            <div class="widge_tags">
+                <ul class="widget_tags_ul">
+                    {dede:tag row='40' sort='total'}
+                    <li><a href="/tags/[field:tag /]/">[field:tag /]</a></li>
+                    {/dede:tag}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--公共底部-->
+{dede:include filename="footer.htm"/}
+
+<script type="text/javascript" src="./js/responsiveslides.min.js"></script> 
+<script>
+		$(function() {
+			$('#suxingmeslider').responsiveSlides({
+				pager: true,
+				nav: true,
+				namespace: 'centered-btns',
+			});
+		});
+	</script> 
+<script type='text/javascript' src='./js/wp-embed.min.js'></script>
+
+</body>
+</html>

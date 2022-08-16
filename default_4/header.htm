@@ -1,0 +1,17 @@
+<div id="sitetopbar">
+    <div class="site-logo">
+        <h1><a href="/" title="{dede:global.cfg_webname/}"> <img src="{dede:global.cfg_basehost/}/images/logo.png" alt="{dede:global.cfg_webname/}"> </a></h1>
+    </div>
+    <div class="site-logo-m">
+        <h1><a href="/" title="{dede:global.cfg_webname/}">{dede:global.cfg_webname/}</a></h1>
+    </div>
+    <div role="navigation"  class="site-nav left-menu">
+        <h1 class="minimenu-text"><i class="icon-align-justify"></i></h1>
+        <ul id="menu-navigation" class="menu">
+            <li class='{dede:field name=typeid runphp='yes'}(@me=='0') ? @me='current-menu-item' : @me=''; {/dede:field}' ><a href="/">首页</a></li>
+            {dede:channel type='top' currentstyle='<li class="current-menu-item"><a href="~typelink~">~typename~</a></li>'}
+            <li><a href="[field:typelink /]">[field:typename/]</a></li>
+            {/dede:channel}
+        </ul>
+    </div>
+</div>
