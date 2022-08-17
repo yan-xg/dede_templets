@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>{dede:global.cfg_webname/}</title>
+    <meta name="description" content="{dede:global.cfg_description/}" />
+    <meta name="keywords" content="{dede:global.cfg_keywords/}" />
+    {dede:include filename="meta.htm"/}
+</head>
+<body>
+<!--公共头部-->
+{dede:include filename="header.htm"/}
+
+<div class="wrap">
+  <div id="content">
+    <div id="contentleft">
+      <div id="banners" class="ui-banner">
+        <ul class="ui-banner-slides">
+            {dede:arclist titlelen='80' flag='p' typeid='top' row='5'}
+            <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank"><img src="[field:litpic /]" alt="[field:title /]" /></a></li>
+            {/dede:arclist}
+        </ul>
+        <ul class="ui-banner-slogans">
+            {dede:arclist titlelen='80' flag='c' typeid='top' row='5'}
+            <li>
+                <h3 onClick="javascript:window.open('[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html')">[field:title /]</h3>
+                <div class="des"> [field:description /]...</div>
+            </li>
+            {/dede:arclist}
+        </ul>
+      </div>
+      <script src="{dede:global.cfg_templets_skin/}/static/js/jqueryui.bannerize.js" type="text/javascript"></script> 
+      <script type="text/javascript">
+$(function(){
+	$('#banners').bannerize({
+		shuffle: 1,
+		interval: "8"
+	});
+});
+</script>
+      <div class="itbox">
+        <h3>今日头条</h3>
+        <div id="itscroll" class="itscroll">
+          <div class="con">
+            <ul>
+                {dede:arclist titlelen='80' flag='c' typeid='top' limit='5,10'}
+                <li><i class="fa fa-caret-left"></i><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html">[field:title /]</a></li>
+                {/dede:arclist}
+            </ul>
+          </div>
+        </div>
+      </div>
+      <script src="{dede:global.cfg_templets_skin/}/static/js/xMarquee.js" type="text/javascript"></script>
+      <div class="cmsbox">
+          {dede:channelartlist type ='top'}
+          <div class="cmslist">
+              <div class="xyti"> <h3><i class="fa fa-list-ul"></i><a href="{dede:field name='typedir'/}" class="mcolor">{dede:field name='typename'/}</a></h3> </div>
+              <ul>
+                  {dede:arclist row='1'}
+                  <li class="first"><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title /]" class="pic"><img src="{APP_PATH}/statics/7/images/nopic.gif" data-original="[field:litpic /]" alt="[field:title /]" /></a><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title /]" class="text">[field:title /]</a>
+                      <div class="des"> [field:description /]...</div>
+                  </li>
+                  {/dede:arclist}
+
+                  {dede:arclist limit='1,4'}
+                  <li><i class="fa fa-caret-right"></i><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title /]">[field:title /]</a></li>
+                  {/dede:arclist}
+
+              </ul>
+          </div>
+          {/dede:channelartlist}
+      </div>
+
+      <ul class="loglist">
+          {dede:arclist row='10' titlelen='80' typeid='top'}
+          <li class="con">
+              <div class="info"> <span class="sn"> <a href="[field:typedir /]" class="mcolor">[field:typename /]</a> </span> </div>
+              <div class="des"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank" class="h2">[field:title /]</a> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank" class="pic"> <img src="{APP_PATH}/statics/7/images/nopic.gif" data-original="[field:litpic /]" title="[field:title /]" /> </a>
+                  <p class="text">[field:description /]...</p>
+                  <p class="tags">发布于：[field:pubdate function="MyDate('Y-m-d ',@me)"/]</p>
+              </div>
+              <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank" class="more">详细阅读<i class="fa fa-angle-right"></i></a>
+          </li>
+          {/dede:arclist}
+      </ul>
+      <script src="{dede:global.cfg_templets_skin/}/static/js/jquery.masonry.min.js" type="text/javascript"></script> 
+      <script src="{dede:global.cfg_templets_skin/}/static/js/jquery.infinitescroll.min.js" type="text/javascript"></script> 
+      <script type="text/javascript">
+$(function(){
+	var $container = $('#ajax-more');
+	$container.imagesLoaded( function(){
+		$container.masonry({
+			itemSelector : '.wapost',
+			isAnimated: true,
+			isResizable: false,
+		});
+	});
+	$container.infinitescroll({
+		navSelector  : '#pagenavi',
+		nextSelector : '#pagenavi a',
+		itemSelector : '.wapost',
+		animate : true,  //是否采用动态效果
+		extraScrollPx: 200, //向下滚动的像素的动态效果
+		maxPage: 2,
+		loading: {
+			msgText: '加载中...',
+        	finishedMsg: '已完成最大加载设置...',
+			selector: '.loading'
+        }  
+	},function(newElems){
+ 		var $newElems = $(newElems);   
+        $('#ajax-more').masonry('appended', $newElems, true);  
+		$("#ajax-more img").lazyload({
+			effect : "fadeIn"
+		});
+	});
+});
+</script>
+      <div id="pagenavi"></div>
+    </div>
+    <!-- end #contentleft--> 
+    <ul id="sidebar">
+  <li id="blogsort">
+    <h3 class="mcolor"><i class="fa fa-folder-open-o"></i><span>分类导航</span></h3>
+    <ul>
+        <li><a href="/">首页</a></li>
+        {dede:channel type='top'}
+        <li><a href="[field:typelink /]">[field:typename/]</a></li>
+        {/dede:channel}
+    </ul>
+  </li>
+  <li class="rlist1">
+    <h3><span>最新文章</span></h3>
+    <ul id="newlog">
+        {dede:arclist limit='10,5' titlelen='80' typeid='top'}
+        <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html">[field:title /]</a></li>
+        {/dede:arclist}
+    </ul>
+  </li>
+  <li class="rlist1">
+    <h3><span>热门文章</span></h3>
+    <ul id="hotlog">
+        {dede:arclist row='5' titlelen='80' typeid='top' orderby='click'}
+        <li><i class='mcolor' >[field:global name=autoindex runphp= 'yes' ] @me; [/field:global]</i><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html">[field:title /]</a></li>
+        {/dede:arclist}
+    </ul>
+  </li>
+        <li class="tag-label">
+            <h3><span>热门标签</span></h3>
+            <ul id="randlog">
+                {dede:tag row='40' sort='total'}
+                <li><a href="/tags/[field:tag /]/" class="tags[field:id runphp='yes']@me = rand(0,7);[/field:id] tagc[field:highlight /]">[field:tag /]</a></li>
+                {/dede:tag}
+            </ul>
+        </li>
+</ul>
+ </div>
+  <!--end #content--> 
+</div>
+<!--end wrap-->
+<div id="footerbar">
+    <div class="friendlink">
+        <div class="friendlinktitle">友情链接</div>
+        {dede:flink row='24' type='text' titlelen="24"  typeid="0"}
+        <i class="fa fa-link"></i>[field:link /]
+        {/dede:flink}
+    </div>
+    {dede:include filename="footer.htm"/}
+</div>
+<!--end #footerbar-->
+<div id="backtop"><span class="fa fa-space-shuttle fa-rotate-270"></span></div>
+
+</body>
+</html>

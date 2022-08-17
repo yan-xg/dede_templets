@@ -1,0 +1,18 @@
+<div id="mainav">
+    <div class="navbox">
+        <div class="wrap">
+            <div class="mlogo"> <a href="/" title="{dede:global.cfg_webname/}"> <img src="{dede:global.cfg_basehost/}/images/logo.png" alt="{dede:global.cfg_webname/}"> </a> </div>
+            <div class="topmenu">
+                <ul class="bar">
+                    <li class="item common"><a href="/">首页</a></li>
+                    {dede:channel type='top' currentstyle='<li class="item common"><a href="~typelink~">~typename~</a></li>'}
+                    <li class="item common"><a href="[field:typelink /]">[field:typename/]</a></li>
+                    {/dede:channel}
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <i class="fa fa-navicon"></i>
+</div>

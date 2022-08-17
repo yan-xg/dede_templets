@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>{dede:field.title/} - {dede:global.cfg_webname/}</title>
+  <meta name="keywords" content="{dede:field.keywords/}" />
+  <meta name="description" content="{dede:field.description function='html2text(@me)'/}" />
+  {dede:include filename="meta.htm"/}
+</head>
+<body>
+<!--公共头部-->
+{dede:include filename="header.htm"/}
+
+<section class="container">
+  <div class="content-wrap">
+    <div class="content">
+      <article class="excerpttu">
+        <header>
+          <a href="/">首页</a> &gt; <a href='#'>TAG标签</a> &gt; {dede:field.title /}
+        </header>
+        <p class="note">  </p>
+      </article>
+      {dede:list pagesize='10'}
+      <article class="excerpt">
+        <a class="focus" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html"><img src="[field:litpic /]" alt="[field:title /]"/></a>
+        <header>
+          <a href="[field:typedir /]" class="cat" title="[field:typename /]">[field:typename /]</a>
+          <h2><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title /]">[field:title /]</a></h2>
+        </header>
+        <p class="meta">
+          <time>[field:pubdate function="MyDate('Y-m-d ',@me)"/]</time>
+          <span class="pv">阅读([field:click/])</span> </p>
+        <p class="note pc"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title /]">[field:description /]...</a></p>
+      </article>
+      {/dede:list}
+      <div class="pagination">
+        <ul>
+          {dede:pagelist listsize="2" listitem="info,index,end,pre,next,pageno,option"/}
+        </ul>
+      </div>
+      <div class="cygswtags tags">
+        <ul>
+          {dede:tag row='40' sort='total'}
+          <li><a href="/tags/[field:tag /]/">[field:tag /]</a></li>
+          {/dede:tag}
+        </ul>
+      </div>
+    </div>
+  </div>
+  <aside class="sidebar pc">
+    <dl class="function" id="divPrevious">
+      <dt class="function_t">热门文章</dt>
+      <dd class="function_c">
+        <ul>
+          {dede:arclist row='10' titlelen='80' typeid='top' orderby='click'}
+          <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html">[field:title /]</a></li>
+          {/dede:arclist}
+        </ul>
+      </dd>
+    </dl>
+
+    <dl class="function" id="divPrevious">
+      <dt class="function_t">最新文章</dt>
+      <dd class="function_c">
+        <ul>
+          {dede:arclist limit='0,10' titlelen='80' typeid='top'}
+          <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html">[field:title /]</a></li>
+          {/dede:arclist}
+        </ul>
+      </dd>
+    </dl>
+  </aside>
+</section>
+<!--公共底部-->
+{dede:include filename="footer.htm"/}
+
+</body>
+</html>
+<!--37.52 ms , 11 query , 2371kb memory , 0 error-->
