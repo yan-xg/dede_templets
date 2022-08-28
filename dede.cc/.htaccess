@@ -3,20 +3,30 @@ if ($host = 'm.jingyang.org') {
   rewrite ^/index.html$ /m/index.php last;
   rewrite ^/index.php /m/index.php last;
 
-  rewrite "^/kjxw/$" /m/list.php?tid=1 last;
-  rewrite "^/kjxw$" /m/list.php?tid=1 last;
-  rewrite "^/kjxw/list_1_([0-9]+).html$" /m/list.php?tid=1&PageNo=$1 last;
-  rewrite "^/kjxw/([0-9]+)_([0-9]+)/([0-9]+).html$" /m/view.php?tid=1&aid=$3 last;
+  rewrite "^/news/$" /m/list.php?tid=1 last;
+  rewrite "^/news$" /m/list.php?tid=1 last;
+  rewrite "^/news/list_1_([0-9]+).html$" /m/list.php?tid=1&PageNo=$1 last;
+  rewrite "^/news/([0-9]+)/([0-9]+).html$" /m/view.php?tid=1&aid=$2 last;
 
-  rewrite "^/qchq/$" /m/list.php?tid=2 last;
-  rewrite "^/qchq$" /m/list.php?tid=2 last;
-  rewrite "^/qchq/list_2_([0-9]+).html$" /m/list.php?tid=2&PageNo=$1 last;
-  rewrite "^/qchq/([0-9]+)_([0-9]+)/([0-9]+).html$" /m/view.php?tid=2&aid=$3 last;
+  rewrite "^/keji/$" /m/list.php?tid=2 last;
+  rewrite "^/keji$" /m/list.php?tid=2 last;
+  rewrite "^/keji/list_2_([0-9]+).html$" /m/list.php?tid=2&PageNo=$1 last;
+  rewrite "^/keji/([0-9]+)/([0-9]+).html$" /m/view.php?tid=2&aid=$2 last;
 
-  rewrite "^/shbk/$" /m/list.php?tid=3 last;
-  rewrite "^/shbk$" /m/list.php?tid=3 last;
-  rewrite "^/shbk/list_3_([0-9]+).html$" /m/list.php?tid=3&PageNo=$1 last;
-  rewrite "^/shbk/([0-9]+)_([0-9]+)/([0-9]+).html$" /m/view.php?tid=3&aid=$3 last;
+  rewrite "^/dongtai/$" /m/list.php?tid=3 last;
+  rewrite "^/dongtai$" /m/list.php?tid=3 last;
+  rewrite "^/dongtai/list_3_([0-9]+).html$" /m/list.php?tid=3&PageNo=$1 last;
+  rewrite "^/dongtai/([0-9]+)/([0-9]+).html$" /m/view.php?tid=3&aid=$2 last;
+
+  rewrite "^/yule/$" /m/list.php?tid=4 last;
+  rewrite "^/yule$" /m/list.php?tid=4 last;
+  rewrite "^/yule/list_4_([0-9]+).html$" /m/list.php?tid=4&PageNo=$1 last;
+  rewrite "^/yule/([0-9]+)/([0-9]+).html$" /m/view.php?tid=4&aid=$2 last;
+
+  rewrite "^/soft/$" /m/list.php?tid=5 last;
+  rewrite "^/soft$" /m/list.php?tid=5 last;
+  rewrite "^/soft/list_5_([0-9]+).html$" /m/list.php?tid=5&PageNo=$1 last;
+  rewrite "^/soft/([0-9]+)/([0-9]+).html$" /m/view.php?tid=5&aid=$2 last;
 }
 
 rewrite ^/$ /index.php last;
@@ -24,18 +34,28 @@ rewrite "^/index.html$" /index.php last;
 rewrite "^/sitemap.xml$" /sitemap.php last;
 rewrite "^/tags/(.+)" /tags.php?/$1 last;
 
-rewrite "^/kjxw/$" /plus/list.php?tid=1 last;
-rewrite "^/kjxw$" /plus/list.php?tid=1 last;
-rewrite "^/kjxw/list_1_([0-9]+).html$" /plus/list.php?tid=1&PageNo=$1 last;
-rewrite "^/kjxw/([0-9]+)_([0-9]+)/([0-9]+).html$" /plus/view.php?tid=1&aid=$3 last;
+rewrite "^/news/$" /plus/list.php?tid=1 last;
+rewrite "^/news$" /plus/list.php?tid=1 last;
+rewrite "^/news/list_1_([0-9]+).html$" /plus/list.php?tid=1&PageNo=$1 last;
+rewrite "^/news/([0-9]+)/([0-9]+).html$" /plus/view.php?tid=1&aid=$2 last;
 
 
-rewrite "^/qchq/$" /plus/list.php?tid=2 last;
-rewrite "^/qchq$" /plus/list.php?tid=2 last;
-rewrite "^/qchq/list_2_([0-9]+).html$" /plus/list.php?tid=2&PageNo=$1 last;
-rewrite "^/qchq/([0-9]+)_([0-9]+)/([0-9]+).html$" /plus/view.php?tid=2&aid=$3 last;
+rewrite "^/keji/$" /plus/list.php?tid=2 last;
+rewrite "^/keji$" /plus/list.php?tid=2 last;
+rewrite "^/keji/list_2_([0-9]+).html$" /plus/list.php?tid=2&PageNo=$1 last;
+rewrite "^/keji/([0-9]+)/([0-9]+).html$" /plus/view.php?tid=2&aid=$2 last;
 
-rewrite "^/shbk/$" /plus/list.php?tid=3 last;
-rewrite "^/shbk$" /plus/list.php?tid=3 last;
-rewrite "^/shbk/list_3_([0-9]+).html$" /plus/list.php?tid=3&PageNo=$1 last;
-rewrite "^/shbk/([0-9]+)_([0-9]+)/([0-9]+).html$" /plus/view.php?tid=3&aid=$3 last;
+rewrite "^/dongtai/$" /plus/list.php?tid=3 last;
+rewrite "^/dongtai$" /plus/list.php?tid=3 last;
+rewrite "^/dongtai/list_3_([0-9]+).html$" /plus/list.php?tid=3&PageNo=$1 last;
+rewrite "^/dongtai/([0-9]+)/([0-9]+).html$" /plus/view.php?tid=3&aid=$2 last;
+
+rewrite "^/yule/$" /plus/list.php?tid=4 last;
+rewrite "^/yule$" /plus/list.php?tid=4 last;
+rewrite "^/yule/list_4_([0-9]+).html$" /plus/list.php?tid=4&PageNo=$1 last;
+rewrite "^/yule/([0-9]+)/([0-9]+).html$" /plus/view.php?tid=4&aid=$2 last;
+
+rewrite "^/soft/$" /plus/list.php?tid=5 last;
+rewrite "^/soft$" /plus/list.php?tid=5 last;
+rewrite "^/soft/list_5_([0-9]+).html$" /plus/list.php?tid=5&PageNo=$1 last;
+rewrite "^/soft/([0-9]+)/([0-9]+).html$" /plus/view.php?tid=5&aid=$2 last;

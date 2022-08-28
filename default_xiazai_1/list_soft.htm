@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>{dede:field.title/} - {dede:global.cfg_webname/}</title>
+  <meta name="keywords" content="{dede:field.keywords/}" />
+  <meta name="description" content="{dede:field.description function='html2text(@me)'/}" />
+  {dede:include filename="meta.htm"/}
+</head>
+<body>
+{dede:include filename="header.htm"/}
+
+<nav class="breadcrumb container ellipsis"><a href="/">首页</a>&nbsp;>&nbsp;<a href="{dede:field.typedir/}/">{dede:field.typename/}</a> >  </nav>
+<div id="content" class="content container clearfix">
+  <section id="mainbox" class="fl br mb">
+    <div class="new-post">
+      {dede:list pagesize='10'}
+      <article class="app-list sb clearfix">
+        <figure class="figure fl"> <a class="thumbnail" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title /]"> <img class="img-cover br" src="[field:litpic /]" alt="[field:title /]" title="[field:title /]"> </a> </figure>
+        <div class="content fl">
+          <h2 class="title ellipsis"><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title /]">[field:title /]</a></h2>
+          <p class="intro ellipsis">[field:description /]... </p>
+          <p class="data clearfix">
+            <time class="time fl"> <i class="iconfont icon-time"></i>[field:pubdate function="MyDate('Y-m-d',@me)"/]</time>
+            <span class="view fl hidden-sm-md-lg"><i class="iconfont icon-view"></i>[field:click /]</span> </p>
+        </div>
+        <p class="btn fr"><a rel="nofollow" class="download transition br" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html">立即查看</a></p>
+      </article>
+      {/dede:list}
+      </div>
+    <div class="pagebar sb">
+      <div class="nav-links">
+          <ul>
+              {dede:pagelist listitem="info,index,end,pre,next,pageno,option"/}
+          </ul>
+      </div>
+    </div>
+  </section>
+
+  <aside id="sidebar" class="hidden-sm-md-lg fr">
+    <div class="theiaStickySidebar">
+        <section id="divTags" class="widget widget_tags sb br mb">
+            <p class="c-title mb10"><span class="name">标签列表</span></p>
+            <ul class="widget-content divTags">
+                {dede:tag row='40' sort='total'}
+                <li><a href="/tags/[field:tag /]/" class="tags[field:id runphp='yes']@me = rand(0,7);[/field:id] tagc[field:highlight /]">[field:tag /]</a></li>
+                {/dede:tag}
+            </ul>
+        </section>
+
+        <section id="divPrevious" class="widget widget_previous sb br mb">
+            <p class="c-title mb10"><span class="name">最近发表</span></p>
+            <ul class="widget-content divPrevious">
+                {dede:arclist typeid='1,2,3,4' row='10' orderby='pubdate'}
+                <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html">[field:title/]</a></li>
+                {/dede:arclist}
+            </ul>
+        </section>
+
+        <section id="top10" class="widget widget_top10 sb br mb">
+            <ul class="widget-content top10">
+                <div class="table_card">
+                    <ul class="tab">
+                        <li class="active">热门</li>
+                        <li>最新</li>
+                    </ul>
+                    <div class="tabCon">
+                        <ul class="list on">
+                            {dede:arclist typeid='5' row='8'  orderby='click'}
+                            <li class="item">
+                                <div class="clearfix">
+                                    <span class="fl iconfont icon-top10 list list-1"><small>[field:global name=autoindex runphp="yes"] @me; [/field:global]</small></span>
+                                    <a class="thumbnail fl" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">
+                                    <img class="img img-cover br" src="[field:litpic/]" alt="[field:title/]" title="[field:title/]">
+                                    </a>
+                                    <div class="fr-wrap">
+                                        <div class="title-wrap">
+                                            <h2 class="title ellipsis"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a> </h2>
+                                            <p class="intro br clearfix ellipsis"> [field:click/]次下载 </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            {/dede:arclist}
+                        </ul>
+                        <ul class="list">
+                            {dede:arclist typeid='5' row='8' orderby='pubdate'}
+                            <li class="item">
+                                <div class="clearfix">
+                                    <span class="fl iconfont icon-top10 list list-1"><small>[field:global name=autoindex runphp="yes"] @me; [/field:global]</small></span>
+                                    <a class="thumbnail fl" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">
+                                    <img class="img img-cover br" src="[field:litpic/]" alt="[field:title/]" title="[field:title/]">
+                                    </a>
+                                    <div class="fr-wrap">
+                                        <div class="title-wrap">
+                                            <h2 class="title ellipsis"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a> </h2>
+                                            <p class="intro br clearfix ellipsis"> [field:click/]次下载 </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            {/dede:arclist}
+
+                        </ul>
+                    </div>
+                </div>
+            </ul>
+        </section>
+    </div>
+  </aside>
+</div>
+{dede:include filename="footer.htm"/}
+
+
+<div id="mask-hidden" class="mask-hidden transition"></div>
+<script type="text/javascript">
+	$(document).ready(function(e) {
+		$(".table_card .tab li").click(function() {
+			$(".table_card .tab li").eq($(this).index()).addClass("active").siblings().removeClass("active");
+			$(".table_card .tabCon ul").hide().eq($(this).index()).show();
+		})
+	});
+</script> 
+</body>
+</html>

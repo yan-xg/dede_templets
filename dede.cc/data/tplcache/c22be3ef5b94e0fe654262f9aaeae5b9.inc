@@ -1,0 +1,4 @@
+<li class="item fl"> <a class="thumbnail" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]"> <img class="img-cover br" src="[field:litpic/]" alt="[field:title/]" title="[field:title/]"> </a>
+                    <h2 class="title ellipsis"><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a><span class="sub ellipsis">[field:click/]次下载</span></h2>
+                    <a rel="nofollow" class="download br" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html">下载</a>
+                </li>

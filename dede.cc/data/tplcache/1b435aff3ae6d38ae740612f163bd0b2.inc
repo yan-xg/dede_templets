@@ -1,0 +1,1 @@
+<a class="more" href="[field:typeurl/]">查看全部></a>

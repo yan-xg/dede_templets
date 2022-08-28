@@ -1,0 +1,1 @@
+<p class="c-title"> <span>[field:typename /]</span> <a class="more" href="[field:typedir /]/" title="更多[field:typename /]">更多</a> </p>
