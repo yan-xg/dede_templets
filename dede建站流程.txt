@@ -8,9 +8,13 @@ ALTER TABLE `dede_archives` MODIFY COLUMN `title`  char(180) CHARACTER SET utf8 
 UPDATE dede_arcrank set adminrank=1 where membername='开放浏览'
 
 4、更改用户组->信息发布员->权限
+     后台->系统->图片水印设置(关闭)
      后台->系统->核心设置：开启伪静态
 		          Html编辑器支持改成：ckeditor
      后台->系统->其它选项：文档标题最大长度：180
+     后台->系统->添加新变量
+           a.  网站备案号(cfg_beian)
+           b.  软件下载地址(cfg_softurl)
 
 5、创建栏目，生成对应伪静态规则，检查模板中url规则是否与伪静态对应
 6、宝塔站点配置文件修改，新增重定向到m端
@@ -18,3 +22,7 @@ UPDATE dede_arcrank set adminrank=1 where membername='开放浏览'
      if ($http_user_agent ~* "(Android|iPhone|Windows Phone|iPad|webOS|BlackBerry|mobile)" ) {
          rewrite ^/(.*)$ http://m.fzkb.cn/$1 permanent;
      }
+
+
+下载站
+软件模型->添加新字段->版本(version)->varchar(15)
