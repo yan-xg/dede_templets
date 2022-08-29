@@ -20,14 +20,20 @@ if(empty($dopost)) $dopost = "";
 $channelid = 3;
 if($dopost=='release')
 {
-    if(!is_numeric($num) || $num < 0)  ShowMsg("数量错误！",$ENV_GOBACK_URL);
+    if(!is_numeric($num) || $num < 0){
+        ShowMsg("数量错误！",$ENV_GOBACK_URL);
+        return false;
+    }
 
     $pubdate = GetMkTime($pubdate);
     $senddate = time();
     $sortrank = AddDay($pubdate,0);
 
     $count = $dsql->GetOne("Select count(id) as count From  `#@__archives` where channel='$channelid' and arcrank='-1' limit $num");
-    if($count['count'] <= 0) ShowMsg("没有未发布的软件了！",$ENV_GOBACK_URL);
+    if($count['count'] <= 0){
+        ShowMsg("没有未发布的软件了！",$ENV_GOBACK_URL);
+        return false;
+    }
 
     $query = "Select id,title From  `#@__archives` where channel='$channelid' and arcrank='-1' order by id asc limit $num";
     $dsql->SetQuery($query);
