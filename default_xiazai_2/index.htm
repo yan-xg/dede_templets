@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <title>{dede:global.cfg_webname/}</title>
+    <meta name="description" content="{dede:global.cfg_description/}" />
+    <meta name="keywords" content="{dede:global.cfg_keywords/}" />
+    {dede:include filename="meta.htm"/}
+</head>
+
+<body>
+    <!--页面头部-->
+    {dede:include filename="header.htm"/}
+    <div class="blank"></div>
+
+    <main class="wrapper">
+        <div class="inner">
+            <!--幻灯片-->
+            <div class="hmpic">
+                <div id="hmpic">
+                    {dede:arclist typeid='1,2,3,4' flag='f' row='1' orderby='pubdate'}
+                    <div class="item first">
+                        <a style="background-image:url([field:litpic /]);" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title /]">
+                            <h2><i>[field:title /]</i></h2>
+                        </a>
+                    </div>
+                    {/dede:arclist}
+
+                    {dede:arclist typeid='1,2,3,4' flag='f' limit='1,2' orderby='pubdate'}
+                    <div class="item">
+                        <a style="background-image:url([field:litpic /]);" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title /]">
+                        <h2><i>[field:title /]</i></h2>
+                        </a>
+                    </div>
+                    {/dede:arclist}
+                </div>
+            </div>
+            <!--app版块-->
+            <div class="hmbox mb">
+                <!--按点击量排名app-->
+                <section class="appbox left">
+                    <div class="boxtop">
+                        <h2>人气排行</h2>
+                    </div>
+                    <div class="hotapp">
+                        <ul>
+                            {dede:arclist typeid='5' row='6' orderby='click'}
+                            <li>
+                                <figure class="icon"><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title /]"><img
+                                        src="[field:litpic /]" alt="[field:title /]" /></a></figure>
+                                <div class="info">
+                                    <h3><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title /]">[field:title /]</a></h3>
+                                    <div class="meta">人气： [field:click /] </div>
+                                </div>
+                            </li>
+                            {/dede:arclist}
+                        </ul>
+                    </div>
+                </section>
+                <!--/按点击量排名app-->
+                <!--栏目最新app-->
+                <section class="appbox right">
+                    <div class="boxtop">
+                        {dede:type typeid='5'}
+                        <h2>[field:typename/]</h2>
+                        <span><a href="[field:typeurl/]" title="[field:typename/]">更多 &gt;</a></span>
+                        {/dede:type}
+                    </div>
+                    <div class="applist">
+                        <ul>
+                            {dede:arclist typeid='5' row='12' orderby='pubdate'}
+                            <li>
+                                <figure class="icon">
+                                    <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title /]">
+                                        <img src="[field:litpic /]" alt="[field:title /]" />
+                                    </a>
+                                </figure>
+                                <div class="info">
+                                    <h3><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title /]">[field:title /]</a></h3>
+                                    <div class="intro">[field:description /]...</div>
+                                    <div class="meta">
+                                        <span class="appbtn">
+                                            <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title /]">下载</a>
+                                        </span>
+                                        <span class="views">人气：[field:click /]</span>
+                                    </div>
+                                </div>
+                            </li>
+                            {/dede:arclist}
+                        </ul>
+                    </div>
+                </section>
+                <!--/栏目最新app-->
+            </div>
+
+            <section class="hmnews mb">
+                <div class="tab">
+                    {dede:type typeid='1'}
+                    <span class="dot"> <a class="cur" href="[field:typeurl/]" title="[field:typename/]">[field:typename/]</a></span>
+                    <a href="[field:typeurl/]" title="{dede:field name='typename'/}" style="float:right">更多>></a>
+                    {/dede:type}
+                </div>
+
+                <!--列表-->
+                <div class="box">
+                    <ul class="cur">
+                        {dede:arclist typeid='1' row='10' orderby='pubdate'}
+                        <li> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a> </li>
+                        {/dede:arclist}
+                    </ul>
+                </div>
+            </section>
+            <section class="hmnews mb">
+                <div class="tab">
+                    {dede:type typeid='2'}
+                    <span class="dot"> <a class="cur" href="[field:typeurl/]" title="[field:typename/]">[field:typename/]</a></span>
+                    <a href="[field:typeurl/]" title="{dede:field name='typename'/}" style="float:right">更多>></a>
+                    {/dede:type}
+                </div>
+
+                <!--列表-->
+                <div class="box">
+                    <ul class="cur">
+                        {dede:arclist typeid='2' row='10' orderby='pubdate'}
+                        <li> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a> </li>
+                        {/dede:arclist}
+                    </ul>
+                </div>
+            </section>
+
+            <section class="hmlinks tag-label">
+                <div class="boxtop">
+                    <h2>热门标签</h2>
+                </div>
+                <ul>
+                    {dede:tag row='50' sort='total'}
+                    <li><a href="/tags/[field:tag /]/" class="tags[field:id runphp='yes']@me = rand(0,7);[/field:id] tagc[field:highlight /]">[field:tag /]</a></li>
+                    {/dede:tag}
+                </ul>
+            </section>
+
+            <section class="hmnews mb">
+                <div class="tab">
+                    {dede:type typeid='3'}
+                    <span class="dot"> <a class="cur" href="[field:typeurl/]" title="[field:typename/]">[field:typename/]</a></span>
+                    <a href="[field:typeurl/]" title="{dede:field name='typename'/}" style="float:right">更多>></a>
+                    {/dede:type}
+                </div>
+
+                <!--列表-->
+                <div class="box">
+                    <ul class="cur">
+                        {dede:arclist typeid='3' row='10' orderby='pubdate'}
+                        <li> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a> </li>
+                        {/dede:arclist}
+                    </ul>
+                </div>
+            </section>
+            <section class="hmnews mb">
+                <div class="tab">
+                    {dede:type typeid='4'}
+                    <span class="dot"> <a class="cur" href="[field:typeurl/]" title="[field:typename/]">[field:typename/]</a></span>
+                    <a href="[field:typeurl/]" title="{dede:field name='typename'/}" style="float:right">更多>></a>
+                    {/dede:type}
+                </div>
+
+                <!--列表-->
+                <div class="box">
+                    <ul class="cur">
+                        {dede:arclist typeid='4' row='10' orderby='pubdate'}
+                        <li> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a> </li>
+                        {/dede:arclist}
+                    </ul>
+                </div>
+            </section>
+
+            <!--友情链接-->
+            <section class="hmlinks">
+                <div class="boxtop">
+                    <h2>友情链接</h2>
+                </div>
+                <ul>
+                    {dede:flink row='24' type='text' titlelen="24"  typeid="0"}
+                    <li>[field:link /]</li>
+                    {/dede:flink}
+                </ul>
+            </section>
+            <div class="clear"></div>
+        </div>
+    </main>
+    <!--页面底部-->
+    {dede:include filename="footer.htm"/}
+</body>
+</html>

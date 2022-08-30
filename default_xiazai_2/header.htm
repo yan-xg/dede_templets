@@ -1,0 +1,21 @@
+<header class="header">
+    <div class="inner">
+        <h1 class="logo">
+            <a title="{dede:global.cfg_webname/}" href="/" style="background-image:url({dede:global.cfg_cmspath/}/public/images/logo.png);">{dede:global.cfg_webname/}</a>
+        </h1>
+    </div>
+    <nav class="nav">
+        <ul>
+            <li><a href="/" class="{dede:field name=typeid runphp='yes'}(@me=='0') ? @me='cur' : @me=''; {/dede:field}">网站首页</a></li>
+            {dede:channel type='top' currentstyle='<li><a href="~typelink~" class="cur">~typename~</a></li>'}
+            <li><a href="[field:typelink /]">[field:typename/]</a></li>
+            {/dede:channel}
+        </ul>
+    </nav>
+    <!--手机端栏目按钮-->
+    <div class="wapbtn">
+        <div class="searchbtn"></div>
+        <div class="navbtn"> <span></span> </div>
+    </div>
+    <div class="clear"></div>
+</header>

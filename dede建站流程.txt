@@ -26,3 +26,13 @@ UPDATE dede_arcrank set adminrank=1 where membername='开放浏览'
 
 下载站
 软件模型->添加新字段->版本(version)->varchar(15)
+
+
+url规则
+    1. {typedir}/{Y}/{M}{D}/{aid}.html  dede默认
+    2. {typedir}/{Y}{M}{D}/{aid}.html
+    3. {typedir}/{Y}_{M}{D}/{aid}.html
+    4. {typedir}/{Y}/{M}/{aid}.html
+    5. {typedir}/{Y}/{aid}.html
+    6. {typedir}/{aid}.html
+    7. {typedir}/{M}{D}/{aid}.html
