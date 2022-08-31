@@ -1,7 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="WEB_MODULE" version="4">
   <component name="NewModuleRootManager">
-    <content url="file://$MODULE_DIR$" />
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/dede.cc/.idea/sonarlint/issuestore/d/6" />
+      <excludeFolder url="file://$MODULE_DIR$/dede.cc/.idea/sonarlint/issuestore/d/a" />
+      <excludeFolder url="file://$MODULE_DIR$/dede.cc/.idea/sonarlint/issuestore/d/d" />
+      <excludeFolder url="file://$MODULE_DIR$/dede.cc/.idea/sonarlint/issuestore/d/e" />
+      <excludeFolder url="file://$MODULE_DIR$/dede.cc/.idea/sonarlint/issuestore/f/1" />
+      <excludeFolder url="file://$MODULE_DIR$/dede.cc/.idea/sonarlint/issuestore/0" />
+      <excludeFolder url="file://$MODULE_DIR$/dede.cc/.idea/sonarlint/issuestore/1" />
+      <excludeFolder url="file://$MODULE_DIR$/dede.cc/.idea/sonarlint/issuestore/2" />
+      <excludeFolder url="file://$MODULE_DIR$/dede.cc/.idea/sonarlint/issuestore/3" />
+      <excludeFolder url="file://$MODULE_DIR$/dede.cc/.idea/sonarlint/issuestore/4" />
+      <excludeFolder url="file://$MODULE_DIR$/dede.cc/.idea/sonarlint/issuestore/5" />
+      <excludeFolder url="file://$MODULE_DIR$/dede.cc/.idea/sonarlint/issuestore/6" />
+      <excludeFolder url="file://$MODULE_DIR$/dede.cc/.idea/sonarlint/issuestore/7" />
+      <excludeFolder url="file://$MODULE_DIR$/dede.cc/.idea/sonarlint/issuestore/8" />
+      <excludeFolder url="file://$MODULE_DIR$/dede.cc/.idea/sonarlint/issuestore/9" />
+      <excludeFolder url="file://$MODULE_DIR$/dede.cc/.idea/sonarlint/issuestore/a" />
+      <excludeFolder url="file://$MODULE_DIR$/dede.cc/.idea/sonarlint/issuestore/b" />
+      <excludeFolder url="file://$MODULE_DIR$/dede.cc/.idea/sonarlint/issuestore/c" />
+      <excludeFolder url="file://$MODULE_DIR$/dede.cc/.idea/sonarlint/issuestore/e" />
+      <excludeFolder url="file://$MODULE_DIR$/dede.cc/templets/default_a" />
+    </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>

@@ -16,8 +16,9 @@
             <nav class="navbar-left primary-menu">
                 <ul id="menu" class="nav navbar-nav wpcom-adv-menu">
                     <li class="menu-item {dede:field name=typeid runphp='yes'}(@me=='0') ? @me='active' : @me=''; {/dede:field}"><a href="/">首页</a></li>
-                    <li class="menu-item {dede:field name=typeid runphp='yes'}(@me=='1') ? @me='active' : @me=''; {/dede:field}"><a href="/xinwen/" class="dropdown-toggle">新闻</a></li>
-                    <li class="menu-item {dede:field name=typeid runphp='yes'}(@me=='2') ? @me='active' : @me=''; {/dede:field}"><a href="/shenghuo/" class="dropdown-toggle">生活</a></li>
+                    {dede:channel type='top' currentstyle='<li class="menu-item active"><a href="~typelink~">~typename~</a></li>'}
+                    <li class="menu-item"><a href="[field:typelink /]">[field:typename/]</a></li>
+                    {/dede:channel}
                 </ul>
             </nav>
         </div>
