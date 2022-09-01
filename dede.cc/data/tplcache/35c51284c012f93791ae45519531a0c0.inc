@@ -1,7 +1,7 @@
 <div class="col-md-4 col-xs-6  th_padding">
          <div class="thliorder1">
           <div class="gundongimg">
-           <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]"><img class="th-img gundong-img-height" src="{dede:global.cfg_templets_skin/}/static/img/c602e4f5d792e64a020e455a20d2a2e8.jpg" /></a>
+           <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]"><img class="th-img gundong-img-height" src="{dede:global.cfg_cmspath/}/public/img/c602e4f5d792e64a020e455a20d2a2e8.jpg" /></a>
           </div>
           <div class="daodu">
            <a href="/dianshang/157.html" title="[field:title/]">[field:title/]</a>

@@ -10,7 +10,7 @@
             <article class="mx3-hentry nba">
               <figure class="mx3-thumbnail">
                 <a href="/zixun/153.html">
-                  <img src="{dede:global.cfg_templets_skin/}/static/img/1bed23fb41166bdec133a4ea723068b9.jpg" width="103" height="78" alt="国外机构测得iPhone 11 Pro辐射量超标137%"></a>
+                  <img src="{dede:global.cfg_cmspath/}/public/img/1bed23fb41166bdec133a4ea723068b9.jpg" width="103" height="78" alt="国外机构测得iPhone 11 Pro辐射量超标137%"></a>
               </figure>
               <header class="mx3-header">
                 <h2 class="mx3-entry-title">

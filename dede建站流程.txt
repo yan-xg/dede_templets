@@ -14,7 +14,8 @@ UPDATE dede_arcrank set adminrank=1 where membername='开放浏览'
      后台->系统->其它选项：文档标题最大长度：180
      后台->系统->添加新变量
            a.  网站备案号(cfg_beian)
-           b.  软件下载地址(cfg_softurl)
+           b.  联系方式(cfg_lianxi)，默认：haotuu1@vip.qq.com
+           c.  下载站使用，软件下载地址(cfg_softurl)
 
 5、创建栏目，生成对应伪静态规则，检查模板中url规则是否与伪静态对应
 6、宝塔站点配置文件修改，新增重定向到m端
