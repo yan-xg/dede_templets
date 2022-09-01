@@ -275,6 +275,10 @@ else if($dopost=='save')
     }
     ClearMyAddon($arcID, $title);
 
+    $typeInfo = $dsql->GetOne("select * from `#@__arctype` WHERE id='$typeid' ");
+    $url = GetFileUrl($arcID,$typeid,$senddate,$title,1,
+        $arcrank,$typeInfo['namerule'],$typeInfo['typedir'],$money,$filename);
+    $artUrl = $cfg_basehost.$url;
 
     //返回成功信息
     $msg = "    　　请选择你的后续操作：
