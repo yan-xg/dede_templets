@@ -304,6 +304,12 @@ else if($dopost=='save')
         $arcUrl = $cfg_phpurl."/view.php?aid=$arcID";
     }
     ClearMyAddon($arcID, $title);
+    
+    $typeInfo = $dsql->GetOne("select * from `#@__arctype` WHERE id='$typeid' ");
+    $url = GetFileUrl($arcID,$typeid,$senddate,$title,1,
+        $arcrank,$typeInfo['namerule'],$typeInfo['typedir'],$money,$filename);
+    $arcUrl = $cfg_basehost.$url;
+    
     //返回成功信息
     $msg = "
     　　请选择你的后续操作：
