@@ -25,7 +25,7 @@
     <div class="notic">
         <div class="wrap subnotic"><i class="fa fa-bullhorn"></i>
             {dede:arclist row='1' titlelen='80' flag='c,p' typeid='top'}
-                <a href="[field:typedir /]/[field:id /].html">[field:title/]</a>
+                <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html">[field:title/]</a>
             {/dede:arclist}
         </div>
     </div>

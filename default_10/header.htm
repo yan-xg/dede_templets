@@ -6,7 +6,7 @@
         </div>
         <i class="gbar fa fa-bars" aria-hidden="true"></i>
         <ul class="gnav-ul gj-right">
-            {dede:field name=typeid runphp='yes'}(@me=='0') ? @me='<li class="gxz"><a href="">' : @me='<li><a href="">'; {/dede:field} <i class="fa fa-home" aria-hidden="true"></i>首页</a></li>
+            {dede:field name=typeid runphp='yes'}(@me=='0') ? @me='<li class="gxz"><a href="/">' : @me='<li><a href="/">'; {/dede:field} <i class="fa fa-home" aria-hidden="true"></i>首页</a></li>
             {dede:channel type='top' currentstyle='<li class="gxz"><a href="~typelink~" >~typename~</a></li>'}
             <li><a href="[field:typelink /]" class="dropdown-toggle">[field:typename/]</a></li>
             {/dede:channel}

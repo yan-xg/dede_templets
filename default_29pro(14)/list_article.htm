@@ -77,6 +77,26 @@
      <!--right-->
      <!--right-->
      <div class="col-md-3 col-xs-12 wap_margintop">
+
+      <div class="th_margintop">
+       <section>
+        <div class="">
+         <section>
+          <div class="thleftcon">
+           <div class="thleftbt">
+            <span>热门标签</span>
+           </div>
+           <ul class="th-7">
+            {dede:tag row='40' sort='total'}
+            <li><a href="/tags/[field:tag /]/" class="tags[field:id runphp='yes']@me = rand(0,7);[/field:id] tagc[field:highlight /]">[field:tag /]</a></li>
+            {/dede:tag}
+           </ul>
+          </div>
+         </section>
+        </div>
+       </section>
+      </div>
+
       <div class="">
        <section>
         <div class="thleftcon" style="height:336px;">
