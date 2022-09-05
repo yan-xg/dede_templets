@@ -92,3 +92,19 @@ if ( ! function_exists('dede_strip_tags'))
 	} 
 }
 
+// 百度api提交
+function api_baidu($urls){
+    $api = 'http://data.zz.baidu.com/urls?site=www.hswaf.com&token=Up7rG2Wi47KLNPlH';
+    $ch = curl_init();
+    $options =  array(
+        CURLOPT_URL => $api,
+        CURLOPT_POST => true,
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_POSTFIELDS => implode("\n", $urls),
+        CURLOPT_HTTPHEADER => array('Content-Type: text/plain'),
+    );
+    curl_setopt_array($ch, $options);
+    $result = curl_exec($ch);
+    echo $result.'推送的url:'.$urls[0];
+}
+

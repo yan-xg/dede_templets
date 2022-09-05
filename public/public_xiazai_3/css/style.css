@@ -138,6 +138,7 @@ li{list-style-type: none;}
 .fr{float:right;}
 .img-d img,.dp-b{display:block;width:100%;}
 .w14{width:140px;display: inline-block;}
+.w20{width:200px;display: inline-block;}
 /* 评论*/.tx-comments>ul.msg{margin-bottom:1rem;border:1px solid #eee;padding:1rem;border-radius:0.4rem;}
 .tx-comments{margin-bottom:1rem;}
 .msg img.avatar{float:left;margin-right:1rem;border-radius:0.5rem;width:45px;height:45px;border-radius:50%;-webkit-transition:.4s;-webkit-transition:-webkit-transform .4s ease-out;transition:transform .4s ease-out;-moz-transition:-moz-transform .4s ease-out;}

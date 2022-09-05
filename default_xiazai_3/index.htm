@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>{dede:global.cfg_webname/}</title>
+    <meta name="description" content="{dede:global.cfg_description/}" />
+    <meta name="keywords" content="{dede:global.cfg_keywords/}" />
+    {dede:include filename="meta.htm"/}
+</head>
+
+<body>
+    {dede:include filename="header.htm"/}
+    <div class="main wide" style="padding-top: 0px;">
+        <div class="row">
+            <div class="col-18 col-m-24">
+                <div class="home-flash mb15">
+                    <div class="swiper-container swiper-container-horizontal">
+                        <div class="swiper-wrapper" style="transform: translate3d(-2775px, 0px, 0px); transition-duration: 300ms;">
+                            {dede:arclist typeid='1,2,3,4' flag='f' row='3' orderby='pubdate'}
+                            <div class="swiper-slide swiper-slide-prev" data-swiper-slide-index="1"
+                                 style="width: 895px; margin-right: 30px;"><a
+                                    href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html"
+                                    title="[field:title /]" rel="nofollow"><img
+                                    src="[field:litpic /]"></a></div>
+                            {/dede:arclist}
+                        </div>
+                        <div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide"><i
+                                class="fa fa-angle-right"></i></div>
+                        <div class="swiper-button-prev" tabindex="0" role="button" aria-label="Previous slide"><i
+                                class="fa fa-angle-left"></i></div>
+                        <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"><span
+                                class="swiper-pagination-bullet" tabindex="0" role="button"
+                                aria-label="Go to slide 1"></span><span class="swiper-pagination-bullet" tabindex="0"
+                                role="button" aria-label="Go to slide 2"></span><span
+                                class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0"
+                                role="button" aria-label="Go to slide 3"></span></div>
+                        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+                    </div>
+                    <script>
+                        var swiper = new Swiper('.home-flash .swiper-container', {
+                            spaceBetween: 30,
+                            centeredSlides: true,
+                            loop: true,
+                            autoplay: {
+                                delay: 5000,
+                                disableOnInteraction: false,
+
+                            },
+                            navigation: {
+                                nextEl: '.swiper-button-next',
+                                prevEl: '.swiper-button-prev',
+                            },
+                            pagination: {
+                                el: '.swiper-pagination',
+                                clickable: true,
+                            },
+                        });
+                    </script>
+                </div>
+                <div class="tx-box mb10 pd15-2">
+                    <h2 class="tx-title fw mb10">热门推荐</h2>
+                    <ul class="row">
+                        {dede:arclist typeid='5' row='16' orderby='pubdate'}
+                       <li class="col-3 col-m-6 mb15 ta-c">
+                            <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html">
+                                <span class="img-box mb5" data-ratio="16:16">
+                                    <img src="[field:litpic /]" alt="[field:title /]">
+                                </span>
+                                <p class="txt-ov">[field:title /]</p>
+                            </a>
+                        </li>
+                        {/dede:arclist}
+                    </ul>
+                </div>
+                <div class="row border-bb">
+                    <div class="ititle clear">
+                        {dede:arclist typeid='1' row='1' orderby='pubdate'}
+                        <div class="clear border-bb ititlediv"> <a href="[field:typedir /]/" class="ititlea f-14">更多&gt;</a>
+                            <span>[field:typename /]</span>
+                        </div>
+                        {/dede:arclist}
+                    </div>
+                </div>
+                <div class="row ip_pa">
+                    <div class="icenter clear mo0" style="display: block;">
+                        {dede:arclist typeid='1' row='8' orderby='pubdate'}
+                        <div class="art col-12 clear">
+                            <div class="fl artimg"> <img src="[field:litpic /]" alt="[field:title /]"> </div>
+                            <div class="arttxt fr">
+                                <p class="t"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title /]">[field:title /]</a> </p>
+                                <p class="desc">[field:description /]...</p>
+                            </div>
+                        </div>
+                        {/dede:arclist}
+                    </div>
+                </div>
+                <div class="tx-box mb10 pd15-2">
+                    <h2 class="tx-title fw mb10">常用软件</h2>
+                    <ul class="row">
+                        {dede:arclist typeid='5' limit='16,16' orderby='pubdate'}
+                        <li class="col-3 col-m-6 mb15 ta-c">
+                            <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html">
+                            <span class="img-box mb5" data-ratio="16:16">
+                                    <img src="[field:litpic /]" alt="[field:title /]">
+                                </span>
+                            <p class="txt-ov">[field:title /]</p>
+                            </a>
+                        </li>
+                        {/dede:arclist}
+                    </ul>
+                </div>
+                <div class="tx-box mb10 pd15-2 clearfix">
+                    <h2 class="tx-title fw mb10">最新资讯</h2>
+                    <ul class="ul-30 mb10">
+                        {dede:arclist typeid='1,2,3,4' row='10' orderby='pubdate'}
+                        <li>
+                            <span class="fr f-gray">[field:pubdate function="MyDate('Y-m-d',@me)"/]</span>
+                            <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title /]">[field:title /]</a>
+                        </li>
+                        {/dede:arclist}
+                    </ul>
+                </div>
+            </div>
+            <div class="col-6 col-m-24">
+                <dl class="tx-box mb15 pd15-2 sidebar-games tag-label">
+                    <dt class="tx-title mb10">热门标签</dt>
+                    <dd>
+                        <ul class="clearfix">
+                            {dede:tag row='40' sort='total'}
+                            <li  class="mb15"><a href="/tags/[field:tag /]/" class="tags[field:id runphp='yes']@me = rand(0,7);[/field:id] tagc[field:highlight /]">[field:tag /]</a></li>
+                            {/dede:tag}
+                        </ul>
+                    </dd>
+                </dl>
+                <dl class="tx-box mb15 pd15-2 sidebar-games">
+                    <dt class="tx-title mb10">本周最热</dt>
+                    <dd>
+                        <ul class="clearfix">
+                            {dede:arclist typeid='5' row='10' orderby='click'}
+                            <li class="mb15">
+                                <h2 class="txt-ov f-14 mb5">
+                                    <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title /]">[field:title /]</a></h2>
+                                    <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title /]" class="side-img-1">
+                                    <i><span class="img-box mb5" data-ratio="[field:pubdate function="MyDate('Y:m:d',@me)"/]">
+                                        <img src="[field:litpic /]" alt="[field:title /]"></span></i>
+                                    <p class="txt-ov mb5 f-gray">下载量：[field:click/]</p>
+                                    <p class="txt-ov mb5 f-gray">[field:description/]...</p>
+                                    <span class="tx-down">立即下载</span>
+                                </a>
+                            </li>
+                            {/dede:arclist}
+                        </ul>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+        <div class="tx-box mb15 pd15-2 friendlink">
+            <h2 class="tx-title fw mb10">友情链接</h2>
+            <ul class="links clearfix">
+                {dede:flink row='24' type='text' titlelen="24"  typeid="0"}
+                <li>[field:link /]</li>
+                {/dede:flink}
+            </ul>
+        </div>
+    </div>
+    {dede:include filename="footer.htm"/}
+</body>
+</html>
