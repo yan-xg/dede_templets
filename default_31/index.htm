@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>{dede:global.cfg_webname/}</title>
+    <meta name="description" content="{dede:global.cfg_description/}" />
+    <meta name="keywords" content="{dede:global.cfg_keywords/}" />
+    {dede:include filename="meta.htm"/}
+    <style>
+        .nav a.on0:after {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        {dede:include filename="header.htm"/}
+
+        <!--主体内容-->
+        <div class="main">
+            <!--头条-->
+            <div class="headline">
+                <div class="layout">
+                    {dede:arclist flag='c' typeid='top' row='1' orderby='pubdate'}
+                    <h2><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html"><strong>[field:title/]</strong></a></h2>
+                    {/dede:arclist}
+
+                    <div class="rcmd">
+                    {dede:arclist flag='c' typeid='top' limit='1,3' orderby='pubdate'}
+                        <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html">【[field:title /]】</a>
+                    {/dede:arclist}
+                    </div>
+                </div>
+                <i class="icon"></i>
+            </div>
+            <!--主体边距框-->
+            <div class="main-padding clearfix">
+                <!--轮播容器与右侧切换-->
+                <div class="focus clearfix">
+                    <!--聚焦 轮播-->
+                    <div class="focus-container">
+                        <div class="box">
+                            {dede:arclist flag='h' typeid='top' row='3' orderby='pubdate'}
+                            <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank" class="active">
+                                <img src="[field:litpic/]" alt="[field:title/]" title="[field:title/]">
+                            </a>
+                            {/dede:arclist}
+                        </div>
+                        <div class="pagination"> <span class="active"></span> <span></span> <span></span> <span></span>
+                            <span></span> </div>
+                        <span class="prev"></span> <span class="next"></span>
+                        <div class="linear"></div>
+                        <div class="list">
+                            <div class="text">
+                                {dede:arclist flag='h' typeid='top' row='3' orderby='pubdate'}
+                                <p class="active">[field:title/]</p>
+                                {/dede:arclist}
+                            </div>
+                        </div>
+                    </div>
+                    <!--聚焦 排行-->
+                    <div class="focus-rank">
+                        <div class="focus-rank-tab"> <span class="active">最新更新</span> <span>一月排行</span>
+                            <span>一周排行</span> </div>
+                        <div class="focus-rank-list">
+                            <div class="active">
+                                {dede:arclist typeid='top' orderby='pubdate' row=10}
+                                <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html"><i class="icon[field:global name=autoindex runphp="yes"] @me; [/field:global]"></i>[field:title/]</a>
+                                {/dede:arclist}
+                            </div>
+                            <div>
+                                {dede:arclist typeid='top' orderby='click' row=10}
+                                <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html"><i class="icon[field:global name=autoindex runphp="yes"] @me; [/field:global]"></i>[field:title/]</a>
+                                {/dede:arclist}
+                            </div>
+                            <div>
+                                {dede:arclist typeid='top' orderby='click' limit="10,10"}
+                                <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html"><i class="icon[field:global name=autoindex runphp="yes"] @me; [/field:global]"></i>[field:title/]</a>
+                                {/dede:arclist}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--百战聚焦-->
+                <div class="layer-focus">
+                    <div class="tabs tabs-small">
+                        <div class="head">百战聚焦</div>
+                        <div class="line"><i></i></div>
+                    </div>
+                    <div class="focus-left">
+                        {dede:arclist flag='p' typeid='top' row='4' orderby='pubdate'}
+                        <div class="hot">
+                            <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_black">
+                                <img src="[field:litpic/]" alt="[field:title/]" title="[field:title/]">
+                            </a>
+                            <p><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title/]</a></p>
+                        </div>
+                        {/dede:arclist}
+                        <div class="poster ad" style="margin-left:-10px;">
+                            <script type="text/javascript">index_poster();</script>
+                        </div>
+                    </div>
+                    <div class="focus-right">
+                        {dede:arclist flag='p' typeid='top' limit='4,1' orderby='pubdate'}
+                        <div class="dtl"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">
+                            <img src="[field:litpic/]" alt="[field:title/]" title="[field:title/]"></a>
+                            <div class="cell">
+                                <h5><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title/]</a></h5>
+                                <p><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[详细]</a></p>
+                            </div>
+                        </div>
+                        {/dede:arclist}
+
+                        <div class="list">
+                            {dede:arclist typeid='top' orderby='pubdate' limit="10,8"}
+                            <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html"><i></i>[field:title/]</a>
+                            {/dede:arclist}
+                        </div>
+                    </div>
+                </div>
+                <!--热门标签-->
+                <div class="layer-recommend">
+                    <div class="tabs tabs-small">
+                        <div class="head">热门标签</div>
+                        <div class="line"><i></i></div>
+                    </div>
+                    <div class="list tag-label">
+                        <ul>
+                            {dede:tag row='50' sort='total'}
+                            <li><a href="/tags/[field:tag /]/" class="tags[field:id runphp='yes']@me = rand(0,7);[/field:id] tagc[field:highlight /]">[field:tag /]</a></li>
+                            {/dede:tag}
+                        </ul>
+                    </div>
+                </div>
+                <!--1-->
+                <div class="news">
+                    <!--栏目标题-->
+                    {dede:type typeid='1'}
+                    <div class="tabs tabs-strong">
+                        <div class="head">[field:typename/]</div>
+                        <div class="line"><i></i></div>
+                        <a href="[field:typeurl/]" class="more" target="_blank">更多&gt;&gt;</a>
+                    </div>
+                    {/dede:type}
+                    <!--栏目内容-->
+                    <div>
+                        <!--左-->
+                        <div class="layer-column">
+                            <div>
+                                {dede:type typeid='1'}
+                                <div class="tabs-head">
+                                    <i class="left-icon"></i> <span class="tabs-fore gjxw"></span>
+                                    <span class="uppercase">world<i></i></span>
+                                    <a href="[field:typeurl/]" class="more" target="_blank"></a>
+                                </div>
+                                {/dede:type}
+
+                                {dede:arclist typeid='1' limit='0,1' orderby='pubdate'}
+                                <h6><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title/]</a></h6>
+                                <div class="item"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">
+                                    <img src="[field:litpic/]" alt="[field:title/]" title="[field:title/]"></a>
+                                    <p>[field:description/]...<a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[详细]</a></p>
+                                </div>
+                                {/dede:arclist}
+
+                                <div class="list">
+                                    {dede:arclist typeid='1' limit='1,5' orderby='pubdate'}
+                                    <p><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title/]</a></p>
+                                    {/dede:arclist}
+                                </div>
+                            </div>
+                            <div>
+                                {dede:type typeid='1'}
+                                <div class="tabs-head">
+                                    <i class="left-icon"></i> <span class="tabs-fore gjxw"></span>
+                                    <span class="uppercase">WILITARY<i></i></span>
+                                    <a href="[field:typeurl/]" class="more" target="_blank"></a>
+                                </div>
+                                {/dede:type}
+
+                                {dede:arclist typeid='1' limit='6,2' orderby='pubdate'}
+                                <h6><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title/]</a></h6>
+                                <div class="item"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">
+                                    <img src="[field:litpic/]" alt="[field:title/]" title="[field:title/]"></a>
+                                    <p>[field:description/]...<a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[详细]</a></p>
+                                </div>
+                                {/dede:arclist}
+                            </div>
+                        </div>
+                        <!--中-->
+                        <div class="layer-column">
+                            <!--内容标题-->
+                            {dede:type typeid='1'}
+                            <div class="tabs-head">
+                                <i class="left-icon"></i> <span class="tabs-fore gjxw"></span>
+                                <span class="uppercase">China<i></i></span>
+                                <a href="[field:typeurl/]" class="more" target="_blank"></a>
+                            </div>
+                            {/dede:type}
+                            <!--内容图文秀-->
+                            {dede:arclist typeid='1' limit='8,1' orderby='pubdate'}
+                            <div class="show"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">
+                                <img src="[field:litpic/]" alt="[field:title/]" title="[field:title/]"></a>
+                                <p><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title/]</a></p>
+                            </div>
+                            {/dede:arclist}
+
+                            <!--内容列表-->
+                            <div class="list">
+                                {dede:arclist typeid='1' limit='9,12' orderby='pubdate'}
+                                <p><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title/]</a></p>
+                                {/dede:arclist}
+                            </div>
+                        </div>
+                        <!--右-->
+                        <div class="layer-column">
+                            <!--内容标题-->
+                            {dede:type typeid='1'}
+                            <div class="tabs-head">
+                                <i class="left-icon"></i> <span class="tabs-fore gjxw"></span>
+                                <span class="uppercase">society<i></i></span>
+                                <a href="[field:typeurl/]" class="more" target="_blank"></a>
+                            </div>
+                            {/dede:type}
+                            <!--内容图文秀-->
+                            {dede:arclist typeid='1' limit='21,1' orderby='pubdate'}
+                            <div class="show"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">
+                                <img src="[field:litpic/]" alt="[field:title/]" title="[field:title/]"></a>
+                                <p><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title/]</a></p>
+                            </div>
+                            {/dede:arclist}
+
+                            <!--内容列表-->
+                            <div class="list">
+                                {dede:arclist typeid='1' limit='22,12' orderby='pubdate'}
+                                <p><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title/]</a></p>
+                                {/dede:arclist}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--2-->
+                <div class="recreation">
+                    <!--栏目标题-->
+                    {dede:type typeid='2'}
+                    <div class="tabs tabs-strong">
+                        <div class="head">[field:typename/]</div>
+                        <div class="line"><i></i></div>
+                        <a href="[field:typeurl/]" class="more" target="_blank">更多&gt;&gt;</a>
+                    </div>
+                    {/dede:type}
+                    <!--栏目内容-->
+                    <div>
+                        <!--左-->
+                        <div class="layer-column">
+                            <div class="list">
+                                {dede:arclist typeid='2' limit='0,1' orderby='pubdate'}
+                                <p class="title mt0"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title/]</a> </p>
+                                {/dede:arclist}
+
+                                {dede:arclist typeid='2' limit='1,7' orderby='pubdate'}
+                                <p> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title/]</a> </p>
+                                {/dede:arclist}
+
+                                {dede:arclist typeid='2' limit='8,1' orderby='pubdate'}
+                                <p class="title mt0"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title/]</a> </p>
+                                {/dede:arclist}
+
+                                {dede:arclist typeid='2' limit='9,7' orderby='pubdate'}
+                                <p> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title/]</a> </p>
+                                {/dede:arclist}
+                            </div>
+                        </div>
+                        <!--中-->
+                        <div class="layer-column">
+                            <!--内容标题-->
+                            {dede:type typeid='2'}
+                            <div class="tabs-head">
+                                <i class="left-icon"></i> <span class="tabs-fore gjxw"></span>
+                                <span class="uppercase">star<i></i></span>
+                                <a href="[field:typeurl/]" class="more" target="_blank"></a>
+                            </div>
+                            {/dede:type}
+                            <!--内容秀-->
+                            {dede:arclist typeid='2' limit='16,1' orderby='pubdate'}
+                            <div class="show"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">
+                                <img src="[field:litpic/]" alt="[field:title/]" title="[field:title/]"></a>
+                                <p><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title/]</a></p>
+                            </div>
+                            {/dede:arclist}
+
+                            <!--图文-->
+                            <div class="images-text">
+                                {dede:arclist typeid='2' limit='17,2' orderby='pubdate'}
+                                <div> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">
+                                    <img src="[field:litpic/]" alt="[field:title/]" title="[field:title/]"> </a>
+                                    <p><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title/]</a></p>
+                                </div>
+                                {/dede:arclist}
+                            </div>
+                        </div>
+                        <!--右-->
+                        <div class="layer-column">
+                            <!--内容标题-->
+                            {dede:type typeid='2'}
+                            <div class="tabs-head">
+                                <i class="left-icon"></i> <span class="tabs-fore gjxw"></span>
+                                <span class="uppercase">movies<i></i></span>
+                                <a href="[field:typeurl/]" class="more" target="_blank"></a>
+                            </div>
+                            {/dede:type}
+                            <!--图文-->
+                            <div class="images-text">
+                                {dede:arclist typeid='2' limit='19,2' orderby='pubdate'}
+                                <div> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">
+                                    <img src="[field:litpic/]" alt="[field:title/]" title="[field:title/]"> </a>
+                                    <p><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title/]</a></p>
+                                </div>
+                                {/dede:arclist}
+                            </div>
+                            <!--内容列表-->
+                            <div class="list list-p">
+                                {dede:arclist typeid='2' limit='21,9' orderby='pubdate'}
+                                <p> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title/]</a> </p>
+                                {/dede:arclist}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--3-->
+                <div class="sports">
+                    <!--栏目标题-->
+                    {dede:type typeid='3'}
+                    <div class="tabs tabs-strong">
+                        <div class="head">[field:typename/]</div>
+                        <div class="line"><i></i></div>
+                        <a href="[field:typeurl/]" class="more" target="_blank">更多&gt;&gt;</a>
+                    </div>
+                    {/dede:type}
+                    <!--栏目内容-->
+                    <div>
+                        <!--左-->
+                        <div class="layer-column">
+                            <div class="list">
+                                {dede:arclist typeid='3' limit='0,1' orderby='pubdate'}
+                                <p class="title mt0"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title/]</a> </p>
+                                {/dede:arclist}
+
+                                {dede:arclist typeid='3' limit='1,7' orderby='pubdate'}
+                                <p> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title/]</a> </p>
+                                {/dede:arclist}
+
+                                {dede:arclist typeid='3' limit='8,1' orderby='pubdate'}
+                                <p class="title mt0"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title/]</a> </p>
+                                {/dede:arclist}
+
+                                {dede:arclist typeid='3' limit='9,7' orderby='pubdate'}
+                                <p> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title/]</a> </p>
+                                {/dede:arclist}
+                            </div>
+                        </div>
+                        <!--中-->
+                        <div class="layer-column">
+                            <!--内容标题-->
+                            {dede:type typeid='3'}
+                            <div class="tabs-head">
+                                <i class="left-icon"></i> <span class="tabs-fore gjxw"></span>
+                                <span class="uppercase">star<i></i></span>
+                                <a href="[field:typeurl/]" class="more" target="_blank"></a>
+                            </div>
+                            {/dede:type}
+                            <!--内容秀-->
+                            {dede:arclist typeid='3' limit='16,1' orderby='pubdate'}
+                            <div class="show"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">
+                                <img src="[field:litpic/]" alt="[field:title/]" title="[field:title/]"></a>
+                                <p><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title/]</a></p>
+                            </div>
+                            {/dede:arclist}
+
+                            <!--图文-->
+                            <div class="images-text">
+                                {dede:arclist typeid='3' limit='17,2' orderby='pubdate'}
+                                <div> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">
+                                    <img src="[field:litpic/]" alt="[field:title/]" title="[field:title/]"> </a>
+                                    <p><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title/]</a></p>
+                                </div>
+                                {/dede:arclist}
+                            </div>
+                        </div>
+                        <!--右-->
+                        <div class="layer-column">
+                            <!--内容标题-->
+                            {dede:type typeid='3'}
+                            <div class="tabs-head">
+                                <i class="left-icon"></i> <span class="tabs-fore gjxw"></span>
+                                <span class="uppercase">movies<i></i></span>
+                                <a href="[field:typeurl/]" class="more" target="_blank"></a>
+                            </div>
+                            {/dede:type}
+                            <!--图文-->
+                            <div class="images-text">
+                                {dede:arclist typeid='3' limit='19,2' orderby='pubdate'}
+                                <div> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">
+                                    <img src="[field:litpic/]" alt="[field:title/]" title="[field:title/]"> </a>
+                                    <p><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title/]</a></p>
+                                </div>
+                                {/dede:arclist}
+                            </div>
+                            <!--内容列表-->
+                            <div class="list list-p">
+                                {dede:arclist typeid='3' limit='21,9' orderby='pubdate'}
+                                <p> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title/]</a> </p>
+                                {/dede:arclist}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--4-->
+                <div class="explore">
+                    <!--栏目标题-->
+                    {dede:type typeid='4'}
+                    <div class="tabs tabs-strong">
+                        <div class="head">[field:typename/]</div>
+                        <div class="line"><i></i></div>
+                        <a href="[field:typeurl/]" class="more" target="_blank">更多&gt;&gt;</a>
+                    </div>
+                    {/dede:type}
+                    <!--栏目内容-->
+                    <div>
+                        <!--左-->
+                        <div class="layer-column">
+                            <!--内容图文秀-->
+                            {dede:arclist typeid='4' limit='0,1' orderby='pubdate'}
+                            <div class="show"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">
+                                <img src="[field:litpic/]" alt="[field:title/]" title="[field:title/]"></a>
+                                <p><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title/]</a></p>
+                            </div>
+                            {/dede:arclist}
+
+                            <!--内容列表-->
+                            <div class="list">
+                                {dede:arclist typeid='4' limit='1,6' orderby='pubdate'}
+                                <p> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title/]</a> </p>
+                                {/dede:arclist}
+                            </div>
+                        </div>
+                        <!--中-->
+                        <div class="layer-column">
+                            <!--内容标题-->
+                            {dede:type typeid='4'}
+                            <div class="tabs-head">
+                                <i class="left-icon"></i> <span class="tabs-fore gjxw"></span>
+                                <span class="uppercase">anecdote<i></i></span>
+                                <a href="[field:typeurl/]" class="more" target="_blank"></a>
+                            </div>
+                            {/dede:type}
+                            <!--图文-->
+                            <div class="images-text">
+                                {dede:arclist typeid='4' limit='7,2' orderby='pubdate'}
+                                <div> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">
+                                    <img src="[field:litpic/]" alt="[field:title/]" title="[field:title/]"> </a>
+                                    <p><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title/]</a></p>
+                                </div>
+                                {/dede:arclist}
+                            </div>
+                            <!--内容列表-->
+                            <div class="list list-p list-p-s">
+                                {dede:arclist typeid='4' limit='9,8' orderby='pubdate'}
+                                <p> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title/]</a> </p>
+                                {/dede:arclist}
+                            </div>
+                        </div>
+                        <!--右-->
+                        <div class="layer-column">
+                            <!--内容标题-->
+                            {dede:type typeid='4'}
+                            <div class="tabs-head">
+                                <i class="left-icon"></i> <span class="tabs-fore gjxw"></span>
+                                <span class="uppercase">science<i></i></span>
+                                <a href="[field:typeurl/]" class="more" target="_blank"></a>
+                            </div>
+                            {/dede:type}
+                            <!--表格列表-->
+                            <div class="table">
+                                <ul>
+                                    {dede:arclist typeid='4' limit='17,5' orderby='pubdate'}
+                                    <li> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_black">
+                                        <img src="[field:litpic/]" alt="[field:title/]" title="[field:title/]"> </a>
+                                        <p> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title/]</a> </p>
+                                    </li>
+                                    {/dede:arclist}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--合作媒体-->
+        <div class="cooperation">
+            <div class="crjwzfoot">
+                <h5>友情链接</h5>
+                <div class="clearfix">
+                    {dede:flink row='24' type='text' titlelen="24"  typeid="0"}
+                    [field:link /]
+                    {/dede:flink}
+                </div>
+            </div>
+        </div>
+        {dede:include filename="footer.htm"/}
+    </div>
+
+</body>
+</html>
