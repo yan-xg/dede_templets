@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>{dede:global.cfg_webname/}</title>
+    <meta name="description" content="{dede:global.cfg_description/}" />
+    <meta name="keywords" content="{dede:global.cfg_keywords/}" />
+    {dede:include filename="meta.htm"/}
+</head>
+
+<body>
+    {dede:include filename="header.htm"/}
+
+    <div class="line10"></div>
+    <table width="1067" border="0" cellspacing="0" cellpadding="0" align="center" height="70">
+        <tr>
+            <td>
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td width="9%"><img src="{dede:global.cfg_cmspath/}/public/img/jrtt.jpg" /></td>
+                        <td width="91%">
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        {dede:arclist flag='c' typeid='top' row='1' orderby='pubdate'}
+                                        <td align="center" valign="middle"><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]" class="dbzw">[field:title/]</a></td>
+                                        {/dede:arclist}
+                                    </td>
+                                </tr>
+                            </table>
+                            <table width="100%" border="0" cellspacing="1" cellpadding="0" class="zw">
+                                <tr>
+                                    <td align="center">
+                                        <DIV id="marqueediv56511"
+                                            style="OVERFLOW:auto; WIDTH: 720px; HEIGHT:26px; margin:0 auto;white-space:nowrap;text-overflow:ellipsis;">
+                                            {dede:arclist typeid='top' orderby='click' row=10}
+                                                <img src="[field:global.cfg_cmspath/]/public/img/newsdot.png" align="absmiddle">
+                                                <a class="css13" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a>
+                                            {/dede:arclist}
+                                        </DIV>
+                                        <SCRIPT defer>new Marquee("marqueediv56511", 2, 1, 920, 26, 30, 0, 0)</SCRIPT>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <div class="line10"></div>
+    <table width="1067" height="278" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+            <td valign="top">
+                <div style="height:228px;">
+                    {dede:arclist typeid='top' orderby='pubdate' row=25}
+                    <div style="float:left;width:405px;">
+                        <img src="[field:global.cfg_cmspath/]/skin/images/landot.png" align="absmiddle">
+                        <a class="css16" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a>
+                    </div>
+                    {/dede:arclist}
+                </div>
+            </td>
+            <td width="656" valign="top">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td>
+                            <div class="focusBox" style="margin:0 auto">
+                                <ul class="pic" style="position: relative; width: 656px; height: 367px;">
+                                    {dede:arclist flag='h' typeid='top' row='5' orderby='pubdate'}
+                                    <li style="position: absolute; width: 656px; left: 0px; top: 0px; display: none;"><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]"><img src="[field:litpic/]" alt="[field:title/]"></a></li>
+                                    {/dede:arclist}
+                                </ul>
+                                <div class="txt-bg"></div>
+                                <div class="txt">
+                                    <ul>
+                                        {dede:arclist flag='h' typeid='top' row='5' orderby='pubdate'}
+                                        <li style="bottom: -36px;"><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a></li>
+                                        {/dede:arclist}
+                                    </ul>
+                                </div>
+                                <ul class="num">
+                                    {dede:arclist flag='h' typeid='top' row='5' orderby='pubdate'}
+                                    <li [field:global name=autoindex runphp="yes"](@me==1)? @me="class='on'":@me="";[/field:global]><a>[field:global.autoindex/]</a><span></span></li>
+                                    {/dede:arclist}
+
+                                </ul>
+                            </div>
+                            <script type="text/javascript">
+                                jQuery(".focusBox").slide({ titCell: ".num li", mainCell: ".pic", effect: "fold", autoPlay: true, trigger: "click", startFun: function (i) { jQuery(".focusBox .txt li").eq(i).animate({ "bottom": 0 }).siblings().animate({ "bottom": -36 }); } });
+                            </script>
+                        </td>
+                    </tr>
+                </table>
+                <div class="line8"></div>
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td valign="top" style="padding-right:10px">
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    {dede:type typeid='1'}
+                                    <td class="css18"><a href="[field:typelink/]" >[field:typename/]</a></td>
+                                    {/dede:type} </tr>
+                                </tr>
+                            </table>
+                            <div class="lanxian100"></div>
+                            <div class="line10"></div>
+                            <div class="kdbfb">
+                                {dede:arclist typeid='1' row='12' orderby='pubdate'}
+                                <li><img src="[field:global.cfg_cmspath/]/skin/images/landot.png" align="absmiddle"> <a class="css16" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a></li>
+                                {/dede:arclist}
+                            </div>
+                        </td>
+                        <td width="275" valign="top" bgcolor="#F0F0F0">
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <td class="css18" style="padding-left:0;" bgcolor="#FFFFFF"><a href="#">热门标签</a></td>
+                                </tr>
+                            </table>
+                            <div class="lanxianzxdb"></div>
+                            <div class="line10"></div>
+                                <div class="tag-label">
+                                <ul>
+                                    {dede:tag row='40' sort='total'}
+                                    <li><a href="/tags/[field:tag /]/" class="tags[field:id runphp='yes']@me = rand(0,7);[/field:id] tagc[field:highlight /]">[field:tag /]</a></li>
+                                    {/dede:tag}
+                                </ul>
+                                </div>
+
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <div class="line10"></div>
+    <table width="1067" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+            <td width="405" valign="top">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        {dede:type typeid='2'}
+                        <td class="cssjj18"><a href="[field:typelink/]">[field:typename/]</a></td>
+                        {/dede:type}
+                    </tr>
+                </table>
+                <div class="lanxian88"></div>
+                <div class="line15"></div>
+                <table cellspacing="0" cellpadding="0" width="96%" align="center" border="0">
+                    <tbody>
+                    {dede:arclist typeid='2' limit='0,1' orderby='pubdate'}
+                    <tr>
+                        <td style="BORDER: #cccccc 1px solid; PADDING: 2px;" align="middle" width="110"><a class="css14" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]"><img height="90" src="[field:picname/]" alt="[field:title/]" width="120" border="0"/></a></td>
+                        <td class="css15" style="padding-left:10px;"><a class="css71" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a><br>
+                            <a class="css15" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:description function="cn_substr(@me,120)"/]...</a><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]" class="css15"><font color="#666666">&gt;&gt;</font></a></td>
+                    </tr>
+                    {/dede:arclist}
+                    </tbody>
+
+                </table>
+                <div class="line8"></div>
+                <div class="kdbx">
+                    {dede:arclist typeid='2' limit='1,5' orderby='pubdate'}
+                    <li><img src="[field:global.cfg_cmspath/]/skin/images/landot.png" align="absmiddle"> <a class="css16" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a></li>
+                    {/dede:arclist}
+                </div>
+            </td>
+            <td valign="top">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        {dede:type typeid='3'}
+                        <td class="cssjj18"><a href="[field:typelink/]">[field:typename/]</a></td>
+                        {/dede:type}
+                    </tr>
+                </table>
+                <div class="lanxian88"></div>
+                <div class="line15"></div>
+                <table cellspacing="0" cellpadding="0" width="96%" align="center" border="0">
+                    <tbody>
+                    {dede:arclist typeid='3' limit='0,1' orderby='pubdate'}
+                    <tr>
+                        <td style="BORDER: #cccccc 1px solid; PADDING: 2px;" align="middle" width="110"><a class="css14" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]"><img height="90" src="[field:picname/]" alt="[field:title/]" width="120" border="0"/></a></td>
+                        <td class="css15" style="padding-left:10px;"><a class="css71" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a><br>
+                            <a class="css15" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:description function="cn_substr(@me,120)"/]...</a><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]" class="css15"><font color="#666666">&gt;&gt;</font></a></td>
+                    </tr>
+                    {/dede:arclist}
+                    </tbody>
+                </table>
+                <div class="line8"></div>
+                <div class="kdbx">
+                    {dede:arclist typeid='3' limit='1,5' orderby='pubdate'}
+                    <li><img src="[field:global.cfg_cmspath/]/skin/images/landot.png" align="absmiddle"> <a class="css16" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a></li>
+                    {/dede:arclist}
+                </div>
+            </td>
+            <td width="275" height="223" valign="top" bgcolor="#F7F3F7">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        {dede:type typeid='4'}
+                        <td class="cssjj18" bgcolor="#FFFFFF"><a href="[field:typelink/]" >[field:typename/]</a></td>
+                        {/dede:type}
+                    </tr>
+                </table>
+                <div class="lanxian88"></div>
+                <div class="line4"></div>
+                <div class="kdbxv">
+                    {dede:arclist typeid='4' row='9' orderby='pubdate'}
+                    <li><img src="[field:global.cfg_cmspath/]/skin/images/landot.png" align="absmiddle"> <a class="css16" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a></li>
+                    {/dede:arclist}
+                </div>
+            </td>
+        </tr>
+    </table>
+    <div class="line10"></div>
+    <table width="1067" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr>
+            <td width="405" colspan="2" valign="top">
+                <table width="798" height="111" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td width="405" valign="top">
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    {dede:type typeid='5'}
+                                    <td class="css18"><a href="[field:typelink/]" >[field:typename/]</a></td>
+                                    {/dede:type}
+                                </tr>
+                            </table>
+                            <div class="lanxian100"></div>
+                            <div class="line10"></div>
+                            <div class="kdbx">
+                                {dede:arclist typeid='5' row='6' orderby='pubdate'}
+                                <li><img src="[field:global.cfg_cmspath/]/skin/images/landot.png" align="absmiddle"> <a class="css16" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a></li>
+                                {/dede:arclist}
+                            </div>
+                        </td>
+                        <td width="393" valign="top">
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    {dede:type typeid='6'}
+                                    <td class="css18"><a href="[field:typelink/]" >[field:typename/]</a></td>
+                                    {/dede:type}
+                                </tr>
+                            </table>
+                            <div class="lanxian100"></div>
+                            <div class="line10"></div>
+                            <div class="kdbx">
+                                {dede:arclist typeid='6' row='6' orderby='pubdate'}
+                                <li><img src="[field:global.cfg_cmspath/]/skin/images/landot.png" align="absmiddle"> <a class="css16" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a></li>
+                                {/dede:arclist}
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <div class="line15"></div>
+                <div class="kdbx"> </div>
+                <div class="line10"></div>
+                <table width="798" height="111" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td width="405" valign="top">
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    {dede:type typeid='7'}
+                                    <td class="cssjj18"><a href="[field:typelink/]" >[field:typename/]</a></td>
+                                    {/dede:type}
+                                </tr>
+                            </table>
+                            <div class="lanxian88"></div>
+                            <div class="line10"></div>
+                            <div class="kdbx">
+                                {dede:arclist typeid='7' row='6' orderby='pubdate'}
+                                <li><img src="[field:global.cfg_cmspath/]/skin/images/landot.png" align="absmiddle"> <a class="css16" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a></li>
+                                {/dede:arclist}
+                            </div>
+                        </td>
+                        <td width="393" valign="top">
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    {dede:type typeid='8'}
+                                    <td class="css18"><a href="[field:typelink/]" >[field:typename/]</a></td>
+                                    {/dede:type}
+                                </tr>
+                            </table>
+                            <div class="lanxian100"></div>
+                            <div class="line10"></div>
+                            <div class="kdbx">
+                                {dede:arclist typeid='8' row='6' orderby='pubdate'}
+                                <li><img src="[field:global.cfg_cmspath/]/skin/images/landot.png" align="absmiddle"> <a class="css16" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a></li>
+                                {/dede:arclist}
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td width="274" height="200" valign="top">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        {dede:type typeid='9'}
+                        <td class="cssjj18"><a href="[field:typelink/]" >[field:typename/]</a></td>
+                        {/dede:type}
+                    </tr>
+                </table>
+                <div class="lanxian88"></div>
+                <div class="line10"></div>
+                <div class="kdbx">
+                    {dede:arclist typeid='9' row='6' orderby='pubdate'}
+                    <li><img src="[field:global.cfg_cmspath/]/skin/images/landot.png" align="absmiddle"> <a class="css16" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a></li>
+                    {/dede:arclist}
+                </div>
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        {dede:type typeid='10'}
+                        <td class="css18"><a href="[field:typelink/]" >[field:typename/]</a></td>
+                        {/dede:type}
+                    </tr>
+                </table>
+                <div class="lanxian88"></div>
+                <div class="line10"></div>
+                <div class="kdbx">
+                    {dede:arclist typeid='10' row='6' orderby='pubdate'}
+                    <li><img src="[field:global.cfg_cmspath/]/skin/images/landot.png" align="absmiddle"> <a class="css16" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a></li>
+                    {/dede:arclist}
+                </div>
+            </td>
+        </tr>
+    </table>
+    <div class="line10"></div>
+
+    <table width="1067" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr>
+            <td align="left" class="zw16heise" height="30">友情链接</td>
+        </tr>
+    </table>
+    <div class="lanxian1067"></div>
+    <div class="line10"></div>
+    <table width="1067" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+            <td height="10" align="left" valign="top" bgcolor="#FFFFFF" class="css5">
+                <div class="link">
+                    {dede:flink row='24' type='text' titlelen="24"  typeid="0"}
+                    [field:link /]
+                    {/dede:flink}
+                </div>
+            </td>
+        </tr>
+    </table>
+    <div class="line10"></div>
+    <div class="linefbg"></div>
+    <div class="line10"></div>
+    {dede:include filename="footer.htm"/}
+</body>
+</html>

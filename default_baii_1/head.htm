@@ -1,0 +1,17 @@
+<div class="nheader">
+  <div class="w1200">
+    <div class="nlogo"><a href="{dede:global.cfg_basehost/}/"><img src="{dede:global.cfg_cmspath/}/public/images/logo.png" alt="{dede:global.cfg_webname/}"></a></div>
+  </div>
+</div>
+<div class="jjnav">
+  <div class="w1200">
+    <li><a href="{dede:global.cfg_basehost/}/" {dede:field name=typeid runphp="yes"}(@me=="")? @me=" class='current' ":@me="";{/dede:field}>网站首页</a></li>
+    {dede:channel type='top' currentstyle="
+    <li><a href='~typelink~' class='current'>~typename~</a></li>
+    "}
+    <li><a href="[field:typeurl/]">[field:typename/]</a></li>
+    {/dede:channel} </div>
+</div>
+<style> 
+#bdads1{width:1026px; margin:0 auto;margin:5px 0 0   190px;} 
+</style>

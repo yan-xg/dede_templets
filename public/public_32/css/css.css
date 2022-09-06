@@ -1,0 +1,1136 @@
+ @charset "utf-8";
+.css3 {
+	font-size: 12px;
+	line-height: 22px;
+	color: #fefeff;
+	text-decoration: none;
+}
+.css4 {
+	font-size: 12px;
+	line-height: 22px;
+	color: #a9a9a9;
+	text-decoration: none;
+}
+.cityzw {
+	font-size: 12px;
+	line-height: 20px;
+	text-decoration: none;
+	word-spacing: -3px;
+	color: #000000
+}
+a.cityzw:hover {
+	font-size: 12px;
+	line-height: 20px;
+	color: #FF0000;
+	word-spacing: -3px;
+	text-decoration: underline;
+}
+.nav4 {
+	font-size: 14px;
+	line-height: 26px;
+	color: #444;
+	text-decoration: none;
+}
+.zw {
+	font-size: 12px;
+	line-height: 20px;
+	text-decoration: none;
+	color: #444444;
+}
+a.zw:hover {
+	font-size: 12px;
+	line-height: 20px;
+	color: #FF0000;
+	text-decoration: underline;
+}
+.theight {
+	height: 8px;
+	width: 100%;
+	line-height: 8px;
+}
+.css1 {
+	font-size: 14px;
+	line-height: 24px;
+	color: #fefeff;
+	text-decoration: none;
+}
+.css2 {
+	font-size: 14px;
+	line-height: 24px;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.css7 {
+	font-size: 14px;
+	line-height: 26px;
+	color: #ffffff;
+	text-decoration: none;
+}
+a.css7:hover {
+	font-size: 14px;
+	line-height: 26px;
+	color: #ffffff;
+	text-decoration: underline;
+	font-weight: bold;
+}
+.css71 {
+	font-size: 14px;
+	line-height: 26px;
+	color: #444444;
+	text-decoration: none;
+	font-weight: bold;
+}
+a.css71:hover {
+	font-size: 14px;
+	line-height: 26px;
+	color: #ff0000;
+	text-decoration: underline;
+	font-weight: bold;
+}
+.css18 a:hover {
+	font-size: 18px;
+	line-height: 33px;
+	color: #ff0000;
+	text-decoration: underline;
+	font-weight: bolder;
+}
+.css18hs {
+	font-size: 18px;
+	line-height: 33px;
+	color: #ff0000;
+	text-decoration: none;
+	font-weight: bolder;
+	padding-left: 10px;
+}
+.css5 {
+	font-size: 12px;
+	line-height: 22px;
+	color: #666666;
+	text-decoration: none;
+}
+.css6 {
+	font-size: 12px;
+	line-height: 22px;
+	color: #167ccb;
+	text-decoration: none;
+	font-weight: bold
+}
+.css8 {
+	font-size: 14px;
+	line-height: 26px;
+	color: #3d3d3d;
+	text-decoration: none;
+	font-weight: bold
+}
+.css9 {
+	font-size: 14px;
+	line-height: 26px;
+	color: #055496;
+	text-decoration: none;
+}
+.css10 {
+	font-size: 14px;
+	line-height: 30px;
+	color: #444;
+	text-decoration: none;
+}
+a.css10:hover {
+	font-size: 14px;
+	line-height: 30px;
+	color: #ff0000;
+	text-decoration: underline;
+}
+.css120 {
+	font-size: 14px;
+	line-height: 25px;
+	color: #055496;
+	text-decoration: none;
+}
+a.css120:hover {
+	font-size: 14px;
+	line-height: 25px;
+	color: #ff0000;
+	text-decoration: underline;
+}
+.csshjj {
+	line-height: 35px;
+}
+.css100 {
+	font-size: 14px;
+	line-height: 26px;
+	color: red;
+	text-decoration: none;
+}
+.css11 {
+	font-size: 14px;
+	line-height: 18px;
+	color: #2e5196;
+	text-decoration: none;
+	font-weight: bold
+}
+.css12 {
+	font-size: 14px;
+	line-height: 18px;
+	color: #2e5196;
+	text-decoration: none;
+}
+.css13 {
+	font-size: 12px;
+	line-height: 22px;
+	color: #333;
+	text-decoration: none;
+}
+a.css13:hover {
+	font-size: 12px;
+	line-height: 22px;
+	color: #ff0000;
+	text-decoration: underline;
+}
+.css27 {
+	font-size: 12px;
+	line-height: 22px;
+	color: #b40000;
+	text-decoration: none;
+}
+.css28 {
+	font-size: 12px;
+	line-height: 22px;
+	color: #b96017;
+	text-decoration: none;
+}
+.css29 {
+	font-size: 12px;
+	line-height: 22px;
+	color: #420969;
+	text-decoration: none;
+}
+.css30 {
+	font-size: 12px;
+	line-height: 22px;
+	color: #59a239;
+	text-decoration: none;
+}
+.css31 {
+	font-size: 12px;
+	line-height: 22px;
+	color: #ff5a00;
+	text-decoration: none;
+}
+.css14 {
+	font-size: 14px;
+	line-height: 24px;
+	color: #444444;
+	text-decoration: none;
+}
+.css15 {
+	font-size: 12px;
+	line-height: 24px;
+	color: #666666;
+	text-decoration: none;
+}
+a.css15:hover {
+	font-size: 12px;
+	line-height: 24px;
+	color: #ff0000;
+	text-decoration: underline;
+}
+.css45 {
+	font-size: 13px;
+	line-height: 20px;
+	color: #555555;
+	text-decoration: none;
+}
+.css16 {
+	font-size: 16px;
+	line-height: 33px;
+	color: #444444;
+	text-decoration: none;
+}
+a.css16:hover {
+	font-size: 16px;
+	line-height: 33px;
+	color: #ff0000;
+	text-decoration: underline;
+}
+.css18 {
+	font-size: 18px;
+	line-height: 33px;
+	color: #0779d4;
+	text-decoration: none;
+	font-weight: bolder;
+	padding-left: 10px;
+}
+.css18 a {
+	font-size: 18px;
+	line-height: 33px;
+	color: #0779d4;
+	text-decoration: none;
+	font-weight: bolder;
+}
+.css18hs a {
+	font-size: 18px;
+	line-height: 33px;
+	color: #ff0000;
+	text-decoration: none;
+	font-weight: bolder;
+}
+.css18hs a:hover {
+	font-size: 18px;
+	line-height: 33px;
+	color: #ff0000;
+	text-decoration: underline;
+	font-weight: bolder;
+}
+.cssjj18 {
+	font-size: 18px;
+	line-height: 33px;
+	color: #0779d4;
+	text-decoration: none;
+	font-weight: bolder;
+	padding-left: 8px;
+}
+.cssjj18 a {
+	font-size: 18px;
+	line-height: 33px;
+	color: #0779d4;
+	text-decoration: none;
+	font-weight: bolder;
+}
+.cssjj18 a:hover {
+	font-size: 18px;
+	line-height: 33px;
+	color: #ff0000;
+	text-decoration: underline;
+	font-weight: bolder;
+}
+.search {
+	overflow: hidden;
+	width: 260px;
+	float: right;
+	border-radius: 1px;
+}
+.search .input_text {
+	width: 213px;
+	padding-left: 5px;
+	float: left;
+	outline: none;
+	height: 28px;
+	line-height: 28px;
+	border: #0879c9 1px solid
+}
+.search .input_submit {
+	background: #0879c9 url(../images/search.png) no-repeat center;
+	color: #FFF;
+	float: right;
+	width: 40px;
+	border: none;
+	cursor: pointer;
+	outline: none;
+	height: 32px;
+	line-height: 32px;
+}
+.css17 {
+	font-size: 14px;
+	line-height: 20px;
+	color: #ffffff;
+	text-decoration: none;
+}
+.css19 {
+	font-size: 12px;
+	line-height: 22px;
+	color: #f2000b;
+	text-decoration: none;
+	font-weight: bold
+}
+.css20 {
+	font-size: 18px;
+	line-height: 24px;
+	text-decoration: none;
+	font-weight: bold
+}
+.css21 {
+	font-size: 14px;
+	line-height: 24px;
+	color: #88bbe6;
+	text-decoration: none;
+	font-weight: bold
+}
+.css22 {
+	font-size: 12px;
+	line-height: 22px;
+	color: #54656f;
+	text-decoration: none;
+}
+.css23 {
+	font-size: 12px;
+	line-height: 26px;
+	color: #0c2c86;
+	text-decoration: none;
+}
+.css24 {
+	font-size: 14px;
+	line-height: 24px;
+	color: #273133;
+	text-decoration: none;
+}
+.css25 {
+	font-size: 12px;
+	line-height: 22px;
+	color: #0010a6;
+	text-decoration: none;
+}
+.css26 {
+	font-size: 12px;
+	line-height: 22px;
+	color: #00545e;
+	text-decoration: none;
+}
+.css32 {
+	font-size: 12px;
+	line-height: 22px;
+	color: #ff0008;
+	text-decoration: none;
+}
+.css33 {
+	font-size: 14px;
+	line-height: 16px;
+	color: #d1f0ff;
+	text-decoration: none;
+}
+.css34 {
+	font-size: 12px;
+	line-height: 24px;
+	color: #526d83;
+	text-decoration: none;
+}
+.css35 {
+	font-size: 12px;
+	line-height: 22px;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.css36 {
+	font-size: 18px;
+	line-height: 24px;
+	color: #d50000;
+	text-decoration: none;
+	font-family: "黑体";
+}
+.css37 {
+	font-size: 14px;
+	line-height: 26px;
+	color: #004293;
+	text-decoration: none;
+}
+.css38 {
+	font-size: 18px;
+	line-height: 34px;
+	color: #1f3645;
+	text-decoration: none;
+	font-weight: bold
+}
+.css39 {
+	font-size: 12px;
+	line-height: 24px;
+	color: #939393;
+	text-decoration: none;
+}
+.css40 {
+	font-size: 14px;
+	line-height: 22px;
+	color: #9b9b9b;
+	text-decoration: none;
+}
+.css41 {
+	font-size: 12px;
+	line-height: 22px;
+	color: #9b9b9b;
+	text-decoration: none;
+}
+.css42 {
+	font-size: 14px;
+	line-height: 24px;
+	color: #ff0008;
+	text-decoration: none;
+}
+.css57 {
+	font-size: 12px;
+	line-height: 18px;
+	color: #0c2c86;
+	text-decoration: none;
+}
+.css56 {
+	font-size: 12px;
+	line-height: 22px;
+	text-decoration: none;
+}
+.css1010 {
+	font-size: 14px;
+	line-height: 24px;
+	color: #055496;
+	text-decoration: none;
+}
+a.css1010:hover {
+	font-size: 14px;
+	line-height: 24px;
+	color: #ff0000;
+	text-decoration: underline;
+}
+.cssbwzg {
+	font-size: 14px;
+	line-height: 25px;
+	color: #055496;
+	text-decoration: none;
+}
+a.cssbwzg:hover {
+	font-size: 14px;
+	line-height: 25px;
+	color: #ff0000;
+	text-decoration: underline;
+}
+.cssnydh {
+	font-size: 14px;
+	line-height: 24px;
+	color: #ffffff;
+	text-decoration: none;
+}
+a.cssnydh:hover {
+	font-size: 14px;
+	line-height: 24px;
+	color: #ffffff;
+	text-decoration: underline;
+}
+.cssbiaoti {
+	font-size: 24px;
+	line-height: 24px;
+	color: #074EAA;
+	font-weight: bold;
+	text-decoration: none;
+}
+a.cssbiaoti:hover {
+	font-size: 14px;
+	line-height: 24px;
+	color: #ffffff;
+	text-decoration: underline;
+}
+.cssfbiaoti {
+	font-size: 16px;
+	line-height: 20px;
+	text-decoration: none;
+}
+a.cssfbiaoti:hover {
+	font-size: 14px;
+	line-height: 24px;
+	color: #ffffff;
+	text-decoration: underline;
+}
+.cssjbiaoti {
+	font-size: 18px;
+	line-height: 24px;
+	font-weight: bold;
+	text-decoration: none;
+}
+a.cssjbiaoti:hover {
+	font-size: 14px;
+	line-height: 24px;
+	color: #ffffff;
+	text-decoration: underline;
+}
+.csssy {
+	font-size: 17px;
+	line-height: 24px;
+	color: #ffffff;
+	text-decoration: none;
+}
+a.csssy:hover {
+	font-size: 17px;
+	line-height: 24px;
+	color: #ffffff;
+	text-decoration: underline;
+}
+#cdhlj {
+	font-size: 14px;
+	line-height: 24px;
+	color: #ffffff;
+	text-decoration: none;
+}
+#cdhlj a {
+	font-size: 14px;
+	line-height: 24px;
+	color: #ffffff;
+	text-decoration: none;
+}
+#cdhlj a:hover {
+	font-size: 14px;
+	line-height: 24px;
+	color: #ffffff;
+	text-decoration: underline;
+}
+.cssneirong {
+	font-size: 16px;
+	line-height: 28px;
+	font-family: "微软雅黑";
+}
+.cssneirong img {
+	display: block;
+	margin: 0 auto;
+	max-width: 720px
+}
+a.cssneirong:hover {
+	font-size: 16px;
+	line-height: 28px;
+	text-decoration: underline;
+}
+.j7-left3 {
+	BORDER-RIGHT: #cbdbeb 1px solid;
+	BORDER-TOP: #cbdbeb 1px solid;
+	FLOAT: left;
+	BORDER-LEFT: #cbdbeb 1px solid;
+	WIDTH: 256px;
+	BORDER-BOTTOM: #cbdbeb 1px solid;
+	HEIGHT: 196px
+}
+.nav-ti7 {
+	FLOAT: left;
+	BACKGROUND-IMAGE: url("../images/buttonbg2.gif");
+	WIDTH: 100%;
+	HEIGHT: 29px
+}
+.nav-t {
+	FLOAT: left;
+	BACKGROUND-IMAGE: url("../images/11hnjjw_018.gif");
+	WIDTH: 100%;
+	HEIGHT: 29px
+}
+.focusBox .pic img {
+	width: 656px;
+	height: 367px;
+	display: block;
+}
+.focusBox .txt-bg {
+	position: absolute;
+	bottom: 0;
+	z-index: 1;
+	height: 36px;
+	width: 100%;
+	background: #333;
+	filter: alpha(opacity=60);
+	opacity: 0.7;
+	overflow: hidden;
+}
+.focusBox .txt {
+	position: absolute;
+	bottom: 0;
+	z-index: 2;
+	height: 36px;
+	width: 100%;
+	overflow: hidden;
+}
+.nav_a {
+	FLOAT: left;
+	BACKGROUND-IMAGE: url("../images/buttonbg.gif");
+	WIDTH: 100%;
+	HEIGHT: 29px
+}
+.nav_a1 {
+	FLOAT: left;
+	BACKGROUND-IMAGE: url("../images/buttonbg.gif");
+	WIDTH: 100%;
+	HEIGHT: 29px
+}
+.nav_a {
+	FLOAT: left;
+	WIDTH: 249px;
+	HEIGHT: 32px
+}
+.nav-ti7 {
+	FLOAT: left;
+	WIDTH: 311px;
+HEIGHT: 29px；BACKGROUND-IMAGE: url("../images/buttonbg.gif")
+}
+.nav_a1 {
+	BORDER-TOP: #c6d6e6 1px solid;
+	FLOAT: left;
+	WIDTH: 249px;
+	HEIGHT: 32px
+}
+.nav-ti7 .current {
+	BORDER-RIGHT: #c6d6e6 1px solid;
+	FONT-WEIGHT: 700;
+	BORDER-LEFT-WIDTH: 0px;
+	BACKGROUND: url("../images/l-ttt.jpg") #fff center 50%;
+	OVERFLOW: hidden;
+	COLOR: #16387c;
+	HEIGHT: 29px
+}
+.dbzw {
+	font-size: 28px;
+	color: #055496;
+	text-decoration: none;
+	font-weight: 400;
+}
+a.dbzw:hover {
+	font-size: 28px;
+	color: #ff0000;
+	text-decoration: none;
+}
+.menuzw {
+	font-size: 14px;
+	color: #FFFFFF;
+	font-family: "微软雅黑";
+	text-decoration: none;
+	word-spacing: 3px;
+}
+.menuzw a {
+	font-size: 14px;
+	color: #FFFFFF;
+	font-family: "微软雅黑";
+	word-spacing: 3px;
+	text-decoration: none;
+}
+.menuzw a:hover {
+	font-size: 14px;
+	color: #FFFFFF;
+	font-family: "微软雅黑";
+	text-decoration: underline;
+}
+img {
+	border: 0;
+}
+.focusBox {
+	position: relative;
+	width: 656px;
+	height: 367px;
+	overflow: hidden;
+	text-align: left;
+	background: white;
+}
+.focusBox .txt li {
+	height: 36px;
+	line-height: 36px;
+	position: absolute;
+	bottom: -36px;
+}
+.focusBox .num li.on a, .focusBox .num a:hover {
+	background: #f60;
+	color: #fff
+}
+.focusBox .num li a:hover, .focusBox .num li:hover a {
+	color: #fff
+}
+/* 分页 */
+ 
+#pages {
+	clear: both;
+	margin: 20px;
+	overflow: hidden;
+	margin-left: 0px;
+	text-align: center;
+	font-size: 12px
+}
+.focusBox .num li a, .focusBox .num li span {
+	position: absolute;
+	z-index: 2;
+	display: block;
+	color: white;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	text-decoration: none;
+}
+.focusBox .num li span {
+	z-index: 1;
+	background: black;
+	filter: alpha(opacity=50);
+	opacity: 0.5;
+}
+#pages ul li {
+	display: inline-block;
+	border: 1px solid #ccc;
+	padding: 4px 12px;
+	margin: 0 1px;
+	line-height: 24px;
+	background: #fff;
+	color: #999
+}
+#pages ul li:hover {
+	background: #027DC3;
+	color: #fff;
+	border: 1px solid #027DC3
+}
+.focusBox .txt li a {
+	display: block;
+	color: white;
+	padding: 0 0 0 10px;
+	font-size: 18px;
+	text-decoration: none;
+}
+.focusBox .num {
+	position: absolute;
+	z-index: 3;
+	bottom: 8px;
+	right: 8px;
+	font: 12px/1.5 Verdana, Geneva, sans-serif;
+}
+.focusBox .num li {
+	float: left;
+	position: relative;
+	width: 22px;
+	height: 20px;
+	line-height: 20px;
+	overflow: hidden;
+	text-align: center;
+	margin-right: 1px;
+	cursor: pointer;
+}
+#pages ul li:hover a {
+	color: #fff;
+}
+#pages ul li.thisclass {
+	display: inline-block;
+	border: 1px solid #027DC3;
+	padding: 4px 12px;
+	margin: 0 1px;
+	background: #027DC3;
+	color: #fff;
+}
+#pages ul li.thisclass a {
+	color: #fff;
+}
+#pages ul li a {
+	display: block;
+	color: #999
+}
+#pages ul li a:hover {
+	color: #fff;
+}
+.topdh {
+	background-color: #d9d9d9;
+	height: 31px;
+	line-height: 31px;
+	color: #666666;
+}
+.topdh ul {
+	width: 1067px;
+	margin: 0 auto;
+	padding: 0;
+	color: #666666;
+}
+.topdh ul li {
+	width: 592px;
+	float: left;
+	font-size: 14px;
+	text-align: left;
+}
+.topdh ul li a {
+	text-decoration: none;
+	color: #666666
+}
+.topdh ul li a:hover {
+	text-decoration: underline;
+	color: #ff0000
+}
+.menucss {
+	font-size: 16px;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.menucss a {
+	font-size: 16px;
+	color: #FFFFFF;
+	text-decoration: none;
+	padding-left: 20px;
+}
+.menucss a:hover {
+	font-size: 16px;
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+.tgcss {
+	font-size: 14px;
+	color: #666666;
+	line-height: 27px;
+}
+#tooltip1 {
+/*	position: absolute;
+	border: 1px solid #ccc;
+	padding: 10px;
+	display: none; width:150px; height:150px;
+	background:url(../images/jjbwb.png) center center no-repeat #FFF;*/
+}
+.tooltip1 {
+}
+#tooltip2 {
+	position: absolute;
+	border: 1px solid #ccc;
+	/*	padding: 10px;*/
+	display: none;
+	width: 150px;
+	height: 150px;
+	background: url(../images/weixin.jpg) center center no-repeat #FFF;
+}
+.tooltip2 {
+}
+.fr {
+	display: block;
+	float: right;
+}
+.follow {
+	display: table;
+	width: 290px;
+}
+.follow-items {
+	position: relative;
+	display: block;
+	float: left;
+	line-height: 38px;
+	margin-right: 10px;
+}
+.follow-items a {
+	display: block;
+	width: 60px;
+	height: 38px;
+}
+.line6 {
+	height: 6px;
+	line-height: 6px;
+	width: 100%
+}
+.line8 {
+	height: 8px;
+	line-height: 8px;
+	width: 100%
+}
+.lanxian88 {
+	background-image: url(../images/lanxian88.jpg);
+	background-position: left;
+	background-repeat: no-repeat;
+	height: 2px;
+	line-height: 2px;
+	margin: 0 auto;
+	width: 100%;
+}
+.lanxianzxdb {
+	background-image: url(../images/zxdbbg.jpg);
+	background-position: left;
+	padding-left: 0;
+	background-repeat: no-repeat;
+	height: 4px;
+	line-height: 4px;
+	margin: 0 auto;
+	width: 100%;
+}
+.hsxian {
+	background-image: url(../images/hsxian.jpg);
+	background-position: left;
+	padding-left: 0;
+	background-repeat: no-repeat;
+	height: 4px;
+	line-height: 4px;
+	margin: 0 auto;
+	width: 100%;
+}
+.kdbfb {
+	width: 100%;
+	margin: 0;
+	padding: 0
+}
+.kdbfb li {
+	width: 100%;
+	float: left
+}
+.kd100 {
+	height: 100px;
+	width: 100%;
+	margin: 0;
+	padding: 0
+}
+.kd100 li {
+	width: 100%;
+	float: left
+}
+.kd405 {
+	width: 405px;
+	margin: 0;
+	padding: 0
+}
+.kd405 li {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	float: left
+}
+.line4 {
+	height: 4px;
+	line-height: 4px;
+	width: 100%
+}
+.line15 {
+	height: 15px;
+	line-height: 15px;
+	width: 100%
+}
+.ad1067 {
+	width: 1067px;
+	margin: 0 auto;
+}
+.linefbg {
+	background-color: #0062B0;
+	height: 3px;
+	line-height: 3px;
+	width: 100%;
+}
+.lanxian1067 {
+	background-image: url(../images/lanxian.jpg);
+	background-position: left;
+	background-repeat: no-repeat;
+	height: 2px;
+	line-height: 2px;
+	margin: 0 auto;
+	width: 1067px;
+}
+.zw16heise {
+	font-size: 16px;
+	color: #333;
+}
+.xudot {
+	background-image: url(../images/xudot.png);
+	background-repeat: no-repeat;
+	height: 1px;
+	line-height: 1px;
+	margin: 0 auto;
+}
+.lanxian100 {
+	background-image: url(../images/lanxian100.jpg);
+	background-position: left;
+	background-repeat: no-repeat;
+	height: 2px;
+	line-height: 2px;
+	margin: 0 auto;
+	width: 100%;
+}
+.kdbx {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+.kdbx li {
+	width: 100%;
+	float: left;
+	height: 33px;
+	overflow: hidden
+}
+.kdbxv {
+	width: 97%;
+	margin: 0 auto;
+	padding: 0
+}
+.kdbxv li {
+	width: 97%;
+	float: left;
+	height: 33px;
+	overflow: hidden
+}
+.adkd {
+	width: 1067px;
+	margin: 0 auto;
+}
+.locatitle {
+	font-size: 16px;
+	font-family: "微软雅黑";
+	color: #686868;
+}
+.locatitle a {
+	font-size: 16px;
+	font-family: "微软雅黑";
+	color: #686868;
+	text-decoration: none
+}
+.line10 {
+	height: 10px;
+	line-height: 10px;
+	width: 100%
+}
+.line20 {
+	height: 10px;
+	line-height: 10px;
+	width: 100%
+}
+.locatitle a:hover {
+	font-size: 16px;
+	font-family: "微软雅黑";
+	color: #ff0000;
+	text- : underline;
+}
+.is-list-l h3 {
+	height: 34px;
+	line-height: 34px;
+	border-bottom: 1px solid #ddd;
+	font-weight: normal;
+}
+.is-list-l h3 a {
+	padding: 0 20px;
+	text-align: center;
+	display: block;
+	float: left;
+	height: 34px;
+	border-bottom: 1px solid #0077b9;
+	color: #0077b9;
+	font-size: 20px;
+	font-family: "微软雅黑";
+}
+.is-list-l h3 a:hover {
+	text-decoration: none;
+}
+.link a {
+	padding-right: 10px;
+	color: #333;
+	line-height: 28px;
+	text-decoration: none
+}
+.biankuangcss a:hover {
+	font-size: 18px;
+	color: #fff;
+	text-decoration: underline;
+}
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	font-family: "微软雅黑";
+	BACKGROUND-COLOR: #ffffff;
+}
+.biankuangcss {
+	font-size: 18px;
+}
+.biankuangcss a {
+	font-size: 18px;
+	border: 1px solid #0066CC;
+	color: #fff;
+	text-decoration: none;
+	margin: 3px;
+	padding: 3px;
+	background-color: #0066CC
+}
+a {
+	color: #666;
+	text-decoration: none
+}
+a:hover {
+	text-decoration: none
+}
+ul, ol, li {
+	list-style: none;
+}
+.line {
+	height: 1px;
+	background: url(../images/line.jpg) repeat-x
+}
+* {
+	margin: 0 auto;
+	list-style: none;
+}

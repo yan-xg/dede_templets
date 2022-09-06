@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <title>{dede:global.cfg_webname/}</title>
+  <meta name="description" content="{dede:global.cfg_description/}" />
+  <meta name="keywords" content="{dede:global.cfg_keywords/}" />
+  <link rel="stylesheet" href="{dede:global.cfg_cmspath/}/public/m/css/style.css">
+</head>
+<body id="index-page">
+{dede:include filename="header_m.htm"/}
+<div class="wrap">
+  <div class="hr10"></div>
+  <section class="modd">
+    <div class="title TitA"> <em></em>
+      <h3>最近更新</h3>
+    </div>
+    <ul class="article-hot">
+      {dede:arclist row='10' orderby='pubdate'}
+      <li><span class="mun">[field:global name=autoindex runphp="yes"]@me=@me+0;[/field:global]</span><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a></li>
+      {/dede:arclist}
+    </ul>
+  </section>
+  <div class="hr10"></div>
+  <section class="modd feedsAll">
+    <div class="title TitA"> <em></em>
+      <h3>图文信息</h3>
+    </div>
+    <div class="feeds">
+      <div class="feeds-list"> {dede:arclist row='10' orderby='pubdate' type='image.'}
+        <div class="feeds-item">
+          <div class="feeds-item-detail hasImg">
+            <p class="feeds-item-pic"><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]"><img src="[field:picname/]" alt="[field:title/]"></a></p>
+            <h3><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a></h3>
+            <div class="feeds-item-info"> <span class="time"><i class="fa-calendar-o"></i>[field:pubdate function="MyDate('Y-m-d',@me)"/]</span> </div>
+          </div>
+        </div>
+        {/dede:arclist} </div>
+    </div>
+  </section>
+  <section class="modd">
+    <div class="title TitA"> <em></em>
+      <h3>阅读排行</h3>
+    </div>
+    <ul class="article-hot">
+      {dede:arclist row='10' orderby='click'}
+      <li><span class="mun">[field:global name=autoindex runphp="yes"]@me=@me+0;[/field:global]</span><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a></li>
+      {/dede:arclist}
+    </ul>
+  </section>
+</div>
+{dede:include filename="footer_m.htm"/}
+</body>
+</html>

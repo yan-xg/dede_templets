@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no" />
+<meta http-equiv="Cache-Control" content="no-transform" />
+  <title>{dede:field.title/}_{dede:field name='typename'/} - {dede:global.cfg_webname/}</title>
+  <meta name="keywords" content="{dede:field.keywords/}" />
+  <meta name="description" content="{dede:field.description function='html2text(@me)'/}" />
+<link rel="stylesheet" href="{dede:global.cfg_cmspath/}/public/m/css/style.css">
+<link rel="stylesheet" href="{dede:global.cfg_cmspath/}/public/m/css/common.css">
+</head>
+<body id="alist">
+{dede:include filename="header_m.htm"/}
+<p class="toolbar">当前位置：{dede:field name='position'/} </p>
+<div class="asd"></div>
+<section class="wzlist">
+  <div class="wtitle" id="wen">
+    <h1>{dede:field.title/}</h1>
+    <p><span>时间：{dede:field.pubdate function="MyDate('Y-m-d H:i',@me)"/} | 栏目：{dede:type} <a href="list.php?tid=[field:id/]">[field:typename/]</a>{/dede:type}  | 点击：<script src="{dede:field name='phpurl'/}/count.php?view=yes&aid={dede:field name='id'/}&mid={dede:field name='mid'/}" type='text/javascript' language="javascript"></script>次</span></p>
+  </div>
+  <div class="con"> </div>
+  <div class="con" id="content"> {dede:field.body/} </div>
+  <div class="art_xg">
+    <h4>您可能感兴趣的文章:</h4>
+    <ul>
+      {dede:arclist row='5' orderby='pubdate'}
+      <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a></li>
+      {/dede:arclist}
+    </ul>
+  </div>
+</section>
+<div class="asd"></div>
+<section class="xgwz"> <b>相关文章</b>
+  <ul>
+    {dede:arclist row='5' orderby='click'}
+    <li><span>[field:pubdate function="MyDate('m-d',@me)"/]</span><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a></li>
+    {/dede:arclist}
+  </ul>
+</section>
+<div class="asd"></div>
+{dede:include filename="footer_m.htm"/}
+</body>
+</html>

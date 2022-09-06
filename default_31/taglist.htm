@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8" />
+    <title>{dede:field.title/} - {dede:global.cfg_webname/}</title>
+    <meta name="keywords" content="{dede:field.keywords/}" />
+    <meta name="description" content="{dede:field.description function='html2text(@me)'/}" />
+    {dede:include filename="meta.htm"/}
+    <link rel="stylesheet" href="{dede:global.cfg_cmspath/}/public/css/style.css">
+    <style>
+        .nav a.on1:after {
+            width: 100%;
+        }
+        .paging li{display: inline;}
+    </style>
+</head>
+
+<body>
+    <!--页头-->
+    <div class="header">
+        {dede:include filename="header.htm"/}
+        <!--主体-->
+        <div class="main">
+            <!--列表层-->
+            <div class="list-layer clearfix">
+                <!--路径-->
+                <div class="path">
+                    <p>当前位置：<a href="/">首页</a> &gt; <a href='#'>TAG标签</a> &gt; <span>{dede:field.title /}</span></p>
+                </div>
+                <!--主体内容列表部分-->
+                <div class="content-list">
+                    <!--列表-->
+                    <div>
+                        <ul>
+                            {dede:list pagesize='10'}
+                            <li> <a href='[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html' target='_blank'>
+                                <img src='[field:litpic /]' alt='[field:title /]' title='[field:title /]'> </a>
+                                <h5><a href='[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html' target='_blank'>[field:title /]</a></h5>
+                                <p>[field:description /]...<a href='[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html' target='_blank' class='detail'>[详细]</a></p>
+                                <P class='describe'> <span>[field:typename /]</span>
+                                    <span class='timer'>[field:pubdate function="MyDate('Y-m-d',@me)"/]</span>
+                                    <a class='discuss'>热度：[field:click /]</a>
+                                </P>
+                            </li>
+                            {/dede:list}
+                        </ul>
+                    </div>
+                    <!--分页-->
+                    <div class="paging">
+                        <ul>
+                            {dede:pagelist listitem="info,index,end,pre,next,pageno,option"/}
+                        </ul>
+                    </div>
+                </div>
+                <!--主体右侧部分-->
+                <div class="content-rt">
+                    <!--今日推荐-->
+                    <div>
+                        <!--标题-->
+                        <div class="tabs tabs-small">
+                            <div class="head">最新文章</div>
+                            <div class="line"><i></i></div>
+                        </div>
+                        <!--title-->
+                        {dede:arclist row='1' titlelen='80' typeid='top'}
+                        <h6><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title/]</a></h6>
+                        <div class="item"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">
+                            <img src="[field:litpic/]" alt="[field:title/]" title="[field:title/]"></a>
+                            <p>[field:description/]...<a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[详细]</a></p>
+                        </div>
+                        {/dede:arclist}
+
+                        <!--内容列表-->
+                        <div class="list">
+                            {dede:arclist limit='1,9' titlelen='80' typeid='top'}
+                            <p><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title /]</a></p>
+                            {/dede:arclist}
+                        </div>
+                    </div>
+
+                    <!--精彩推荐-->
+                    <div>
+                        <div class="tabs tabs-small">
+                            <div class="head">热门排行</div>
+                            <div class="line"><i></i></div>
+                        </div>
+                        <div class="ranking">
+                            <ul>
+                                {dede:arclist row='10'typeid='top' orderby='click'}
+                                <li> <i class="icon1"></i> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title/]</a>
+                                </li>
+                                {/dede:arclist}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {dede:include filename="footer.htm"/}
+    </div>
+</body>
+</html>

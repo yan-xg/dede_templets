@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" >
+  <title>{dede:field.title/} - {dede:global.cfg_webname/}</title>
+  <meta name="keywords" content="{dede:field.keywords/}" />
+  <meta name="description" content="{dede:field.description function='html2text(@me)'/}" />
+<link href="{dede:global.cfg_cmspath/}/public/css/cjcss.css" rel="stylesheet" type="text/css" />
+<link href="{dede:global.cfg_cmspath/}/public/css/listcss.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="{dede:global.cfg_cmspath/}/public/js/jquery1.42.min.js"></script>
+<script type="text/javascript" src="{dede:global.cfg_cmspath/}/public/js/jquery.superslide.2.1.1.js"></script>
+</head>
+<body>
+{dede:include filename="head.htm"/}
+<div class="main">
+  <div class="boxx bb2">
+    <div class="navv  clear"> 当前位置：<a href="/">首页</a> &gt; <a href='#'>TAG标签</a> &gt; <span>{dede:field.title /}</span></div>
+  </div>
+  <div class="w1200">
+    <div class="pleft">
+      <div class="articles article-wrap newslists pagination-container"> {dede:list pagesize ='10'}
+        <article class="excerpt excerptn pagination-item">
+          <header>
+            <h3><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a> </h3>
+          </header>
+          <p class="meta"> <span class="time">[field:pubdate function="MyDate('Y-m-d',@me)"/]</span> <span class="author"></span> </p>
+          <p class="brief" target="_blank"> [field:description function="cn_substr(@me,200)"/]...</p>
+        </article>
+        {/dede:list} </div>
+      <div class="tg_pages">
+        <ul>
+          {dede:pagelist listitem="index,end,pre,next,pageno" listsize="5"/}
+        </ul>
+      </div>
+    </div>
+    <div class="pright">
+      <div class="box w300">
+        <div class="tita "><span>推荐阅读</span></div>
+        <div class="newslist">
+          <ul>
+            {dede:arclist limit='8,8' typeid='top' orderby='pubdate'}
+            <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]"><i></i>[field:title/]</a></li>
+            {/dede:arclist}
+          </ul>
+        </div>
+      </div>
+      <div class="slideTxtBox">
+        <div class="hd">
+          <ul>
+            <li>最新资讯</li>
+            <li>热门资讯</li>
+          </ul>
+        </div>
+        <div class="bd">
+          <ul>
+            {dede:arclist row='8' typeid='top' titlelen='50' orderby='pubdate'}
+            <li><i>[field:global name=autoindex runphp="yes"]@me=@me;[/field:global]</i><span class="date">[field:click/]</span><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a></li>
+            {/dede:arclist}
+          </ul>
+          <ul>
+            {dede:arclist row='8' typeid='top' titlelen='50' orderby='click'}
+            <li><i>[field:global name=autoindex runphp="yes"]@me=@me;[/field:global]</i><span class="date">[field:click/]</span><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a></li>
+            {/dede:arclist}
+          </ul>
+        </div>
+      </div>
+      <script>jQuery(".slideTxtBox").slide({effect:"fold"})</script>
+      {dede:channelartlist typeid='2,2'}
+      <div class="box w300">
+        <div class="tita "><span>{dede:field name='typename'/}</span></div>
+        <div class="newslist">
+          <ul>
+            {dede:arclist row='10' titlelen='50' orderby='pubdate'}
+            <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]"><i></i>[field:title/]</a></li>
+            {/dede:arclist}
+          </ul>
+        </div>
+      </div>
+      {/dede:channelartlist} </div>
+  </div>
+</div>
+{dede:include filename="footer.htm"/}
+</body>
+</html>

@@ -1,0 +1,25 @@
+<header>
+  <div class="header-min">
+    <div class="content"> <a class="btn-back" href="{dede:global.cfg_basehost/}/"></a>
+      <div class="title"><a href="{dede:global.cfg_basehost/}/">{dede:global.cfg_webname/}</a></div>
+      <a class="btn-menu" id="click_mmeun"></a> </div>
+  </div>
+  <div class="nav-top" id="hidden_mmenuc">
+    <div class="nav-all">
+      <h4>频道导航</h4>
+      <ul class="nav-all-list row-4">
+        {dede:channel type='top' currentstyle='<li><a href="~typelink~">~typename~</a></li>'}
+        <li><a href="[field:typelink /]">[field:typename/]</a></li>
+        {/dede:channel}
+      </ul>
+    </div>
+  </div>
+  <div class="channels-wrap">
+    <ul class="channels">
+      {dede:channel type='top' currentstyle='<li><a href="~typelink~">~typename~</a></li>'}
+      <li><a href="[field:typelink /]">[field:typename/]</a></li>
+      {/dede:channel}
+    </ul>
+  </div>
+  <div class="pop-layer" id="hidden_mmenub"></div>
+</header>

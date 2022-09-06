@@ -1,0 +1,21 @@
+<footer class="footer-min">
+  <div class="app"> <a href="{dede:global.cfg_basehost/}/" class="pc">返回首页</a> </div>
+  <div class="copyright">Copyright &copy; 2002-2022 未经授权请勿转载 | 网站所有内容来源于网络，如有侵权联系我们删除。</div>
+  <div class="copyright">联系方式：{dede:global.cfg_lianxi/} </div>
+</footer>
+<div class="clearfix"></div>
+<script type="text/javascript" src="{dede:global.cfg_cmspath/}/public/m/js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="{dede:global.cfg_cmspath/}/public/m/js/menuclick.js"></script>
+<script type="text/javascript">
+$(".feedsAll").each(function(index){
+	$(this).find("#feeds-tab a:first").addClass("cur");
+});
+$(document).ready(function(){
+	var $tab_li_artice = $('.feedsAll #feeds-tab a');
+	$tab_li_artice.click(function(){
+		$(this).addClass('cur').siblings().removeClass('cur');
+		var index = $tab_li_artice.index(this);
+		$('.feedsAll .feeds>.feeds-list').eq(index).removeClass('hide').siblings().addClass('hide');
+	});	
+});
+</script>

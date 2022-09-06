@@ -1,0 +1,265 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" >
+  <title>{dede:global.cfg_webname/}</title>
+  <meta name="description" content="{dede:global.cfg_description/}" />
+  <meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<link href="{dede:global.cfg_cmspath/}/public/css/cjcss.css" rel="stylesheet" type="text/css" />
+<link href="{dede:global.cfg_cmspath/}/public/css/tags_style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="{dede:global.cfg_cmspath/}/public/js/jquery1.42.min.js"></script>
+<script type="text/javascript" src="{dede:global.cfg_cmspath/}/public/js/jquery.superslide.2.1.1.js"></script>
+</head>
+<body>
+{dede:include filename="head.htm"/} 
+<!--<div id="bdads1">广告</div>-->
+<div class="main">
+  <div class="w1200" style=" overflow:visible">
+    <div class="gdbb">
+      <div class="title">滚动播报</div>
+      <div class="gdbbcon">
+        <div class="bd">
+          <ul>
+            {dede:arclist typeid='top' orderby='click' row=10}
+            <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a></li>
+            {/dede:arclist}
+          </ul>
+        </div>
+      </div>
+      <script>jQuery(".gdbbcon").slide({mainCell:".bd ul",autoPlay:true,effect:"leftMarquee",interTime:50,vis:5});</script> 
+    </div>
+    <div class="con mt10">
+      <div class="jjhdp mr85">
+        <div class="focusBox">
+          <ul class="pic">
+            {dede:arclist flag='h' typeid='top' row='5' orderby='pubdate'}
+            <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]"><img src="[field:picname/]" alt="[field:title/]"/></a></li>
+            {/dede:arclist}
+          </ul>
+          <div class="txt-bg"></div>
+          <div class="txt">
+            <ul>
+              {dede:arclist flag='h' typeid='top' row='5' orderby='pubdate'}
+              <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a></li>
+              {/dede:arclist}
+            </ul>
+          </div>
+          <ul class="num">
+            {dede:arclist flag='h' typeid='top' row='5' orderby='pubdate'}
+            <li>[field:global name=autoindex runphp="yes"]@me=@me+0;[/field:global]</li>
+            {/dede:arclist}
+          </ul>
+        </div>
+        <script type="text/javascript">
+		jQuery(".focusBox").slide({ titCell:".num li", mainCell:".pic",effect:"fold", autoPlay:true,trigger:"click",
+			//下面startFun代码用于控制文字上下切换
+			startFun:function(i){
+				 jQuery(".focusBox .txt li").eq(i).animate({"bottom":0}).siblings().animate({"bottom":-36});
+			}
+		});
+	  </script>
+        <div class="newslist">
+          <ul>
+            {dede:arclist typeid='top' orderby='pubdate' row=5}
+            <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]"><i></i>[field:title/]</a></li>
+            {/dede:arclist}
+          </ul>
+        </div>
+      </div>
+      <div class="box jjtmid">
+        <div class="newslist mt10">
+          <ul>
+            {dede:arclist typeid='top' orderby='pubdate' limit='5,13'}
+            <li [field:global name=autoindex runphp="yes"](@me==1)? @me="class='first'":@me="";[/field:global]><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]"><i></i>[field:title/]</a></li>
+            {/dede:arclist}
+          </ul>
+        </div>
+      </div>
+      <div class="jjtright">
+        <div class="m-p1-lb2_1 slideTxtBox">
+          <div class="m-tab_container">
+            <ul class="yjhk_nav clearfix">
+              <li class="current"><a>热门标签</a></li>
+            </ul>
+          </div>
+          <div class="bd" style="position: relative; width: 359px; height: 354px;">
+            <div class="m-p1-lb2_1-container" style="position: absolute; width: 359px; left: 0px; top: 0px; display: none;">
+              <div class="tag-label">
+                <ul>
+                  {dede:tag row='60' sort='total'}
+                  <li><a href="/tags/[field:tag /]/" class="tags[field:id runphp='yes']@me = rand(0,7);[/field:id] tagc[field:highlight /]">[field:tag /]</a></li>
+                  {/dede:tag}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script>jQuery(".slideTxtBox").slide({titCell:".hd .w48",mainCell:".bd ",effect:"fold"});</script> 
+      </div>
+    </div>
+    <div class="con mt25"> {dede:channelartlist typeid='1,1'}
+      <div class="box w360 mr85">
+        <div class="tita "><span>{dede:field name='typename'/}</span></div>
+        <div class="newslist">
+          <ul>
+            {dede:arclist row='9' titlelen='50' orderby='pubdate'}
+            <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]"><i></i>[field:title/]</a></li>
+            {/dede:arclist}
+          </ul>
+        </div>
+      </div>
+      {/dede:channelartlist}
+      {dede:channelartlist typeid='2,2'}
+      <div class="box w360">
+        <div class="tita "><span>{dede:field name='typename'/}</span></div>
+        <div class="newslist">
+          <ul>
+            {dede:arclist row='9' titlelen='50' orderby='pubdate'}
+            <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]"><i></i>[field:title/]</a></li>
+            {/dede:arclist}
+          </ul>
+        </div>
+      </div>
+      {/dede:channelartlist}
+      {dede:channelartlist typeid='3,3'}
+      <div class="box w350">
+        <div class="rg_yjhk_tabs mb30">
+          <div class="yjhk_bd">
+            <ul class="yjhk_nav clearfix">
+              <li class="current"><a>{dede:field name='typename'/}</a></li>
+            </ul>
+            <div class="yjhk_main">
+              <div class="rg_yjzg current">
+                <div class="yjzg_first rg_video_first"> {dede:arclist limit='0,1' titlelen='50' orderby='pubdate'} <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]" class="pic"> <img src="[field:picname/]" alt="[field:title/]" width="350" height="90">
+                  <div class="info"> <i></i> <span class="time"></span> </div>
+                  </a> {/dede:arclist}
+                  {dede:arclist limit='0,1' titlelen='50' orderby='pubdate'}
+                  <h3><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]"><em class="cms-I_Blank_">[field:title/]</em></a></h3>
+                  {/dede:arclist} </div>
+                <ul class="yjzg_list rg_video_list">
+                  {dede:arclist limit='1,4' titlelen='50' orderby='pubdate'}
+                  <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]"><i></i>[field:title/]</a></li>
+                  {/dede:arclist}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/dede:channelartlist} </div>
+    <div class="con mt25"> {dede:channelartlist typeid='4,4'}
+      <div class="box w360 mr85">
+        <div class="tita "><span>{dede:field name='typename'/}</span></div>
+        <div class="newslist">
+          <ul>
+            {dede:arclist row='11' titlelen='50' orderby='pubdate'}
+            <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]"><i></i>[field:title/]</a></li>
+            {/dede:arclist}
+          </ul>
+        </div>
+      </div>
+      {/dede:channelartlist}
+      {dede:channelartlist typeid='5,5'}
+      <div class="box w360">
+        <div class="tita "><span>{dede:field name='typename'/}</span></div>
+        <div class="newslist">
+          <ul>
+            {dede:arclist row='11' titlelen='50' orderby='pubdate'}
+            <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]"><i></i>[field:title/]</a></li>
+            {/dede:arclist}
+          </ul>
+        </div>
+      </div>
+      {/dede:channelartlist}
+      {dede:channelartlist typeid='6,6'}
+      <div class="box w350">
+        <div class="tita "><span>{dede:field name='typename'/}</span></div>
+        <div class="rbox lighting" >
+          <div class="bd">
+            <ul class="plist yh" id="yh">
+              {dede:arclist row='4' titlelen='50' orderby='pubdate'}
+              <li [field:global name=autoindex runphp="yes"](@me==1)? @me="class='current'":@me="";[/field:global]>
+                <h3 class="bg0"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a> </h3>
+                <div class="picbox"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]"> <img  src="[field:picname/]" alt="[field:title/]"> </a> </div>
+              </li>
+              {/dede:arclist}
+            </ul>
+          </div>
+        </div>
+      </div>
+      {/dede:channelartlist} </div>
+    <div class="avd mt25"></div>
+    <div class="con mt25"> {dede:channelartlist typeid='7,7'}
+      <div class="box w360 mr85">
+        <div class="tita "><span>{dede:field name='typename'/}</span></div>
+        <div class="newslist">
+          <ul>
+            {dede:arclist row='9' titlelen='50' orderby='pubdate'}
+            <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]"><i></i>[field:title/]</a></li>
+            {/dede:arclist}
+          </ul>
+        </div>
+      </div>
+      {/dede:channelartlist}
+      {dede:channelartlist typeid='8,8'}
+      <div class="box w360">
+        <div class="tita "><span>{dede:field name='typename'/}</span></div>
+        <div class="newslist">
+          <ul>
+            {dede:arclist row='9' titlelen='50' orderby='pubdate'}
+            <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]"><i></i>[field:title/]</a></li>
+            {/dede:arclist}
+          </ul>
+        </div>
+      </div>
+      {/dede:channelartlist}
+      {dede:channelartlist typeid='9,9'}
+      <div class="box w350">
+        <div class="tita "><span>{dede:field name='typename'/}</span></div>
+        <div class="rbox lighting">
+          <div class="bd">
+            <ul class="plist yh" id="yh">
+              {dede:arclist row='9' titlelen='50' orderby='pubdate'}
+              <li>
+                <h3 class="bg0"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a> </h3>
+                <div class="picbox"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]"> <img src="[field:picname/]" alt="[field:title/]"> </a> </div>
+              </li>
+              {/dede:arclist}
+            </ul>
+          </div>
+        </div>
+      </div>
+      {/dede:channelartlist} </div>
+    <div class="avd mt25"></div>
+    <div class="bn_1201 mt5 mb5">
+      
+    </div>
+    <div class="g_box3">
+      <div class="t_1">
+        <h3 class="c5">图文资讯<i>Picture</i></h3>
+        <span> {dede:channel type='top'} <a href='[field:typeurl/]'>[field:typename/]</a>{/dede:channel} </span> </div>
+      <div class="pic1 fl">
+        {dede:arclist flag='p' typeid='top' row='1' orderby='pubdate'}
+        <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html"><img src="[field:picname/]" alt="[field:title/]"/>
+        <p>[field:title/]</p>
+        </a> {/dede:arclist}
+      </div>
+      <ul class="pic2 fl">
+        {dede:arclist flag='p' typeid='top' limit='1,8' orderby='pubdate'}
+        <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html"><img src="[field:picname/]" alt="[field:title/]"/>
+          <p>[field:title/]</p>
+          </a></li>
+        {/dede:arclist}
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="link">
+  <div class="link_t">友情链接：</div>
+  <div class="box"> {dede:flink titlelen='20' row='20' type='text'}  [field:link /]  {/dede:flink} </div>
+</div>
+<div class="clear"></div>
+{dede:include filename="footer.htm"/}
+</body>
+</html>
