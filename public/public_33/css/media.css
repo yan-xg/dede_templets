@@ -1,0 +1,155 @@
+@import url(jquery.mmenu.css);
+@media (max-width:760px){
+	body{ font-family:Arial,"Microsoft Yahei";}
+	.banner{ position:relative; margin:0 auto; z-index: 1;width: 100%;}
+	img{ max-width: 100%;}
+	.sideqrcode{display:none;}
+	.htop .fr{ display:none;}
+	.header{ height: auto; padding-top: 10px; padding-bottom: 10px;}
+	.header .logo {padding-top: 0px; text-align:left; padding-left: 0px;}
+	.header .logo img{ width: 100%;}
+	.header .sobox{ display: none;}
+	.header .tad{display:none;}
+	.icon-navicon{ position: absolute; top:10px; left:10px; background: #70b5ec; color:#fff; border-color: #70b5ec;} 
+	.icon-navicon:focus{ background: #70b5ec; border-color: #70b5ec; color: #fff;}
+
+	.newslist-mem dl{padding:10px 20px;}
+	.newslist-mem dl dd.pic{display:none;}
+	.icon-navicon{ top:3px;}
+	.menuwrap{ height: 40px; line-height: 40px;}
+	
+	.menu{ top:0px;}
+	.menu ul{ width:100%;}
+	.menu ul li{ display: block; width: 100%; margin: 0; height: auto; float:none;}
+	.menu ul li a{ border-radius: 0; text-align: left;}
+	
+	.menu>ul>li:nth-child(9) {display: block;}
+
+	.footer{ text-align: center;}
+	.fico{ display: none;}
+	.footer .icp{ display: block;}
+	
+	.insert{ height: 20px;}
+	
+	.itits{ line-height:36px;}
+	.itits .f48 span:before, .itits .f48 span:after{ top:15px;}
+	.itits .f48 span{ padding: 0 5px;}
+	.itits .f48{ font-size: 30px;}
+	.itits .f18{ font-size: 14px; line-height: 16px;}
+	
+	.iplat{ margin-bottom: 0;}
+	
+	.ipart1 { padding: 10px 0 0px;}
+	.ipart1 .xm5 { margin-bottom: 10px;}
+	.ipart1 .f48{ font-size: 26px;}
+	.ipart1 .f18{ font-size: 14px;}
+	
+	.ipart2 { padding-top: 10px; padding-bottom:0px; margin-bottom: 0!important;}
+	.ipart2 .f30{ font-size: 20px;}
+	.ipart2 .itittop { margin-bottom: 10px!important;}
+	.ipart2 .xlink{ margin-bottom: 10px!important;}
+	.ipart2 .xlink a{ font-size: 14px; padding: 5px; margin-bottom: 5px;}
+	.zybox a .text{ padding: 5px; font-size: 14px;}
+	
+	.itittop_sb{ margin-bottom: 10px!important;}
+	.ititsub_sb{ margin-bottom: 5px!important;}
+	
+	.ipart3 { padding-top: 10px;  padding-bottom: 0; margin-bottom:0px!important;}
+	.ipart3 .lines{ border:0; margin-bottom: 10px;}
+	.ipart3 .cybox img{ width:100%;}
+	.inews{ margin-top: 0px;}
+	.inews li .wrap{ padding-left: 70px;}
+	.inews li .wrap .date{ width: 60px; font-size: 16px; line-height: 26px;}
+	.inews li .wrap .date span{ font-size: 30px; line-height: 34px;}
+	.inews li .wrap h3{ font-size: 16px; line-height: 24px;}
+	.inews li .wrap .desc{ line-height: 24px;}
+	
+	.ipart4 {  margin-bottom:10px!important;}
+	
+	.ipart5 .mslide .bd{ overflow: hidden;}
+	
+	
+	.fotlogo,.fotnav{ display: none;}
+	
+	
+	.abtlogo .insert{ height: 0;}
+	.ctitle { margin-top: 20px;  margin-bottom: 20px;}
+	.tWrap { margin-bottom: 50px;}
+	
+	.side_sb{ display: none;}
+	
+	.crumbwrap{ height: 34px; line-height: 34px; margin-bottom: 10px;}
+	.ctitle{ margin-top:0;}
+		
+	.pages .pages{ display: none;}
+	.pages a, .pages span{ padding: 4px 6px;}
+	
+	.page1{font-size: 14px;}
+	.page1 img{ max-width: 100%;}
+	.page1 .abttel{ border-radius: 8px; padding: 0px 10px; font-size: 26px;}
+	.page1 .abttel i{ vertical-align: text-bottom; position: relative; top:-3px;}
+
+	.contact h3.f30{ font-size: 24px;}
+	.cat li {margin-bottom: 10px;}
+	.mapwrap{ height: 200px;}
+	#allmap {height:250px;}
+	
+	.newslist dl{background: none; padding:0px; border:0; margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px dashed #efefef;}
+	.newslist dl dt{overflow:hidden; white-space: normal; padding-left: 65px; height: 48px; font-size: 16px; line-height: 24px;}
+	.newslist dl dd.date{ left:0; top:0; width:55px; height: 48px; overflow: hidden; background:#e1e8eb; font-size: 12px; line-height: 18px;}
+	.newslist dl dd.date span{ display:block; font-size:26px; color:#13619f; background:#f2f6f8; line-height:30px;}
+	.newslist dl:hover{ background: none;}
+
+	.newslist-pic li{ width:48%; margin: 1%; padding: 5px; float:left; height: auto;}
+	.newslist-pic li .pic{ position: static; width:100%; height: auto;}
+	.newslist-pic li .pic img{ width:100%; height: auto;}
+	.newslist-pic li .f20{ font-size: 16px; margin: 5px 0 0; line-height: 24px; height: 48px; overflow: hidden;}
+	.newslist-pic li .desc,.newslist-pic li .date{ display: none;}
+	
+	.prolist li .con{ padding: 10px;}
+	.prolist li .name{ height: auto; font-size: 16px; margin-bottom: 10px;}
+	.prolist li .date{ padding-top:10px;}
+	.prolist li .desc{ height: auto;}
+	
+	
+	.albumlist li .tit{ padding:5px; font-size: 14px;}
+	
+	.content h1.f30{ font-size: 20px; line-height: 24px;}
+	.content .date{padding:5px; font-size: 12px;}
+	.content .f16{ font-size: 14px;}
+	
+	.prevNext{ padding:10px;}
+	.prevNext .xs6.next{ padding-right:0; padding-left: 70px; text-align: left; margin-top: 10px;}
+	.prevNext .xs6.next span{ left: 0; right:auto; padding-right: 0; padding-left: 10px; background-position: left center;}
+
+
+
+	/*2021.02 新增*/
+	.newpart .xs4{ margin-bottom:20px; }
+	.partindex{ padding:10px; }
+	.partcon .left{ display: none;}
+	.partcon .partside{ min-height: auto;}
+
+	
+}
+
+@media (min-width: 760px) and (max-width:999px){
+	.header{ height: 300px;}
+	.header .logo img{ height: 100px;}
+	.menu ul{ width:730px;}
+	.menu ul li{ width:140px;}
+	.insert{ height: 30px;}
+	.ctitle{ margin-top:20px; margin-bottom: 20px;}
+	.ctitle .itits{ line-height: 46px;}
+	.ctitle .f48{ font-size: 36px;}
+	.ctitle .f18{ font-size: 16px; line-height: 16px;}
+	.ctitle .itits .f48 span:before, .ctitle .itits .f48 span:after{ top:20px;}
+	.content h1{ font-size: 24px; line-height: 30px;}
+}
+
+@media (min-width: 1000px) and (max-width:1199px){
+	.header{ height: 300px;}
+	.header .logo img{ height: 150px;}
+	.menu ul{ width: 980px;}
+	.insert{ height: 30px;}
+}

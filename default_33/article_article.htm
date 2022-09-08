@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>{dede:field.title/}_{dede:field name='typename'/} - {dede:global.cfg_webname/}</title>
+    <meta name="keywords" content="{dede:field.keywords/}" />
+    <meta name="description" content="{dede:field.description function='html2text(@me)'/}" />
+    {dede:include filename="meta.htm"/}
+</head>
+
+<body>
+    <div id="page">
+        {dede:include filename="header.htm"/}
+
+        <div class="layout crumbwrap">
+            <div class="container">
+                <div class="crumb">
+                    <div class="f14 text-gray-light"> <span class="icon-home text-blue"></span>
+                        <a href="/">首页</a> >> <a href="{dede:field.typedir/}/">{dede:field.typename/}</a> >> <a href="javascript:void(0);">正文</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="layout tWrap">
+            <div class="container f16">
+                <div class="line-large">
+                    <div class="xs3">
+                        <div class="sidebar side_sb">
+                            <h3 class="tit text-white text-center f16 fs100">最新文章</h3>
+                            <div class="snav">
+                                <ul>
+
+                                    {dede:arclist row='10' orderby='pubdate' typeid='all'}
+                                    <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html">[field:title/]</a></li>
+                                    {/dede:arclist}
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="xs9">
+                        <div class="ctitle">
+                            <div class="wrap"><span class="f16 fs100 text-white">{dede:field.typename/}</span></div>
+                        </div>
+                        <div class="content">
+                            <h1 class="f30 height-large fs100 text-black text-center">{dede:field.title/}</h1>
+                            <div class="date f14 text-center text-gray margin-big-bottom padding"> <span>发布时间：{dede:field.pubdate function="MyDate('Y-m-d H:i',@me)"/}</span> </div>
+                            <div class="info f16 text-justify" id="maximg">
+                                {dede:field.body/}
+                            </div>
+                            <style>
+                                .info p {
+                                    text-indent: 2rem;
+                                }
+                            </style>
+                        </div>
+                        <br>
+                        <div class="table"> <span>标签</span>
+                            {dede:tag row='30' sort='new' getall='0'}<a href='/tags/[field:tag /]/'>[field:tag /]</a>&nbsp;/&nbsp;{/dede:tag}
+                        </div>
+                        <br>
+                        <div class="prevNext f14">
+                            <div class="line">
+                                <div class="xs6 prev text-more">{dede:prenext get='next' /} </div>
+                                <div class="xs6 next text-right text-more"> {dede:prenext get='pre'/} </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="layout footer2 f14">
+            {dede:include filename="footer.htm"/}
+        </div>
+    </div>
+</body>
+
+</html>

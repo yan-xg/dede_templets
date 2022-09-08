@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>{dede:global.cfg_webname/}</title>
+    <meta name="description" content="{dede:global.cfg_description/}" />
+    <meta name="keywords" content="{dede:global.cfg_keywords/}" />
+    {dede:include filename="meta.htm"/}
+</head>
+
+<body>
+    <div id="page">
+        {dede:include filename="header.htm"/}
+
+        <div class="layout banner">
+            <div class="hd">
+                <ul>
+                </ul>
+            </div>
+            <a href="javascript:;" class="prev"></a> <a href="javascript:;" class="next"></a>
+            <div class="bd">
+                <ul>
+                    {dede:arclist flag='h' typeid='top' row='3' orderby='pubdate' orderway='desc'}
+                    <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank"><img src="[field:litpic/]" alt="[field:title/]"></a></li>
+                    {/dede:arclist}
+                </ul>
+            </div>
+        </div>
+        <script>
+            $(".banner").slide({ titCell: ".hd ul", mainCell: ".bd ul", effect: "leftLoop", vis: "auto", autoPlay: true, autoPage: true, trigger: "click" });
+        </script>
+        <div class="container">
+            <div class="ipart1 clearfix line-big">
+                <div class="xm4 xs12">
+                    <div class="topnews">
+                        <h3 class="itittop"><span>头条新闻</span></h3>
+
+                        <div class="con">
+                            {dede:arclist flag='c' typeid='top' row='1' orderby='pubdate'}
+                            <h3 class="fb f16 text-more text-center margin-bottom">[field:title/]</h3>
+                            <div class="desc text-justify text-gray text-indent f14">
+                                [field:description/]···
+                                <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]" class="text-blue">{详情}</a>
+                            </div>
+                            {/dede:arclist}
+                        </div>
+
+                    </div>
+
+                    <div class="yhnews">
+                        <div class="ntit"><a href="index2.html"><span class="f16 fb text-blue">推荐阅读</span></a></div>
+                        <div class="inews">
+                            <ul class="padding f14">
+                                {dede:arclist flag='c' typeid='top' limit='1,3' orderby='pubdate'}
+                                <li class="text-more"><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]"><span
+                                        class="icon-angle-double-right text-yellow"></span>[field:title/]</a>
+                                </li>
+                                {/dede:arclist}
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="xm5 xs12">
+                    <div class="islide">
+                        <div class="hd">
+                            <ul>
+                            </ul>
+                        </div>
+                        <div class="bd">
+                            <ul>
+                                {dede:arclist flag='h' typeid='top' limit='3,5' orderby='pubdate' orderway='desc'}
+                                <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">
+                                    <img src="[field:litpic/]" alt="[field:title/]">
+                                    <div class="text-more">[field:title/]</div>
+                                </a>
+                                </li>
+                                {/dede:arclist}
+                            </ul>
+                        </div>
+                    </div>
+                    <script>
+                        $(".islide").slide({ titCell: ".hd ul", mainCell: ".bd ul", effect: "fold", vis: "auto", autoPlay: true, autoPage: true, trigger: "click" });
+                    </script>
+                </div>
+                <div class="xm3 xs12">
+
+                    <div class="yhnews">
+                        <div class="ntit"><a href="#"><span class="f16 fb text-blue">热门标签</span></a></div>
+                        <div class="inews tag-label">
+                            <ul class="padding f14">
+                                {dede:tag row='35' sort='total'}
+                                <li><a href="/tags/[field:tag /]/" class="tags[field:id runphp='yes']@me = rand(0,7);[/field:id] tagc[field:highlight /]">[field:tag /]</a></li>
+                                {/dede:tag}
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="container newpart">
+            <div class="line-big">
+                {dede:channelartlist type='top'}
+                <div class="xs4">
+                    <div class="itittop2"><a href="{dede:field name='typedir'/}/"><span class="f18">{dede:field name='typename'/}</span></a></div>
+                    <div class="tab f14" data-toggle="hover">
+                        <div class="tab-body">
+                            <div class="tab-panel active" id="tab-38">
+                                <ul class="f14">
+                                    {dede:arclist titlelen='80' row='8'}
+                                    <li>
+                                        <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" class="text-more" title="[field:title/]"><span
+                                                class="date">[field:pubdate function="MyDate('m-d',@me)"/]</span>[field:title/]</a>
+                                    </li>
+                                    {/dede:arclist}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {/dede:channelartlist}
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="ipart5 clearfix margin-large-bottom">
+                <h3 class="itittop f18 text-blue"><span>图文资讯</span></h3>
+                <div class="con clearfix">
+                    <div class="mslide"> <a href="javascript:;" class="prev"></a> <a href="javascript:;"
+                            class="next"></a>
+                        <div class="bd">
+                            <ul>
+                                {dede:arclist flag='p' typeid='top' row='15' orderby='pubdate'}
+                                <li>
+                                    <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">
+                                        <img src="[field:litpic/]" alt="[field:title/]">
+                                        <div class="text-more f14">[field:title/]</div>
+                                    </a>
+                                </li>
+                                {/dede:arclist}
+                            </ul>
+                        </div>
+                    </div>
+                    <script>
+                        $(".mslide").slide({ mainCell: ".bd ul", autoPage: true, effect: "left", autoPlay: true, vis: 5 });
+                    </script>
+                </div>
+            </div>
+        </div>
+        {dede:include filename="footer.htm"/}
+        <div class="layout footer2 f14">
+            <div class="fotnav">
+                <div class="container">
+                    <div class="clearfix line-big">
+
+                        <dl>
+                            <dt class="f18 fs100">
+                                <a href="#" class="text-white">友情链接</a></dt>
+                            <dd class="clearfix">
+                                <ul>
+                                    {dede:flink row='24' type='text' titlelen="24"  typeid="0"}
+                                    <li>[field:link /]</li>
+                                    {/dede:flink}
+                                </ul>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            {dede:include filename="footer.htm"/}
+        </div>
+    </div>
+</body>
+</html>

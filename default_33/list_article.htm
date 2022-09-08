@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>{dede:field.title/} - {dede:global.cfg_webname/}</title>
+    <meta name="keywords" content="{dede:field.keywords/}" />
+    <meta name="description" content="{dede:field.description function='html2text(@me)'/}" />
+    {dede:include filename="meta.htm"/}
+</head>
+
+<body>
+    <div id="page">
+        {dede:include filename="header.htm"/}
+
+        <div class="layout crumbwrap">
+            <div class="container">
+                <div class="crumb">
+                    <div class="f14 text-gray-light">
+                        <span class="icon-home text-blue"></span>
+                        <a href="/">首页</a>&nbsp;>>&nbsp;<a href="{dede:field.typedir/}/">{dede:field.typename/}</a> >>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="layout tWrap">
+            <div class="container f16">
+                <div class="line-large">
+                    <div class="xs3">
+                        <div class="sidebar side_sb">
+                            <h3 class="tit text-white text-center f16 fs100">最新文章</h3>
+                            <div class="snav">
+                                <ul>
+                                    {dede:arclist row='10' orderby='pubdate' typeid='all'}
+                                    <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html">[field:title/]</a></li>
+                                    {/dede:arclist}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="xs9">
+                        <div class="ctitle">
+                            <div class="wrap"><span class="f16 fs100 text-white">{dede:field.typename/}</span></div>
+                        </div>
+                        <div class="newslist">
+                            {dede:list pagesize='10'}
+                           <dl>
+                                <dd class="date text-gray"><span>[field:pubdate function="MyDate('d',@me)"/]</span>[field:pubdate function="MyDate('Y-m',@me)"/]</dd>
+                                <dt class="f18 fn text-more">
+                                    <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" class="text-black"><span>[field:title/]</span></a></dt>
+                                <dd class="desc text-gray f14">
+                                    <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html">[field:description/]···</a>
+                                </dd>
+                            </dl>
+                            {/dede:list}
+
+                        </div>
+
+                        <div class="pagebar">
+                            <div class="pagination">
+                                <ul>{dede:pagelist listitem="info,index,end,pre,next,pageno,option"/}</ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="layout footer2 f14">
+            {dede:include filename="footer.htm"/}
+        </div>
+    </div>
+</body>
+
+</html>
