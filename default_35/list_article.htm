@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>{dede:field.title/} - {dede:global.cfg_webname/}</title>
+    <meta name="keywords" content="{dede:field.keywords/}" />
+    <meta name="description" content="{dede:field.description function='html2text(@me)'/}" />
+    {dede:include filename="meta.htm"/}
+    <style>
+        .page ul li {
+            display: inline;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        $(document).ready(
+            function () {
+                $(".nav li").mouseover(
+                    function () {
+                        $(".nav li").removeClass('active');
+                        $(this).addClass('active');
+                    }
+                );
+            });
+    </script>
+    <script src="{dede:global.cfg_cmspath/}/public/js/idangerous.swiper.min.js"></script>
+    <script src="{dede:global.cfg_cmspath/}/public/js/idangerous.swiper.progress.min.js"></script>
+    {dede:include filename="header.htm"/}
+
+    <main>
+        <div class="container">
+            <div class="height20"></div>
+            <div class="sub_box">
+                <div class="sub_guide"><strong>您现在所在的位置：</strong>&gt;<a href="/">首页</a>&nbsp;>&nbsp;<a href="{dede:field.typedir/}/">{dede:field.typename/}</a> > </div>
+                <div class="row">
+
+                    <div class="col-xs-12 col-md-8">
+                        <div class="sub_content">
+                            <div class="news_list">
+                                <ul class="list-unstyled">
+                                    {dede:list pagesize='20'}
+                                    <li class="col-xs-12">
+                                        <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html">[field:title/]</a>[field:pubdate function="MyDate('Y-m-d',@me)"/]
+                                    </li>
+                                    {/dede:list}
+                                </ul>
+                            </div>
+                            <div class="height20"></div>
+                            <div class="page">
+                                <div>
+                                    <ul>{dede:pagelist listitem="info,index,end,pre,next,pageno,option"/}</ul>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="main_open col-xs-12 col-md-4">
+                        <div class="main_open_list col-xs-12 col-md-10">
+                            <div class="main_title">
+                                <strong>最新资讯</strong>
+                            </div>
+                            <ul class="list-unstyled">
+                                {dede:arclist typeid='top' orderby='pubdate' limit='0,10'}
+                                <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html">[field:title/]</a></li>
+                                {/dede:arclist}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="height20"></div>
+    {dede:include filename="footer.htm"/}
+</body>
+
+</html>
