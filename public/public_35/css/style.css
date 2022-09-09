@@ -64,9 +64,9 @@ header {
 	margin: 0 auto;
 }
 .logo {
-	float: left;
-	padding-top: 42px;
-	width: 48%;
+	/* float: left; */
+	/* padding-top: 42px; */
+	/* width: 48%; */
 }
 .top_slogan {
 	padding-top: 50px;
@@ -79,9 +79,9 @@ header {
 }
  @media (min-width:768px) {
 .logo {
-	float: left;
-	width: 25%;
-	padding-top: 80px;
+	/* float: left; */
+	/* width: 25%; */
+	/* padding-top: 80px; */
 }
 .top_slogan {
 	padding-top: 85px;
@@ -886,7 +886,7 @@ main {
 .main_open_list ul {
 	clear: both;
 	margin-bottom: 20px;
-	/*height: 124px;*/
+	height: 124px;
 	overflow: hidden;
 }
 .main_open_list li {
@@ -1126,6 +1126,9 @@ footer {
 	margin-top: 0;
 }
  @media (min-width:768px) {
+.sub_guide {
+	text-align: right;
+}
 .sub_guide strong {
 	background: url(../img/sub_07.png) left no-repeat;
 	display: inline-block;
