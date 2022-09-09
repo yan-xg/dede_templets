@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>{dede:field.title/}_{dede:field name='typename'/} - {dede:global.cfg_webname/}</title>
+    <meta name="keywords" content="{dede:field.keywords/}" />
+    <meta name="description" content="{dede:field.description function='html2text(@me)'/}" />
+    <link rel="stylesheet" href="{dede:global.cfg_cmspath/}/public/css/article_2020.css" />
+
+    <style type="text/css">
+        img {
+            border: 0;
+        }
+
+        .tj_td td {
+            font-size: 12px;
+        }
+
+        body {
+            margin: 0;
+            background-color: #FFF;
+        }
+
+        .title {
+            font-weight: bold;
+            font-size: 22px;
+        }
+
+        a:link {
+            color: #393736;
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: #393736;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #F00;
+            text-decoration: underline;
+        }
+
+        a:active {
+            color: #393736;
+            text-decoration: none;
+        }
+
+        .here {
+            color: red;
+            font-weight: bold;
+        }
+
+        .fs12 {
+            font-size: 12px;
+        }
+
+        /* 新闻眼样式适配 */
+        #artContent>p>span:nth-child(1)>span:nth-child(1) {
+            width: 1.45rem !important;
+            height: 1.45rem !important;
+        }
+
+        #artContent>p>span:nth-child(1)>span:nth-child(2) {
+            height: 1.45rem !important;
+            margin-left: 1.6rem !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="page_top">
+        <div class="wrap">
+            <style>
+                .head-right {
+                    margin-right: 0;
+                }
+
+                .head-right>div {
+                    margin-left: 10px;
+                }
+            </style>
+            <div class="art-head">
+                <div class="logo">
+                    <a href="{dede:global.cfg_basehost/}/" title="{dede:global.cfg_webname/}">{dede:global.cfg_webname/}</a>
+                </div>
+                <div class="head-col-s head-col">
+                    <div class="head-1">
+                        {dede:channel type='top'}
+                        <a href="[field:typelink /]" target="_blank">[field:typename/]</a>
+                        {/dede:channel}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page_content">
+        <table width="962" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td align="left" class="article-nav">
+                    <a href="/">首页</a> > <a href="{dede:field.typedir/}/">{dede:field.typename/}</a> > <a href="javascript:void(0);">正文</a>
+                </td>
+            </tr>
+            <tr>
+                <td height="50" align="center" class="title">
+                    <h1 style="padding-top: 35px;">
+                        {dede:field.title/}
+                    </h1>
+                </td>
+            </tr>
+            <tr>
+                <td align="center" class="fs12 info">
+                    <h2>
+                        <span class="time nobr">{dede:field.pubdate function="MyDate('Y-m-d H:i',@me)"/}</span>
+                        <span class="source nobr">来源：{dede:global.cfg_webname/}</span>
+                        <span class="source nobr">浏览量：{dede:field.click/}</span>
+                    </h2>
+                </td>
+            </tr>
+        </table>
+        <table width="962" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+                <td align="left" height="15" id="artContent" class="artContent article-content">
+                    {dede:field.body/}
+                </td>
+            </tr>
+            <tr>
+                <td align="left" height="15" class="artContent article-content">
+                    <span>标签：</span>
+                    {dede:tag row='30' sort='new' getall='0'}<a href='/tags/[field:tag /]/'>[field:tag /]</a>&nbsp;/&nbsp;{/dede:tag}
+                </td>
+            </tr>
+            <tr>
+                <td align="left" height="15" class="artContent article-content">
+                    <div class="detail-arr-left"><span>{dede:prenext get='next' /}</span></div>
+                    <div class="detail-arr-right"><span>{dede:prenext get='pre'/}</span></div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="page_recommend">
+        <table width="962" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+                <td height="36" class="a_tj" align="left"><a href="#" style="float: right; ">&gt;&gt;更多</a>精彩图集推荐</td>
+            </tr>
+        </table>
+        <table width="962" border="0" cellpadding="0" cellspacing="0" class="stable">
+            <tr>
+                <td height="180" align="center" style=" padding-top: 5px; " class="tj_td">
+                    <table width="98%" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                            {dede:arclist flag='p' typeid='top' limit='0,5' orderby='pubdate'}
+                            <td align="center" valign="top">
+                                <div style="width: 172px; text-align:center">
+                                    <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title /]">
+                                        <img src="[field:litpic /]" width="170" height="113" alt="[field:typedir /]" border="0" style="border:1px solid #bbb;border-radius:1px;" title="1">
+                                        <p style='text-align:left;display:inline-block;font-size:13px;font-family:microsoft yahei;margin: 0; margin-top: 5px;'>[field:title /]</p>
+                                    </a>
+                                </div>
+                            </td>
+                            {/dede:arclist}
+                        </tr>
+                        <tr>
+                            <td colspan="5" height="10"></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+    {dede:include filename="footer.htm"/}
+</body>
+</html>

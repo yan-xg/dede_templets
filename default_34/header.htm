@@ -1,0 +1,20 @@
+<div class="head">
+    <div class="head-top">
+        <div class="logo">
+            <a href="{dede:global.cfg_basehost/}/" title="{dede:global.cfg_webname/}">{dede:global.cfg_webname/}</a>
+        </div>
+        <div class="date">
+            <p class="company">{dede:global.cfg_webname/}</p>
+            <p><span id="datenow"></span><span id="weekdate"></span></p>
+        </div>
+    </div>
+    <div class="nav">
+        <ul>
+            <li><a href="/" target="_blank"><strong>首页</strong></a></li><li>|</li>
+            {dede:channel type='top' currentstyle='<li><a href="~typelink~" target="_blank"><strong>~typename~</strong></a></li>'}
+            <li><a href="[field:typelink /]" target="_blank"><strong>[field:typename/]</strong></a></li>
+            <li>|</li>
+            {/dede:channel}
+        </ul>
+    </div>
+</div>

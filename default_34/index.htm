@@ -1,0 +1,483 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>{dede:global.cfg_webname/}</title>
+    <meta name="description" content="{dede:global.cfg_description/}" />
+    <meta name="keywords" content="{dede:global.cfg_keywords/}" />
+    <link rel="stylesheet" href="{dede:global.cfg_cmspath/}/public/css/layout.css" type="text/css">
+    <link rel="stylesheet" href="{dede:global.cfg_cmspath/}/public/css/flexslider.css" type="text/css">
+    <link rel="stylesheet" href="{dede:global.cfg_cmspath/}/public/css/base-min.css" />
+    <link rel="stylesheet" href="{dede:global.cfg_cmspath/}/public/css/css-min.css" />
+    <link rel="stylesheet" href="{dede:global.cfg_cmspath/}/public/css/style.css" />
+    <link rel="stylesheet" href="{dede:global.cfg_cmspath/}/public/css/tags_style.css" />
+    <script src="{dede:global.cfg_cmspath/}/public/js/mobile-detect.1.2.1.min.js"></script>
+</head>
+
+<body class="index">
+    {dede:include filename="header.htm"/}
+    <div class="model-title">
+        <ul>
+            {dede:arclist flag='c' typeid='top' row='2' orderby='pubdate' orderway='desc'}
+            <li class="m[field:global name=autoindex runphp="yes"]@me=@me;[/field:global]">
+                <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">
+                [field:title /]
+                </a>
+            </li>
+            {/dede:arclist}
+            <li class="m3">
+                <div class="move">
+                    <div class="dowebok gui-marquee-list" data-speed="50" data-direction="left" data-type="txt" id="test3">
+                        <ul class="gui-videolist fs14 lh30">
+                            {dede:arclist flag='c' typeid='top' limit='2,3' orderby='pubdate' orderway='desc'}
+                            <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title /]</a></li>
+                            {/dede:arclist}
+                        </ul>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="content" name="floor1" id="gxnews-floor1">
+        <div class="con-left">
+
+            <div class="con-top">
+                <div class="top-news">
+                    {dede:arclist flag='c' typeid='top' limit='5,1' orderby='pubdate' orderway='desc'}
+                    <h2>
+                        <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank" title="[field:title /]">
+                            <b>[field:title /]</b>
+                        </a>
+                    </h2>
+                    {/dede:arclist}
+
+
+                    <div class="con-top-inf lh25">
+                        {dede:arclist flag='c' typeid='top' limit='5,1' orderby='pubdate' orderway='desc'}
+                        <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">
+                        [field:title /]
+                        </a>
+                        {/dede:arclist}
+                    </div>
+                </div>
+                <div class="con-roll">
+                    <p><a href="#" target="_blank">滚动新闻</a></p>
+                    <div class="fn-left" id="scroll">
+                        <ul>
+                            {dede:arclist flag='p' typeid='top' limit='0,10' orderby='pubdate'}
+                            <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title /]([field:pubdate function="MyDate('Y-m-d',@me)"/])</a></li>
+                            {/dede:arclist}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="con-mid">
+                <div class="con-news rmar">
+                    <div class="con-focus">
+
+                        <style type="text/css">
+                            /*整体外框*/
+                            #focus_21360 {
+                                width: 340px;
+                                height: 295px;
+                                overflow: hidden;
+                                position: relative;
+                            }
+
+                            /*大图*/
+                            #focus_au_21360 {
+                                FILTER: progid:DXImagetransform.Microsoft.Fade (duration=0.5, overlap=1.0);
+                                width: 340px;
+                                height: 255px;
+                            }
+
+                            /*标题*/
+                            #focus_conau_21360 {
+                                margin-top: 0px;
+                                left: 3px;
+                                width: 340px;
+                                height: 40px;
+                                line-height: 40px;
+                                overflow: hidden;
+                                position: absolute;
+                                top: 255px;
+                                text-align: center;
+                                font-weight: bold;
+                                font-size: 14px
+                            }
+
+                            /*数字按钮*/
+                            .focus_lunbo_21360 {
+                                height: 15px;
+                                position: absolute;
+                                top: 240px;
+                                right: 2px
+                            }
+
+                            .focus_lunbo_21360 table {
+                                height: 15px;
+                                overflow: hidden;
+                            }
+
+                            .focus_lunbo_21360 td {
+                                font-family: "Microsoft YaHei";
+                                color: #fff;
+                                font-size: 10px;
+                                line-height: 15px;
+                                cursor: pointer;
+                            }
+
+                            .focus_lunbo_21360 .focus_bg_21360 {
+                                padding: 0px;
+                                background: #000;
+                                background: rgba(0, 0, 0, 0.8);
+                                filter: alpha(opacity=80);
+                                width: 24px;
+                                height: 15px;
+                                text-align: center;
+                                color: #fff;
+                            }
+
+                            .focus_lunbo_21360 .focus_active_21360 {
+                                padding: 0px;
+                                background: #ce0609;
+                                width: 24px;
+                                height: 15px;
+                                text-align: center;
+                                color: #fff;
+                            }
+                        </style>
+
+                        <div id="focus_21360">
+                            <div id="focus_au_21360">
+                                {dede:arclist flag='h' typeid='top' limit='0,1' orderby='pubdate' orderway='desc'}
+                                <div>
+                                    <a target="_blank" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html">
+                                        <img src="[field:litpic /]" width="340" height="255" border="0" alt="[field:title /]" title="[field:title /]" />
+                                    </a>
+                                </div>
+                                {/dede:arclist}
+
+                                {dede:arclist flag='h' typeid='top'  limit='1,5' orderby='pubdate' orderway='desc'}
+                                <div style="display: none;">
+                                    <a target="_blank" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html">
+                                    <img src="[field:litpic /]" width="340" height="255" border="0" alt="[field:title /]" title="[field:title /]" />
+                                    </a>
+                                </div>
+                                {/dede:arclist}
+
+                            </div>
+
+                            <div class="focus_lunbo_21360">
+                                <table border="0" cellPadding="0" cellSpacing="0" align="right">
+                                    <tr>
+                                        <td class="focus_active_21360" id="focus_t_21360_0"
+                                            onmouseover="Mea_21360(0);clearAuto_21360();" onmouseout="setAuto_21360();">
+                                            1</td>
+
+                                        {dede:arclist flag='h' typeid='top'  limit='1,5' orderby='pubdate' orderway='desc'}
+                                        <td width="1"></td>
+                                        <td class="focus_bg_21360" id="focus_t_21360_[field:global name=autoindex runphp="yes"]@me=@me;[/field:global]"
+                                            onmouseover="Mea_21360([field:global name=autoindex runphp="yes"]@me=@me;[/field:global]);clearAuto_21360();" onmouseout="setAuto_21360();">
+                                        [field:global name=autoindex runphp="yes"]@me=@me+1;[/field:global]</td>
+                                        {/dede:arclist}
+                                    </tr>
+                                </table>
+                            </div>
+
+                        </div>
+
+                        <script type="text/javascript">
+                            var isIE6 = false;
+                            document.write("<!--[if lte IE 6]><script>isIE6=true;</scr" + "ipt><![endif]-->");
+                            if (isIE6) {
+                                document.getElementById("focus_au_21360").style.filter = "";
+                            }
+
+                            var n_21360 = 0;
+                            function Mea_21360(value) {
+                                n_21360 = value;
+                                setBg_21360(value);
+                                plays_21360(value);
+                                conaus_21360(n_21360);
+                            }
+                            function setBg_21360(value) {
+                                for (var i = 0; i < 6; i++)
+                                    document.getElementById("focus_t_21360_" + i + "").className = "focus_bg_21360";
+                                document.getElementById("focus_t_21360_" + value + "").className = "focus_active_21360";
+                            }
+                            function plays_21360(value) {
+                                if (isIE6) {
+                                    var d = document.getElementById("focus_au_21360").getElementsByTagName("div");
+                                    for (i = 0; i < 6; i++)i == value ? d[i].style.display = "block" : d[i].style.display = "none";
+                                }
+                                else {
+                                    try {
+                                        with (focus_au_21360) {
+                                            filters[0].Apply();
+                                            for (i = 0; i < 6; i++)i == value ? children[i].style.display = "block" : children[i].style.display = "none";
+                                            filters[0].play();
+                                        }
+                                    }
+                                    catch (e) {
+                                        var d = document.getElementById("focus_au_21360").getElementsByTagName("div");
+                                        for (i = 0; i < 6; i++)i == value ? d[i].style.display = "block" : d[i].style.display = "none";
+                                    }
+                                }
+                            }
+                            function conaus_21360(value) {
+                                try {
+                                    with (focus_conau_21360) {
+
+                                        for (i = 0; i < 6; i++)i == value ? children[i].style.display = "block" : children[i].style.display = "none";
+
+                                    }
+                                }
+                                catch (e) {
+                                    var d = document.getElementById("focus_conau_21360").getElementsByTagName("div");
+                                    for (i = 0; i < 6; i++)i == value ? d[i].style.display = "block" : d[i].style.display = "none";
+                                }
+
+                            }
+                            function clearAuto_21360() { clearInterval(autoStart_21360) }
+                            function setAuto_21360() { autoStart_21360 = setInterval("auto_21360(n_21360)", 4000) }
+                            function auto_21360() {
+                                n_21360++;
+                                if (n_21360 > 5) n_21360 = 0;
+                                Mea_21360(n_21360);
+                                conaus_21360(n_21360);
+                            }
+                            setAuto_21360(); 
+                        </script>
+
+                    </div>
+                    <div class="news">
+                        <div class="con-title">
+                            {dede:type typeid='1'}
+                            <h2><a href="[field:typeurl/]" target="_blank" title="[field:typename/]">[field:typename/]</a></h2>
+                            <span><a href="[field:typeurl/]" target="_blank" title="更多">更多</a></span>
+                            {/dede:type}
+                        </div>
+                        <div class="left-layout layout-place" id="layout_531">
+                        </div>
+                        <div class="new-list">
+                            <ul>
+                                {dede:arclist typeid='1' limit='0,6' orderby='pubdate'}
+                                <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title /]</a></li>
+                                {/dede:arclist}
+                            </ul>
+                        </div>
+                        <div class="left-layout layout-place" id="layout_532">
+                        </div>
+                    </div>
+                </div>
+                <div class="con-news">
+                    <div class="news">
+                        <div class="con-title" id="tabnews" sid=21337 p=0 pp=16 maxpage=3>
+                            <h3><strong>猜你喜欢</strong></h3>
+                        </div>
+                        <div id="divnews">
+                            <div class="day-list">
+                                <ul id="ul_s21337">
+                                    {dede:arclist typeid='top' row='16' orderby='pubdate'}
+                                    <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title /]</a></li>
+                                    {/dede:arclist}
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="con-mid tmar">
+                <!--con-news start-->
+                <div class="con-news rmar">
+                    <div class="news-wrap">
+                        <div class="con-title" sid=37426 p=0 pp=6 maxpage=3>
+                            {dede:type typeid='3'}
+                            <h2><a href="[field:typeurl/]" target="_blank" title="[field:typename/]">[field:typename/]</a></h2>
+                            <span><a href="[field:typeurl/]" target="_blank" title="更多">更多</a></span>
+                            {/dede:type}
+                        </div>
+                        <div class="new-list">
+                            <ul>
+                                {dede:arclist typeid='3' limit='0,6' orderby='pubdate'}
+                                <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title /]</a></li>
+                                {/dede:arclist}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="news">
+                    <div class="con-title">
+                        {dede:type typeid='2'}
+                        <h2><a href="[field:typeurl/]" target="_blank" title="[field:typename/]">[field:typename/]</a></h2>
+                        <span><a href="[field:typeurl/]" target="_blank" title="更多">更多</a></span>
+                        {/dede:type}
+                    </div>
+                    <div class="new-list">
+                        <ul>
+                            {dede:arclist typeid='2' limit='0,6' orderby='pubdate'}
+                            <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title /]</a></li>
+                            {/dede:arclist}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="con-mid tmar">
+                <!--con-news start-->
+                <div class="con-news rmar">
+                    <div class="news-wrap">
+                        <div class="con-title" sid=37426 p=0 pp=6 maxpage=3>
+                            {dede:type typeid='4'}
+                            <h2><a href="[field:typeurl/]" target="_blank" title="[field:typename/]">[field:typename/]</a></h2>
+                            <span><a href="[field:typeurl/]" target="_blank" title="更多">更多</a></span>
+                            {/dede:type}
+                        </div>
+                        <div class="new-list">
+                            <ul>
+                                {dede:arclist typeid='4' limit='0,6' orderby='pubdate'}
+                                <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title /]</a></li>
+                                {/dede:arclist}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="news">
+                    <div class="con-title">
+                        {dede:type typeid='5'}
+                        <h2><a href="[field:typeurl/]" target="_blank" title="[field:typename/]">[field:typename/]</a></h2>
+                        <span><a href="[field:typeurl/]" target="_blank" title="更多">更多</a></span>
+                        {/dede:type}
+                    </div>
+                    <div class="new-list">
+                        <ul>
+                            {dede:arclist typeid='5' limit='0,6' orderby='pubdate'}
+                            <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title /]</a></li>
+                            {/dede:arclist}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="con-right">
+            <div class="con-border">
+                <div class="con-nob-title dot" id="tabgxnews">
+                    <h2 style="padding:0;">
+                        <a href="#" target="_blank" title="热门标签">·<strong>热门标签</strong></a>
+                    </h2>
+                </div>
+                <div id="divgxnews">
+                    <div class="new-list tag-label">
+                        <ul>
+                            {dede:tag row='50' sort='total'}
+                            <li><a href="/tags/[field:tag /]/" class="tags[field:id runphp='yes']@me = rand(0,7);[/field:id] tagc[field:highlight /]">[field:tag /]</a></li>
+                            {/dede:tag}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="layout layout-place" id="layout_536">
+            </div>
+            <div class="con-border">
+                <div class="con-nob-title dot">
+                    <h2><a href="#" target="_blank" title="推荐阅读">推荐阅读</a></h2>
+                </div>
+                <div class="new-list">
+                    <ul>
+                        {dede:arclist typeid='top' limit='16,6' orderby='pubdate'}
+                        <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title /]</a></li>
+                        {/dede:arclist}
+                    </ul>
+                </div>
+            </div>
+            <div class="layout layout-place" id="layout_537">
+            </div>
+            <div class="con-border">
+                <div class="con-nob-title dot" sid=40553 p=0 pp=7 maxpage=3>
+                    <h2><a href="#" target="_blank"
+                            title="热门文章">热门文章</a>
+                    </h2>
+                </div>
+                <div class="new-list">
+                    <ul id="ul_s40553">
+                        {dede:arclist typeid='top' orderby='click' row=8}
+                        <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title /]</a></li>
+                        {/dede:arclist}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="channel" name="floor4">
+        {dede:channelartlist typeid='6,7,8'}
+        <div class="channel-wrap {dede:global name=itemindex runphp="yes"} ((@me%3)==0) ? @me='last' : @me=''; {/dede:global}">
+            <div class="con-nob-title dot" sid=21357 p=0 pp=5 maxpage=3>
+                <h2><a title="{dede:field name='typename'/}" target="_blank" href="{dede:field name='typedir'/}/">{dede:field name='typename'/}</a></h2>
+                 <span><a title="更多" target="_blank" href="{dede:field name='typedir'/}/">更多</a></span>
+            </div>
+
+            <div class="channel-img">
+                {dede:arclist row='1'}
+                <a title="[field:title/]”" target="_blank" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html">
+                    <img src="[field:litpic/]" width="318" height="190" alt="[field:title/]" />
+                    <span>[field:title/]</span>
+                </a>
+                {/dede:arclist}
+            </div>
+            <ul class="channel-list">
+                {dede:arclist limit='1,4'}
+                <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank"> [field:title/]</a></li>
+                {/dede:arclist}
+            </ul>
+        </div>
+        {/dede:channelartlist}
+    </div>
+
+    <div class="channel" name="floor4">
+        {dede:channelartlist typeid='9,10,1'}
+        <div class="channel-wrap {dede:global name=itemindex runphp="yes"} ((@me%3)==0) ? @me='last' : @me=''; {/dede:global}">
+        <div class="con-nob-title dot" sid=21357 p=0 pp=5 maxpage=3>
+            <h2><a title="{dede:field name='typename'/}" target="_blank" href="{dede:field name='typedir'/}/">{dede:field name='typename'/}</a></h2>
+            <span><a title="更多" target="_blank" href="{dede:field name='typedir'/}/">更多</a></span>
+        </div>
+
+        <div class="channel-img">
+            {dede:arclist row='1'}
+            <a title="[field:title/]”" target="_blank" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html">
+            <img src="[field:litpic/]" width="318" height="190" alt="[field:title/]" />
+            <span>[field:title/]</span>
+            </a>
+            {/dede:arclist}
+        </div>
+        <ul class="channel-list">
+            {dede:arclist limit='1,4'}
+            <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank"> [field:title/]</a></li>
+            {/dede:arclist}
+        </ul>
+    </div>
+    {/dede:channelartlist}
+    </div>
+
+    <div class="layout-wrap layout-place" name="floor4" id="layout_547"></div>
+
+    <div class="link">
+        <div class="link-title"><a href="#" target="_blank"> 友情链接</a> </div>
+        <div class="link-list">
+            <ul>
+                {dede:flink row='24' type='text' titlelen="24"  typeid="0"}
+                <li>[field:link /]</li>
+                {/dede:flink}
+            </ul>
+        </div>
+    </div>
+    {dede:include filename="footer.htm"/}
+    <script src="{dede:global.cfg_cmspath/}/public/jquery.min.js"></script>
+    <script src="{dede:global.cfg_cmspath/}/public/sound.js"></script>
+</body>
+</html>

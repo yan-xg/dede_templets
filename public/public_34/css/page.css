@@ -1,0 +1,56 @@
+.page {
+    clear: both;
+    text-align: center;
+    line-height: 28px;
+}
+.page span {
+    display: inline-block;
+    padding: 0 8px;
+    margin: 3px;
+}
+.page a {
+    display: inline-block;
+    border: 1px solid #ddd;
+    background: #fafafa;
+    padding: 0 10px;
+    margin: 3px;
+    color: #353535;
+}
+.page a:hover {
+    border: 1px solid #ddd;
+    background: #f1f1f1;
+    color: #333;
+}
+.page .hover {
+    border: 1px solid #00a0e9;
+    background: #00a0e9;
+    color: #fff;
+}
+.page .hover:hover {
+    border: 1px solid #00a0e9;
+    background: #00a0e9;
+    color: #fff;
+}
+.page input {
+    display: inline-block;
+    border: 1px solid #ddd;
+    background: #fafafa;
+    padding: 0 5px;
+    width: 50px;
+    line-height: 36px;
+    height: 36px;
+    margin: 0 10px;
+}
+.page .page_bt {
+    margin: 0;
+    padding: 0;
+}
+.page .page_bt input {
+    background: url(404.png) repeat-x;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 0;
+}
+.page ul li {
+    display: inline;
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>{dede:field.title/} - {dede:global.cfg_webname/}</title>
+    <meta name="keywords" content="{dede:field.keywords/}" />
+    <meta name="description" content="{dede:field.description function='html2text(@me)'/}" />
+    <link rel="stylesheet" href="{dede:global.cfg_cmspath/}/public/css/base-min.css" />
+    <link rel="stylesheet" href="{dede:global.cfg_cmspath/}/public/css/css-min.css" />
+    <link rel="stylesheet" href="{dede:global.cfg_cmspath/}/public/css/page.css" />
+    <script src="{dede:global.cfg_cmspath/}/public/js/mobile-detect.1.2.1.min.js"></script>
+    <style>
+        .article-right-jd {
+            display: none !important;
+        }
+
+        .article-right-ws {
+            display: none !important;
+        }
+
+        .head,
+        .more,
+        .footer {
+            padding: 0 10px;
+            background: #fff;
+            border-left: 1px solid #eee;
+            border-right: 1px solid #eee;
+        }
+    </style>
+</head>
+
+<body>
+    {dede:include filename="header.htm"/}
+    <div class="more">
+        <div class="more-left">
+            <div class="more-title">
+                <h2 style="margin:0 auto;"><a href="/">首页</a> &gt; <a href='#'>TAG标签</a> > <span>{dede:field.title /}</span></h2>
+            </div>
+            <ul class="more-list" id="ul_s191">
+                {dede:list pagesize='15'}
+               <li>
+                    <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank" class="dwb">
+                        <div class="more-desc wbf">
+                            <h3 class="more-desc-head">[field:title/]</h3>
+                            <p class="more-desc-main">[field:description /]</p>
+                            <div class="more-desc-bottom">
+                                <span class="more-date">[field:pubdate function="MyDate('Y-m-d H:i',@me)"/]</span>
+                            </div>
+                        </div>
+                        <div class="more-img"><img src="[field:litpic/]" width="150"></div>
+                    </a>
+                </li>
+                {/dede:list}
+            </ul>
+            <div class="page">
+                <div>
+                    <ul>{dede:pagelist listitem="info,index,end,pre,next,pageno,option"/}</ul>
+                </div>
+            </div>
+        </div>
+        <div class="more-right">
+
+            <div class="more-wrap no-border">
+                <h2>焦点图片</h2>
+                <ul class="article-focus-list">
+                    {dede:arclist flag='p' typeid='top' row='4' orderby='pubdate' orderway='desc'}
+                    <li>
+                        <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">
+                            <img src="[field:litpic/]" height="124" width="165" alt="[field:title/]">
+                            <span>[field:title/]</span>
+                        </a>
+                    </li>
+                    {/dede:arclist}
+                </ul>
+            </div>
+            
+            <div class="more-wrap article-right-tj" style="display:inline-block;">
+                <h2>热门文章</h2>
+                <ul class="new-list">
+                    {dede:arclist typeid='top' orderby='click' row=8}
+                    <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title /]</a></li>
+                    {/dede:arclist}
+                </ul>
+            </div>
+
+            <div class="more-wrap article-right-ph">
+                <h2>最新资讯</h2>
+                <ul class="rank-list">
+                    {dede:arclist typeid='top' row='8' orderby='pubdate'}
+                    <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title /]</a></li>
+                    {/dede:arclist}
+                </ul>
+            </div>
+        </div>
+    </div>
+    </div>
+    {dede:include filename="footer.htm"/}
+</body>
+
+</html>

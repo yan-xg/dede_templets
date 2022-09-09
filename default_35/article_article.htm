@@ -40,6 +40,10 @@
                     <div class="table"> <span>标签：</span>
                         {dede:tag row='30' sort='new' getall='0'}<a href='/tags/[field:tag /]/'>[field:tag /]</a>&nbsp;/&nbsp;{/dede:tag}
                     </div>
+                    <div class="detail-arr">
+                        <div class="detail-arr-left"><span>{dede:prenext get='next' /}</span></div>
+                        <div class="detail-arr-right"><span>{dede:prenext get='pre'/}</span></div>
+                    </div>
                 </div>
 
                 <div class="main_open col-xs-12 col-md-4">
