@@ -45,7 +45,9 @@
                         </div>
                         <div class="content">
                             <h1 class="f30 height-large fs100 text-black text-center">{dede:field.title/}</h1>
-                            <div class="date f14 text-center text-gray margin-big-bottom padding"> <span>发布时间：{dede:field.pubdate function="MyDate('Y-m-d H:i',@me)"/}</span> </div>
+                            <div class="date f14 text-center text-gray margin-big-bottom padding">
+                                <span>发布时间：{dede:field.pubdate function="MyDate('Y-m-d H:i',@me)"/}</span>
+                            </div>
                             <div class="info f16 text-justify" id="maximg">
                                 {dede:field.body/}
                             </div>
