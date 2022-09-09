@@ -886,7 +886,7 @@ main {
 .main_open_list ul {
 	clear: both;
 	margin-bottom: 20px;
-	height: 124px;
+	/*height: 124px;*/
 	overflow: hidden;
 }
 .main_open_list li {
