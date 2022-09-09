@@ -24,6 +24,11 @@ UPDATE dede_arcrank set adminrank=1 where membername='开放浏览'
          rewrite ^/(.*)$ http://m.fzkb.cn/$1 permanent;
      }
 
+7、如果出现标题展示不完整，在/include/taglib/arclist.lib.php里
+     找到  $titlelen = AttDef($titlelen,30);
+     改为  $titlelen = AttDef($titlelen,180);
+
+
 
 下载站
 软件模型->添加新字段->版本(version)->varchar(15)

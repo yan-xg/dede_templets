@@ -150,7 +150,8 @@ a.sub-country {
 }
 
 .logo a {
-	background: url(/public/img/logo.png) -25px 0;
+	background: url(/public/img/logo.png) no-repeat;
+	background-size: 100% 100%;
 	width: 200px;
 	height: 66px;
 	float: left;
