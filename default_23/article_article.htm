@@ -36,7 +36,7 @@
       <h2 class="htitle">相关文章</h2>
       <ul class="otherlink">
           {dede:arclist row='10' titlelen='80' typeid='top'}
-          <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a></li>
+          <li><a href="[field:arcurl /]" title="[field:title/]">[field:title/]</a></li>
           {/dede:arclist}
       </ul>
     </div>
@@ -47,19 +47,19 @@
             <h2 class="htitle">热门文章</h2>
             <ul>
                 {dede:arclist row='8' titlelen='80' typeid='top' orderby='click'}
-                <li><i></i><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a></li>
+                <li><i></i><a href="[field:arcurl /]" title="[field:title/]">[field:title/]</a></li>
                 {/dede:arclist}
             </ul>
         </div>
         <div class="whitebg tuijian">
             <h2 class="htitle">站长推荐</h2>
             {dede:arclist titlelen='80' flag='c,p' typeid='top' limit='1'}
-            <section class="topnews imgscale"><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html"><img src="[field:litpic /]"><span>[field:title /]</span></a></section>
+            <section class="topnews imgscale"><a href="[field:arcurl /]"><img src="[field:litpic /]"><span>[field:title /]</span></a></section>
             {/dede:arclist}
 
             <ul>
                 {dede:arclist typeid='top' orderby='pubdate' titlelen='80' limit="0,8"}
-                <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title /]"><i><img src="[field:litpic /]"></i><p>[field:title /]</p></a></li>
+                <li><a href="[field:arcurl /]" title="[field:title /]"><i><img src="[field:litpic /]"></i><p>[field:title /]</p></a></li>
                 {/dede:arclist}
             </ul>
         </div>

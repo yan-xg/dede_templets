@@ -358,7 +358,7 @@ class TagList
                     $row['infos'] = cn_substr($row['description'],$infolen);
                     $row['id'] =  $row['id'];
                     $row['arcurl'] = GetFileUrl($row['id'],$row['typeid'],$row['senddate'],$row['title'],
-                    $row['ismake'],
+                    1,
                     $row['arcrank'],$row['namerule'],$row['typedir'],$row['money'],
                     $row['filename'],$row['moresite'],$row['siteurl'],$row['sitepath']);
                     $row['typeurl'] = GetTypeUrl($row['typeid'],MfTypedir($row['typedir']),$row['isdefault'],$row['defaultname'],

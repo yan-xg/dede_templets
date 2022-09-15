@@ -27,7 +27,7 @@
       <div class="banner">
         <div id="banner" class="fader">
 		{dede:arclist     row='4'     titlelen='80'       flag='f'     typeid='top'      }
-          <li class="slide" ><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank"><img src="[field:litpic/]"></a></li>
+          <li class="slide" ><a href="[field:arcurl /]" target="_blank"><img src="[field:litpic/]"></a></li>
 		{/dede:arclist}
           <div class="fader_controls">
             <div class="page prev" data-target="prev"></div>
@@ -43,7 +43,7 @@
     <div class="headline">
 		<ul>
 		{dede:arclist     row='4'     titlelen='80'       flag='c,p'     typeid='top'      }
-			<li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]"><img src="[field:litpic/]" alt="[field:title/]"><span>[field:title/]</span></a></li>
+			<li><a href="[field:arcurl /]" title="[field:title/]"><img src="[field:litpic/]" alt="[field:title/]"><span>[field:title/]</span></a></li>
         {/dede:arclist}
 		</ul>
     </div>
@@ -58,7 +58,7 @@
               {dede:arclist titlelen='80' row='6'}
               <li>
                   <i class="ztpic">
-                      <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">
+                      <a href="[field:arcurl /]" target="_blank">
                         <img src="[field:litpic/]">
                       </a>
                   </i>
@@ -79,8 +79,8 @@
 		
 		{dede:arclist typeid='top' orderby='pubdate' titlelen='80' row=20}
 		 <li>
-          <span class="blogpic imgscale"><i><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html"></a></i><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title=""><img src="[field:litpic/]" alt=""></a></span>
-          <p class="blogtext"><h3 class="blogtitle"><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title/]</a></h3></p>
+          <span class="blogpic imgscale"><i><a href="[field:arcurl /]"></a></i><a href="[field:arcurl /]" title=""><img src="[field:litpic/]" alt=""></a></span>
+          <p class="blogtext"><h3 class="blogtitle"><a href="[field:arcurl /]" target="_blank">[field:title/]</a></h3></p>
           <p class="bloginfo"><span>[field:pubdate function="MyDate('Y年m月d日 ',@me)"/]</span></p>
         </li>
    
@@ -103,7 +103,7 @@
         <h2 class="htitle">最新发布</h2>
         <ul>
 		{dede:arclist typeid='top' orderby='pubdate' titlelen='80' row=4}
-            <li><i></i><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html">[field:title/]</a></li>
+            <li><i></i><a href="[field:arcurl /]">[field:title/]</a></li>
 		{/dede:arclist}
           </ul>
       </div>
@@ -112,7 +112,7 @@
       <section class="topnews imgscale"><a href="/"><img src="http://demo.mxyhn.xyz:8020/cssthemes6/1.06ZF24/images/4.jpg"><span>6条网页设计配色原则,让你秒变配色高手</span></a></section>
       <ul>
         {dede:arclist typeid='1' orderby='pubdate' titlelen='80' row=8}
-            <li><i></i><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html">[field:title/]</a></li>
+            <li><i></i><a href="[field:arcurl /]">[field:title/]</a></li>
 		{/dede:arclist}
       </ul>
     </div>
@@ -121,7 +121,7 @@
         <section class="topnews imgscale"><a href="/"><img src="http://demo.mxyhn.xyz:8020/cssthemes6/1.06ZF24/images/4.jpg"><span>6条网页设计配色原则,让你秒变配色高手</span></a></section>
         <ul>
 		{dede:arclist typeid='2' orderby='pubdate' titlelen='80' row=8}
-            <li><i></i><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html">[field:title/]</a></li>
+            <li><i></i><a href="[field:arcurl /]">[field:title/]</a></li>
 		{/dede:arclist}
         </ul>
       </div>

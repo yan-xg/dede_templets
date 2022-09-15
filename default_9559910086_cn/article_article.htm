@@ -45,7 +45,7 @@
             <ul>
                 {dede:arclist     row='6'     titlelen='42'     typeid='top'      }
                 <li>
-                    <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">
+                    <a href="[field:arcurl /]" title="[field:title/]">
                         <div class="img">
                             <img src="[field:litpic/]" alt="[field:title/]" /></div>
                         <div class="info">
@@ -63,7 +63,7 @@
             <h5>热门文章</h5>
             <ul>
                 {dede:arclist     row='10'     titlelen='42'   typeid='1'      }
-                <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html">[field:title/]</a></li>
+                <li><a href="[field:arcurl /]">[field:title/]</a></li>
                 {/dede:arclist}
             </ul>
         </div>
@@ -71,7 +71,7 @@
             <h5>最近发表</h5>
             <ul>
                 {dede:arclist     row='10'     titlelen='42'   typeid='2'      }
-                <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html">[field:title/]</a></li>
+                <li><a href="[field:arcurl /]">[field:title/]</a></li>
                 {/dede:arclist}
             </ul>
         </div>
@@ -79,7 +79,7 @@
             <h5>随机文章</h5>
             <ul>
                 {dede:arclist     row='10'     titlelen='42'   typeid='3'      }
-                <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html">[field:title/]</a></li>
+                <li><a href="[field:arcurl /]">[field:title/]</a></li>
                 {/dede:arclist}
             </ul>
         </div>

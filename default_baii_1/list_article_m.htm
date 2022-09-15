@@ -19,7 +19,7 @@
 <section class="clist">
   <ul id="infocon">
     {dede:list pagesize ='20'}
-    <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a>
+    <li><a href="[field:arcurl /]" title="[field:title/]">[field:title/]</a>
       <p>[field:description function="cn_substr(@me,300)"/]...</p>
     </li>
     {/dede:list}

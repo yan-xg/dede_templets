@@ -21,7 +21,7 @@
           <div class="swiper-container br">
             <ul class="swiper-wrapper ">
               {dede:arclist titlelen='80' flag='c,p' typeid='top' row='5'}
-              <li class="swiper-slide"> <a class="link" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">
+              <li class="swiper-slide"> <a class="link" href="[field:arcurl /]" title="[field:title/]">
                 <p class="p ellipsis">[field:title/]</p>
                 <img src="[field:litpic/]" alt="[field:title/]" /> <i class="mask"></i> </a>
               </li>
@@ -35,7 +35,7 @@
             <div class="wrap">
               {dede:arclist titlelen='80' flag='a' typeid='top' row='5'}
               <article class="item">
-                <p class="title ellipsis"> <i class=" iconfont icon-jian"></i> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a></p>
+                <p class="title ellipsis"> <i class=" iconfont icon-jian"></i> <a href="[field:arcurl /]" title="[field:title/]">[field:title/]</a></p>
               </article>
               {/dede:arclist}
             </div>
@@ -47,7 +47,7 @@
             <p class="c-title"> <span>最近更新</span></p>
             {dede:arclist row='12' titlelen='80' typeid='top'}
             <article class="article-list clearfix">
-              <h2 class="title ellipsis"> <i class="iconfont icon-dot"></i> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title function="cn_substr(@me,10)"/]</a></h2>
+              <h2 class="title ellipsis"> <i class="iconfont icon-dot"></i> <a href="[field:arcurl /]" title="[field:title/]">[field:title function="cn_substr(@me,10)"/]</a></h2>
               <time class="time fr font-oswald" datetime="[field:pubdate function="MyDate('Y-m-d',@me)"/]" title="[field:pubdate function="MyDate('Y-m-d',@me)"/]"> <span> <i class="iconfont icon-time"></i>[field:pubdate function="MyDate('Y-m-d',@me)"/]</span> </time>
             </article>
             {/dede:arclist}
@@ -72,7 +72,7 @@
           <p class="c-title mb"> <span class="name">推荐图文</span></p>
           <ul class="widget-content aside_random">
             {dede:arclist titlelen='80' flag='c,p' typeid='top' limit='5,5'}
-            <li class="list clearfix"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]"> <span class="img-wrap br"> <img src="[field:litpic/]" alt="[field:title/]" class="img-cover br random-img"></span>
+            <li class="list clearfix"> <a href="[field:arcurl /]" title="[field:title/]"> <span class="img-wrap br"> <img src="[field:litpic/]" alt="[field:title/]" class="img-cover br random-img"></span>
               <div class="new-text">
                 <p class="title">[field:title/]</p>
                 <div class="info"> <span class="time"> <i class="iconfont icon-time"></i> <span class="font-oswald">2018-04-28</span></span> <span class="view"> <i class="iconfont icon-view"></i> <span class="font-oswald">[field:click/]</span></span> </div>
@@ -95,9 +95,9 @@
       {dede:arclist titlelen='80' row='9'}
       <article class="img-list br mt fl jq-remove-mb">
         <div class="clearfix">
-          <figure class="figure br fl"> <a class="thumbnail" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]"> <img class="img-cover br" src="[field:litpic/]" alt="[field:title/]" title="[field:title/]"></a> </figure>
+          <figure class="figure br fl"> <a class="thumbnail" href="[field:arcurl /]" title="[field:title/]"> <img class="img-cover br" src="[field:litpic/]" alt="[field:title/]" title="[field:title/]"></a> </figure>
           <div class="content">
-            <h2 class="title ellipsis m-multi-ellipsis"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a></h2>
+            <h2 class="title ellipsis m-multi-ellipsis"> <a href="[field:arcurl /]" title="[field:title/]">[field:title/]</a></h2>
             <div class="intro hidden-sm">[field:description /]...</div>
             <p class="info clearfix">
               <time class="time fl font-oswald" datetime="[field:pubdate function="MyDate('Y-m-d',@me)"/]" title="[field:pubdate function="MyDate('Y-m-d',@me)"/]"> <i class="iconfont icon-time"></i>2016-01-01</time>

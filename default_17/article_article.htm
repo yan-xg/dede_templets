@@ -32,8 +32,8 @@
               <li class="con">
                 <div class="info"> <span class="sn"><a href="[field:typedir /]/" class="mcolor">[field:typename /]</a></span> </div>
                 <div class="des">
-                  <a class="h2" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title /]">[field:title /]</a>
-                  <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title /]" class="pic"> <img class="img br img-cover" src="[field:litpic /]" alt="[field:title /]"> </a>
+                  <a class="h2" href="[field:arcurl /]" title="[field:title /]">[field:title /]</a>
+                  <a href="[field:arcurl /]" title="[field:title /]" class="pic"> <img class="img br img-cover" src="[field:litpic /]" alt="[field:title /]"> </a>
                   <div class="text">
                     <p>[field:description /]...</p>
                     <p class="data"> <span class="time">
@@ -42,7 +42,7 @@
                     </p>
                   </div>
                 </div>
-                <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title /]" class="more" target="_blank" rel="nofollow">详细阅读<i class="fa fa-angle-right"></i></a> </li>
+                <a href="[field:arcurl /]" title="[field:title /]" class="more" target="_blank" rel="nofollow">详细阅读<i class="fa fa-angle-right"></i></a> </li>
               {/dede:arclist}
           </div>
         </div>
@@ -53,7 +53,7 @@
         <h3><span>热门文章</span></h3>
         <ul class="widget-content aside_hot">
           {dede:arclist row='5' titlelen='80' typeid='top' orderby='click'}
-          <li class="clearfix"><span class="list list-1">[field:global name=autoindex runphp= 'yes' ] @me; [/field:global]</span><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a></li>
+          <li class="clearfix"><span class="list list-1">[field:global name=autoindex runphp= 'yes' ] @me; [/field:global]</span><a href="[field:arcurl /]" title="[field:title/]">[field:title/]</a></li>
           {/dede:arclist}
         </ul>
       </section>
@@ -62,7 +62,7 @@
         <h3><span>推荐文章</span></h3>
         <ul class="widget-content aside_new">
           {dede:arclist titlelen='80' flag='c,p' typeid='top' limit='8,5'}
-          <li class="clearfix"><i class="fa fa-caret-right"></i><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a></li>
+          <li class="clearfix"><i class="fa fa-caret-right"></i><a href="[field:arcurl /]" title="[field:title/]">[field:title/]</a></li>
           {/dede:arclist}
         </ul>
       </section>

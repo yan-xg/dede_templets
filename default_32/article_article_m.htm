@@ -26,7 +26,7 @@
     <h4>您可能感兴趣的文章:</h4>
     <ul>
       {dede:arclist row='5' orderby='pubdate'}
-      <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a></li>
+      <li><a href="[field:arcurl /]" title="[field:title/]">[field:title/]</a></li>
       {/dede:arclist}
     </ul>
   </div>
@@ -35,7 +35,7 @@
 <section class="xgwz"> <b>相关文章</b>
   <ul>
     {dede:arclist row='5' orderby='click'}
-    <li><span>[field:pubdate function="MyDate('m-d',@me)"/]</span><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a></li>
+    <li><span>[field:pubdate function="MyDate('m-d',@me)"/]</span><a href="[field:arcurl /]" title="[field:title/]">[field:title/]</a></li>
     {/dede:arclist}
   </ul>
 </section>

@@ -29,11 +29,11 @@
         {dede:list pagesize='10'}
         <div class="post">
             <h2>
-                <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]" target="_blank" rel="bookmark">[field:title/]</a></h2>
+                <a href="[field:arcurl /]" title="[field:title/]" target="_blank" rel="bookmark">[field:title/]</a></h2>
             <h6>[field:pubdate function="MyDate('Y-m-d ',@me)"/] | 栏目：<a href='[field:typedir/]'>[field:typename/]</a>| 浏览:[field:click/]<div class="clear"></div></h6>
             <div class="intro">
                       <span id="img">
-                        <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">
+                        <a href="[field:arcurl /]" title="[field:title/]">
                           <img alt="[field:title/]" src="[field:litpic/]" /></a>
                       </span>
                 <p>[field:description /]...</p>
@@ -62,7 +62,7 @@
                <dd class="function_c">
                    <ul>
                        {dede:arclist row='10' titlelen='80' typeid='top' flag='a'}
-                       <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title/]</a></li>
+                       <li><a href="[field:arcurl /]" target="_blank">[field:title/]</a></li>
                        {/dede:arclist}
                    </ul>
                </dd>
@@ -72,7 +72,7 @@
                <dd class="function_c">
                    <ul>
                        {dede:arclist row='10' titlelen='80' typeid='top' orderby='click'}
-                       <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title/]</a><span class="kandyDiggUp">[field:click/]</span></li>
+                       <li><a href="[field:arcurl /]" target="_blank">[field:title/]</a><span class="kandyDiggUp">[field:click/]</span></li>
                        {/dede:arclist}
                    </ul>
                </dd>
@@ -82,7 +82,7 @@
                <dd class="function_c">
                    <ul>
                        {dede:arclist row='10' titlelen='80' typeid='top'}
-                       <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title/]</a></li>
+                       <li><a href="[field:arcurl /]" target="_blank">[field:title/]</a></li>
                        {/dede:arclist}
                    </ul>
                </dd>

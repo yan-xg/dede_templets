@@ -280,10 +280,6 @@ else if($dopost=='save')
         $arcrank,$typeInfo['namerule'],$typeInfo['typedir'],$money,$filename);
     $artUrl = $cfg_basehost.$url;
 
-//    $urls = array(
-//        $artUrl,
-//        );
-//    api_baidu($urls);//百度api提交
 
     //返回成功信息
     $msg = "    　　请选择你的后续操作：

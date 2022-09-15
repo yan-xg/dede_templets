@@ -29,8 +29,8 @@
         {dede:list pagesize='15'}
         <li class="con">
           <div class="des">
-            <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" class="h2" target="_blank">[field:title /]</a>
-            <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank" class="pic"> <img src="[field:litpic /]" data-original="[field:litpic /]" title="[field:title /]" /> </a>
+            <a href="[field:arcurl /]" class="h2" target="_blank">[field:title /]</a>
+            <a href="[field:arcurl /]" target="_blank" class="pic"> <img src="[field:litpic /]" data-original="[field:litpic /]" title="[field:title /]" /> </a>
             <p class="text">[field:description /]...</p>
           </div>
         </li>
@@ -55,7 +55,7 @@
         <h3><span>最新文章</span></h3>
         <ul id="newlog">
           {dede:arclist limit='0,5' titlelen='80' typeid='top'}
-          <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html">[field:title /]</a></li>
+          <li><a href="[field:arcurl /]">[field:title /]</a></li>
           {/dede:arclist}
         </ul>
       </li>
@@ -63,7 +63,7 @@
         <h3><span>热门文章</span></h3>
         <ul id="hotlog">
           {dede:arclist row='5' titlelen='80' typeid='top' orderby='click'}
-          <li><i class='mcolor' >[field:global name=autoindex runphp= 'yes' ] @me; [/field:global]</i><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html">[field:title /]</a></li>
+          <li><i class='mcolor' >[field:global name=autoindex runphp= 'yes' ] @me; [/field:global]</i><a href="[field:arcurl /]">[field:title /]</a></li>
           {/dede:arclist}
         </ul>
       </li>

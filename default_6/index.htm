@@ -18,29 +18,29 @@
       <article class="excerpt-see excerpt-see-index pc">
           {dede:arclist titlelen='80' flag='c' typeid='top' row='1'}
           <h2><span class="red">【站长推荐】</span>
-              <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title /]">[field:title /]</a>
+              <a href="[field:arcurl /]" title="[field:title /]">[field:title /]</a>
           </h2>
-          <p class="note"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title /]">[field:description /]...</a></p>
+          <p class="note"> <a href="[field:arcurl /]" title="[field:title /]">[field:description /]...</a></p>
           {/dede:arclist}
         <div class="relatescom">
           <ul>
               {dede:arclist titlelen='80' flag='c' typeid='top' limit='1,6'}
-              <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title /]">[field:title /]</a></li>
+              <li><a href="[field:arcurl /]" title="[field:title /]">[field:title /]</a></li>
               {/dede:arclist}
           </ul>
         </div>
       </article>
         {dede:arclist row='10' titlelen='80' typeid='top'}
         <article class="excerpt">
-            <a class="focus" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html"><img src="[field:litpic /]" alt="[field:title /]"/></a>
+            <a class="focus" href="[field:arcurl /]"><img src="[field:litpic /]" alt="[field:title /]"/></a>
             <header>
                 <a href="[field:typedir /]" class="cat" title="[field:typename /]">[field:typename /]</a>
-                <h2><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title /]">[field:title /]</a></h2>
+                <h2><a href="[field:arcurl /]" title="[field:title /]">[field:title /]</a></h2>
             </header>
             <p class="meta">
                 <time>[field:pubdate function="MyDate('Y-m-d ',@me)"/]</time>
                 <span class="pv">阅读([field:click/])</span> </p>
-            <p class="note pc"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title /]">[field:description /]...</a></p>
+            <p class="note pc"> <a href="[field:arcurl /]" title="[field:title /]">[field:description /]...</a></p>
         </article>
         {/dede:arclist}
 
@@ -59,7 +59,7 @@
       <dd class="function_c">
         <ul>
             {dede:arclist row='10' titlelen='80' typeid='top' orderby='click'}
-            <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html">[field:title /]</a></li>
+            <li><a href="[field:arcurl /]">[field:title /]</a></li>
             {/dede:arclist}
         </ul>
       </dd>
@@ -70,7 +70,7 @@
           <dd class="function_c">
               <ul>
                   {dede:arclist limit='10,10' titlelen='80' typeid='top'}
-                  <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html">[field:title /]</a></li>
+                  <li><a href="[field:arcurl /]">[field:title /]</a></li>
                   {/dede:arclist}
               </ul>
           </dd>

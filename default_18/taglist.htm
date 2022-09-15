@@ -30,8 +30,8 @@
         <ul class="catelist clear">
             {dede:list orderby='sortrank' pagesize='10'}
             <li>
-                <div class="pic"><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html"><img src="[field:litpic /]" alt="[field:title /]"></a></div>
-                <h3><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html">[field:title /]</a></h3>
+                <div class="pic"><a href="[field:arcurl /]"><img src="[field:litpic /]" alt="[field:title /]"></a></div>
+                <h3><a href="[field:arcurl /]">[field:title /]</a></h3>
                 <p>[field:description /]...</p>
                 <div class="info">
                     <span><i class="iconfont">&#xe675;</i>[field:pubdate function="MyDate('Y-m-d',@me)"/]</span>
@@ -55,7 +55,7 @@
                 <h3>热门文章</h3>
                 <ul class="remen">
                     {dede:arclist row='10' titlelen='80' typeid='top' orderby='click'}
-                    <li><i class="iconfont">&#xe6f1;</i><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html"> [field:title/]</a></li>
+                    <li><i class="iconfont">&#xe6f1;</i><a href="[field:arcurl /]"> [field:title/]</a></li>
                     {/dede:arclist}
                 </ul>
             </div>
@@ -64,7 +64,7 @@
                 <h3>推荐文章</h3>
                 <ul class="remen">
                     {dede:arclist titlelen='80' flag='c,p' typeid='top' limit='5,10'}
-                    <li><i class="iconfont">&#xe6f1;</i><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html"> [field:title/]</a></li>
+                    <li><i class="iconfont">&#xe6f1;</i><a href="[field:arcurl /]"> [field:title/]</a></li>
                     {/dede:arclist}
                 </ul>
             </div>

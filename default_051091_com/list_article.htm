@@ -28,8 +28,8 @@
 		{dede:list pagesize='20'}
 		
         <li>
-            <span class="blogpic imgscale"><i><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html"></a></i><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title=""><img src="[field:litpic/]" alt=""></a></span>
-			  <p class="blogtext"><h3 class="blogtitle"><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title/]</a></h3></p>
+            <span class="blogpic imgscale"><i><a href="[field:arcurl /]"></a></i><a href="[field:arcurl /]" title=""><img src="[field:litpic/]" alt=""></a></span>
+			  <p class="blogtext"><h3 class="blogtitle"><a href="[field:arcurl /]" target="_blank">[field:title/]</a></h3></p>
 		 
             <p class="bloginfo"><span>日期：[field:pubdate function="MyDate('Y/m/d ',@me)"/]</span></p>
 			</li>
@@ -52,7 +52,7 @@
         <section class="topnews imgscale"><a href="/"><img src="http://demo.mxyhn.xyz:8020/cssthemes6/1.06ZF24/images/4.jpg"><span>6条网页设计配色原则,让你秒变配色高手</span></a></section>
         <ul>
          {dede:arclist typeid='1' orderby='pubdate' titlelen='80' row=8}
-            <li><i></i><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html">[field:title/]</a></li>
+            <li><i></i><a href="[field:arcurl /]">[field:title/]</a></li>
 		{/dede:arclist}
         </ul>
       </div>
@@ -61,7 +61,7 @@
           <section class="topnews imgscale"><a href="/"><img src="http://demo.mxyhn.xyz:8020/cssthemes6/1.06ZF24/images/4.jpg"><span>6条网页设计配色原则,让你秒变配色高手</span></a></section>
           <ul>
            {dede:arclist typeid='2' orderby='pubdate' titlelen='80' row=8}
-            <li><i></i><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html">[field:title/]</a></li>
+            <li><i></i><a href="[field:arcurl /]">[field:title/]</a></li>
 			{/dede:arclist}
           </ul>
         </div>

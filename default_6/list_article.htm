@@ -22,15 +22,15 @@
       </article>
       {dede:list pagesize='10'}
       <article class="excerpt">
-        <a class="focus" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html"><img src="[field:litpic /]" alt="[field:title /]"/></a>
+        <a class="focus" href="[field:arcurl /]"><img src="[field:litpic /]" alt="[field:title /]"/></a>
         <header>
           <a href="[field:typedir /]" class="cat" title="[field:typename /]">[field:typename /]</a>
-          <h2><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title /]">[field:title /]</a></h2>
+          <h2><a href="[field:arcurl /]" title="[field:title /]">[field:title /]</a></h2>
         </header>
         <p class="meta">
           <time>[field:pubdate function="MyDate('Y-m-d ',@me)"/]</time>
           <span class="pv">阅读([field:click/])</span> </p>
-        <p class="note pc"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title /]">[field:description /]...</a></p>
+        <p class="note pc"> <a href="[field:arcurl /]" title="[field:title /]">[field:description /]...</a></p>
       </article>
       {/dede:list}
       <div class="pagination">
@@ -53,7 +53,7 @@
       <dd class="function_c">
         <ul>
           {dede:arclist row='10' titlelen='80' typeid='top' orderby='click'}
-          <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html">[field:title /]</a></li>
+          <li><a href="[field:arcurl /]">[field:title /]</a></li>
           {/dede:arclist}
         </ul>
       </dd>
@@ -64,7 +64,7 @@
       <dd class="function_c">
         <ul>
           {dede:arclist limit='0,10' titlelen='80' typeid='top'}
-          <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html">[field:title /]</a></li>
+          <li><a href="[field:arcurl /]">[field:title /]</a></li>
           {/dede:arclist}
         </ul>
       </dd>

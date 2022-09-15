@@ -17,13 +17,13 @@
       <div id="banners" class="ui-banner">
         <ul class="ui-banner-slides">
             {dede:arclist titlelen='80' flag='p' typeid='top' row='5'}
-            <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank"><img src="[field:litpic /]" alt="[field:title /]" /></a></li>
+            <li><a href="[field:arcurl /]" target="_blank"><img src="[field:litpic /]" alt="[field:title /]" /></a></li>
             {/dede:arclist}
         </ul>
         <ul class="ui-banner-slogans">
             {dede:arclist titlelen='80' flag='c' typeid='top' row='5'}
             <li>
-                <h3 onClick="javascript:window.open('[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html')">[field:title /]</h3>
+                <h3 onClick="javascript:window.open('[field:arcurl /]')">[field:title /]</h3>
                 <div class="des"> [field:description /]...</div>
             </li>
             {/dede:arclist}
@@ -44,7 +44,7 @@ $(function(){
           <div class="con">
             <ul>
                 {dede:arclist titlelen='80' flag='c' typeid='top' limit='5,10'}
-                <li><i class="fa fa-caret-left"></i><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html">[field:title /]</a></li>
+                <li><i class="fa fa-caret-left"></i><a href="[field:arcurl /]">[field:title /]</a></li>
                 {/dede:arclist}
             </ul>
           </div>
@@ -57,13 +57,13 @@ $(function(){
               <div class="xyti"> <h3><i class="fa fa-list-ul"></i><a href="{dede:field name='typedir'/}" class="mcolor">{dede:field name='typename'/}</a></h3> </div>
               <ul>
                   {dede:arclist row='1'}
-                  <li class="first"><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title /]" class="pic"><img src="{APP_PATH}/statics/7/images/nopic.gif" data-original="[field:litpic /]" alt="[field:title /]" /></a><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title /]" class="text">[field:title /]</a>
+                  <li class="first"><a href="[field:arcurl /]" title="[field:title /]" class="pic"><img src="{APP_PATH}/statics/7/images/nopic.gif" data-original="[field:litpic /]" alt="[field:title /]" /></a><a href="[field:arcurl /]" title="[field:title /]" class="text">[field:title /]</a>
                       <div class="des"> [field:description /]...</div>
                   </li>
                   {/dede:arclist}
 
                   {dede:arclist limit='1,4'}
-                  <li><i class="fa fa-caret-right"></i><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title /]">[field:title /]</a></li>
+                  <li><i class="fa fa-caret-right"></i><a href="[field:arcurl /]" title="[field:title /]">[field:title /]</a></li>
                   {/dede:arclist}
 
               </ul>
@@ -75,11 +75,11 @@ $(function(){
           {dede:arclist row='10' titlelen='80' typeid='top'}
           <li class="con">
               <div class="info"> <span class="sn"> <a href="[field:typedir /]" class="mcolor">[field:typename /]</a> </span> </div>
-              <div class="des"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank" class="h2">[field:title /]</a> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank" class="pic"> <img src="{APP_PATH}/statics/7/images/nopic.gif" data-original="[field:litpic /]" title="[field:title /]" /> </a>
+              <div class="des"> <a href="[field:arcurl /]" target="_blank" class="h2">[field:title /]</a> <a href="[field:arcurl /]" target="_blank" class="pic"> <img src="{APP_PATH}/statics/7/images/nopic.gif" data-original="[field:litpic /]" title="[field:title /]" /> </a>
                   <p class="text">[field:description /]...</p>
                   <p class="tags">发布于：[field:pubdate function="MyDate('Y-m-d ',@me)"/]</p>
               </div>
-              <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank" class="more">详细阅读<i class="fa fa-angle-right"></i></a>
+              <a href="[field:arcurl /]" target="_blank" class="more">详细阅读<i class="fa fa-angle-right"></i></a>
           </li>
           {/dede:arclist}
       </ul>
@@ -133,7 +133,7 @@ $(function(){
     <h3><span>最新文章</span></h3>
     <ul id="newlog">
         {dede:arclist limit='10,5' titlelen='80' typeid='top'}
-        <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html">[field:title /]</a></li>
+        <li><a href="[field:arcurl /]">[field:title /]</a></li>
         {/dede:arclist}
     </ul>
   </li>
@@ -141,7 +141,7 @@ $(function(){
     <h3><span>热门文章</span></h3>
     <ul id="hotlog">
         {dede:arclist row='5' titlelen='80' typeid='top' orderby='click'}
-        <li><i class='mcolor' >[field:global name=autoindex runphp= 'yes' ] @me; [/field:global]</i><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html">[field:title /]</a></li>
+        <li><i class='mcolor' >[field:global name=autoindex runphp= 'yes' ] @me; [/field:global]</i><a href="[field:arcurl /]">[field:title /]</a></li>
         {/dede:arclist}
     </ul>
   </li>

@@ -22,7 +22,7 @@
                             <table width="100%" border="0" cellpadding="0" cellspacing="0">
                                     <tr>
                                         {dede:arclist flag='c' typeid='top' row='1' orderby='pubdate'}
-                                        <td align="center" valign="middle"><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]" class="dbzw">[field:title/]</a></td>
+                                        <td align="center" valign="middle"><a href="[field:arcurl /]" title="[field:title/]" class="dbzw">[field:title/]</a></td>
                                         {/dede:arclist}
                                     </td>
                                 </tr>
@@ -34,7 +34,7 @@
                                             style="OVERFLOW:auto; WIDTH: 720px; HEIGHT:26px; margin:0 auto;white-space:nowrap;text-overflow:ellipsis;">
                                             {dede:arclist typeid='top' orderby='click' row=10}
                                                 <img src="[field:global.cfg_cmspath/]/public/img/newsdot.png" align="absmiddle">
-                                                <a class="css13" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a>
+                                                <a class="css13" href="[field:arcurl /]" title="[field:title/]">[field:title/]</a>
                                             {/dede:arclist}
                                         </DIV>
                                         <SCRIPT defer>new Marquee("marqueediv56511", 2, 1, 920, 26, 30, 0, 0)</SCRIPT>
@@ -55,7 +55,7 @@
                     {dede:arclist typeid='top' orderby='pubdate' row=25}
                     <div style="float:left;width:405px;">
                         <img src="[field:global.cfg_cmspath/]/public/img/landot.png" align="absmiddle">
-                        <a class="css16" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a>
+                        <a class="css16" href="[field:arcurl /]" title="[field:title/]">[field:title/]</a>
                     </div>
                     {/dede:arclist}
                 </div>
@@ -67,14 +67,14 @@
                             <div class="focusBox" style="margin:0 auto">
                                 <ul class="pic" style="position: relative; width: 656px; height: 367px;">
                                     {dede:arclist flag='h' typeid='top' row='5' orderby='pubdate'}
-                                    <li style="position: absolute; width: 656px; left: 0px; top: 0px; display: none;"><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]"><img src="[field:litpic/]" alt="[field:title/]"></a></li>
+                                    <li style="position: absolute; width: 656px; left: 0px; top: 0px; display: none;"><a href="[field:arcurl /]" title="[field:title/]"><img src="[field:litpic/]" alt="[field:title/]"></a></li>
                                     {/dede:arclist}
                                 </ul>
                                 <div class="txt-bg"></div>
                                 <div class="txt">
                                     <ul>
                                         {dede:arclist flag='h' typeid='top' row='5' orderby='pubdate'}
-                                        <li style="bottom: -36px;"><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a></li>
+                                        <li style="bottom: -36px;"><a href="[field:arcurl /]" title="[field:title/]">[field:title/]</a></li>
                                         {/dede:arclist}
                                     </ul>
                                 </div>
@@ -106,7 +106,7 @@
                             <div class="line10"></div>
                             <div class="kdbfb">
                                 {dede:arclist typeid='1' row='12' orderby='pubdate'}
-                                <li><img src="[field:global.cfg_cmspath/]/public/img/landot.png" align="absmiddle"> <a class="css16" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a></li>
+                                <li><img src="[field:global.cfg_cmspath/]/public/img/landot.png" align="absmiddle"> <a class="css16" href="[field:arcurl /]" title="[field:title/]">[field:title/]</a></li>
                                 {/dede:arclist}
                             </div>
                         </td>
@@ -149,9 +149,9 @@
                     <tbody>
                     {dede:arclist typeid='2' limit='0,1' orderby='pubdate'}
                     <tr>
-                        <td style="BORDER: #cccccc 1px solid; PADDING: 2px;" align="middle" width="110"><a class="css14" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]"><img height="90" src="[field:picname/]" alt="[field:title/]" width="120" border="0"/></a></td>
-                        <td class="css15" style="padding-left:10px;"><a class="css71" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a><br>
-                            <a class="css15" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:description function="cn_substr(@me,120)"/]...</a><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]" class="css15"><font color="#666666">&gt;&gt;</font></a></td>
+                        <td style="BORDER: #cccccc 1px solid; PADDING: 2px;" align="middle" width="110"><a class="css14" href="[field:arcurl /]" title="[field:title/]"><img height="90" src="[field:picname/]" alt="[field:title/]" width="120" border="0"/></a></td>
+                        <td class="css15" style="padding-left:10px;"><a class="css71" href="[field:arcurl /]" title="[field:title/]">[field:title/]</a><br>
+                            <a class="css15" href="[field:arcurl /]" title="[field:title/]">[field:description function="cn_substr(@me,120)"/]...</a><a href="[field:arcurl /]" title="[field:title/]" class="css15"><font color="#666666">&gt;&gt;</font></a></td>
                     </tr>
                     {/dede:arclist}
                     </tbody>
@@ -160,7 +160,7 @@
                 <div class="line8"></div>
                 <div class="kdbx">
                     {dede:arclist typeid='2' limit='1,5' orderby='pubdate'}
-                    <li><img src="[field:global.cfg_cmspath/]/public/img/landot.png" align="absmiddle"> <a class="css16" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a></li>
+                    <li><img src="[field:global.cfg_cmspath/]/public/img/landot.png" align="absmiddle"> <a class="css16" href="[field:arcurl /]" title="[field:title/]">[field:title/]</a></li>
                     {/dede:arclist}
                 </div>
             </td>
@@ -178,9 +178,9 @@
                     <tbody>
                     {dede:arclist typeid='3' limit='0,1' orderby='pubdate'}
                     <tr>
-                        <td style="BORDER: #cccccc 1px solid; PADDING: 2px;" align="middle" width="110"><a class="css14" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]"><img height="90" src="[field:picname/]" alt="[field:title/]" width="120" border="0"/></a></td>
-                        <td class="css15" style="padding-left:10px;"><a class="css71" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a><br>
-                            <a class="css15" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:description function="cn_substr(@me,120)"/]...</a><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]" class="css15"><font color="#666666">&gt;&gt;</font></a></td>
+                        <td style="BORDER: #cccccc 1px solid; PADDING: 2px;" align="middle" width="110"><a class="css14" href="[field:arcurl /]" title="[field:title/]"><img height="90" src="[field:picname/]" alt="[field:title/]" width="120" border="0"/></a></td>
+                        <td class="css15" style="padding-left:10px;"><a class="css71" href="[field:arcurl /]" title="[field:title/]">[field:title/]</a><br>
+                            <a class="css15" href="[field:arcurl /]" title="[field:title/]">[field:description function="cn_substr(@me,120)"/]...</a><a href="[field:arcurl /]" title="[field:title/]" class="css15"><font color="#666666">&gt;&gt;</font></a></td>
                     </tr>
                     {/dede:arclist}
                     </tbody>
@@ -188,7 +188,7 @@
                 <div class="line8"></div>
                 <div class="kdbx">
                     {dede:arclist typeid='3' limit='1,5' orderby='pubdate'}
-                    <li><img src="[field:global.cfg_cmspath/]/public/img/landot.png" align="absmiddle"> <a class="css16" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a></li>
+                    <li><img src="[field:global.cfg_cmspath/]/public/img/landot.png" align="absmiddle"> <a class="css16" href="[field:arcurl /]" title="[field:title/]">[field:title/]</a></li>
                     {/dede:arclist}
                 </div>
             </td>
@@ -204,7 +204,7 @@
                 <div class="line4"></div>
                 <div class="kdbxv">
                     {dede:arclist typeid='4' row='9' orderby='pubdate'}
-                    <li><img src="[field:global.cfg_cmspath/]/public/img/landot.png" align="absmiddle"> <a class="css16" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a></li>
+                    <li><img src="[field:global.cfg_cmspath/]/public/img/landot.png" align="absmiddle"> <a class="css16" href="[field:arcurl /]" title="[field:title/]">[field:title/]</a></li>
                     {/dede:arclist}
                 </div>
             </td>
@@ -228,7 +228,7 @@
                             <div class="line10"></div>
                             <div class="kdbx">
                                 {dede:arclist typeid='5' row='6' orderby='pubdate'}
-                                <li><img src="[field:global.cfg_cmspath/]/public/img/landot.png" align="absmiddle"> <a class="css16" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a></li>
+                                <li><img src="[field:global.cfg_cmspath/]/public/img/landot.png" align="absmiddle"> <a class="css16" href="[field:arcurl /]" title="[field:title/]">[field:title/]</a></li>
                                 {/dede:arclist}
                             </div>
                         </td>
@@ -244,7 +244,7 @@
                             <div class="line10"></div>
                             <div class="kdbx">
                                 {dede:arclist typeid='6' row='6' orderby='pubdate'}
-                                <li><img src="[field:global.cfg_cmspath/]/public/img/landot.png" align="absmiddle"> <a class="css16" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a></li>
+                                <li><img src="[field:global.cfg_cmspath/]/public/img/landot.png" align="absmiddle"> <a class="css16" href="[field:arcurl /]" title="[field:title/]">[field:title/]</a></li>
                                 {/dede:arclist}
                             </div>
                         </td>
@@ -267,7 +267,7 @@
                             <div class="line10"></div>
                             <div class="kdbx">
                                 {dede:arclist typeid='7' row='6' orderby='pubdate'}
-                                <li><img src="[field:global.cfg_cmspath/]/public/img/landot.png" align="absmiddle"> <a class="css16" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a></li>
+                                <li><img src="[field:global.cfg_cmspath/]/public/img/landot.png" align="absmiddle"> <a class="css16" href="[field:arcurl /]" title="[field:title/]">[field:title/]</a></li>
                                 {/dede:arclist}
                             </div>
                         </td>
@@ -283,7 +283,7 @@
                             <div class="line10"></div>
                             <div class="kdbx">
                                 {dede:arclist typeid='8' row='6' orderby='pubdate'}
-                                <li><img src="[field:global.cfg_cmspath/]/public/img/landot.png" align="absmiddle"> <a class="css16" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a></li>
+                                <li><img src="[field:global.cfg_cmspath/]/public/img/landot.png" align="absmiddle"> <a class="css16" href="[field:arcurl /]" title="[field:title/]">[field:title/]</a></li>
                                 {/dede:arclist}
                             </div>
                         </td>
@@ -302,7 +302,7 @@
                 <div class="line10"></div>
                 <div class="kdbx">
                     {dede:arclist typeid='9' row='6' orderby='pubdate'}
-                    <li><img src="[field:global.cfg_cmspath/]/public/img/landot.png" align="absmiddle"> <a class="css16" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a></li>
+                    <li><img src="[field:global.cfg_cmspath/]/public/img/landot.png" align="absmiddle"> <a class="css16" href="[field:arcurl /]" title="[field:title/]">[field:title/]</a></li>
                     {/dede:arclist}
                 </div>
                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
@@ -316,7 +316,7 @@
                 <div class="line10"></div>
                 <div class="kdbx">
                     {dede:arclist typeid='10' row='6' orderby='pubdate'}
-                    <li><img src="[field:global.cfg_cmspath/]/public/img/landot.png" align="absmiddle"> <a class="css16" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a></li>
+                    <li><img src="[field:global.cfg_cmspath/]/public/img/landot.png" align="absmiddle"> <a class="css16" href="[field:arcurl /]" title="[field:title/]">[field:title/]</a></li>
                     {/dede:arclist}
                 </div>
             </td>

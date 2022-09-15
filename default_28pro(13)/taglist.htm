@@ -24,12 +24,12 @@
           {dede:list orderby='sortrank' pagesize='10'}
           <article class="newsitem">
             <figure class="thumbnail">
-              <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title /]">
+              <a href="[field:arcurl /]" title="[field:title /]">
                 <img src="[field:litpic/]" alt="[field:title /]" /></a>
             </figure>
             <div class="info">
               <h2>
-                <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title /]">[field:title /]</a></h2>
+                <a href="[field:arcurl /]" title="[field:title /]">[field:title /]</a></h2>
               <div class="meta">
                 <span>
                   <time datetime="[field:pubdate function="MyDate('Y-m-d',@me)"/]">
@@ -57,11 +57,11 @@
               {dede:arclist row='5' titlelen='80' typeid='top' orderby='click'}
               <li class="pic">
                 <figure class="thumbnail">
-                  <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">
+                  <a href="[field:arcurl /]" title="[field:title/]">
                   <img src="[field:litpic/]" alt="[field:title/]" /></a>
                 </figure>
                 <p>
-                  <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a></p>
+                  <a href="[field:arcurl /]" title="[field:title/]">[field:title/]</a></p>
               </li>
               {/dede:arclist}
             </ul>
@@ -70,7 +70,7 @@
             <h3>推荐文章</h3>
             <ul>
               {dede:arclist row='5' titlelen='80' typeid='top' flag='a'}
-              <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title/]</a></li>
+              <li><a href="[field:arcurl /]" target="_blank">[field:title/]</a></li>
               {/dede:arclist}
             </ul>
           </section>
@@ -79,7 +79,7 @@
             <ul>
               {dede:arclist row='10' titlelen='80' typeid='top'}
               <li class="text">
-                <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a>
+                <a href="[field:arcurl /]" title="[field:title/]">[field:title/]</a>
                 <time datetime="[field:pubdate function="MyDate('Y-m-d',@me)"/]">
                 <i class="far fa-calendar-alt"></i>[field:pubdate function="MyDate('Y-m-d',@me)"/]</time>
               </li>

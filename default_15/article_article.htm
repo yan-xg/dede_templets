@@ -51,7 +51,7 @@
             </div>
             <ul class="list_3">
               {dede:arclist row='10' titlelen='80' typeid='top'}
-              <li><a target="_blank" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a></li>
+              <li><a target="_blank" href="[field:arcurl /]" title="[field:title/]">[field:title/]</a></li>
               {/dede:arclist}
             </ul>
           </div>
@@ -62,7 +62,7 @@
             <ul class="sidebar_content divPrevious">
               {dede:arclist row='6' titlelen='80' typeid='top' orderby='click'}
               <li class="clr">
-                <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">
+                <a href="[field:arcurl /]" target="_blank">
                   <div class="time"><span class="r">[field:pubdate function="MyDate('d',@me)"/]</span>/<span class="y">[field:pubdate function="MyDate('m',@me)"/]月</span></div>
                   <div class="title">[field:title/]</div></a>
               </li>
@@ -74,7 +74,7 @@
             <ul class="sidebar_content divPrevious">
               {dede:arclist titlelen='80' flag='c,p' typeid='top' row='6'}
               <li class="clr">
-                <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">
+                <a href="[field:arcurl /]" target="_blank">
                 <div class="time"><span class="r">[field:pubdate function="MyDate('d',@me)"/]</span>/<span class="y">[field:pubdate function="MyDate('m',@me)"/]月</span></div>
                 <div class="title">[field:title/]</div></a>
               </li>

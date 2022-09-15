@@ -21,7 +21,7 @@
           <div class="con">
             <ul>
                 {dede:arclist titlelen='80' flag='a' typeid='top' row='5'}
-                <li> <i class="fa fa-newspaper-o"></i> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html">[field:title/]</a> </li>
+                <li> <i class="fa fa-newspaper-o"></i> <a href="[field:arcurl /]">[field:title/]</a> </li>
                 {/dede:arclist}
             </ul>
           </div>
@@ -32,7 +32,7 @@
       <div class="swiper-container card">
         <ul class="swiper-wrapper">
             {dede:arclist titlelen='80' flag='c,p' typeid='top' row='5'}
-            <li class="swiper-slide"> <a class="link" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">
+            <li class="swiper-slide"> <a class="link" href="[field:arcurl /]" title="[field:title/]">
                 <p class="p ellipsis">[field:title/]</p>
                 <img src="[field:litpic/]" alt="[field:title/]" /> <i class="mask"></i> </a>
             </li>
@@ -44,8 +44,8 @@
         <ul>
             {dede:arclist titlelen='80' flag='c,p' typeid='top' limit='5,3'}
             <li class="clearfix">
-                <div> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html"><img class="img-cover br" src="[field:litpic/]" alt="[field:title/]" title="[field:title/]"></a> </div>
-                <h2 class="ellipsis"><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a></h2>
+                <div> <a href="[field:arcurl /]"><img class="img-cover br" src="[field:litpic/]" alt="[field:title/]" title="[field:title/]"></a> </div>
+                <h2 class="ellipsis"><a href="[field:arcurl /]" title="[field:title/]">[field:title/]</a></h2>
                 <p> [field:description /] </p>
             </li>
             {/dede:arclist}
@@ -60,13 +60,13 @@
               </div>
               <ul>
                   {dede:arclist titlelen='80' row='1'}
-                  <li class="first"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]" class="pic"> <img class="img-cover br" src="[field:litpic/]" alt="[field:title/]" title="[field:title/]"> </a> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]" class="text">[field:title/]</a>
+                  <li class="first"> <a href="[field:arcurl /]" title="[field:title/]" class="pic"> <img class="img-cover br" src="[field:litpic/]" alt="[field:title/]" title="[field:title/]"> </a> <a href="[field:arcurl /]" title="[field:title/]" class="text">[field:title/]</a>
                       <div class="des"> [field:description/]</div>
                   </li>
                   {/dede:arclist}
 
                   {dede:arclist titlelen='80' limit='1,5'}
-                  <li> <i class="fa fa-caret-right"></i> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a> </li>
+                  <li> <i class="fa fa-caret-right"></i> <a href="[field:arcurl /]" title="[field:title/]">[field:title/]</a> </li>
                   {/dede:arclist}
               </ul>
           </div>
@@ -77,8 +77,8 @@
       <div id="imgbox">
           {dede:arclist row='12' titlelen='80' typeid='top'}
           <div class="wapost card">
-              <h2 class="multi-ellipsis"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title /]">[field:title /]</a> </h2>
-              <p class="img"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank"> <img class="img-cover br" src="[field:litpic /]" alt="[field:title /]" title="[field:title /]"> </a> </p>
+              <h2 class="multi-ellipsis"> <a href="[field:arcurl /]" title="[field:title /]">[field:title /]</a> </h2>
+              <p class="img"> <a href="[field:arcurl /]" target="_blank"> <img class="img-cover br" src="[field:litpic /]" alt="[field:title /]" title="[field:title /]"> </a> </p>
               <p class="text">[field:description /]</p>
               <div class="count"> <span><i class="fa fa-eye"></i>[field:click /]</span>
                   <span class="edit"><i class="fa fa-clock-o"></i>[field:pubdate function="MyDate('Y-m-d',@me)"/] </span> </div>
@@ -102,7 +102,7 @@
         <h3><span>热门文章</span></h3>
         <ul class="widget-content aside_hot">
             {dede:arclist row='5' titlelen='80' typeid='top' orderby='click'}
-            <li class="clearfix"><span class="list list-1">[field:global name=autoindex runphp= 'yes' ] @me; [/field:global]</span><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a></li>
+            <li class="clearfix"><span class="list list-1">[field:global name=autoindex runphp= 'yes' ] @me; [/field:global]</span><a href="[field:arcurl /]" title="[field:title/]">[field:title/]</a></li>
             {/dede:arclist}
         </ul>
       </section>
@@ -111,7 +111,7 @@
         <h3><span>推荐文章</span></h3>
         <ul class="widget-content aside_new">
             {dede:arclist titlelen='80' flag='c,p' typeid='top' limit='8,5'}
-            <li class="clearfix"><i class="fa fa-caret-right"></i><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a></li>
+            <li class="clearfix"><i class="fa fa-caret-right"></i><a href="[field:arcurl /]" title="[field:title/]">[field:title/]</a></li>
             {/dede:arclist}
         </ul>
       </section>

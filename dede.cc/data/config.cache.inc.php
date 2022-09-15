@@ -1,9 +1,9 @@
 <?php
 $cfg_disable_funs = 'phpinfo,eval,exec,passthru,shell_exec,system,proc_open,popen,curl_exec,curl_multi_exec,parse_ini_file,show_source,file_put_contents';
 $cfg_disable_tags = 'php';
-$cfg_basehost = 'http://dede.cc:8084';
+$cfg_basehost = 'http://www.dede.cc:8009';
 $cfg_cmspath = '';
-$cfg_cookie_encode = 'Y0bWY1yk6FOiMOxih5pFnRCacTwmfE';
+$cfg_cookie_encode = 'ngFc2CtXAULNO69ne02XsMABiyKoO3c';
 $cfg_indexurl = '/';
 $cfg_backup_dir = 'backupdata';
 $cfg_indexname = '主页';
@@ -103,7 +103,7 @@ $cfg_rewrite = 'Y';
 $cfg_delete = 'Y';
 $cfg_keywords = '';
 $cfg_description = '';
-$cfg_beian = '';
+$cfg_beian = '222222';
 $cfg_need_typeid2 = 'Y';
 $cfg_cache_type = 'id';
 $cfg_max_face = 50;

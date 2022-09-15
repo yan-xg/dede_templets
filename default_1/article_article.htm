@@ -44,8 +44,8 @@
           <ul>
               {dede:arclist limit='5,4' titlelen='80' typeid='top'}
               <li>
-                  <div class="thumbnail"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title /]" target="_blank"><img src="[field:litpic /]"/></a> </div>
-                  <p><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title /]" target="_blank">[field:title /]</a></p>
+                  <div class="thumbnail"> <a href="[field:arcurl /]" title="[field:title /]" target="_blank"><img src="[field:litpic /]"/></a> </div>
+                  <p><a href="[field:arcurl /]" title="[field:title /]" target="_blank">[field:title /]</a></p>
               </li>
               {/dede:arclist}
           </ul>
@@ -62,7 +62,7 @@
             </div>
             <ul>
                 {dede:arclist row='8' titlelen='80' typeid='top' orderby='click'}
-                <li> <i class="a[field:global name=autoindex runphp="yes"] @me; [/field:global]">[field:global name=autoindex runphp="yes"] @me; [/field:global]</i> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]" target="_blank">[field:title/]</a> </li>
+                <li> <i class="a[field:global name=autoindex runphp="yes"] @me; [/field:global]">[field:global name=autoindex runphp="yes"] @me; [/field:global]</i> <a href="[field:arcurl /]" title="[field:title/]" target="_blank">[field:title/]</a> </li>
                 {/dede:arclist}
             </ul>
         </section>
@@ -74,8 +74,8 @@
             <ul>
                 {dede:arclist row='5' titlelen='80' typeid='top'}
                 <li>
-                    <div class="thumbnail"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title /]" target="_blank"><img src="[field:litpic /]"/></a> </div>
-                    <p><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title /]" target="_blank">[field:title /]</a></p>
+                    <div class="thumbnail"> <a href="[field:arcurl /]" title="[field:title /]" target="_blank"><img src="[field:litpic /]"/></a> </div>
+                    <p><a href="[field:arcurl /]" title="[field:title /]" target="_blank">[field:title /]</a></p>
                 </li>
                 {/dede:arclist}
             </ul>

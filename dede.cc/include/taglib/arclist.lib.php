@@ -175,7 +175,7 @@ function lib_arclistDone(&$refObj, &$ctag, $typeid=0, $notypeid=0, $row=10, $col
 {
     global $dsql,$PubFields,$cfg_keyword_like,$cfg_index_cache,$_arclistEnv,$envs,$cfg_cache_type,$cfg_digg_update;
     $row = AttDef($row,10);
-    $titlelen = AttDef($titlelen,30);
+    $titlelen = AttDef($titlelen,180);
     $infolen = AttDef($infolen,160);
     $imgwidth = AttDef($imgwidth,120);
     $imgheight = AttDef($imgheight,120);
@@ -507,7 +507,7 @@ function lib_arclistDone(&$refObj, &$ctag, $typeid=0, $notypeid=0, $row=10, $col
                     $row['arcrank'] = $row['corank'];
                 }
 
-                $row['filename'] = $row['arcurl'] = GetFileUrl($row['id'],$row['typeid'],$row['senddate'],$row['title'],$row['ismake'],
+                $row['filename'] = $row['arcurl'] = GetFileUrl($row['id'],$row['typeid'],$row['senddate'],$row['title'],1,
                 $row['arcrank'],$row['namerule'],$row['typedir'],$row['money'],$row['filename'],$row['moresite'],$row['siteurl'],$row['sitepath']);
 
                 $row['typeurl'] = GetTypeUrl($row['typeid'],$row['typedir'],$row['isdefault'],$row['defaultname'],$row['ispart'],

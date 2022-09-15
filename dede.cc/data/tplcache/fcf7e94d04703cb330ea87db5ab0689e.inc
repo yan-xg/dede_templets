@@ -1,1 +1,0 @@
-<li class="title clearfix"> <a class="a ellipsis fl" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title /]"> <i class="iconfont icon-dot"></i>[field:title /]</a> </li>

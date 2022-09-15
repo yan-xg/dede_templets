@@ -46,7 +46,7 @@
               <h3><span>最新文章</span></h3>
               <ul id="newlog">
                   {dede:arclist limit='0,5' titlelen='80' typeid='top'}
-                  <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html">[field:title /]</a></li>
+                  <li><a href="[field:arcurl /]">[field:title /]</a></li>
                   {/dede:arclist}
               </ul>
           </li>
@@ -54,7 +54,7 @@
               <h3><span>热门文章</span></h3>
               <ul id="hotlog">
                   {dede:arclist row='5' titlelen='80' typeid='top' orderby='click'}
-                  <li><i class='mcolor' >[field:global name=autoindex runphp= 'yes' ] @me; [/field:global]</i><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html">[field:title /]</a></li>
+                  <li><i class='mcolor' >[field:global name=autoindex runphp= 'yes' ] @me; [/field:global]</i><a href="[field:arcurl /]">[field:title /]</a></li>
                   {/dede:arclist}
               </ul>
           </li>

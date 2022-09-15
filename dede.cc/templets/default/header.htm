@@ -1,16 +1,15 @@
-<header id="header" class="header header-fixed sb">
-    <div class="h-wrap container clearfix">
-        <div class="logo-area fl"> <a href="/" title="{dede:global.cfg_webname/}"> <img class="img" src="{dede:global.cfg_cmspath/}/public/images/logo.png" alt="{dede:global.cfg_webname/}" title="{dede:global.cfg_webname/}"> </a> </div>
-        <div class="m-nav-btn"><i class="iconfont icon-menu"></i></div>
-        <nav class="responsive-nav">
-            <div class="pc-nav m-nav fl" data-type="article" data-infoid="9">
-                <ul class="nav-ul">
-                    <li><a href="/" class="{dede:field name=typeid runphp='yes'}(@me=='0') ? @me='active' : @me=''; {/dede:field}">首页</a></li>
-                    {dede:channel type='top' currentstyle='<li><a href="~typelink~" class="active">~typename~</a></li>'}
-                    <li><a href="[field:typelink /]">[field:typename/]</a></li>
-                    {/dede:channel}
+<header id="header">
+    <div class="navbox">
+        <h2 id="mnavh"><span class="navicon"></span></h2>
+        <div class="logo"><a href="/"><img src="{dede:global.cfg_basehost/}/images/logo.png" alt="{dede:global.cfg_webname/}" title="{dede:global.cfg_webname/}"/></a></div>
+        <nav>
+            <ul id="starlist">
+                <li><a href="/" id="{dede:field name=typeid runphp='yes'}(@me=='0') ? @me='selected' : @me=''; {/dede:field}">首页</a></li>
+                {dede:channel type='top' currentstyle='<li><a href="~typelink~" id="selected">~typename~</a></li>'}
+                <li><a href="[field:typelink /]">[field:typename/]</a></li>
+                {/dede:channel}
                 </ul>
-            </div>
         </nav>
     </div>
 </header>
+<div class="searchbox"></div>

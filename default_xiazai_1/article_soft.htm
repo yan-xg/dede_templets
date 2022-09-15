@@ -54,9 +54,9 @@
       <p class="c-title"><span class="name">猜你喜欢</span></p>
       <ul class="ul clearfix">
           {dede:arclist typeid='5' limit='8,8' orderby='pubdate'}
-          <li class="item fl"> <a class="thumbnail" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]"> <img class="img-cover br" src="[field:litpic/]" alt="[field:title/]" title="[field:title/]"> </a>
-              <h2 class="title ellipsis"><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a><span class="sub ellipsis">[field:click/]次下载</span></h2>
-              <a rel="nofollow" class="download br" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html">下载</a>
+          <li class="item fl"> <a class="thumbnail" href="[field:arcurl /]" title="[field:title/]"> <img class="img-cover br" src="[field:litpic/]" alt="[field:title/]" title="[field:title/]"> </a>
+              <h2 class="title ellipsis"><a href="[field:arcurl /]" title="[field:title/]">[field:title/]</a><span class="sub ellipsis">[field:click/]次下载</span></h2>
+              <a rel="nofollow" class="download br" href="[field:arcurl /]">下载</a>
           </li>
           {/dede:arclist}
       </ul>
@@ -77,12 +77,12 @@
                   <li class="item">
                       <div class="clearfix">
                           <span class="fl iconfont icon-top10 list list-1"><small>[field:global name=autoindex runphp="yes"] @me; [/field:global]</small></span>
-                          <a class="thumbnail fl" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">
+                          <a class="thumbnail fl" href="[field:arcurl /]" title="[field:title/]">
                           <img class="img img-cover br" src="[field:litpic/]" alt="[field:title/]" title="[field:title/]">
                           </a>
                           <div class="fr-wrap">
                               <div class="title-wrap">
-                                  <h2 class="title ellipsis"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a> </h2>
+                                  <h2 class="title ellipsis"> <a href="[field:arcurl /]" title="[field:title/]">[field:title/]</a> </h2>
                                   <p class="intro br clearfix ellipsis"> [field:click/]次下载 </p>
                               </div>
                           </div>
@@ -96,12 +96,12 @@
                   <li class="item">
                       <div class="clearfix">
                           <span class="fl iconfont icon-top10 list list-1"><small>[field:global name=autoindex runphp="yes"] @me; [/field:global]</small></span>
-                          <a class="thumbnail fl" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">
+                          <a class="thumbnail fl" href="[field:arcurl /]" title="[field:title/]">
                           <img class="img img-cover br" src="[field:litpic/]" alt="[field:title/]" title="[field:title/]">
                           </a>
                           <div class="fr-wrap">
                               <div class="title-wrap">
-                                  <h2 class="title ellipsis"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a> </h2>
+                                  <h2 class="title ellipsis"> <a href="[field:arcurl /]" title="[field:title/]">[field:title/]</a> </h2>
                                   <p class="intro br clearfix ellipsis"> [field:click/]次下载 </p>
                               </div>
                           </div>
@@ -117,7 +117,7 @@
             <p class="c-title mb10"><span class="name">最近发表</span></p>
             <ul class="widget-content divPrevious">
                 {dede:arclist typeid='1,2,3,4' row='10' orderby='pubdate'}
-                <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html">[field:title/]</a></li>
+                <li><a href="[field:arcurl /]">[field:title/]</a></li>
                 {/dede:arclist}
             </ul>
         </section>

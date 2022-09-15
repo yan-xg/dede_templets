@@ -22,7 +22,7 @@
             <div class="swiper-wrapper">
               {dede:arclist titlelen='80' flag='f' typeid='top' row='5'}
               <div class="swiper-slide">
-                <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html"><img src="[field:litpic/]" alt="[field:title/]" style="width: 100%;height: 299px;">
+                <a href="[field:arcurl /]"><img src="[field:litpic/]" alt="[field:title/]" style="width: 100%;height: 299px;">
                 <p>[field:title/]</p>
                 </a>
               </div>
@@ -46,13 +46,13 @@
           <div class="post">
             {dede:arclist titlelen='80' flag='a' typeid='top' row='1'}
             <h2>
-              <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]" target="_blank" rel="bookmark">
+              <a href="[field:arcurl /]" title="[field:title/]" target="_blank" rel="bookmark">
               <span class="jinrituijian">推荐阅读</span>[field:title/]
               </a>
             </h2>
             <h6>[field:pubdate function="MyDate('Y年m月d日 ',@me)"/] | 栏目：<a href='[field:typedir/]/'>[field:typename/]</a>| 浏览:[field:click/]<div class="clear"></div></h6>
             <div class="intro">
-              <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank" rel="bookmark">
+              <a href="[field:arcurl /]" target="_blank" rel="bookmark">
               <p>[field:description /]...</p>
               </a>
               <br /></div>
@@ -61,7 +61,7 @@
           <div class="post">
             <div class="intro">
               {dede:arclist titlelen='80' flag='c' typeid='top' limit='0,4'}
-              <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title/]</a></li>
+              <li><a href="[field:arcurl /]" target="_blank">[field:title/]</a></li>
               {/dede:arclist}
             </div>
           </div>
@@ -80,11 +80,11 @@
                 {dede:arclist typeid='top' orderby='pubdate' titlelen='80' row=10}
                 <div class="post">
                   <h2>
-                    <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]" target="_blank" rel="bookmark">[field:title/]</a></h2>
+                    <a href="[field:arcurl /]" title="[field:title/]" target="_blank" rel="bookmark">[field:title/]</a></h2>
                   <h6>[field:pubdate function="MyDate('Y-m-d ',@me)"/] | 栏目：<a href='[field:typedir/]'>[field:typename/]</a>| 浏览:[field:click/]<div class="clear"></div></h6>
                   <div class="intro">
                       <span id="img">
-                        <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">
+                        <a href="[field:arcurl /]" title="[field:title/]">
                           <img alt="[field:title/]" src="[field:litpic/]" /></a>
                       </span>
                     <p>[field:description /]...</p>
@@ -98,11 +98,11 @@
                 {dede:arclist titlelen='80' row='10'}
                 <div class="post">
                   <h2>
-                    <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]" target="_blank" rel="bookmark">[field:title/]</a></h2>
+                    <a href="[field:arcurl /]" title="[field:title/]" target="_blank" rel="bookmark">[field:title/]</a></h2>
                   <h6>[field:pubdate function="MyDate('Y-m-d ',@me)"/] | 栏目：<a href='[field:typedir/]'>[field:typename/]</a>| 浏览:[field:click/]<div class="clear"></div></h6>
                   <div class="intro">
                       <span id="img">
-                        <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">
+                        <a href="[field:arcurl /]" title="[field:title/]">
                           <img alt="[field:title/]" src="[field:litpic/]" /></a>
                       </span>
                     <p>[field:description /]...</p>
@@ -127,7 +127,7 @@
             <dd class="function_c">
               <ul>
                 {dede:arclist typeid='top' orderby='pubdate' titlelen='80' limit="10,10"}
-                <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title/]</a></li>
+                <li><a href="[field:arcurl /]" target="_blank">[field:title/]</a></li>
                 {/dede:arclist}
               </ul>
             </dd>
@@ -137,7 +137,7 @@
             <dd class="function_c">
               <ul>
                 {dede:arclist row='10' titlelen='80' typeid='top' orderby='click'}
-                <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title/]</a><span class="kandyDiggUp">[field:click/]</span></li>
+                <li><a href="[field:arcurl /]" target="_blank">[field:title/]</a><span class="kandyDiggUp">[field:click/]</span></li>
                 {/dede:arclist}
               </ul>
             </dd>

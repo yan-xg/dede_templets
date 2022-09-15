@@ -17,14 +17,14 @@
     <ul class="ul clearfix">
         {dede:arclist flag='c' typeid='5' row='10'}
         <li class="item fl">
-            <a class="thumbnail" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">
+            <a class="thumbnail" href="[field:arcurl /]" title="[field:title/]">
                 <img class="img-cover br" src="[field:litpic/]" alt="[field:title/]" title="[field:title/]">
             </a>
             <h2 class="title ellipsis">
-                <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a>
+                <a href="[field:arcurl /]" title="[field:title/]">[field:title/]</a>
                 <span class="sub ellipsis">[field:click/]次下载</span>
             </h2>
-            <a rel="nofollow" class="download br" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html">下载</a>
+            <a rel="nofollow" class="download br" href="[field:arcurl /]">下载</a>
         </li>
         {/dede:arclist}
     </ul>
@@ -45,12 +45,12 @@
                     <li class="item">
                         <div class="clearfix">
                             <span class="fl iconfont icon-top10 list list-1"><small>[field:global name=autoindex runphp="yes"] @me; [/field:global]</small></span>
-                            <a class="thumbnail fl" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">
+                            <a class="thumbnail fl" href="[field:arcurl /]" title="[field:title/]">
                                 <img class="img img-cover br" src="[field:litpic/]" alt="[field:title/]" title="[field:title/]">
                             </a>
                             <div class="fr-wrap">
                                 <div class="title-wrap">
-                                    <h2 class="title ellipsis"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a> </h2>
+                                    <h2 class="title ellipsis"> <a href="[field:arcurl /]" title="[field:title/]">[field:title/]</a> </h2>
                                     <p class="intro br clearfix ellipsis"> [field:click/]次下载 </p>
                                 </div>
                             </div>
@@ -64,12 +64,12 @@
                     <li class="item">
                         <div class="clearfix">
                             <span class="fl iconfont icon-top10 list list-1"><small>[field:global name=autoindex runphp="yes"] @me; [/field:global]</small></span>
-                            <a class="thumbnail fl" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">
+                            <a class="thumbnail fl" href="[field:arcurl /]" title="[field:title/]">
                             <img class="img img-cover br" src="[field:litpic/]" alt="[field:title/]" title="[field:title/]">
                             </a>
                             <div class="fr-wrap">
                                 <div class="title-wrap">
-                                    <h2 class="title ellipsis"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a> </h2>
+                                    <h2 class="title ellipsis"> <a href="[field:arcurl /]" title="[field:title/]">[field:title/]</a> </h2>
                                     <p class="intro br clearfix ellipsis"> [field:click/]次下载 </p>
                                 </div>
                             </div>
@@ -86,7 +86,7 @@
           <p class="c-title mb10"><span class="name">最近发表</span></p>
           <ul class="widget-content divPrevious">
               {dede:arclist typeid='1,2,3,4' row='10' orderby='pubdate'}
-              <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html">[field:title/]</a></li>
+              <li><a href="[field:arcurl /]">[field:title/]</a></li>
               {/dede:arclist}
           </ul>
         </section>
@@ -94,8 +94,8 @@
           <p class="c-title mb10"><span class="name">热门资讯</span></p>
           <ul class="widget-content divComments">
               {dede:arclist typeid='1,2,3,4' row='10' orderby='click'}
-              <li class="list clearfix"><span class="avatar fl"><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html"><img src="[field:litpic/]" alt="[field:title/]" title="[field:title/]"></a></span>
-                  <div class="title"><a class="a ellipsis" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="查阅详情">[field:title/]</a>
+              <li class="list clearfix"><span class="avatar fl"><a href="[field:arcurl /]"><img src="[field:litpic/]" alt="[field:title/]" title="[field:title/]"></a></span>
+                  <div class="title"><a class="a ellipsis" href="[field:arcurl /]" title="查阅详情">[field:title/]</a>
                       <div class="info ellipsis"><span class="time"><i class="iconfont icon-time"></i>[field:pubdate function="MyDate('m-d',@me)"/]</span><span class="author"><i class="iconfont icon-user"></i>[field:click/] </span></div>
                   </div>
               </li>
@@ -109,7 +109,7 @@
         <ul class="swiper-wrapper">
             {dede:arclist typeid='1,2,3,4' flag='f' row='3' orderby='pubdate'}
             <li class="swiper-slide">
-                <a class="link" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title /]">
+                <a class="link" href="[field:arcurl /]" title="[field:title /]">
                     <p class="p ellipsis"></p>
                     <img src="[field:litpic /]" alt="[field:title /]">
                 </a>
@@ -126,14 +126,14 @@
             {dede:arclist typeid='1' row='1' orderby='pubdate'}
             <p class="c-title"> <span>[field:typename /]</span> <a class="more" href="[field:typedir /]/" title="更多[field:typename /]">更多</a> </p>
             <article class="item top">
-                <h2 class="top-title ellipsis"><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title /]">[field:title /]</a></h2>
+                <h2 class="top-title ellipsis"><a href="[field:arcurl /]" title="[field:title /]">[field:title /]</a></h2>
                 <p class="intro multi-ellipsis"> <i class="iconfont icon-yin"></i> [field:description /]... </p>
             </article>
             {/dede:arclist}
 
             {dede:arclist typeid='1' limit='1,28' orderby='pubdate'}
             <article class="item fl">
-                <h2 class="title ellipsis"><i class="iconfont icon-dot"></i><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title /]">[field:title /]</a></h2>
+                <h2 class="title ellipsis"><i class="iconfont icon-dot"></i><a href="[field:arcurl /]" title="[field:title /]">[field:title /]</a></h2>
             </article>
             {/dede:arclist}
         </div>
@@ -146,9 +146,9 @@
               {/dede:arclist}
 
               {dede:arclist typeid='5' row='15' orderby='pubdate'}
-              <article class="item fl"> <a class="thumbnail" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title /]"> <img class="img-cover br" src="[field:litpic /]" alt="[field:title /]" title="[field:title /]"> </a>
-                  <h2 class="title ellipsis"><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title /]">[field:title /]</a><span class="sub ellipsis">[field:click /]次下载</span></h2>
-                  <a rel="nofollow" class="download br" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html">下载</a>
+              <article class="item fl"> <a class="thumbnail" href="[field:arcurl /]" title="[field:title /]"> <img class="img-cover br" src="[field:litpic /]" alt="[field:title /]" title="[field:title /]"> </a>
+                  <h2 class="title ellipsis"><a href="[field:arcurl /]" title="[field:title /]">[field:title /]</a><span class="sub ellipsis">[field:click /]次下载</span></h2>
+                  <a rel="nofollow" class="download br" href="[field:arcurl /]">下载</a>
               </article>
               {/dede:arclist}
           </div>
@@ -162,12 +162,12 @@
           <div class="wrap clearfix">
               {dede:arclist typeid='5' flag='a' row='1' orderby='pubdate'}
               <article class="item fl">
-                  <div class="clearfix"> <a class="thumbnail fl" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title /]"> <img class="img img-cover br" src="[field:litpic /]" alt="[field:title /]" title="[field:title /]"> </a>
+                  <div class="clearfix"> <a class="thumbnail fl" href="[field:arcurl /]" title="[field:title /]"> <img class="img img-cover br" src="[field:litpic /]" alt="[field:title /]" title="[field:title /]"> </a>
                       <div class="fr-wrap">
                           <div class="title-wrap">
-                              <h2 class="title ellipsis"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title /]">[field:title /]</a> </h2>
-                              <a class="category transition br" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html"> [field:typename /]</a>
-                              <div class="div"><a rel="nofollow" class="download brightness transition br" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html">下载</a></div>
+                              <h2 class="title ellipsis"> <a href="[field:arcurl /]" title="[field:title /]">[field:title /]</a> </h2>
+                              <a class="category transition br" href="[field:arcurl /]"> [field:typename /]</a>
+                              <div class="div"><a rel="nofollow" class="download brightness transition br" href="[field:arcurl /]">下载</a></div>
                           </div>
                       </div>
                   </div>
@@ -182,7 +182,7 @@
           <div class="br">
               {dede:arclist typeid='2' row='1' orderby='pubdate'}
               <p class="c-title mb10"> <span>[field:typename /]</span> <a class="more" href="[field:typedir /]/" title="更多[field:typename /]">更多</a> </p>
-              <article class="item mb10"> <a class="thumbnail" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title /]"> <img class="img-cover br" src="[field:litpic /]" alt="[field:title /]" title="[field:title /]">
+              <article class="item mb10"> <a class="thumbnail" href="[field:arcurl /]" title="[field:title /]"> <img class="img-cover br" src="[field:litpic /]" alt="[field:title /]" title="[field:title /]">
                   <div class="absolute">
                       <p class="p-title ellipsis">[field:title /]</p>
                   </div>
@@ -192,7 +192,7 @@
 
             <ul class="ul">
                 {dede:arclist typeid='2' limit='1,12' orderby='pubdate'}
-                <li class="title clearfix"> <a class="a ellipsis fl" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title /]"> <i class="iconfont icon-dot"></i>[field:title /]</a> </li>
+                <li class="title clearfix"> <a class="a ellipsis fl" href="[field:arcurl /]" title="[field:title /]"> <i class="iconfont icon-dot"></i>[field:title /]</a> </li>
                 {/dede:arclist}
             </ul>
           </div>
@@ -211,10 +211,10 @@
               <p class="c-title"> <span>排行榜</span> </p>
               {dede:arclist typeid='5' limit='8,5' orderby='click'}
               <article class="item">
-                  <div class="clearfix"> <a class="thumbnail fl" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]"> <img class="img img-cover br" src="[field:litpic/]" alt="[field:title/]" title="[field:title/]"> </a>
+                  <div class="clearfix"> <a class="thumbnail fl" href="[field:arcurl /]" title="[field:title/]"> <img class="img img-cover br" src="[field:litpic/]" alt="[field:title/]" title="[field:title/]"> </a>
                       <div class="fr-wrap">
                           <div class="title-wrap">
-                              <h2 class="title ellipsis"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a> </h2>
+                              <h2 class="title ellipsis"> <a href="[field:arcurl /]" title="[field:title/]">[field:title/]</a> </h2>
                               <p class="intro br clearfix ellipsis"> &nbsp;&nbsp;&nbsp;&nbsp;ps：[field:description/]... </p>
                           </div>
                       </div>
@@ -235,7 +235,7 @@
     <div class="clearfix">
         {dede:arclist typeid='3' row='4' orderby='pubdate'}
         <article class="item fl">
-            <a class="thumbnail" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title /]"> <img class="img-cover br" src="[field:litpic /]" alt="[field:title /]" title="[field:title /]">
+            <a class="thumbnail" href="[field:arcurl /]" title="[field:title /]"> <img class="img-cover br" src="[field:litpic /]" alt="[field:title /]" title="[field:title /]">
                 <div class="absolute">
                     <p class="p-title ellipsis">[field:title /]</p>
                 </div>

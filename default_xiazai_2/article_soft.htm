@@ -27,14 +27,14 @@
                 {dede:arclist typeid='5' row='6' orderby='click'}
                 <li>
                     <figure class="icon">
-                        <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title /]">
+                        <a href="[field:arcurl /]" title="[field:title /]">
                         <img src="[field:litpic /]" alt="[field:title /]" />
                         </a>
                     </figure>
                     <div class="info">
-                        <h4><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title /]">[field:title /]</a></h4>
+                        <h4><a href="[field:arcurl /]" title="[field:title /]">[field:title /]</a></h4>
                         <p>[field:description /]...</p>
-                        <p class="appbtn"><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title /]">下载</a></p>
+                        <p class="appbtn"><a href="[field:arcurl /]" title="[field:title /]">下载</a></p>
                     </div>
                 </li>
                 {/dede:arclist}
@@ -44,14 +44,14 @@
                 {dede:arclist typeid='5' row='6' orderby='pubdate'}
                 <li>
                     <figure class="icon">
-                        <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title /]">
+                        <a href="[field:arcurl /]" title="[field:title /]">
                         <img src="[field:litpic /]" alt="[field:title /]" />
                         </a>
                     </figure>
                     <div class="info">
-                        <h4><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title /]">[field:title /]</a></h4>
+                        <h4><a href="[field:arcurl /]" title="[field:title /]">[field:title /]</a></h4>
                         <p>[field:description /]...</p>
-                        <p class="appbtn"><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title /]">下载</a></p>
+                        <p class="appbtn"><a href="[field:arcurl /]" title="[field:title /]">下载</a></p>
                     </div>
                 </li>
                 {/dede:arclist}
@@ -65,7 +65,7 @@
           <ul>
               {dede:arclist typeid='1,2,3,4' row='10' orderby='pubdate'}
               <li>
-                  <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title /]">
+                  <a href="[field:arcurl /]" title="[field:title /]">
                   <div class="info">
                       <h4>[field:title /]..</h4>
                   </div>
@@ -131,8 +131,8 @@
           <ul>
               {dede:arclist typeid='5' limit='6,8' orderby='pubdate'}
               <li>
-                  <figure class="icon"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]"> <img src="[field:litpic/]" alt="[field:title/]"/></a> </figure>
-                  <h4><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a></h4>
+                  <figure class="icon"> <a href="[field:arcurl /]" title="[field:title/]"> <img src="[field:litpic/]" alt="[field:title/]"/></a> </figure>
+                  <h4><a href="[field:arcurl /]" title="[field:title/]">[field:title/]</a></h4>
               </li>
               {/dede:arclist}
           </ul>

@@ -17,7 +17,7 @@
         <div class="slider">
           <ul id="suxingmeslider">
               {dede:arclist titlelen='80' flag='c' typeid='top' row='5'}
-              <li> <a class="item" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank" title="[field:title/]"> <img src="[field:litpic/]" alt="[field:title/]" class="thumbnail"/> </a> </li>
+              <li> <a class="item" href="[field:arcurl /]" target="_blank" title="[field:title/]"> <img src="[field:litpic/]" alt="[field:title/]" class="thumbnail"/> </a> </li>
               {/dede:arclist}
           </ul>
         </div>
@@ -29,16 +29,16 @@
         <div class="sticky">
           <ul class="aa">
               {dede:arclist titlelen='80' flag='p' typeid='top' row='1'}
-              <div class="pic345"><a rel="nofollow" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html"title="[field:title/]" target="_blank"> <img class="thumbnail" src="[field:litpic/]" alt="[field:title/]"/> </a> </div>
-              <a class="title" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]" target="_blank"><h2>[field:title/]</h2></a>
+              <div class="pic345"><a rel="nofollow" href="[field:arcurl /]"title="[field:title/]" target="_blank"> <img class="thumbnail" src="[field:litpic/]" alt="[field:title/]"/> </a> </div>
+              <a class="title" href="[field:arcurl /]" title="[field:title/]" target="_blank"><h2>[field:title/]</h2></a>
 <!--              <p class="sticky-info">[field:description /]...</p>-->
               {/dede:arclist}
           </ul>
           <ul class="bb">
               {dede:arclist titlelen='80' flag='p' typeid='top' limit='1,2'}
               <li>
-                  <div  class="pic80"> <a rel="nofollow" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]" target="_blank"> <img src="[field:litpic/]" alt="[field:title/]"/> </a> </div>
-                  <a class="title" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]" target="_blank">
+                  <div  class="pic80"> <a rel="nofollow" href="[field:arcurl /]" title="[field:title/]" target="_blank"> <img src="[field:litpic/]" alt="[field:title/]"/> </a> </div>
+                  <a class="title" href="[field:arcurl /]" title="[field:title/]" target="_blank">
                       <h2>[field:title/]</h2>
                   </a>
               </li>
@@ -54,7 +54,7 @@
             {dede:arclist row='15' titlelen='80' typeid='top'}
             <div class="content">
                 <div class="content-header">
-                    <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title /]" target="_blank"><h2>[field:title /]</h2></a>
+                    <a href="[field:arcurl /]" title="[field:title /]" target="_blank"><h2>[field:title /]</h2></a>
                     <div class="content-info">
                         <span class="mr10 postclock">[field:pubdate function="MyDate('Y-m-d ',@me)"/]</span>
                         <span class="mr10 postuser">[field:typename/]<a></a></span>
@@ -62,7 +62,7 @@
                     </div>
                 </div>
 
-                <div class="content-img"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title /]" target="_blank"> <img class="lazy thumbnail" src="[field:litpic /]" data-original="[field:litpic /]" alt="[field:title /]" /> </a> </div>
+                <div class="content-img"> <a href="[field:arcurl /]" title="[field:title /]" target="_blank"> <img class="lazy thumbnail" src="[field:litpic /]" data-original="[field:litpic /]" alt="[field:title /]" /> </a> </div>
                 <div class="content-note">
                     <p>[field:description /]...</p>
                     <span class="category-color"><a href="[field:typedir /]">[field:typename /]</a></span>
@@ -81,7 +81,7 @@
         <h3>热门文章</h3>
       </div>
         {dede:arclist row='3' titlelen='80' typeid='top' orderby='click'}
-        <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" rel="bookmark" title="[field:title /]">
+        <li><a href="[field:arcurl /]" rel="bookmark" title="[field:title /]">
             <div class="overlay"></div>
             <img src="[field:litpic /]" alt="[field:title /]" class="thumbnail" /><span><i class="icon-eye"></i>[field:click/]</span>
             <p class="title">[field:title /]</p>
@@ -108,7 +108,7 @@
       </div>
         {dede:arclist limit='15,3' titlelen='80' typeid='top'}
         <li>
-            <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" rel="bookmark" title="[field:title /]">
+            <a href="[field:arcurl /]" rel="bookmark" title="[field:title /]">
                 <div class="overlay"></div>
                 <img src="[field:litpic /]" alt="[field:title /]" class="thumbnail" /><span></span>
                 <p class="title">[field:title /]</p>

@@ -19,7 +19,7 @@
         <div id="demo1" class="slideBox">
           <ul class="items">
               {dede:arclist titlelen='80' flag='c,p' typeid='top' row='5'}
-              <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]"><img src="[field:litpic/]" alt="[field:title/]"></a></li>
+              <li><a href="[field:arcurl /]" title="[field:title/]"><img src="[field:litpic/]" alt="[field:title/]"></a></li>
               {/dede:arclist}
           </ul>
         </div>
@@ -35,7 +35,7 @@ $('#demo1').slideBox();
           <ul>
             <!--推荐文章-->
               {dede:arclist titlelen='80' flag='a' typeid='top' row='10'}
-              <li><span>[field:pubdate function="MyDate('m-d',@me)"/]</span><a  href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a></li>
+              <li><span>[field:pubdate function="MyDate('m-d',@me)"/]</span><a  href="[field:arcurl /]" title="[field:title/]">[field:title/]</a></li>
               {/dede:arclist}
           </ul>
         </div>
@@ -45,7 +45,7 @@ $('#demo1').slideBox();
           <ul>
             <!--最新文章-->
               {dede:arclist row='20' titlelen='80' typeid='top'}
-              <li><span>[field:pubdate function="MyDate('m-d',@me)"/]</span><a  href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a></li>
+              <li><span>[field:pubdate function="MyDate('m-d',@me)"/]</span><a  href="[field:arcurl /]" title="[field:title/]">[field:title/]</a></li>
               {/dede:arclist}
                       </ul>
         </div>
@@ -61,7 +61,7 @@ $('#demo1').slideBox();
 
                 <ul>
                     {dede:arclist titlelen='80' row='5'}
-                    <li><span>[field:pubdate function="MyDate('m-d',@me)"/]</span><a  href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a></li>
+                    <li><span>[field:pubdate function="MyDate('m-d',@me)"/]</span><a  href="[field:arcurl /]" title="[field:title/]">[field:title/]</a></li>
                     {/dede:arclist}
                 </ul>
             </div>
@@ -85,7 +85,7 @@ $('#demo1').slideBox();
           <h3>热门文章</h3>
           <ul class="remen">
               {dede:arclist row='10' titlelen='80' typeid='top' orderby='click'}
-              <li><i class="iconfont">&#xe6f1;</i><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html"> [field:title/]</a></li>
+              <li><i class="iconfont">&#xe6f1;</i><a href="[field:arcurl /]"> [field:title/]</a></li>
               {/dede:arclist}
           </ul>
         </div>
@@ -94,7 +94,7 @@ $('#demo1').slideBox();
           <h3>推荐文章</h3>
           <ul class="remen">
               {dede:arclist titlelen='80' flag='c,p' typeid='top' limit='5,10'}
-              <li><i class="iconfont">&#xe6f1;</i><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html"> [field:title/]</a></li>
+              <li><i class="iconfont">&#xe6f1;</i><a href="[field:arcurl /]"> [field:title/]</a></li>
               {/dede:arclist}
                       </ul>
         </div>

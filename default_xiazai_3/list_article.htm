@@ -19,9 +19,9 @@
         <ul class="ul-30 mb15">
             {dede:list pagesize='20'}
             <dl class="news-item mb20">
-                <dt><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html"  rel="nofollow"><span class="img-box" data-ratio="16:9"><img src="[field:litpic /]" alt="[field:title /]"></span></a></dt>
+                <dt><a href="[field:arcurl /]"  rel="nofollow"><span class="img-box" data-ratio="16:9"><img src="[field:litpic /]" alt="[field:title /]"></span></a></dt>
                 <dd>
-                    <h2 class="f-18 txt-ov mb5"><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html"><b>[field:title /]</b></a></h2>
+                    <h2 class="f-18 txt-ov mb5"><a href="[field:arcurl /]"><b>[field:title /]</b></a></h2>
                     <p class="f-12 f-gray mb5"><span class="mr10">[field:pubdate function="MyDate('Y-m-d',@me)"/]</span><span class="mr10">/</span><span class="mr10">浏览量：[field:click /]</span></p>
                     <p class="i40 f-gray">ps：[field:description /]...</p>
                 </dd>
@@ -53,8 +53,8 @@
               {dede:arclist typeid='5' row='10' orderby='click'}
               <li class="mb15">
                   <h2 class="txt-ov f-14 mb5">
-                      <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title /]">[field:title /]</a></h2>
-                  <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title /]" class="side-img-1">
+                      <a href="[field:arcurl /]" title="[field:title /]">[field:title /]</a></h2>
+                  <a href="[field:arcurl /]" title="[field:title /]" class="side-img-1">
                   <i><span class="img-box mb5" data-ratio="[field:pubdate function="MyDate('Y:m:d',@me)"/]">
                       <img src="[field:litpic /]" alt="[field:title /]"></span></i>
                   <p class="txt-ov mb5 f-gray">下载量：[field:click/]</p>

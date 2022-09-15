@@ -20,7 +20,7 @@
             <div class="swiper-wrapper">
               {dede:arclist titlelen='80' flag='f' typeid='top' row='5'}
               <div class="swiper-slide" style="background-image:url([field:litpic/])">
-                <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">
+                <a href="[field:arcurl /]" title="[field:title/]">
                 <div class="title"><span>[field:title/]</span>
                   <h3 class="f20">[field:title/]...</h3>
                 </div>
@@ -39,7 +39,7 @@
             <div class="top-box">
               <ul class="topnews">
                 {dede:arclist row='10' titlelen='80' typeid='top' flag='c'}
-                <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html"><span>[field:global name=autoindex runphp= 'yes' ] @me; [/field:global]</span>[field:title/]</a></li>
+                <li><a href="[field:arcurl /]"><span>[field:global name=autoindex runphp= 'yes' ] @me; [/field:global]</span>[field:title/]</a></li>
                 {/dede:arclist}
               </ul>
             </div>
@@ -61,7 +61,7 @@
                 <div class="wrap">
                   <div class="row">
                     {dede:arclist titlelen='80' typeid='top' flag='a' limit='3'}
-                    <div class="hotnewlist"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">
+                    <div class="hotnewlist"> <a href="[field:arcurl /]" target="_blank">
                       <div class="hotdiv" style="background-image:url([field:litpic/])">
                         <div class="overlay"></div>
                         <div class="title"><span>[field:typename /]</span>
@@ -88,9 +88,9 @@
             {dede:arclist typeid='top' orderby='pubdate' titlelen='80' row=15}
             <div class="items">
               <div class="content-box">
-                <div class="posts-gallery-img"><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html"><img class="thumbnail" src="[field:litpic/]" alt="[field:title/]"></a> </div>
+                <div class="posts-gallery-img"><a href="[field:arcurl /]"><img class="thumbnail" src="[field:litpic/]" alt="[field:title/]"></a> </div>
                 <div class="posts-gallery-content">
-                  <h2><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title/]</a></h2>
+                  <h2><a href="[field:arcurl /]" target="_blank">[field:title/]</a></h2>
                   <div class="posts-gallery-text">[field:title/]...</div>
                   <div class="posts-default-info posts-gallery-info">
                     <ul>
@@ -122,9 +122,9 @@
             <ul class="recent-posts-widget">
               {dede:arclist typeid='top' orderby='pubdate' titlelen='80' limit='15,5'}
               <li>
-                <div class="recent-posts-img"><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html"><img src="[field:litpic/]" class="thumbnail" alt="[field:title/]"></a></div>
+                <div class="recent-posts-img"><a href="[field:arcurl /]"><img src="[field:litpic/]" class="thumbnail" alt="[field:title/]"></a></div>
                 <div class="recent-posts-title">
-                  <h4 class="tit"><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html">[field:title/]</a></h4>
+                  <h4 class="tit"><a href="[field:arcurl /]">[field:title/]</a></h4>
                   <span class="info"><i class="iconfont icon-yanjing1"></i> [field:click/]</span> </div>
               </li>
               {/dede:arclist}
@@ -135,7 +135,7 @@
             <ul class="hot-article">
 
               {dede:arclist typeid='top' orderby='pubdate' titlelen='80' limit="15,5"}
-              <li> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank" class="img">
+              <li> <a href="[field:arcurl /]" target="_blank" class="img">
                 <i class="iconfont icon-fenxiang"></i>
                 <img src="[field:litpic/]" class="thumbnail" alt="[field:title/]">
                 </a>
@@ -148,9 +148,9 @@
             <ul class="recent-posts-widget">
               {dede:arclist row='5' titlelen='80' typeid='top' orderby='click'}
               <li>
-                <div class="recent-posts-img"><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html"><img src="[field:litpic/]" class="thumbnail" alt="[field:title/]"></a></div>
+                <div class="recent-posts-img"><a href="[field:arcurl /]"><img src="[field:litpic/]" class="thumbnail" alt="[field:title/]"></a></div>
                 <div class="recent-posts-title">
-                  <h4 class="tit"><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html">[field:title/]</a></h4>
+                  <h4 class="tit"><a href="[field:arcurl /]">[field:title/]</a></h4>
                   <span class="info"><i class="iconfont icon-yanjing1"></i> [field:click/]</span> </div>
               </li>
               {/dede:arclist}

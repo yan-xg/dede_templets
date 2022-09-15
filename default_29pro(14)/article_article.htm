@@ -73,7 +73,7 @@
                          </div>
                          <ul class="th-5">
                              {dede:arclist row='7' titlelen='80' typeid='top'}
-                             <li><span class="date">[field:click/]</span><i>[field:global name=autoindex runphp="yes"] @me; [/field:global]</i><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a></li>
+                             <li><span class="date">[field:click/]</span><i>[field:global name=autoindex runphp="yes"] @me; [/field:global]</i><a href="[field:arcurl /]" title="[field:title/]">[field:title/]</a></li>
                              {/dede:arclist}
                          </ul>
                      </div>
@@ -87,7 +87,7 @@
                          </div>
                          <ul class="th-5">
                              {dede:arclist row='8' titlelen='80' typeid='top' orderby='click'}
-                             <li><span class="date">[field:click /]</span><i>[field:global name=autoindex runphp="yes"] @me; [/field:global]</i><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a></li>
+                             <li><span class="date">[field:click /]</span><i>[field:global name=autoindex runphp="yes"] @me; [/field:global]</i><a href="[field:arcurl /]" title="[field:title/]">[field:title/]</a></li>
                              {/dede:arclist}
                          </ul>
                      </div>
@@ -105,7 +105,7 @@
                              {dede:arclist limit='8,6' titlelen='80' typeid='top' orderby='click'}
                              <li>
                                  <div class="gundongimg">
-                                     <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title /]"><img class="th-img zhuti-img-height" src="[field:litpic /]" />
+                                     <a href="[field:arcurl /]" title="[field:title /]"><img class="th-img zhuti-img-height" src="[field:litpic /]" />
                                      <div class="zhuantiinfo">
                                          [field:title /]
                                      </div> </a>

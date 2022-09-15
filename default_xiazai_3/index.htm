@@ -19,7 +19,7 @@
                             {dede:arclist typeid='1,2,3,4' flag='f' row='3' orderby='pubdate'}
                             <div class="swiper-slide swiper-slide-prev" data-swiper-slide-index="1"
                                  style="width: 895px; margin-right: 30px;"><a
-                                    href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html"
+                                    href="[field:arcurl /]"
                                     title="[field:title /]" rel="nofollow"><img
                                     src="[field:litpic /]"></a></div>
                             {/dede:arclist}
@@ -62,7 +62,7 @@
                     <ul class="row">
                         {dede:arclist typeid='5' row='16' orderby='pubdate'}
                        <li class="col-3 col-m-6 mb15 ta-c">
-                            <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html">
+                            <a href="[field:arcurl /]">
                                 <span class="img-box mb5" data-ratio="16:16">
                                     <img src="[field:litpic /]" alt="[field:title /]">
                                 </span>
@@ -87,7 +87,7 @@
                         <div class="art col-12 clear">
                             <div class="fl artimg"> <img src="[field:litpic /]" alt="[field:title /]"> </div>
                             <div class="arttxt fr">
-                                <p class="t"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title /]">[field:title /]</a> </p>
+                                <p class="t"> <a href="[field:arcurl /]" title="[field:title /]">[field:title /]</a> </p>
                                 <p class="desc">[field:description /]...</p>
                             </div>
                         </div>
@@ -99,7 +99,7 @@
                     <ul class="row">
                         {dede:arclist typeid='5' limit='16,16' orderby='pubdate'}
                         <li class="col-3 col-m-6 mb15 ta-c">
-                            <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html">
+                            <a href="[field:arcurl /]">
                             <span class="img-box mb5" data-ratio="16:16">
                                     <img src="[field:litpic /]" alt="[field:title /]">
                                 </span>
@@ -115,7 +115,7 @@
                         {dede:arclist typeid='1,2,3,4' row='10' orderby='pubdate'}
                         <li>
                             <span class="fr f-gray">[field:pubdate function="MyDate('Y-m-d',@me)"/]</span>
-                            <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title /]">[field:title /]</a>
+                            <a href="[field:arcurl /]" title="[field:title /]">[field:title /]</a>
                         </li>
                         {/dede:arclist}
                     </ul>
@@ -139,8 +139,8 @@
                             {dede:arclist typeid='5' row='10' orderby='click'}
                             <li class="mb15">
                                 <h2 class="txt-ov f-14 mb5">
-                                    <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title /]">[field:title /]</a></h2>
-                                    <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title /]" class="side-img-1">
+                                    <a href="[field:arcurl /]" title="[field:title /]">[field:title /]</a></h2>
+                                    <a href="[field:arcurl /]" title="[field:title /]" class="side-img-1">
                                     <i><span class="img-box mb5" data-ratio="[field:pubdate function="MyDate('Y:m:d',@me)"/]">
                                         <img src="[field:litpic /]" alt="[field:title /]"></span></i>
                                     <p class="txt-ov mb5 f-gray">下载量：[field:click/]</p>

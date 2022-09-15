@@ -1,38 +1,37 @@
 1、上传指定压缩包，解压，在宝塔面板上创建站点、数据库，安装dede
 2、更改后台入口
 
-3、更改数据库字段
+3、后台->系统->SQL命令行工具->更改数据库字段:
 ALTER TABLE `dede_tagindex` ENGINE=InnoDB;
 ALTER TABLE `dede_taglist` ENGINE=InnoDB;
 ALTER TABLE `dede_archives` MODIFY COLUMN `title`  char(180) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '' AFTER `money`;
-UPDATE dede_arcrank set adminrank=1 where membername='开放浏览'
+UPDATE dede_arcrank set adminrank=1 where membername='开放浏览';
 
-4、更改用户组->信息发布员->权限
-     后台->系统->图片水印设置(关闭)
-     后台->系统->核心设置：开启伪静态
-		          Html编辑器支持改成：ckeditor
-     后台->系统->其它选项：文档标题最大长度：180
+4、后台->系统->图片水印设置(关闭)
+     后台->系统->用户组设定->信息发布员->权限(添加审核权限)
+     后台->系统->系统基本参数->核心设置：Html编辑器支持改成：ckeditor
+				开启伪静态
+     后台->系统->系统基本参数->其它选项：文档标题最大长度：180
      后台->系统->添加新变量
            a.  网站备案号(cfg_beian)
            b.  联系方式(cfg_lianxi)，默认：haotuu1@vip.qq.com
            c.  下载站使用，软件下载地址(cfg_softurl)
 
-5、创建栏目，生成对应伪静态规则，检查模板中url规则是否与伪静态对应
-6、宝塔站点配置文件修改，新增重定向到m端
+5、宝塔站点配置文件修改，新增重定向到m端
      #根据ua判断，如果手机端访问时，重定向到m
      if ($http_user_agent ~* "(Android|iPhone|Windows Phone|iPad|webOS|BlackBerry|mobile)" ) {
          rewrite ^/(.*)$ http://m.fzkb.cn/$1 permanent;
      }
+
+6、创建栏目，生成对应伪静态规则，检查模板中url规则是否与伪静态对应
 
 7、如果出现标题展示不完整，在/include/taglib/arclist.lib.php里
      找到  $titlelen = AttDef($titlelen,30);
      改为  $titlelen = AttDef($titlelen,180);
 
 
-
 下载站
 软件模型->添加新字段->版本(version)->varchar(15)
-
 
 url规则
     1. {typedir}/{Y}/{M}{D}/{aid}.html  dede默认

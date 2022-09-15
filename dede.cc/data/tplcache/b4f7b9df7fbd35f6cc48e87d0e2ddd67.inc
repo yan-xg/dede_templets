@@ -1,1 +1,0 @@
-<p class="c-title mb10"> <span>[field:typename/]</span> <a class="more" href=[field:typename/]/" title="更多[field:typename/]">更多</a> </p>

@@ -1,7 +1,7 @@
 <?php
-$cfg_basehost = 'http://dede.cc:8084';
+$cfg_basehost = 'http://dedetest.cc';
 $cfg_cmspath = '';
-$cfg_cookie_encode = 'Y0bWY1yk6FOiMOxih5pFnRCacTwmfE';
+$cfg_cookie_encode = '3hBuyghU91v3wWoFT0FlNycI1pMUTET';
 $cfg_indexurl = '/';
 $cfg_backup_dir = 'backupdata';
 $cfg_indexname = '主页';

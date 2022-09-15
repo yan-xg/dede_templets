@@ -6,7 +6,7 @@
               </div>
               <div class="post-user-info">
                 <a>
-                  <img class="user-header" src="{dede:global.cfg_cmspath/}/public/img/DGZJ.jpg" alt="admin" />
+                  <img class="user-header" src="{dede:global.cfg_templets_skin/}/static/img/DGZJ.jpg" alt="admin" />
                   <span class="post-username">admin</span>
                   <span class="post-fbtime">2020-09-12</span></a>
               </div>

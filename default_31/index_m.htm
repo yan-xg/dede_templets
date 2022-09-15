@@ -22,7 +22,7 @@
     </div>
     <ul class="article-hot">
       {dede:arclist row='10' orderby='pubdate'}
-      <li><span class="mun">[field:global name=autoindex runphp="yes"]@me=@me+0;[/field:global]</span><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a></li>
+      <li><span class="mun">[field:global name=autoindex runphp="yes"]@me=@me+0;[/field:global]</span><a href="[field:arcurl /]" title="[field:title/]">[field:title/]</a></li>
       {/dede:arclist}
     </ul>
   </section>
@@ -35,8 +35,8 @@
       <div class="feeds-list"> {dede:arclist row='10' orderby='pubdate' type='image.'}
         <div class="feeds-item">
           <div class="feeds-item-detail hasImg">
-            <p class="feeds-item-pic"><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]"><img src="[field:picname/]" alt="[field:title/]"></a></p>
-            <h3><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a></h3>
+            <p class="feeds-item-pic"><a href="[field:arcurl /]" title="[field:title/]"><img src="[field:picname/]" alt="[field:title/]"></a></p>
+            <h3><a href="[field:arcurl /]" title="[field:title/]">[field:title/]</a></h3>
             <div class="feeds-item-info"> <span class="time"><i class="fa-calendar-o"></i>[field:pubdate function="MyDate('Y-m-d',@me)"/]</span> </div>
           </div>
         </div>
@@ -49,7 +49,7 @@
     </div>
     <ul class="article-hot">
       {dede:arclist row='10' orderby='click'}
-      <li><span class="mun">[field:global name=autoindex runphp="yes"]@me=@me+0;[/field:global]</span><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a></li>
+      <li><span class="mun">[field:global name=autoindex runphp="yes"]@me=@me+0;[/field:global]</span><a href="[field:arcurl /]" title="[field:title/]">[field:title/]</a></li>
       {/dede:arclist}
     </ul>
   </section>

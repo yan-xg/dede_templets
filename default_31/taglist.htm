@@ -33,10 +33,10 @@
                     <div>
                         <ul>
                             {dede:list pagesize='10'}
-                            <li> <a href='[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html' target='_blank'>
+                            <li> <a href='[field:arcurl /]' target='_blank'>
                                 <img src='[field:litpic /]' alt='[field:title /]' title='[field:title /]'> </a>
-                                <h5><a href='[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html' target='_blank'>[field:title /]</a></h5>
-                                <p>[field:description /]...<a href='[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html' target='_blank' class='detail'>[详细]</a></p>
+                                <h5><a href='[field:arcurl /]' target='_blank'>[field:title /]</a></h5>
+                                <p>[field:description /]...<a href='[field:arcurl /]' target='_blank' class='detail'>[详细]</a></p>
                                 <P class='describe'> <span>[field:typename /]</span>
                                     <span class='timer'>[field:pubdate function="MyDate('Y-m-d',@me)"/]</span>
                                     <a class='discuss'>热度：[field:click /]</a>
@@ -63,17 +63,17 @@
                         </div>
                         <!--title-->
                         {dede:arclist row='1' titlelen='80' typeid='top'}
-                        <h6><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title/]</a></h6>
-                        <div class="item"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">
+                        <h6><a href="[field:arcurl /]" target="_blank">[field:title/]</a></h6>
+                        <div class="item"> <a href="[field:arcurl /]" target="_blank">
                             <img src="[field:litpic/]" alt="[field:title/]" title="[field:title/]"></a>
-                            <p>[field:description/]...<a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[详细]</a></p>
+                            <p>[field:description/]...<a href="[field:arcurl /]" target="_blank">[详细]</a></p>
                         </div>
                         {/dede:arclist}
 
                         <!--内容列表-->
                         <div class="list">
                             {dede:arclist limit='1,9' titlelen='80' typeid='top'}
-                            <p><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title /]</a></p>
+                            <p><a href="[field:arcurl /]" target="_blank">[field:title /]</a></p>
                             {/dede:arclist}
                         </div>
                     </div>
@@ -87,7 +87,7 @@
                         <div class="ranking">
                             <ul>
                                 {dede:arclist row='10'typeid='top' orderby='click'}
-                                <li> <i class="icon1"></i> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title/]</a>
+                                <li> <i class="icon1"></i> <a href="[field:arcurl /]" target="_blank">[field:title/]</a>
                                 </li>
                                 {/dede:arclist}
                             </ul>

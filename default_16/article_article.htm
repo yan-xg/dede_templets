@@ -45,7 +45,7 @@
         <p class="c-title mb"> <span class="name">热门文章</span></p>
         <ul class="widget-content aside_hot_comment">
             {dede:arclist row='5' titlelen='80' typeid='top' orderby='click'}
-            <li class="list clearfix"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]"> <span class="img-wrap br"> <img src="[field:litpic/]" alt="[field:title/]" class="img-cover br random-img"></span>
+            <li class="list clearfix"> <a href="[field:arcurl /]" title="[field:title/]"> <span class="img-wrap br"> <img src="[field:litpic/]" alt="[field:title/]" class="img-cover br random-img"></span>
                 <div class="new-text">
                     <p class="title">[field:title/]</p>
                     <div class="info"> <span class="time"> <i class="iconfont icon-time"></i> <span class="font-oswald">[field:pubdate function="MyDate('Y-m-d',@me)"/]</span></span> <span class="comment"> <i class="iconfont icon-comment"></i> <span class="font-oswald">[field:click/]</span></span> </div>
@@ -59,9 +59,9 @@
             <ul class="ul clearfix">
                 {dede:arclist row='5' titlelen='80' typeid='top'}
                 <article class="article-list sb clearfix">
-                    <figure class="figure fl br"> <a class="thumbnail" href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]"> <img class="img-cover br" src="[field:litpic/]" alt="[field:title/]" title="[field:title/]"></a> </figure>
+                    <figure class="figure fl br"> <a class="thumbnail" href="[field:arcurl /]" title="[field:title/]"> <img class="img-cover br" src="[field:litpic/]" alt="[field:title/]" title="[field:title/]"></a> </figure>
                     <div class="content">
-                        <h2 class="title ellipsis m-multi-ellipsis"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a></h2>
+                        <h2 class="title ellipsis m-multi-ellipsis"> <a href="[field:arcurl /]" title="[field:title/]">[field:title/]</a></h2>
                         <p class="intro hidden-sm">[field:description function='cn_substr(@me,60)' /]...</p>
                         <p class="data clearfix"> <a class="cate fl br" href="[field:typedir /]/" target="_blank"> <i class="iconfont icon-cate"></i>[field:typename /]</a>
                             <span class="hidden-sm-md-lg view fl font-oswald"> <i class="iconfont icon-view"></i>[field:click /]</span>

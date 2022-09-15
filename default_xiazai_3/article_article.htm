@@ -33,7 +33,7 @@
         <h2 class="f-20 fw mb10">最新资讯</h2>
         <ul class="row ul-30">
             {dede:arclist typeid='1,2,3,4' row='10' orderby='pubdate'}
-            <li class="col-12 col-m-24"><span class="fr f-gray ml10">[field:pubdate function="MyDate('Y-m-d',@me)"/]</span><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title /]">[field:title /]</a></li>
+            <li class="col-12 col-m-24"><span class="fr f-gray ml10">[field:pubdate function="MyDate('Y-m-d',@me)"/]</span><a href="[field:arcurl /]" title="[field:title /]">[field:title /]</a></li>
             {/dede:arclist}
         </ul>
       </div>
@@ -41,7 +41,7 @@
         <h2 class="f-20 fw mb10">猜你喜欢</h2>
         <ul class="row">
             {dede:arclist typeid='5' limit='0,8' orderby='pubdate'}
-            <li class="col-3 col-m-6 mb15 ta-c"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">
+            <li class="col-3 col-m-6 mb15 ta-c"> <a href="[field:arcurl /]" title="[field:title/]">
                 <span class="img-box mb5" data-ratio="field:pubdate function="MyDate('Y:m:d',@me)"/]"><img src="[field:litpic/]" alt="[field:title/]"></span>
                 <p class="txt-ov">[field:title/]</p>
             </a>
@@ -58,8 +58,8 @@
               {dede:arclist typeid='5' row='6' orderby='click'}
               <li class="col-24 col-m-12 mb15">
                   <h2 class="txt-ov f-14 mb5">
-                      <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title /]">[field:title /]</a></h2>
-                  <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title /]" class="side-img-1">
+                      <a href="[field:arcurl /]" title="[field:title /]">[field:title /]</a></h2>
+                  <a href="[field:arcurl /]" title="[field:title /]" class="side-img-1">
                   <i><span class="img-box mb5" data-ratio="[field:pubdate function="MyDate('Y:m:d',@me)"/]">
                       <img src="[field:litpic /]" alt="[field:title /]"></span></i>
                   <p class="txt-ov mb5 f-gray">下载量：[field:click/]</p>

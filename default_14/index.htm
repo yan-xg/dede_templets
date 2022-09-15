@@ -22,7 +22,7 @@
        <div class="swiper-wrapper">
         {dede:arclist titlelen='80' flag='c,p' typeid='top' row='5'}
         <div class="swiper-slide">
-         <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]" target="_blank"> <img class="th-img thbanner-img-height" src="[field:litpic/]" />
+         <a href="[field:arcurl /]" title="[field:title/]" target="_blank"> <img class="th-img thbanner-img-height" src="[field:litpic/]" />
           <div class="thbn-title">
            <span>[field:title/]</span>
           </div>
@@ -53,7 +53,7 @@
         {dede:arclist titlelen='80' flag='c,p' typeid='top' limit='5,3'}
         <dl>
          <dt>
-          <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a>
+          <a href="[field:arcurl /]" title="[field:title/]">[field:title/]</a>
          </dt>
          <dd>
           <i class="iconfont  icon-quotes-after icon_yin"></i>
@@ -93,7 +93,7 @@
        </div>
        <ul class="th-5">
         {dede:arclist row='7' titlelen='80' typeid='top'}
-        <li><span class="date">[field:click/]</span><i>[field:global name=autoindex runphp="yes"] @me; [/field:global]</i><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">千[field:title/]</a></li>
+        <li><span class="date">[field:click/]</span><i>[field:global name=autoindex runphp="yes"] @me; [/field:global]</i><a href="[field:arcurl /]" title="[field:title/]">千[field:title/]</a></li>
         {/dede:arclist}
         </ul>
       </div>
@@ -141,7 +141,7 @@
        </div> 
        <ul class="th-5">
         {dede:arclist row='8' titlelen='80' typeid='top' orderby='click'}
-        <li><span class="date">[field:click /]</span><i>[field:global name=autoindex runphp="yes"] @me; [/field:global]</i><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a></li>
+        <li><span class="date">[field:click /]</span><i>[field:global name=autoindex runphp="yes"] @me; [/field:global]</i><a href="[field:arcurl /]" title="[field:title/]">[field:title/]</a></li>
         {/dede:arclist}
        </ul>
       </div> 
@@ -166,10 +166,10 @@
         <div class="col-md-4 col-xs-6  th_padding">
          <div class="thliorder1">
           <div class="gundongimg">
-           <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]"><img class="th-img gundong-img-height" src="[field:litpic /]" /></a>
+           <a href="[field:arcurl /]" title="[field:title/]"><img class="th-img gundong-img-height" src="[field:litpic /]" /></a>
           </div>
           <div class="daodu">
-           <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a>
+           <a href="[field:arcurl /]" title="[field:title/]">[field:title/]</a>
           </div>
           <div class="daoducon">
            <p>[field:description /]...</p>
@@ -203,7 +203,7 @@
         {dede:arclist limit='8,6' titlelen='80' typeid='top' orderby='click'}
         <li>
          <div class="gundongimg">
-          <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title /]"><img class="th-img zhuti-img-height" src="[field:litpic /]" />
+          <a href="[field:arcurl /]" title="[field:title /]"><img class="th-img zhuti-img-height" src="[field:litpic /]" />
            <div class="zhuantiinfo">
             [field:title /]
            </div> </a>
@@ -238,9 +238,9 @@
          {dede:arclist typeid='top' orderby='pubdate' titlelen='80' limit='15,5'}
          <div class="swiper-slide">
           <div class="thslidelist gundongimg ">
-           <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" class="silde_a_border"> <img class="th-img thslide2-img-height" src="[field:litpic/]" alt="[field:title/]" title="[field:title/]" /> </a>
+           <a href="[field:arcurl /]" class="silde_a_border"> <img class="th-img thslide2-img-height" src="[field:litpic/]" alt="[field:title/]" title="[field:title/]" /> </a>
            <div class="thslidetitle">
-            <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a>
+            <a href="[field:arcurl /]" title="[field:title/]">[field:title/]</a>
            </div>
           </div>
          </div>
@@ -267,7 +267,7 @@
        </div>
        <ul class="th-5">
         {dede:arclist titlelen='80' row='8'}
-        <li><span class="date">[field:pubdate function="MyDate('Y-m-d',@me)"/]</span><i>[field:global name=autoindex runphp="yes"] @me; [/field:global]</i><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]" target="_blank">[field:title/]</a></li>
+        <li><span class="date">[field:pubdate function="MyDate('Y-m-d',@me)"/]</span><i>[field:global name=autoindex runphp="yes"] @me; [/field:global]</i><a href="[field:arcurl /]" title="[field:title/]" target="_blank">[field:title/]</a></li>
         {/dede:arclist}
        </ul>
       </div>

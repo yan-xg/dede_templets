@@ -1,4 +1,4 @@
-if ($host = 'm.jingyang.org') {
+if ($host = 'm.csdaily.com.cn') {
   rewrite ^/$ /m/index.php last;
   rewrite ^/index.html$ /m/index.php last;
   rewrite ^/index.php /m/index.php last;
@@ -8,25 +8,50 @@ if ($host = 'm.jingyang.org') {
   rewrite "^/news/list_1_([0-9]+).html$" /m/list.php?tid=1&PageNo=$1 last;
   rewrite "^/news/([0-9]+)/([0-9]+).html$" /m/view.php?tid=1&aid=$2 last;
 
-  rewrite "^/keji/$" /m/list.php?tid=2 last;
-  rewrite "^/keji$" /m/list.php?tid=2 last;
-  rewrite "^/keji/list_2_([0-9]+).html$" /m/list.php?tid=2&PageNo=$1 last;
-  rewrite "^/keji/([0-9]+)/([0-9]+).html$" /m/view.php?tid=2&aid=$2 last;
+  rewrite "^/tech/$" /m/list.php?tid=2 last;
+  rewrite "^/tech$" /m/list.php?tid=2 last;
+  rewrite "^/tech/list_2_([0-9]+).html$" /m/list.php?tid=2&PageNo=$1 last;
+  rewrite "^/tech/([0-9]+)/([0-9]+).html$" /m/view.php?tid=2&aid=$2 last;
 
-  rewrite "^/dongtai/$" /m/list.php?tid=3 last;
-  rewrite "^/dongtai$" /m/list.php?tid=3 last;
-  rewrite "^/dongtai/list_3_([0-9]+).html$" /m/list.php?tid=3&PageNo=$1 last;
-  rewrite "^/dongtai/([0-9]+)/([0-9]+).html$" /m/view.php?tid=3&aid=$2 last;
+  rewrite "^/html/$" /m/list.php?tid=3 last;
+  rewrite "^/html$" /m/list.php?tid=3 last;
+  rewrite "^/html/list_3_([0-9]+).html$" /m/list.php?tid=3&PageNo=$1 last;
+  rewrite "^/html/([0-9]+)/([0-9]+).html$" /m/view.php?tid=3&aid=$2 last;
 
-  rewrite "^/yule/$" /m/list.php?tid=4 last;
-  rewrite "^/yule$" /m/list.php?tid=4 last;
-  rewrite "^/yule/list_4_([0-9]+).html$" /m/list.php?tid=4&PageNo=$1 last;
-  rewrite "^/yule/([0-9]+)/([0-9]+).html$" /m/view.php?tid=4&aid=$2 last;
+  rewrite "^/qiche/$" /m/list.php?tid=4 last;
+  rewrite "^/qiche$" /m/list.php?tid=4 last;
+  rewrite "^/qiche/list_4_([0-9]+).html$" /m/list.php?tid=4&PageNo=$1 last;
+  rewrite "^/qiche/([0-9]+)/([0-9]+).html$" /m/view.php?tid=4&aid=$2 last;
 
-  rewrite "^/soft/$" /m/list.php?tid=5 last;
-  rewrite "^/soft$" /m/list.php?tid=5 last;
-  rewrite "^/soft/list_5_([0-9]+).html$" /m/list.php?tid=5&PageNo=$1 last;
-  rewrite "^/soft/([0-9]+)/([0-9]+).html$" /m/view.php?tid=5&aid=$2 last;
+  rewrite "^/shuma/$" /m/list.php?tid=5 last;
+  rewrite "^/shuma$" /m/list.php?tid=5 last;
+  rewrite "^/shuma/list_5_([0-9]+).html$" /m/list.php?tid=5&PageNo=$1 last;
+  rewrite "^/shuma/([0-9]+)/([0-9]+).html$" /m/view.php?tid=5&aid=$2 last;
+
+  rewrite "^/shenghuo/$" /m/list.php?tid=6 last;
+  rewrite "^/shenghuo$" /m/list.php?tid=6 last;
+  rewrite "^/shenghuo/list_6_([0-9]+).html$" /m/list.php?tid=6&PageNo=$1 last;
+  rewrite "^/shenghuo/([0-9]+)/([0-9]+).html$" /m/view.php?tid=6&aid=$2 last;
+
+  rewrite "^/shishang/$" /m/list.php?tid=7 last;
+  rewrite "^/shishang$" /m/list.php?tid=7 last;
+  rewrite "^/shishang/list_7_([0-9]+).html$" /m/list.php?tid=7&PageNo=$1 last;
+  rewrite "^/shishang/([0-9]+)/([0-9]+).html$" /m/view.php?tid=7&aid=$2 last;
+
+  rewrite "^/baike/$" /m/list.php?tid=8 last;
+  rewrite "^/baike$" /m/list.php?tid=8 last;
+  rewrite "^/baike/list_8_([0-9]+).html$" /m/list.php?tid=8&PageNo=$1 last;
+  rewrite "^/baike/([0-9]+)/([0-9]+).html$" /m/view.php?tid=8&aid=$2 last;
+
+  rewrite "^/fangchan/$" /m/list.php?tid=9 last;
+  rewrite "^/fangchan$" /m/list.php?tid=9 last;
+  rewrite "^/fangchan/list_9_([0-9]+).html$" /m/list.php?tid=9&PageNo=$1 last;
+  rewrite "^/fangchan/([0-9]+)/([0-9]+).html$" /m/view.php?tid=9&aid=$2 last;
+
+  rewrite "^/lvyou/$" /m/list.php?tid=10 last;
+  rewrite "^/lvyou$" /m/list.php?tid=10 last;
+  rewrite "^/lvyou/list_10_([0-9]+).html$" /m/list.php?tid=10&PageNo=$1 last;
+  rewrite "^/lvyou/([0-9]+)/([0-9]+).html$" /m/view.php?tid=10&aid=$2 last;
 }
 
 rewrite ^/$ /index.php last;
@@ -39,23 +64,47 @@ rewrite "^/news$" /plus/list.php?tid=1 last;
 rewrite "^/news/list_1_([0-9]+).html$" /plus/list.php?tid=1&PageNo=$1 last;
 rewrite "^/news/([0-9]+)/([0-9]+).html$" /plus/view.php?tid=1&aid=$2 last;
 
+rewrite "^/tech/$" /plus/list.php?tid=2 last;
+rewrite "^/tech$" /plus/list.php?tid=2 last;
+rewrite "^/tech/list_2_([0-9]+).html$" /plus/list.php?tid=2&PageNo=$1 last;
+rewrite "^/tech/([0-9]+)/([0-9]+).html$" /plus/view.php?tid=2&aid=$2 last;
 
-rewrite "^/keji/$" /plus/list.php?tid=2 last;
-rewrite "^/keji$" /plus/list.php?tid=2 last;
-rewrite "^/keji/list_2_([0-9]+).html$" /plus/list.php?tid=2&PageNo=$1 last;
-rewrite "^/keji/([0-9]+)/([0-9]+).html$" /plus/view.php?tid=2&aid=$2 last;
+rewrite "^/html/$" /plus/list.php?tid=3 last;
+rewrite "^/html$" /plus/list.php?tid=3 last;
+rewrite "^/html/list_3_([0-9]+).html$" /plus/list.php?tid=3&PageNo=$1 last;
+rewrite "^/html/([0-9]+)/([0-9]+).html$" /plus/view.php?tid=3&aid=$2 last;
 
-rewrite "^/dongtai/$" /plus/list.php?tid=3 last;
-rewrite "^/dongtai$" /plus/list.php?tid=3 last;
-rewrite "^/dongtai/list_3_([0-9]+).html$" /plus/list.php?tid=3&PageNo=$1 last;
-rewrite "^/dongtai/([0-9]+)/([0-9]+).html$" /plus/view.php?tid=3&aid=$2 last;
+rewrite "^/qiche/$" /plus/list.php?tid=4 last;
+rewrite "^/qiche$" /plus/list.php?tid=4 last;
+rewrite "^/qiche/list_4_([0-9]+).html$" /plus/list.php?tid=4&PageNo=$1 last;
+rewrite "^/qiche/([0-9]+)/([0-9]+).html$" /plus/view.php?tid=4&aid=$2 last;
 
-rewrite "^/yule/$" /plus/list.php?tid=4 last;
-rewrite "^/yule$" /plus/list.php?tid=4 last;
-rewrite "^/yule/list_4_([0-9]+).html$" /plus/list.php?tid=4&PageNo=$1 last;
-rewrite "^/yule/([0-9]+)/([0-9]+).html$" /plus/view.php?tid=4&aid=$2 last;
+rewrite "^/shuma/$" /plus/list.php?tid=5 last;
+rewrite "^/shuma$" /plus/list.php?tid=5 last;
+rewrite "^/shuma/list_5_([0-9]+).html$" /plus/list.php?tid=5&PageNo=$1 last;
+rewrite "^/shuma/([0-9]+)/([0-9]+).html$" /plus/view.php?tid=5&aid=$2 last;
 
-rewrite "^/soft/$" /plus/list.php?tid=5 last;
-rewrite "^/soft$" /plus/list.php?tid=5 last;
-rewrite "^/soft/list_5_([0-9]+).html$" /plus/list.php?tid=5&PageNo=$1 last;
-rewrite "^/soft/([0-9]+)/([0-9]+).html$" /plus/view.php?tid=5&aid=$2 last;
+rewrite "^/shenghuo/$" /plus/list.php?tid=6 last;
+rewrite "^/shenghuo$" /plus/list.php?tid=6 last;
+rewrite "^/shenghuo/list_6_([0-9]+).html$" /plus/list.php?tid=6&PageNo=$1 last;
+rewrite "^/shenghuo/([0-9]+)/([0-9]+).html$" /plus/view.php?tid=6&aid=$2 last;
+
+rewrite "^/shishang/$" /plus/list.php?tid=7 last;
+rewrite "^/shishang$" /plus/list.php?tid=7 last;
+rewrite "^/shishang/list_7_([0-9]+).html$" /plus/list.php?tid=7&PageNo=$1 last;
+rewrite "^/shishang/([0-9]+)/([0-9]+).html$" /plus/view.php?tid=7&aid=$2 last;
+
+rewrite "^/baike/$" /plus/list.php?tid=8 last;
+rewrite "^/baike$" /plus/list.php?tid=8 last;
+rewrite "^/baike/list_8_([0-9]+).html$" /plus/list.php?tid=8&PageNo=$1 last;
+rewrite "^/baike/([0-9]+)/([0-9]+).html$" /plus/view.php?tid=8&aid=$2 last;
+
+rewrite "^/fangchan/$" /plus/list.php?tid=9 last;
+rewrite "^/fangchan$" /plus/list.php?tid=9 last;
+rewrite "^/fangchan/list_9_([0-9]+).html$" /plus/list.php?tid=9&PageNo=$1 last;
+rewrite "^/fangchan/([0-9]+)/([0-9]+).html$" /plus/view.php?tid=9&aid=$2 last;
+
+rewrite "^/lvyou/$" /plus/list.php?tid=10 last;
+rewrite "^/lvyou$" /plus/list.php?tid=10 last;
+rewrite "^/lvyou/list_10_([0-9]+).html$" /plus/list.php?tid=10&PageNo=$1 last;
+rewrite "^/lvyou/([0-9]+)/([0-9]+).html$" /plus/view.php?tid=10&aid=$2 last;

@@ -18,7 +18,7 @@
       <div class="swiper-wrapper">
           {dede:arclist flag='f' typeid='top' row='5'}
           <div class="swiper-slide">
-              <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank"><img src="[field:litpic/]" alt="[field:title/]"><section><h4>[field:title/]</h4></section></a>
+              <a href="[field:arcurl /]" target="_blank"><img src="[field:litpic/]" alt="[field:title/]"><section><h4>[field:title/]</h4></section></a>
           </div>
           {/dede:arclist}
       </div>
@@ -46,7 +46,7 @@
       <ul>
           {dede:arclist titlelen='80' flag='c,p' typeid='top' row='2'}
           <li>
-              <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">
+              <a href="[field:arcurl /]" title="[field:title/]">
                 <img src="[field:litpic/]" alt="[field:title/]">
                 <span><h4>[field:title/]</h4></span>
               </a>
@@ -61,7 +61,7 @@
       <ul>
 
           {dede:arclist typeid='top' orderby='pubdate' titlelen='80' row=20}
-          <li class="blogs_list"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank"><i><img src="[field:litpic /]" alt="[field:title /]"></i>
+          <li class="blogs_list"> <a href="[field:arcurl /]" target="_blank"><i><img src="[field:litpic /]" alt="[field:title /]"></i>
               <h2>[field:title /]</h2></a>
               <p>[field:description /]...</p>
               <div class="blogs_writer">[field:click /]<span class="blogs_time">[field:pubdate function="MyDate('Y-m-d',@me)"/]</span></div>
@@ -78,7 +78,7 @@
       <h2>7x24小时头条</h2>
       <ul>
           {dede:arclist typeid='top' orderby='pubdate' titlelen='80' limit="20,5"}
-          <li><i></i><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title /]</a><span>[field:pubdate function="MyDate('Y-m-d',@me)"/]</span></li>
+          <li><i></i><a href="[field:arcurl /]" target="_blank">[field:title /]</a><span>[field:pubdate function="MyDate('Y-m-d',@me)"/]</span></li>
           {/dede:arclist}
       </ul>
     </div>
@@ -95,7 +95,7 @@
       <p class="h_title">文章热榜</p>
       <ul>
           {dede:arclist row='10' titlelen='80' typeid='top' orderby='click'}
-          <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title /]" target="_blank">
+          <li><a href="[field:arcurl /]" title="[field:title /]" target="_blank">
               <i><img src="[field:litpic /]" alt="[field:title /]"></i><em>[field:global name=autoindex runphp= 'yes' ] @me; [/field:global]</em>
               <h2>[field:title /]</h2>
               <span>[field:pubdate function="MyDate('Y-m-d',@me)"/]</span>

@@ -17,7 +17,7 @@
           <div class="swiper-wrapper">
             {dede:arclist titlelen='80' flag='c,p' typeid='top' row='5'}
             <div class="swiper-slide">
-              <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">
+              <a href="[field:arcurl /]" target="_blank">
                 <img src="[field:litpic/]" class="swiper-img" alt="[field:title/]" title="[field:title/]" style="width: 100%;height: 200px;"></a>
             </div>
             {/dede:arclist}
@@ -41,21 +41,21 @@
         {dede:arclist titlelen='80' flag='c,p' typeid='top' limit='5,1'}
         <div class="hot_news_img">
           <div class="hot_pic">
-            <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html">
+            <a href="[field:arcurl /]">
               <img src="[field:litpic/]" alt="[field:title/]" /></a>
           </div>
           <h3 class="hot_h4">
             <a class="red" href="/yidong/161.html">[field:title/]</a></h3>
           <p class="hot_text_ms">[field:description /]...</p>
           <div class="hot_text_more">
-            <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" class="button3">阅读详细</a></div>
+            <a href="[field:arcurl /]" class="button3">阅读详细</a></div>
         </div>
         {/dede:arclist}
 
         <ul class="hot_news_list">
           {dede:arclist titlelen='80' flag='c,p' typeid='top' limit='6,6'}
           <li>
-            <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">
+            <a href="[field:arcurl /]" title="[field:title/]">
               <time class="l">
                 <span class="hot_li_data">
                   <em>[field:pubdate function="MyDate('d',@me)"/]</em>[field:pubdate function="MyDate('Y-m',@me)"/]</span></time>
@@ -73,14 +73,14 @@
           <ul class="side-main">
             {dede:arclist row='6' titlelen='80' typeid='top' orderby='click'}
             <li class="side-list side-list-box">
-              <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]" class="block">
+              <a href="[field:arcurl /]" title="[field:title/]" class="block">
                 <img src="[field:litpic/]" alt="[field:title/]" class="kandyCover wi7 hi7 flol amar" width="112" height="112" style="background: url([field:litpic/]) center center / cover no-repeat;"></a>
               <div class="side-h3-title">
                 <h3>
-                  <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a></h3>
+                  <a href="[field:arcurl /]" title="[field:title/]">[field:title/]</a></h3>
                 <small>[field:pubdate function="MyDate('Y-m',@me)"/]</small>...</div>
               <p class="">
-                <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:description /]...</a></p>
+                <a href="[field:arcurl /]" title="[field:title/]">[field:description /]...</a></p>
             </li>
             {/dede:arclist}
           </ul>
@@ -97,12 +97,12 @@
             {dede:arclist typeid='top' orderby='pubdate' titlelen='80' limit='15,9'}
             <article class="mx3-hentry nba">
               <figure class="mx3-thumbnail">
-                <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html">
+                <a href="[field:arcurl /]">
                   <img src="[field:litpic/]" width="103" height="78" alt="[field:title/]"></a>
               </figure>
               <header class="mx3-header">
                 <h2 class="mx3-entry-title">
-                  <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]" rel="bookmark">[field:title/]</a></h2>
+                  <a href="[field:arcurl /]" title="[field:title/]" rel="bookmark">[field:title/]</a></h2>
               </header>
               <div class="mx3-entry-content">
                 <span class="mx3-entry-meta">
@@ -125,7 +125,7 @@
           <article class="post-list wow fadeInDown" id="list2">
             <div class="post-item-box goods-box">
               <div class="post-img-wp">
-                <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">
+                <a href="[field:arcurl /]" target="_blank">
                   <img class="goods-img" src="[field:litpic/]" alt="[field:title/]" /></a>
               </div>
               <div class="post-user-info">
@@ -133,7 +133,7 @@
               </div>
               <div class="post-title">
                 <h3>
-                  <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]" target="_blank">[field:title/]</a></h3>
+                  <a href="[field:arcurl /]" title="[field:title/]" target="_blank">[field:title/]</a></h3>
               </div>
               <div class="post-item-meta">
                 <a class="post-item-catename" href="[field:typedir /]/">

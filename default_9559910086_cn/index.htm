@@ -26,7 +26,7 @@
                     <!--f-->
                     {dede:arclist     row='4'     titlelen='80'       flag='f'     typeid='top'      }
                     <li>
-                        <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">
+                        <a href="[field:arcurl /]" target="_blank">
                             <img src="[field:litpic/]" alt="[field:title/]">
                             <p>[field:title/]</p>
                         </a>
@@ -44,11 +44,11 @@
                 {dede:arclist typeid='top' orderby='pubdate' titlelen='80' row=10}
                 <li class="infinitescroll_li">
                     <div class="img">
-                        <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">
+                        <a href="[field:arcurl /]" title="[field:title/]">
                             <img src="[field:litpic/]" alt="[field:title/]" /></a>
                     </div>
                     <div class="info">
-                        <h3><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a></h3>
+                        <h3><a href="[field:arcurl /]" title="[field:title/]">[field:title/]</a></h3>
                         <p></p>
                         <span>日期：[field:pubdate function="MyDate('Y年m月d日 ',@me)"/]&nbsp;&nbsp;&nbsp;&nbsp;分类：<a href="/[field:typedir/]/" title="[field:typename/]">[field:typename/]</a></span>
                     </div>
@@ -62,7 +62,7 @@
             <ul>
                 {dede:arclist     row='10'     titlelen='80'   typeid='1'      }
                 <li>
-                    <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html">
+                    <a href="[field:arcurl /]">
                         <div class="img">
                             <img src="[field:litpic/]" alt="[field:title/]" /></div>
                         <div class="info">
@@ -79,7 +79,7 @@
             <ul>
                 {dede:arclist     row='10'     titlelen='80'   typeid='2'      }
                 <li>
-                    <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html">
+                    <a href="[field:arcurl /]">
                         <div class="img">
                             <img src="[field:litpic/]" alt="[field:title/]" /></div>
                         <div class="info">
@@ -97,7 +97,7 @@
             <h5>热门文章</h5>
             <ul>
                 {dede:arclist     row='10'     titlelen='42'   typeid='1'      }
-                <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html">[field:title/]</a></li>
+                <li><a href="[field:arcurl /]">[field:title/]</a></li>
                 {/dede:arclist}
                </ul>
         </div>
@@ -105,7 +105,7 @@
             <h5>最近发表</h5>
             <ul>
                 {dede:arclist     row='10'     titlelen='42'   typeid='2'      }
-                <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html">[field:title/]</a></li>
+                <li><a href="[field:arcurl /]">[field:title/]</a></li>
                 {/dede:arclist}
             </ul>
         </div>
@@ -113,7 +113,7 @@
             <h5>随机文章</h5>
             <ul>
                 {dede:arclist     row='10'     titlelen='42'   typeid='3'      }
-                <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html">[field:title/]</a></li>
+                <li><a href="[field:arcurl /]">[field:title/]</a></li>
                 {/dede:arclist}
             </ul>
         </div>

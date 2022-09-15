@@ -20,7 +20,7 @@
         <ul class="slides">
             {dede:arclist titlelen='80' flag='f' typeid='top' row='5'}
             <li>
-                <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">
+                <a href="[field:arcurl /]" title="[field:title/]">
                     <img src="[field:litpic/]" alt="[field:title/]"/>
                     <p class="flex-caption">[field:title/]</p>
                 </a>
@@ -34,7 +34,7 @@
       <ul>
           {dede:arclist titlelen='80' flag='h' typeid='top' row='3'}
           <li>
-              <h4><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a></h4>
+              <h4><a href="[field:arcurl /]" title="[field:title/]">[field:title/]</a></h4>
               <p>[field:description /]...</p>
           </li>
           {/dede:arclist}
@@ -48,8 +48,8 @@
       <ul>
           {dede:arclist titlelen='80' flag='c' typeid='top' row='4'}
           <li>
-              <div class="thumbnail"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]"><img src="[field:litpic/]" alt="[field:title/]"/></a> </div>
-              <h4><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a></h4>
+              <div class="thumbnail"> <a href="[field:arcurl /]" title="[field:title/]"><img src="[field:litpic/]" alt="[field:title/]"/></a> </div>
+              <h4><a href="[field:arcurl /]" title="[field:title/]">[field:title/]</a></h4>
               <p> [field:description /]...</p>
           </li>
           {/dede:arclist}
@@ -62,8 +62,8 @@
       </div>
         {dede:arclist row='10' titlelen='80' typeid='top'}
         <section class="section wow fadeIn">
-            <div class="thumbnail"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]" target="_blank"><img src="[field:litpic/]g" alt="[field:title/]"/></a> </div>
-            <h2><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]" target="_blank">[field:title/]</a></h2>
+            <div class="thumbnail"> <a href="[field:arcurl /]" title="[field:title/]" target="_blank"><img src="[field:litpic/]g" alt="[field:title/]"/></a> </div>
+            <h2><a href="[field:arcurl /]" title="[field:title/]" target="_blank">[field:title/]</a></h2>
             <div class="postmeta">
                 <span><i class="icon-calendar"></i><time>[field:pubdate function="MyDate('Y-m-d',@me)"/]</time></span>
                 <span><i class="icon-eye"></i> [field:click /]</span>
@@ -82,7 +82,7 @@
       </div>
       <ul>
           {dede:arclist row='8' titlelen='80' typeid='top' orderby='click'}
-          <li> <i class="a[field:global name=autoindex runphp="yes"] @me; [/field:global]">[field:global name=autoindex runphp="yes"] @me; [/field:global]</i> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]" target="_blank">[field:title/]</a> </li>
+          <li> <i class="a[field:global name=autoindex runphp="yes"] @me; [/field:global]">[field:global name=autoindex runphp="yes"] @me; [/field:global]</i> <a href="[field:arcurl /]" title="[field:title/]" target="_blank">[field:title/]</a> </li>
           {/dede:arclist}
       </ul>
     </section>

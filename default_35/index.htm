@@ -117,7 +117,7 @@
                             <div class="swiper-wrapper">
                                 {dede:arclist flag='h' typeid='top' row='5' orderby='pubdate' orderway='desc'}
                                 <div class="swiper-slide">
-                                    <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" class="slide_link">
+                                    <a href="[field:arcurl /]" class="slide_link">
                                         <div class="slide_title">[field:title /]</div>
                                         <img src="[field:litpic /]" style="background-image:url([field:litpic /]);display:block;" alt="[field:title /]" class="img-responsive" height="440">
                                     </a>
@@ -178,16 +178,16 @@
                             <dt class="row">
                                 {dede:arclist typeid='top' orderby='pubdate' row=1}
                                 <div class="col-xs-12">
-                                    <div class="main_ntl_title"><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html">[field:title/]</a></div>
+                                    <div class="main_ntl_title"><a href="[field:arcurl /]">[field:title/]</a></div>
                                     <div class="main_ntl_text">[field:description /]...</div>
-                                    <div class="main_ntl_more"><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html">更多+</a></div>
+                                    <div class="main_ntl_more"><a href="[field:arcurl /]">更多+</a></div>
                                 </div>
                                 {/dede:arclist}
                             </dt>
                             <dd>
                                 <ul class="list-unstyled">
                                     {dede:arclist typeid='top' orderby='pubdate' limit='1,8'}
-                                    <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html">[field:title/]</a>[[field:pubdate function="MyDate('m-d',@me)"/]]</li>
+                                    <li><a href="[field:arcurl /]">[field:title/]</a>[[field:pubdate function="MyDate('m-d',@me)"/]]</li>
                                     {/dede:arclist}
                                 </ul>
                             </dd>
@@ -196,16 +196,16 @@
                             <dt class="row">
                                 {dede:arclist row='1' typeid='top' orderby='click'}
                                 <div class="col-xs-12">
-                                    <div class="main_ntl_title"><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html">[field:title/]</a></div>
+                                    <div class="main_ntl_title"><a href="[field:arcurl /]">[field:title/]</a></div>
                                     <div class="main_ntl_text">[field:description /]...</div>
-                                    <div class="main_ntl_more"><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html">更多+</a></div>
+                                    <div class="main_ntl_more"><a href="[field:arcurl /]">更多+</a></div>
                                 </div>
                                 {/dede:arclist}
                             </dt>
                             <dd>
                                 <ul class="list-unstyled">
                                     {dede:arclist typeid='top' orderby='click' limit='1,8'}
-                                    <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html">[field:title/]</a>[[field:pubdate function="MyDate('m-d',@me)"/]]</li>
+                                    <li><a href="[field:arcurl /]">[field:title/]</a>[[field:pubdate function="MyDate('m-d',@me)"/]]</li>
                                     {/dede:arclist}
                                 </ul>
                             </dd>
@@ -220,13 +220,13 @@
                         <div class="main_open_list col-xs-12 col-md-10">
                             <ul class="list-unstyled">
                                 {dede:arclist flag='p' typeid='top' limit='0,6' orderby='pubdate'}
-                                <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html">[field:title/]</a></li>
+                                <li><a href="[field:arcurl /]">[field:title/]</a></li>
                                 {/dede:arclist}
                             </ul>
                             <div class="main_open_br"></div>
                             <ul class="list-unstyled">
                                 {dede:arclist flag='p' typeid='top' limit='6,6' orderby='pubdate'}
-                                <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html">[field:title/]</a></li>
+                                <li><a href="[field:arcurl /]">[field:title/]</a></li>
                                 {/dede:arclist}
                             </ul>
                         </div>
@@ -255,13 +255,13 @@
                             </div>
                             <div class="main_art_title">
                                 {dede:arclist row='1'}
-                                <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html">[field:title/]</a>
+                                <a href="[field:arcurl /]">[field:title/]</a>
                                 {/dede:arclist}
                             </div>
 
                             <ul class="list-unstyled">
                                 {dede:arclist limit='1,5'}
-                                <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html">[field:title/]</a>[[field:pubdate function="MyDate('m-d',@me)"/]]</li>
+                                <li><a href="[field:arcurl /]">[field:title/]</a>[[field:pubdate function="MyDate('m-d',@me)"/]]</li>
                                 {/dede:arclist}
                             </ul>
                         </div>

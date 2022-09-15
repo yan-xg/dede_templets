@@ -22,7 +22,7 @@
         <div class="bd">
           <ul>
             {dede:arclist typeid='top' orderby='click' row=10}
-            <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a></li>
+            <li><a href="[field:arcurl /]" title="[field:title/]">[field:title/]</a></li>
             {/dede:arclist}
           </ul>
         </div>
@@ -34,14 +34,14 @@
         <div class="focusBox">
           <ul class="pic">
             {dede:arclist flag='h' typeid='top' row='5' orderby='pubdate'}
-            <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]"><img src="[field:picname/]" alt="[field:title/]"/></a></li>
+            <li><a href="[field:arcurl /]" title="[field:title/]"><img src="[field:picname/]" alt="[field:title/]"/></a></li>
             {/dede:arclist}
           </ul>
           <div class="txt-bg"></div>
           <div class="txt">
             <ul>
               {dede:arclist flag='h' typeid='top' row='5' orderby='pubdate'}
-              <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a></li>
+              <li><a href="[field:arcurl /]" title="[field:title/]">[field:title/]</a></li>
               {/dede:arclist}
             </ul>
           </div>
@@ -62,7 +62,7 @@
         <div class="newslist">
           <ul>
             {dede:arclist typeid='top' orderby='pubdate' row=5}
-            <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]"><i></i>[field:title/]</a></li>
+            <li><a href="[field:arcurl /]" title="[field:title/]"><i></i>[field:title/]</a></li>
             {/dede:arclist}
           </ul>
         </div>
@@ -71,7 +71,7 @@
         <div class="newslist mt10">
           <ul>
             {dede:arclist typeid='top' orderby='pubdate' limit='5,13'}
-            <li [field:global name=autoindex runphp="yes"](@me==1)? @me="class='first'":@me="";[/field:global]><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]"><i></i>[field:title/]</a></li>
+            <li [field:global name=autoindex runphp="yes"](@me==1)? @me="class='first'":@me="";[/field:global]><a href="[field:arcurl /]" title="[field:title/]"><i></i>[field:title/]</a></li>
             {/dede:arclist}
           </ul>
         </div>
@@ -104,7 +104,7 @@
         <div class="newslist">
           <ul>
             {dede:arclist row='9' titlelen='50' orderby='pubdate'}
-            <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]"><i></i>[field:title/]</a></li>
+            <li><a href="[field:arcurl /]" title="[field:title/]"><i></i>[field:title/]</a></li>
             {/dede:arclist}
           </ul>
         </div>
@@ -116,7 +116,7 @@
         <div class="newslist">
           <ul>
             {dede:arclist row='9' titlelen='50' orderby='pubdate'}
-            <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]"><i></i>[field:title/]</a></li>
+            <li><a href="[field:arcurl /]" title="[field:title/]"><i></i>[field:title/]</a></li>
             {/dede:arclist}
           </ul>
         </div>
@@ -131,15 +131,15 @@
             </ul>
             <div class="yjhk_main">
               <div class="rg_yjzg current">
-                <div class="yjzg_first rg_video_first"> {dede:arclist limit='0,1' titlelen='50' orderby='pubdate'} <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]" class="pic"> <img src="[field:picname/]" alt="[field:title/]" width="350" height="90">
+                <div class="yjzg_first rg_video_first"> {dede:arclist limit='0,1' titlelen='50' orderby='pubdate'} <a href="[field:arcurl /]" title="[field:title/]" class="pic"> <img src="[field:picname/]" alt="[field:title/]" width="350" height="90">
                   <div class="info"> <i></i> <span class="time"></span> </div>
                   </a> {/dede:arclist}
                   {dede:arclist limit='0,1' titlelen='50' orderby='pubdate'}
-                  <h3><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]"><em class="cms-I_Blank_">[field:title/]</em></a></h3>
+                  <h3><a href="[field:arcurl /]" title="[field:title/]"><em class="cms-I_Blank_">[field:title/]</em></a></h3>
                   {/dede:arclist} </div>
                 <ul class="yjzg_list rg_video_list">
                   {dede:arclist limit='1,4' titlelen='50' orderby='pubdate'}
-                  <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]"><i></i>[field:title/]</a></li>
+                  <li><a href="[field:arcurl /]" title="[field:title/]"><i></i>[field:title/]</a></li>
                   {/dede:arclist}
                 </ul>
               </div>
@@ -154,7 +154,7 @@
         <div class="newslist">
           <ul>
             {dede:arclist row='11' titlelen='50' orderby='pubdate'}
-            <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]"><i></i>[field:title/]</a></li>
+            <li><a href="[field:arcurl /]" title="[field:title/]"><i></i>[field:title/]</a></li>
             {/dede:arclist}
           </ul>
         </div>
@@ -166,7 +166,7 @@
         <div class="newslist">
           <ul>
             {dede:arclist row='11' titlelen='50' orderby='pubdate'}
-            <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]"><i></i>[field:title/]</a></li>
+            <li><a href="[field:arcurl /]" title="[field:title/]"><i></i>[field:title/]</a></li>
             {/dede:arclist}
           </ul>
         </div>
@@ -180,8 +180,8 @@
             <ul class="plist yh" id="yh">
               {dede:arclist row='4' titlelen='50' orderby='pubdate'}
               <li [field:global name=autoindex runphp="yes"](@me==1)? @me="class='current'":@me="";[/field:global]>
-                <h3 class="bg0"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a> </h3>
-                <div class="picbox"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]"> <img  src="[field:picname/]" alt="[field:title/]"> </a> </div>
+                <h3 class="bg0"> <a href="[field:arcurl /]" title="[field:title/]">[field:title/]</a> </h3>
+                <div class="picbox"> <a href="[field:arcurl /]" title="[field:title/]"> <img  src="[field:picname/]" alt="[field:title/]"> </a> </div>
               </li>
               {/dede:arclist}
             </ul>
@@ -196,7 +196,7 @@
         <div class="newslist">
           <ul>
             {dede:arclist row='9' titlelen='50' orderby='pubdate'}
-            <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]"><i></i>[field:title/]</a></li>
+            <li><a href="[field:arcurl /]" title="[field:title/]"><i></i>[field:title/]</a></li>
             {/dede:arclist}
           </ul>
         </div>
@@ -208,7 +208,7 @@
         <div class="newslist">
           <ul>
             {dede:arclist row='9' titlelen='50' orderby='pubdate'}
-            <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]"><i></i>[field:title/]</a></li>
+            <li><a href="[field:arcurl /]" title="[field:title/]"><i></i>[field:title/]</a></li>
             {/dede:arclist}
           </ul>
         </div>
@@ -222,8 +222,8 @@
             <ul class="plist yh" id="yh">
               {dede:arclist row='9' titlelen='50' orderby='pubdate'}
               <li>
-                <h3 class="bg0"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a> </h3>
-                <div class="picbox"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]"> <img src="[field:picname/]" alt="[field:title/]"> </a> </div>
+                <h3 class="bg0"> <a href="[field:arcurl /]" title="[field:title/]">[field:title/]</a> </h3>
+                <div class="picbox"> <a href="[field:arcurl /]" title="[field:title/]"> <img src="[field:picname/]" alt="[field:title/]"> </a> </div>
               </li>
               {/dede:arclist}
             </ul>
@@ -241,13 +241,13 @@
         <span> {dede:channel type='top'} <a href='[field:typeurl/]'>[field:typename/]</a>{/dede:channel} </span> </div>
       <div class="pic1 fl">
         {dede:arclist flag='p' typeid='top' row='1' orderby='pubdate'}
-        <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html"><img src="[field:picname/]" alt="[field:title/]"/>
+        <a href="[field:arcurl /]"><img src="[field:picname/]" alt="[field:title/]"/>
         <p>[field:title/]</p>
         </a> {/dede:arclist}
       </div>
       <ul class="pic2 fl">
         {dede:arclist flag='p' typeid='top' limit='1,8' orderby='pubdate'}
-        <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html"><img src="[field:picname/]" alt="[field:title/]"/>
+        <li><a href="[field:arcurl /]"><img src="[field:picname/]" alt="[field:title/]"/>
           <p>[field:title/]</p>
           </a></li>
         {/dede:arclist}

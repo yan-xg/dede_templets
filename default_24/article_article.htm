@@ -41,7 +41,7 @@
          <p>推荐阅读</p>
          <ul>
              {dede:arclist limit='5,4' titlelen='80' typeid='top'}
-             <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">
+             <li><a href="[field:arcurl /]" target="_blank">
                  <i><img src="[field:litpic/]" alt="[field:title/]"></i>
                  <h2>[field:title/]</h2>
                  <span>[field:pubdate function="MyDate('Y-m-d',@me)"/]</span>
@@ -57,7 +57,7 @@
             <h2>7x24小时头条</h2>
             <ul>
                 {dede:arclist typeid='top' orderby='pubdate' titlelen='80' row=5}
-                <li><i></i><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title /]</a><span>[field:pubdate function="MyDate('Y-m-d',@me)"/]</span></li>
+                <li><i></i><a href="[field:arcurl /]" target="_blank">[field:title /]</a><span>[field:pubdate function="MyDate('Y-m-d',@me)"/]</span></li>
                 {/dede:arclist}
             </ul>
         </div>
@@ -66,7 +66,7 @@
             <p class="h_title">文章热榜</p>
             <ul>
                 {dede:arclist row='10' titlelen='80' typeid='top' orderby='click'}
-                <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title /]" target="_blank">
+                <li><a href="[field:arcurl /]" title="[field:title /]" target="_blank">
                     <i><img src="[field:litpic /]" alt="[field:title /]"></i><em>[field:global name=autoindex runphp= 'yes' ] @me; [/field:global]</em>
                     <h2>[field:title /]</h2>
                     <span>[field:pubdate function="MyDate('Y-m-d',@me)"/]</span>

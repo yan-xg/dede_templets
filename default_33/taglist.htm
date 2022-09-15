@@ -31,7 +31,7 @@
                             <div class="snav">
                                 <ul>
                                     {dede:arclist row='10' orderby='pubdate' typeid='all'}
-                                    <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html">[field:title/]</a></li>
+                                    <li><a href="[field:arcurl /]">[field:title/]</a></li>
                                     {/dede:arclist}
                                 </ul>
                             </div>
@@ -47,9 +47,9 @@
                            <dl>
                                 <dd class="date text-gray"><span>[field:pubdate function="MyDate('d',@me)"/]</span>[field:pubdate function="MyDate('Y-m',@me)"/]</dd>
                                 <dt class="f18 fn text-more">
-                                    <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" class="text-black"><span>[field:title/]</span></a></dt>
+                                    <a href="[field:arcurl /]" class="text-black"><span>[field:title/]</span></a></dt>
                                 <dd class="desc text-gray f14">
-                                    <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html">[field:description/]···</a>
+                                    <a href="[field:arcurl /]">[field:description/]···</a>
                                 </dd>
                             </dl>
                             {/dede:list}

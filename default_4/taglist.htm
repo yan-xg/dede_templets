@@ -22,7 +22,7 @@
           {dede:list pagesize='15'}
           <div class="content">
               <div class="content-header">
-                  <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title /]" target="_blank"><h2>[field:title /]</h2></a>
+                  <a href="[field:arcurl /]" title="[field:title /]" target="_blank"><h2>[field:title /]</h2></a>
                   <div class="content-info">
                       <span class="mr10 postclock">[field:pubdate function="MyDate('Y-m-d ',@me)"/]</span>
                       <span class="mr10 postuser">[field:typename/]<a></a></span>
@@ -30,7 +30,7 @@
                   </div>
               </div>
 
-              <div class="content-img"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title /]" target="_blank"> <img class="lazy thumbnail" src="[field:litpic /]" data-original="[field:litpic /]" alt="[field:title /]" /> </a> </div>
+              <div class="content-img"> <a href="[field:arcurl /]" title="[field:title /]" target="_blank"> <img class="lazy thumbnail" src="[field:litpic /]" data-original="[field:litpic /]" alt="[field:title /]" /> </a> </div>
               <div class="content-note">
                   <p>[field:description /]...</p>
                   <span class="category-color"><a href="[field:typedir /]">[field:typename /]</a></span>
@@ -49,7 +49,7 @@
                 <h3>热门文章</h3>
             </div>
             {dede:arclist row='3' titlelen='80' typeid='top' orderby='click'}
-            <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" rel="bookmark" title="[field:title /]">
+            <li><a href="[field:arcurl /]" rel="bookmark" title="[field:title /]">
                 <div class="overlay"></div>
                 <img src="[field:litpic /]" alt="[field:title /]" class="thumbnail" /><span><i class="icon-eye"></i>[field:click/]</span>
                 <p class="title">[field:title /]</p>
@@ -63,7 +63,7 @@
             </div>
             {dede:arclist limit='15,3' titlelen='80' typeid='top'}
             <li>
-                <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" rel="bookmark" title="[field:title /]">
+                <a href="[field:arcurl /]" rel="bookmark" title="[field:title /]">
                 <div class="overlay"></div>
                 <img src="[field:litpic /]" alt="[field:title /]" class="thumbnail" /><span></span>
                 <p class="title">[field:title /]</p>

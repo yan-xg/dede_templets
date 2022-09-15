@@ -23,12 +23,12 @@
             <div class="headline">
                 <div class="layout">
                     {dede:arclist flag='c' typeid='top' row='1' orderby='pubdate'}
-                    <h2><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html"><strong>[field:title/]</strong></a></h2>
+                    <h2><a href="[field:arcurl /]"><strong>[field:title/]</strong></a></h2>
                     {/dede:arclist}
 
                     <div class="rcmd">
                     {dede:arclist flag='c' typeid='top' limit='1,3' orderby='pubdate'}
-                        <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html">【[field:title /]】</a>
+                        <a href="[field:arcurl /]">【[field:title /]】</a>
                     {/dede:arclist}
                     </div>
                 </div>
@@ -42,7 +42,7 @@
                     <div class="focus-container">
                         <div class="box">
                             {dede:arclist flag='h' typeid='top' row='3' orderby='pubdate'}
-                            <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank" class="active">
+                            <a href="[field:arcurl /]" target="_blank" class="active">
                                 <img src="[field:litpic/]" alt="[field:title/]" title="[field:title/]">
                             </a>
                             {/dede:arclist}
@@ -66,17 +66,17 @@
                         <div class="focus-rank-list">
                             <div class="active">
                                 {dede:arclist typeid='top' orderby='pubdate' row=10}
-                                <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html"><i class="icon[field:global name=autoindex runphp="yes"] @me; [/field:global]"></i>[field:title/]</a>
+                                <a href="[field:arcurl /]"><i class="icon[field:global name=autoindex runphp="yes"] @me; [/field:global]"></i>[field:title/]</a>
                                 {/dede:arclist}
                             </div>
                             <div>
                                 {dede:arclist typeid='top' orderby='click' row=10}
-                                <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html"><i class="icon[field:global name=autoindex runphp="yes"] @me; [/field:global]"></i>[field:title/]</a>
+                                <a href="[field:arcurl /]"><i class="icon[field:global name=autoindex runphp="yes"] @me; [/field:global]"></i>[field:title/]</a>
                                 {/dede:arclist}
                             </div>
                             <div>
                                 {dede:arclist typeid='top' orderby='click' limit="10,10"}
-                                <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html"><i class="icon[field:global name=autoindex runphp="yes"] @me; [/field:global]"></i>[field:title/]</a>
+                                <a href="[field:arcurl /]"><i class="icon[field:global name=autoindex runphp="yes"] @me; [/field:global]"></i>[field:title/]</a>
                                 {/dede:arclist}
                             </div>
                         </div>
@@ -91,10 +91,10 @@
                     <div class="focus-left">
                         {dede:arclist flag='p' typeid='top' row='4' orderby='pubdate'}
                         <div class="hot">
-                            <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_black">
+                            <a href="[field:arcurl /]" target="_black">
                                 <img src="[field:litpic/]" alt="[field:title/]" title="[field:title/]">
                             </a>
-                            <p><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title/]</a></p>
+                            <p><a href="[field:arcurl /]" target="_blank">[field:title/]</a></p>
                         </div>
                         {/dede:arclist}
                         <div class="poster ad" style="margin-left:-10px;">
@@ -103,18 +103,18 @@
                     </div>
                     <div class="focus-right">
                         {dede:arclist flag='p' typeid='top' limit='4,1' orderby='pubdate'}
-                        <div class="dtl"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">
+                        <div class="dtl"> <a href="[field:arcurl /]" target="_blank">
                             <img src="[field:litpic/]" alt="[field:title/]" title="[field:title/]"></a>
                             <div class="cell">
-                                <h5><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title/]</a></h5>
-                                <p><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[详细]</a></p>
+                                <h5><a href="[field:arcurl /]" target="_blank">[field:title/]</a></h5>
+                                <p><a href="[field:arcurl /]" target="_blank">[详细]</a></p>
                             </div>
                         </div>
                         {/dede:arclist}
 
                         <div class="list">
                             {dede:arclist typeid='top' orderby='pubdate' limit="10,8"}
-                            <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html"><i></i>[field:title/]</a>
+                            <a href="[field:arcurl /]"><i></i>[field:title/]</a>
                             {/dede:arclist}
                         </div>
                     </div>
@@ -157,16 +157,16 @@
                                 {/dede:type}
 
                                 {dede:arclist typeid='1' limit='0,1' orderby='pubdate'}
-                                <h6><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title/]</a></h6>
-                                <div class="item"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">
+                                <h6><a href="[field:arcurl /]" target="_blank">[field:title/]</a></h6>
+                                <div class="item"> <a href="[field:arcurl /]" target="_blank">
                                     <img src="[field:litpic/]" alt="[field:title/]" title="[field:title/]"></a>
-                                    <p>[field:description/]...<a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[详细]</a></p>
+                                    <p>[field:description/]...<a href="[field:arcurl /]" target="_blank">[详细]</a></p>
                                 </div>
                                 {/dede:arclist}
 
                                 <div class="list">
                                     {dede:arclist typeid='1' limit='1,5' orderby='pubdate'}
-                                    <p><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title/]</a></p>
+                                    <p><a href="[field:arcurl /]" target="_blank">[field:title/]</a></p>
                                     {/dede:arclist}
                                 </div>
                             </div>
@@ -180,10 +180,10 @@
                                 {/dede:type}
 
                                 {dede:arclist typeid='1' limit='6,2' orderby='pubdate'}
-                                <h6><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title/]</a></h6>
-                                <div class="item"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">
+                                <h6><a href="[field:arcurl /]" target="_blank">[field:title/]</a></h6>
+                                <div class="item"> <a href="[field:arcurl /]" target="_blank">
                                     <img src="[field:litpic/]" alt="[field:title/]" title="[field:title/]"></a>
-                                    <p>[field:description/]...<a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[详细]</a></p>
+                                    <p>[field:description/]...<a href="[field:arcurl /]" target="_blank">[详细]</a></p>
                                 </div>
                                 {/dede:arclist}
                             </div>
@@ -200,16 +200,16 @@
                             {/dede:type}
                             <!--内容图文秀-->
                             {dede:arclist typeid='1' limit='8,1' orderby='pubdate'}
-                            <div class="show"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">
+                            <div class="show"> <a href="[field:arcurl /]" target="_blank">
                                 <img src="[field:litpic/]" alt="[field:title/]" title="[field:title/]"></a>
-                                <p><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title/]</a></p>
+                                <p><a href="[field:arcurl /]" target="_blank">[field:title/]</a></p>
                             </div>
                             {/dede:arclist}
 
                             <!--内容列表-->
                             <div class="list">
                                 {dede:arclist typeid='1' limit='9,12' orderby='pubdate'}
-                                <p><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title/]</a></p>
+                                <p><a href="[field:arcurl /]" target="_blank">[field:title/]</a></p>
                                 {/dede:arclist}
                             </div>
                         </div>
@@ -225,16 +225,16 @@
                             {/dede:type}
                             <!--内容图文秀-->
                             {dede:arclist typeid='1' limit='21,1' orderby='pubdate'}
-                            <div class="show"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">
+                            <div class="show"> <a href="[field:arcurl /]" target="_blank">
                                 <img src="[field:litpic/]" alt="[field:title/]" title="[field:title/]"></a>
-                                <p><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title/]</a></p>
+                                <p><a href="[field:arcurl /]" target="_blank">[field:title/]</a></p>
                             </div>
                             {/dede:arclist}
 
                             <!--内容列表-->
                             <div class="list">
                                 {dede:arclist typeid='1' limit='22,12' orderby='pubdate'}
-                                <p><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title/]</a></p>
+                                <p><a href="[field:arcurl /]" target="_blank">[field:title/]</a></p>
                                 {/dede:arclist}
                             </div>
                         </div>
@@ -256,19 +256,19 @@
                         <div class="layer-column">
                             <div class="list">
                                 {dede:arclist typeid='2' limit='0,1' orderby='pubdate'}
-                                <p class="title mt0"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title/]</a> </p>
+                                <p class="title mt0"> <a href="[field:arcurl /]" target="_blank">[field:title/]</a> </p>
                                 {/dede:arclist}
 
                                 {dede:arclist typeid='2' limit='1,7' orderby='pubdate'}
-                                <p> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title/]</a> </p>
+                                <p> <a href="[field:arcurl /]" target="_blank">[field:title/]</a> </p>
                                 {/dede:arclist}
 
                                 {dede:arclist typeid='2' limit='8,1' orderby='pubdate'}
-                                <p class="title mt0"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title/]</a> </p>
+                                <p class="title mt0"> <a href="[field:arcurl /]" target="_blank">[field:title/]</a> </p>
                                 {/dede:arclist}
 
                                 {dede:arclist typeid='2' limit='9,7' orderby='pubdate'}
-                                <p> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title/]</a> </p>
+                                <p> <a href="[field:arcurl /]" target="_blank">[field:title/]</a> </p>
                                 {/dede:arclist}
                             </div>
                         </div>
@@ -284,18 +284,18 @@
                             {/dede:type}
                             <!--内容秀-->
                             {dede:arclist typeid='2' limit='16,1' orderby='pubdate'}
-                            <div class="show"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">
+                            <div class="show"> <a href="[field:arcurl /]" target="_blank">
                                 <img src="[field:litpic/]" alt="[field:title/]" title="[field:title/]"></a>
-                                <p><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title/]</a></p>
+                                <p><a href="[field:arcurl /]" target="_blank">[field:title/]</a></p>
                             </div>
                             {/dede:arclist}
 
                             <!--图文-->
                             <div class="images-text">
                                 {dede:arclist typeid='2' limit='17,2' orderby='pubdate'}
-                                <div> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">
+                                <div> <a href="[field:arcurl /]" target="_blank">
                                     <img src="[field:litpic/]" alt="[field:title/]" title="[field:title/]"> </a>
-                                    <p><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title/]</a></p>
+                                    <p><a href="[field:arcurl /]" target="_blank">[field:title/]</a></p>
                                 </div>
                                 {/dede:arclist}
                             </div>
@@ -313,16 +313,16 @@
                             <!--图文-->
                             <div class="images-text">
                                 {dede:arclist typeid='2' limit='19,2' orderby='pubdate'}
-                                <div> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">
+                                <div> <a href="[field:arcurl /]" target="_blank">
                                     <img src="[field:litpic/]" alt="[field:title/]" title="[field:title/]"> </a>
-                                    <p><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title/]</a></p>
+                                    <p><a href="[field:arcurl /]" target="_blank">[field:title/]</a></p>
                                 </div>
                                 {/dede:arclist}
                             </div>
                             <!--内容列表-->
                             <div class="list list-p">
                                 {dede:arclist typeid='2' limit='21,9' orderby='pubdate'}
-                                <p> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title/]</a> </p>
+                                <p> <a href="[field:arcurl /]" target="_blank">[field:title/]</a> </p>
                                 {/dede:arclist}
                             </div>
                         </div>
@@ -344,19 +344,19 @@
                         <div class="layer-column">
                             <div class="list">
                                 {dede:arclist typeid='3' limit='0,1' orderby='pubdate'}
-                                <p class="title mt0"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title/]</a> </p>
+                                <p class="title mt0"> <a href="[field:arcurl /]" target="_blank">[field:title/]</a> </p>
                                 {/dede:arclist}
 
                                 {dede:arclist typeid='3' limit='1,7' orderby='pubdate'}
-                                <p> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title/]</a> </p>
+                                <p> <a href="[field:arcurl /]" target="_blank">[field:title/]</a> </p>
                                 {/dede:arclist}
 
                                 {dede:arclist typeid='3' limit='8,1' orderby='pubdate'}
-                                <p class="title mt0"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title/]</a> </p>
+                                <p class="title mt0"> <a href="[field:arcurl /]" target="_blank">[field:title/]</a> </p>
                                 {/dede:arclist}
 
                                 {dede:arclist typeid='3' limit='9,7' orderby='pubdate'}
-                                <p> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title/]</a> </p>
+                                <p> <a href="[field:arcurl /]" target="_blank">[field:title/]</a> </p>
                                 {/dede:arclist}
                             </div>
                         </div>
@@ -372,18 +372,18 @@
                             {/dede:type}
                             <!--内容秀-->
                             {dede:arclist typeid='3' limit='16,1' orderby='pubdate'}
-                            <div class="show"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">
+                            <div class="show"> <a href="[field:arcurl /]" target="_blank">
                                 <img src="[field:litpic/]" alt="[field:title/]" title="[field:title/]"></a>
-                                <p><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title/]</a></p>
+                                <p><a href="[field:arcurl /]" target="_blank">[field:title/]</a></p>
                             </div>
                             {/dede:arclist}
 
                             <!--图文-->
                             <div class="images-text">
                                 {dede:arclist typeid='3' limit='17,2' orderby='pubdate'}
-                                <div> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">
+                                <div> <a href="[field:arcurl /]" target="_blank">
                                     <img src="[field:litpic/]" alt="[field:title/]" title="[field:title/]"> </a>
-                                    <p><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title/]</a></p>
+                                    <p><a href="[field:arcurl /]" target="_blank">[field:title/]</a></p>
                                 </div>
                                 {/dede:arclist}
                             </div>
@@ -401,16 +401,16 @@
                             <!--图文-->
                             <div class="images-text">
                                 {dede:arclist typeid='3' limit='19,2' orderby='pubdate'}
-                                <div> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">
+                                <div> <a href="[field:arcurl /]" target="_blank">
                                     <img src="[field:litpic/]" alt="[field:title/]" title="[field:title/]"> </a>
-                                    <p><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title/]</a></p>
+                                    <p><a href="[field:arcurl /]" target="_blank">[field:title/]</a></p>
                                 </div>
                                 {/dede:arclist}
                             </div>
                             <!--内容列表-->
                             <div class="list list-p">
                                 {dede:arclist typeid='3' limit='21,9' orderby='pubdate'}
-                                <p> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title/]</a> </p>
+                                <p> <a href="[field:arcurl /]" target="_blank">[field:title/]</a> </p>
                                 {/dede:arclist}
                             </div>
                         </div>
@@ -432,16 +432,16 @@
                         <div class="layer-column">
                             <!--内容图文秀-->
                             {dede:arclist typeid='4' limit='0,1' orderby='pubdate'}
-                            <div class="show"> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">
+                            <div class="show"> <a href="[field:arcurl /]" target="_blank">
                                 <img src="[field:litpic/]" alt="[field:title/]" title="[field:title/]"></a>
-                                <p><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title/]</a></p>
+                                <p><a href="[field:arcurl /]" target="_blank">[field:title/]</a></p>
                             </div>
                             {/dede:arclist}
 
                             <!--内容列表-->
                             <div class="list">
                                 {dede:arclist typeid='4' limit='1,6' orderby='pubdate'}
-                                <p> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title/]</a> </p>
+                                <p> <a href="[field:arcurl /]" target="_blank">[field:title/]</a> </p>
                                 {/dede:arclist}
                             </div>
                         </div>
@@ -458,16 +458,16 @@
                             <!--图文-->
                             <div class="images-text">
                                 {dede:arclist typeid='4' limit='7,2' orderby='pubdate'}
-                                <div> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">
+                                <div> <a href="[field:arcurl /]" target="_blank">
                                     <img src="[field:litpic/]" alt="[field:title/]" title="[field:title/]"> </a>
-                                    <p><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title/]</a></p>
+                                    <p><a href="[field:arcurl /]" target="_blank">[field:title/]</a></p>
                                 </div>
                                 {/dede:arclist}
                             </div>
                             <!--内容列表-->
                             <div class="list list-p list-p-s">
                                 {dede:arclist typeid='4' limit='9,8' orderby='pubdate'}
-                                <p> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title/]</a> </p>
+                                <p> <a href="[field:arcurl /]" target="_blank">[field:title/]</a> </p>
                                 {/dede:arclist}
                             </div>
                         </div>
@@ -485,9 +485,9 @@
                             <div class="table">
                                 <ul>
                                     {dede:arclist typeid='4' limit='17,5' orderby='pubdate'}
-                                    <li> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_black">
+                                    <li> <a href="[field:arcurl /]" target="_black">
                                         <img src="[field:litpic/]" alt="[field:title/]" title="[field:title/]"> </a>
-                                        <p> <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" target="_blank">[field:title/]</a> </p>
+                                        <p> <a href="[field:arcurl /]" target="_blank">[field:title/]</a> </p>
                                     </li>
                                     {/dede:arclist}
                                 </ul>

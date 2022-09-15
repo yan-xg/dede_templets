@@ -36,7 +36,7 @@
           <ul class="related_img">
               {dede:arclist row='4' titlelen='80' typeid='top'}
               <li class="related_box">
-                  <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title /]" target="_blank"> <img class="thumbnail" src="[field:litpic /]" alt="[field:title /]" />
+                  <a href="[field:arcurl /]" title="[field:title /]" target="_blank"> <img class="thumbnail" src="[field:litpic /]" alt="[field:title /]" />
                   <h3>[field:title /]</h3>
                 </a>
               </li>
@@ -55,7 +55,7 @@
                 <h3>热门文章</h3>
             </div>
             {dede:arclist row='3' titlelen='80' typeid='top' orderby='click'}
-            <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" rel="bookmark" title="[field:title /]">
+            <li><a href="[field:arcurl /]" rel="bookmark" title="[field:title /]">
                 <div class="overlay"></div>
                 <img src="[field:litpic /]" alt="[field:title /]" class="thumbnail" /><span><i class="icon-eye"></i>[field:click/]</span>
                 <p class="title">[field:title /]</p>
@@ -69,7 +69,7 @@
             </div>
             {dede:arclist row='5' titlelen='80' typeid='top'}
             <li>
-                <a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" rel="bookmark" title="[field:title /]">
+                <a href="[field:arcurl /]" rel="bookmark" title="[field:title /]">
                 <div class="overlay"></div>
                 <img src="[field:litpic /]" alt="[field:title /]" class="thumbnail" /><span></span>
                 <p class="title">[field:title /]</p>

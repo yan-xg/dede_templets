@@ -22,7 +22,7 @@
       <div class="articles article-wrap newslists pagination-container"> {dede:list pagesize ='10'}
         <article class="excerpt excerptn pagination-item">
           <header>
-            <h3><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a> </h3>
+            <h3><a href="[field:arcurl /]" title="[field:title/]">[field:title/]</a> </h3>
           </header>
           <p class="meta"> <span class="time">[field:pubdate function="MyDate('Y-m-d',@me)"/]</span> <span class="author"></span> </p>
           <p class="brief" target="_blank"> [field:description function="cn_substr(@me,200)"/]...</p>
@@ -40,7 +40,7 @@
         <div class="newslist">
           <ul>
             {dede:arclist limit='8,8' typeid='top' orderby='pubdate'}
-            <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]"><i></i>[field:title/]</a></li>
+            <li><a href="[field:arcurl /]" title="[field:title/]"><i></i>[field:title/]</a></li>
             {/dede:arclist}
           </ul>
         </div>
@@ -55,12 +55,12 @@
         <div class="bd">
           <ul>
             {dede:arclist row='8' typeid='top' titlelen='50' orderby='pubdate'}
-            <li><i>[field:global name=autoindex runphp="yes"]@me=@me;[/field:global]</i><span class="date">[field:click/]</span><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a></li>
+            <li><i>[field:global name=autoindex runphp="yes"]@me=@me;[/field:global]</i><span class="date">[field:click/]</span><a href="[field:arcurl /]" title="[field:title/]">[field:title/]</a></li>
             {/dede:arclist}
           </ul>
           <ul>
             {dede:arclist row='8' typeid='top' titlelen='50' orderby='click'}
-            <li><i>[field:global name=autoindex runphp="yes"]@me=@me;[/field:global]</i><span class="date">[field:click/]</span><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]">[field:title/]</a></li>
+            <li><i>[field:global name=autoindex runphp="yes"]@me=@me;[/field:global]</i><span class="date">[field:click/]</span><a href="[field:arcurl /]" title="[field:title/]">[field:title/]</a></li>
             {/dede:arclist}
           </ul>
         </div>
@@ -72,7 +72,7 @@
         <div class="newslist">
           <ul>
             {dede:arclist row='10' titlelen='50' orderby='pubdate'}
-            <li><a href="[field:typedir /]/[field:pubdate function="MyDate('Ymd',@me)"/]/[field:id /].html" title="[field:title/]"><i></i>[field:title/]</a></li>
+            <li><a href="[field:arcurl /]" title="[field:title/]"><i></i>[field:title/]</a></li>
             {/dede:arclist}
           </ul>
         </div>
