@@ -15,7 +15,7 @@
 </head>
 <body id="index-page">
 {dede:include filename="header_m.htm"/}
-<p class="toolbar">当前位置：{dede:field name='position'/} </p>
+<p class="toolbar">当前位置：<a href="/">首页</a>&nbsp;>&nbsp;<a href="{dede:field.typedir/}/">{dede:field.typename/}</a> </p>
 <section class="clist">
   <ul id="infocon">
     {dede:list pagesize ='20'}

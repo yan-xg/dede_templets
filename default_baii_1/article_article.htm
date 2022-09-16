@@ -19,7 +19,7 @@
     <h1>{dede:field.title/}</h1>
   </div>
   <div class="arcinfo">
-    <span>首页：{dede:field name='position'/} </span>
+    <span>首页：<a href="/">首页</a>&nbsp;>&nbsp;<a href="{dede:field.typedir/}/">{dede:field.typename/}</a> > 文章正文 </span>
     <span>发布时间： {dede:field.pubdate function="MyDate('Y-m-d H:i',@me)"/}</span>
     <span class="read-num">阅读(<em class="red"><script src="{dede:field name='phpurl'/}/count.php?view=yes&aid={dede:field name='id'/}&mid={dede:field name='mid'/}" type='text/javascript' language="javascript"></script></em>)</span>
   </div>
