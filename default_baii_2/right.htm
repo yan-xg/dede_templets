@@ -1,0 +1,33 @@
+<aside class="aside fr hidden-sm-md-lg">
+  <div id="divTags" class="widget widget_tags">
+    <div class="box_title side_title clearfix"> <span><i class="icon side_icon fa fa-file-text"></i>标签列表</span> </div>
+    <ul class="widget-content divTags">
+      {dede:tag row='60' sort='total'}
+      <li><a href="/tags/[field:tag /]/" class="tags[field:id runphp='yes']@me = rand(0,7);[/field:id] tagc[field:highlight /]">[field:tag /]</a></li>
+      {/dede:tag}
+    </ul>
+  </div>
+
+  <div id="aside_hot_comment" class="widget widget_aside_hot_comment">
+    <div class="box_title side_title clearfix"> <span><i class="icon side_icon fa fa-file-text"></i>最新文章</span> </div>
+    <ul class="widget-content aside_hot_comment">
+      {dede:arclist typeid='top' row='8' orderby='pubdate'}
+      <li> <a class="clearfix" href="[field:arcurl/]" title="[field:title/]"><span class="side_comment_img fl"><img src="[field:picname/]" alt="[field:title/]"></span>
+        <div class="side_comment_text fl">
+          <p>[field:title/]</p>
+          <p class="meta"><i class="fa fa-clock-o">&nbsp;[field:pubdate function="MyDate('Y-m-d',@me)"/]</i><i class="fa fa-comment-o">&nbsp;[field:click/]</i></p>
+        </div>
+      </a> </li>
+      {/dede:arclist}
+    </ul>
+  </div>
+
+  <div id="aside_hot" class="widget widget_aside_hot">
+    <div class="box_title side_title clearfix"> <span><i class="icon side_icon fa fa-file-text"></i>阅读排行</span> </div>
+    <ul class="widget-content aside_hot">
+      {dede:arclist typeid='top' row='8' orderby='click'}
+      <li class="clearfix"><i class="fl side_hot_num side_hot_num-1">[field:global.autoindex/]</i><a href="[field:arcurl/]" title="[field:title/]">[field:title/]</a></li>
+      {/dede:arclist}
+    </ul>
+  </div>
+</aside>

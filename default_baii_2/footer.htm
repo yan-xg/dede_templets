@@ -1,0 +1,53 @@
+<div class="footer">
+  <div class="container">
+    <div class="footer_wrap">
+      <p class="copyright">本站涵盖的内容、图片、视频等模板演示数据，部分未能与原作者取得联系。若涉及版权问题，请及时通知我们并提供相关证明材料，我们将及时予以删除！谢谢大家的理解与支持！</p>
+      <p class="copyright">Copyright &copy;  版权所有 | 联系方式：{dede:global.cfg_lianxi/}  <a rel="nofollow" href="http://www.beian.miit.gov.cn/" target="_blank"><span style="color:#3297fc;">{dede:global.cfg_beian/}</span></a></p>
+      <div class="clear"></div>
+    </div>
+  </div>
+</div>
+<div id="mask"></div>
+<div id="backtop"> <span id="gotop1" style=""> <img src="{dede:global.cfg_cmspath/}/public/images/huojian.svg" alt="返回顶部小火箭"> </span> </div>
+<script src="{dede:global.cfg_cmspath/}/public/js/custom.js"></script>
+<!-- Initialize Swiper --> 
+<script>
+        var swiper = new Swiper('.swiper-container', {
+            pagination: '.swiper-pagination',
+            paginationClickable: true,
+            loop: true, 
+            autoplay:2000,
+            nextButton: '.swiper-button-next',
+            prevButton: '.swiper-button-prev',
+            spaceBetween: 30,
+            effect: 'fade',
+        });
+    </script> 
+<script>
+		function searchToggle(obj, evt){
+			var container = $(obj).closest('.search-wrapper');
+
+			if(!container.hasClass('active')){
+				  container.addClass('active');
+				  evt.preventDefault();
+			}
+			else if(container.hasClass('active') && $(obj).closest('.input-holder').length == 0){
+				  container.removeClass('active');
+				  // clear input
+				  container.find('.search-input').val('');
+				  // clear and hide result container when we press close
+				  container.find('.result-container').fadeOut(100, function(){$(this).empty();});
+			}
+		}
+	</script> 
+<script>
+	$(function() {
+			$("#gotop1,#gotop2").click(function(e) {
+				   TweenMax.to(window, 1.5, {scrollTo:0, ease: Expo.easeInOut});
+				   var huojian = new TimelineLite();
+					huojian.to("#gotop1", 1, {rotationY:720, scale:0.6, y:"+=40", ease:  Power4.easeOut})
+					.to("#gotop1", 1, {y:-1000, opacity:0, ease:  Power4.easeOut}, 0.6)
+					.to("#gotop1", 1, {y:0, rotationY:0, opacity:1, scale:1, ease: Expo.easeOut, clearProps: "all"}, "1.4");
+				 });
+			});
+</script>

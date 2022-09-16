@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="renderer" content="webkit">
+<meta name="force-rendering" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
+<meta name="applicable-device" content="pc,mobile">
+<title>{dede:global.cfg_webname/}</title>
+<meta name="description" content="{dede:global.cfg_description/}" />
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<link rel="stylesheet" href="{dede:global.cfg_cmspath/}/public/css/font-awesome.min.css" type="text/css">
+<link rel="stylesheet" href="{dede:global.cfg_cmspath/}/public/css/style.css" type="text/css">
+<script src="{dede:global.cfg_cmspath/}/public/js/jquery-2.2.4.min.js" type="text/javascript"></script>
+</head>
+<body>
+{dede:include filename="head.htm"/}
+<main class="content">
+  <div class="container clearfix">
+    <div class="slider_wraper clearfix">
+      <div class="swiper-container  fl">
+        <div class="swiper-wrapper"> {dede:arclist row='3' titlelen='50' flag='f'}
+          <div class="swiper-slide"> <a href="[field:arcurl/]" title="[field:title/]"><img src="[field:picname/]" alt="[field:title/]" width="690" height="365"></a>
+            <div class="swiper_des">
+              <h3><a href="[field:arcurl/]" title="[field:title/]">[field:title/]</a></h3>
+            </div>
+          </div>
+          {/dede:arclist} </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination swiper-pagination-white"></div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next swiper-button-white"></div>
+        <div class="swiper-button-prev swiper-button-white"></div>
+      </div>
+      <div class="slider_side fr">
+        <ul>
+          {dede:arclist row='4' titlelen='50' orderby='click'}
+          <li> <a href="[field:arcurl/]" title="[field:title/]"><span class="mask"></span><img src="[field:picname/]" alt="[field:title/]"></a>
+            <div class="side_pic_des">
+              <h3><a href="[field:arcurl/]" title="[field:title/]">[field:title/]</a></h3>
+              <p><span>[field:pubdate function="MyDate('Y-m-d',@me)"/]</span></p>
+            </div>
+          </li>
+          {/dede:arclist}
+        </ul>
+      </div>
+    </div>
+    <div class="leftmain fl">
+      <!--stars--> 
+      {dede:channelartlist typeid='1,2'}
+      <div class="stars clearfix">
+        <div class="box_title clearfix"><span><i class="icon news_icon fa fa-file-text"></i>{dede:field name='typename'/}</span> <a class="fr" href="{dede:field name='typeurl'/}" title="{dede:field name='typename'/}">更多<i class="fa fa-angle-right"></i></a></div>
+        {dede:arclist row='6' titlelen='50' orderby='pubdate'}
+        <article class="stars_article fl">
+          <div class="stars_img"> <a href="[field:arcurl/]" title="[field:title/]"><img src="[field:picname/]" alt="[field:title/]"></a> </div>
+          <div class="stars_detail">
+            <header class="clearfix">
+              <h3 ><a href="[field:arcurl/]" title="[field:title/]">[field:title/]</a></h3>
+            </header>
+            <p class="note"> [field:description function="cn_substr(@me,100)"/]... </p>
+            <p class="read_all"> <a href="[field:arcurl/]" title="[field:title/]">阅读全文</a> </p>
+          </div>
+        </article>
+        {/dede:arclist} </div>
+      {/dede:channelartlist}
+
+      <!--morenews-->
+      <div class="morenews clearfix">
+        {dede:channelartlist typeid='3,4,5,6,7,8,9,10'}
+        <div class="sportsnew fl">
+          <div class="box_title clearfix"><span><i class="icon more_icon fa fa-paper-plane-o"></i>{dede:field name='typename'/}</span> <a class="fr"  href="{dede:field name='typeurl'/}" title="{dede:field name='typename'/}">更多<i class="fa fa-angle-right"></i></a> </div>
+          <div class="big_block"> {dede:arclist limit='0,1' titlelen='50' orderby='pubdate'}
+            <article class="morenews_article clearfix">
+              <div class="morenews_img fl"> <a href="[field:arcurl/]" title="[field:title/]"><img src="[field:picname/]" alt="[field:title/]"></a> </div>
+              <div class="morenews_detail fr">
+                <h3 ><a href="[field:arcurl/]" title="[field:title/]">[field:title/]</a></h3>
+                <p class="note m-multi-ellipsis"> [field:description function="cn_substr(@me,60)"/]... </p>
+              </div>
+            </article>
+            {/dede:arclist} </div>
+          {dede:arclist limit='1,5' titlelen='50' orderby='pubdate'}
+          <ul class="box">
+            <li class="clearfix"> <i></i>
+              <h4><a  href="[field:arcurl/]" title="[field:title/]">[field:title/]</a></h4>
+              <strong class="fr">[[field:pubdate function="MyDate('Y-m-d',@me)"/]]</strong> </li>
+          </ul>
+          {/dede:arclist}
+        </div>
+        {/dede:channelartlist}
+      </div>
+    </div>
+    {dede:include filename="right.htm"/} 
+    <!-- 广告位AD2  -->
+    <div class="friendlink fl">
+      <div class="box_title"> <span><i class="icon link_icon fa fa-link"></i>友情链接</span> <span class="friendlink_ruler">申请条件：内容上要求属于同类网站，并且没有出现任何的作弊现象</span> </div>
+      <ul class="clearfix">
+        {dede:flink titlelen='20' row='20' type='text'}
+        <li>[field:link /]</li>
+        {/dede:flink}
+      </ul>
+    </div>
+  </div>
+</main>
+{dede:include filename="footer.htm"/}
+</body>
+</html>
