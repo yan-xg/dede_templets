@@ -1,0 +1,111 @@
+<div class="top">
+    <div class="logo_box">
+        <a title="{dede:global.cfg_webname/}" href="{dede:global.cfg_basehost/}/"><img src="{dede:global.cfg_cmspath/}/public/img/logo.png" alt="{dede:global.cfg_webname/}" width="260" /></a>
+    </div>
+</div>
+
+<div class="menu">
+    <div class="menu_l"></div>
+    <div class="menu_r"></div>
+    <ul id="navmenu" class="menu_ul">
+        <li class="one on"><a class="one {dede:field name=typeid runphp="yes"}(@me=="0")? @me="on":@me="";{/dede:field}" title="返回首页" href="{dede:global.cfg_basehost/}/">网站首页</a></li>
+        {dede:channel type='top' currentstyle='<li class="one on"><a class="one on" href="~typelink~">~typename~</a></li>'}
+        <li class="one on"><a href="[field:typeurl/]">[field:typename/]</a></li>
+        {/dede:channel}
+    </ul>
+</div>
+
+<div class="banner box">
+    <style type="text/css">
+        .slides_box {
+            position: relative;
+            width: 930px;
+            height: 182px;
+            overflow: hidden;
+        }
+
+        .slides_box div {
+            position: absolute;
+            text-align: center;
+        }
+
+        .slides_box div img {
+            width: 930px;
+            height: 182px;
+        }
+
+        .slides_box div p {
+            position: absolute;
+            left: 0;
+            bottom: -26px;
+            line-height: 26px;
+            width: 930px;
+            background: #035faa;
+        }
+
+        .slides_box div p a {
+            color: #ffffff;
+        }
+
+        .slides_nav {
+            text-align: center;
+            position: absolute;
+            right: 20px;
+            bottom: 40px;
+            z-index: 99999;
+        }
+
+        .slides_nav li {
+            cursor: pointer;
+            padding: 3px 4px;
+            color: #ffffff;
+            background-color: #ffffff;
+            margin: 1px;
+            display: inline;
+            font-weight: bold;
+            font-size: 12px;
+            border-radius: 3px 3px 3px 3px;
+        }
+
+        .slides_nav .current {
+            background-color: #0099ff;
+            color: #ffffff;
+        }
+    </style>
+    <script language="javascript">
+        /*******************************
+         * 幻灯片
+         * 当前状态时 .current
+         * start_item 从第几个开始
+         *******************************/
+        $(document).ready(function () {
+
+            $.featureList(
+                $(".slides_nav li"),
+                $(".slides_box div"), {
+                    start_item: 0
+                }
+            );
+
+        });
+    </script>
+
+
+    <!--/t_1-->
+
+    <div class="slides_box">
+        {dede:arclist flag='h' typeid='top' row='5' orderby='pubdate'}
+        <div>
+            <a href="[field:arcurl /]" title="[field:title/]"><img src="[field:picname/]" alt="[field:title/]" /></a>
+        </div>
+        {/dede:arclist}
+
+        <ul class="slides_nav">
+            {dede:arclist flag='h' typeid='top' row='5' orderby='pubdate'}
+            <li>[field:global name=autoindex runphp="yes"]@me=@me+0;[/field:global]</li>
+            {/dede:arclist}
+        </ul>
+        <!--slides_nav end-->
+    </div>
+    <!--slides_box end-->
+</div>

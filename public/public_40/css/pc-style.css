@@ -1,0 +1,153 @@
+﻿ul,li{list-style: none;margin:0;padding:0;}
+.mask{width: 100%;height: 100%;position: fixed;background: rgba(0, 0, 0, 0.6);top: 0;left: 0;display:none;}
+.mask .close{background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANIAAAA9CAMAAADvVccnAAAApVBMVEUAAAD+/v7////+/v7+/v7////////////////////////+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7///////93d3cuje3s9P01ke78/v6Li4vy8vJ8fHxQoPDO5fvb29vi4uKUxfbr6+uYmJiGhobI4fqCu/RGmu9zs/SgoKC42PhmrPKurq6RkZH19fVcp/G7u7ve7Pumz/fQ0NDDw8OmpqZdKo2AAAAAFXRSTlMAm8OugUQ8M/J2H4lJ7pIp6OJfVBLJcKDQAAACS0lEQVRo3uzBgQAAAACAoP2pF6kCAAAAAADgcsxsSVEYjMKDC+LS2tsJGFAUUFzQdu33f7TJn9AiZLqdy1D9FUUuvqtTSQ4Jvxi7azWbVtd+pOtCx3pGzstw9EjXgF4fJVrvj7TptJ8giI+7zWZ3jSF4tjXtbaM0PW+51KYvv1cILj7L2c8gGJT1MnMV4/VJaZMZAAgSdsfmA4B9p73MLRhHHIDJ89RzgPmClfBj4OX9pk9Tt0TGhTZ4P/WBYMEq+B9A90t7K7fCmpM2lQ6AhGlsAPRynbkakdSGYgEX1QpMMVFTNgP6Sm9dYuoqxiv59kgbCgDZdZ+YTWSygMsxARylZZg1lmOZzONyTEmbSRuYM2IRUCbaRDMmiYEO6dAlVp7MNBWDmixO2khawDFvBMpEiSZMcgW6pCNXMqVM4hWOXUlobEE0gU92yzQvErEdYJFeuwqKIxMpzqSNpEF9V2SiREXnNUlnbpGJEuVEpI2kGmmuRTrULVJl4Ymn9guvWg9FJr0ewvt6WBpbD1qJB9+WeFiTEv8DcF9tHUpEmbgc94Cj9Kpmn1oqgAsjfO1ANCT9zYHoRNpQbIDvmUYCYJTrw7+Preb+gmgA8YRVWARA60vrl4uMkzaWDtevgIsYeOop7QBhJdPBE9rYu4XgDUBcWntJAGBwp73S2ku58T8fXiG4+izHv0DwVtbbW6h1qLTZDDgE8+MuSXbHGIKntqZP5zRNo62Xa9MZDVGi3/tZm7yPbtiWgxzH6vysTT016LRbVqNhtdr/r/8CuC+A5wxEEh4AAAAASUVORK5CYII=);background-repeat: no-repeat;position: absolute;right: -10px;width: 30px;height: 30px;text-indent: -9999px;top: -10px;cursor: pointer;background-position:-149px -31px;/*MjA4MTE1MzY1*/}
+.mask .close:hover{background-position: -180px -31px;}
+/*复制弹窗*/
+@-webkit-keyframes alert-bounceIn {0% {opacity: 0;transform: scale(.5)}100% {opacity: 1;transform: scale(1)}}
+.alert-bounceIn {animation-name: alert-bounceIn;animation-duration: .3s;animation-fill-mode: forwards;}
+
+.copy_mask{z-index:1000;}
+.copy-alert{padding:30px 0 25px;width: 711px;height: 370px;background-color: #fff;position: relative;margin: 10% auto;border-radius: 2px;}
+.paybox{
+    width:345px;
+    float: right;
+    border-left:1px solid #ccc;
+}
+.paybox-img {
+    width: 100px;
+    margin: 54px auto 4%;
+}
+.paybox-img img {
+    width: 100%;
+}
+.paybox-money{height: 40px;line-height: 40px;margin: 10px;text-align: center}
+.paybox-money h2{color: #ff6600;font-size: 15px;display: inline-block;font-weight: 600;margin:0;}
+.paybox-money span{text-decoration: line-through;color: #949494;margin-left: 10px;font-size: 14px;}
+.paybox-bottom{width:80%;text-align:center;margin:10px auto 0;cursor: pointer;background: #44b549;height: 47px;line-height: 47px;border-radius: 4px;font-size: 17px;color: #fff;font-weight: 600}
+.paybox-service{margin-top:13px;text-align: center}
+.paybox-service span{font-size: 14px;color:#999;margin:0 27px;cursor: pointer}
+.paybox-title,.codebox_title{
+    color: #009900;
+    font-size: 30px;
+    text-align: center;
+    font-weight: 700;
+    line-height: 40px;
+    height: 40px;
+    width: 100%;
+    margin-bottom: 12px;
+}
+.paybox-art,.codebox_tip{
+    color: #666;
+    font-size: 16px;
+    line-height: 26px;
+    height: 26px;
+    width: 100%;
+    margin: 0 0 8px 0;
+    text-align: center;
+}
+
+.codebox{
+    width:365px;
+    float: left;
+}
+.codebox_qrcode{
+    width: 200px;
+    display: block;
+    margin:6px auto 0;
+}
+.codebox_search{margin: 6px auto 0;width: 74%;border: 1px solid #44b549;height: 40px;line-height: 40px;overflow: hidden;}
+.codebox_search .houhao_bar{width: 70%; font-size: 15px; float: left; border: none; color: #bdbdbd; line-height: 40px; padding-left: 3%;height: 38px;outline:none}
+.codebox_search .houhao_bar{width: 70%; font-size: 15px; float: left; border: none; color: #bdbdbd; line-height: 40px; padding-left: 3%;height: 38px;outline:none}
+.codebox_search .houhaoresults{width: 23%;background: #009900;color: #fff;text-align: center;font-size: 16px;border: 0 none;cursor: pointer;float: right;height: 40px;}
+.codebox_search .houhaoresults:hover{opacity: .8;text-decoration: none;}
+.houhao_bar::-webkit-input-placeholder {
+    color: #ccc;
+}
+.houhao_bar:-moz-placeholder {
+    color: #ccc;
+}
+.houhao_bar:-ms-input-placeholder {
+    color: #ccc;
+}
+.codebox_tips {
+    color: #999;
+    font-size: 14px;
+    line-height: 24px;
+    height: 24px;
+    width: 100%;
+    margin-top: 12px;
+    text-align: center;
+}
+/*客服弹窗*/
+.customer_mask{z-index:1001;}
+.customer_service_box{width:552px;min-height:414px;background: #fff;border-radius: 5px;margin:200px auto 0;position: relative;padding:1px 30px 30px;}
+.customer_service_box li{padding:10px 0;text-align: left;}
+.cj_title{display:none;font-size:18px;color:#20ad48;margin-top:20px;text-align: center;font-weight: bold;}
+.cj_title span{display: inline-block;}
+.customer_service_box li{margin-top:10px;}
+.que{font-size:14px;color:#009900;font-weight: bold}
+.ans{font-size:14px;color:#666;margin:8px 10px 0;line-height: 20px;border-top:1px dashed #eee;padding-top:6px;}
+/*支付弹窗*/
+.pay_mask{z-index:1002;}
+.pay_mask .mask_box{width:342px;height:375px;background: #fff;margin:200px auto 0;border-radius: 5px;position: relative;}
+.pay_mask_top{height:68px;background: #38ad3a;color:#fff;line-height: 68px;font-size: 28px;border-radius: 5px 5px 0 0;text-align: center}
+.pay_qrcode{width:160px;height:160px;margin:30px auto 0;}
+.pay_qrcode img{width:100%;height:100%;}
+.pay_tip{width:170px;height:28px;line-height:28px;margin:20px auto 0;background:#38ad3a;color:#fff;font-size:16px; }
+.pay_tip img{width:24px;height:24px;vertical-align: -6px;margin:0 5px 0 10px;}
+.pay_price{font-size:18px;color:#666;text-align: center;margin-top:10px;}
+.pay_price span{color:#ff7800;font-weight: bold;}
+/*支付成功弹窗*/
+.buy_success{z-index:1003;}
+.buy_success .mask_box{width:342px;height:375px;background: #fff;margin:200px auto 0;border-radius: 5px;position: relative;}
+.buy_success .icon{display: block;margin:60px auto 0;width:86px;height:86px;fill: #44b549;padding-top:34px;}
+.buy_success_tip1{color:#40b938;text-align: center;font-size:18px;margin:20px auto 0;}
+.buy_success_tip2{font-size:14px;color:#666;text-align: center;line-height: 26px;}
+.buy_btn_qr{cursor:pointer;width:241px;height:43px;background: #3dbb37;color:#fff;line-height: 43px;text-align: center;font-size:18px;margin:80px auto 0;border-radius: 4px;}
+/*下载卡片，加载更多*/
+.download_card {padding: 10px;border: 1px solid #e4e4e4;position: relative;overflow: hidden;display: block;margin: 20px 0;float: left;width: 670px;}
+.download_card div{clear:none;}
+.download_card_pic{width:90px;float: left;}
+.download_card_msg{float:left;}
+.download_card_title{font-size:16px;color:#003399;text-decoration: underline;margin-top:6px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;width: 360px;}
+.download_card_tip{font-size:14px;color:#666;margin:8px 0 8px 0;}
+.download_card_tj{font-size:14px;color:#999;float: left;}
+.download_card_tj span{float: left;}
+.download_card_tj img{width:14px;margin-top:2px;float: left;margin-right:3px;}
+.download_card_btn{width:210px;height:60px;background: -webkit-linear-gradient(#82ce21, #68b602); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(#82ce21, #68b602); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(#82ce21, #68b602); /* Firefox 3.6 - 15 */
+    background: linear-gradient(#82ce21, #68b602); /* 闂佸搫绉村ú銈夊闯椤栫偞鍎嶉柛鏇ㄥ櫘閸ゆ梹绻涙径娑欏 */
+    border-radius: 4px;
+    position: absolute;
+    right:10px;top:24px;
+}
+.download_card_btn img{width:30px;float: left;display:block;margin:14px 28px 0 16px;}
+.downlod_btn_right{float: left;color:#fff;font-size: 16px;font-weight: bold;margin-top:8px;}
+.downlod_btn_right p{font-size:12px;margin:2px 0 0 0;}
+
+.more_box {
+    width: 100%;
+    height: 150px;
+    background-image: linear-gradient(-180deg, rgba(255, 255, 255, 0.1) 0%, #fff 70%);
+    float: left;
+    margin-top:-150px;
+}
+.more_box .more{
+    width:160px;
+    height:30px;
+    margin:50px auto 0;
+    color:#45b449;
+    font-size:16px;
+    border:1px solid #45b449;
+    background: #fff;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 4px;
+    cursor:pointer;
+}
+.more_tip{text-align: center;color:#999;margin-top:6px;}
+.mask,.marks{clear:none;overflow: visible;}
+.mask div,.marks div{clear:none;overflow: visible;    box-sizing: content-box;}
+
+.download_card:nth-of-type(2){display:none;}

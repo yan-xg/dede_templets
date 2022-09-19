@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="format-detection" content="telephone=no">
+    <title>{dede:global.cfg_webname/}</title>
+    <meta name="description" content="{dede:global.cfg_description/}" />
+    <meta name="keywords" content="{dede:global.cfg_keywords/}" />
+    <link rel="stylesheet" href="{dede:global.cfg_cmspath/}/public/css/index.css">
+    <link rel="stylesheet" href="{dede:global.cfg_cmspath/}/public/css/tags_style.css">
+    <script src='{dede:global.cfg_cmspath/}/public/js/jquery.min.js'></script>
+    <script src='{dede:global.cfg_cmspath/}/public/js/xiuzhanwang.js' type='text/javascript'></script>
+</head>
+
+<body>
+{dede:include filename="header.htm"/}
+    <div class="middle">
+        <div class="kuai1">
+            <div class="kuai1-left">
+                <div class="tu">
+                    {dede:arclist flag='f' typeid='top' row='1' orderby='pubdate'}
+                    <a href="[field:arcurl /]" title="[field:title/]">
+                        <img loading="lazy" src="[field:picname/]" alt="[field:title/]" data-img-source="original">
+                        <div class="tu-des">[field:title/]</div>
+                    </a>
+                    {/dede:arclist}
+                </div>
+
+                <div class="redian">
+                    <div class="dianji">最新资讯</div>
+                    <ul>
+                        {dede:arclist typeid='top' orderby='pubdate' row=12}
+                        <li>
+                            <span>[field:global name=autoindex runphp="yes"]@me=@me+0;[/field:global]</span>
+                            <a href="[field:arcurl /]" title="[field:title/]">[field:title/]</a>
+                            <em>[field:pubdate function="MyDate('m-d',@me)"/]</em>
+                        </li>
+                        {/dede:arclist}
+                    </ul>
+                </div>
+            </div>
+            <div class="kuai1-right1">
+                <div class="dianji">热门排行</div>
+                <ul>
+                    {dede:arclist typeid='top' orderby='click' row=18}
+                    <li>
+                        <a href="[field:arcurl /]" title="[field:title/]"><p>[field:title/]</p></a>
+                    </li>
+                    {/dede:arclist}
+                </ul>
+            </div>
+            <div class="kuai1-right2">
+                <div class="wntj">热门标签</div>
+                <div class="tag-label">
+                <ul>
+                    {dede:tag row='50' sort='total'}
+                    <li><a href="/tags/[field:tag /]/" class="tags[field:id runphp='yes']@me = rand(0,7);[/field:id] tagc[field:highlight /]">[field:tag /]</a></li>
+                    {/dede:tag}
+                </ul>
+                </div>
+            </div>
+        </div>
+        {dede:channelartlist type ='top'}
+        <div class="pd_list">
+            <div class="lanmu"><a title="{dede:field name='typename'/}" href="{dede:field name='typedir'/}/">
+                <h2>{dede:field name='typename'/}</h2>
+                <span>查看更多</span>
+            </a></div>
+            <div class="pd_l">
+                <div class="l-wrapper1">
+                    {dede:arclist titlelen='80' limit='0,3' orderby='pubdate'}
+                    <a href="[field:arcurl /]" title="[field:title/]">
+                        <img loading="lazy" src="[field:picname/]" alt="[field:title/]">
+                        <span>[field:title/]</span>
+                    </a>
+                    {/dede:arclist}
+                </div>
+            </div>
+            <div class="pd_m">
+                <ul>
+                    {dede:arclist titlelen='80' limit='3,22' orderby='pubdate'}
+                    <li><a href="[field:arcurl /]" title="[field:title/]">[field:title/]</a></li>
+                    {/dede:arclist}
+                </ul>
+            </div>
+            <div class="pd_r">
+                <div class="remen">热门推荐HOT</div>
+                <ul>
+                    {dede:arclist titlelen='80' limit='0,10' orderby='click'}
+                    <li>
+                        <span>[field:global name=autoindex runphp="yes"]@me=@me+0;[/field:global]</span>
+                        <a href="[field:arcurl /]" title="[field:title/]">[field:title/]</a>
+                        <em>[field:pubdate function="MyDate('m-d',@me)"/]</em>
+                    </li>
+                    {/dede:arclist}
+                </ul>
+            </div>
+        </div>
+        {/dede:channelartlist}
+
+        <!-- 友链 -->
+        <div class="flink">
+            <li><b>友情链接</b>:</li>
+            {dede:flink titlelen='20' row='20' type='text'}
+            <li>[field:link /]</li>
+            {/dede:flink}
+        </div>
+    </div>
+    <!--底部引用-->
+    {dede:include filename="footer.htm"/}
+    <!-- 代码 开始 -->
+    <div class="go-top dn" id="go-top"> <a href="javascript:;" class="share">
+            <div class="shareDiv"> <span class="shareA a1" onclick="javascript:openShare('tieba');"></span> <span
+                    class="shareA a2" onclick="javascript:openShare('tqq');"></span> <span class="shareA a3"
+                    onclick="javascript:openShare('tsina');"></span> <span class="shareA a4"
+                    onclick="javascript:openShare('qzone');"></span> <span class="shareA a5"
+                    onclick="javascript:openShare('sqq');"></span></div>
+        </a>
+        <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=&site=qq&menu=yes" class="feedback"></a>
+        <a href="javascript:;" class="go"></a>
+    </div>
+    <script src="{dede:global.cfg_cmspath/}/public/js/xiuzhan.min.js"></script>
+
+</body>
+
+</html>

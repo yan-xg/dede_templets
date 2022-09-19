@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+    <meta name="keywords" content="{dede:field name='keywords'/}" />
+    <meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+    {dede:include filename="meta.htm"/}
+</head>
+
+<body>
+{dede:include filename="header.htm"/}
+
+    <!-- 面包屑导航开始 -->
+    <div class="navigation"><span>当前位置</span>&gt;
+        <a href="/">首页</a> &gt; <a href='#'>TAG标签</a> &gt; {dede:field.title /}
+    </div><!-- 面包屑导航结束 -->
+
+    <!-- 中部开始 -->
+    <div class="box clear">
+        <div class="w_220 fl">
+
+            <!-- 左侧开始 -->
+            <div class="w_250">
+
+                <div class="t_1">
+                    <h3><a>最新资讯</a></h3>
+                </div>
+                <!--/t_1-->
+                <div class="f_1 pa10">
+
+                    <ul class="m_3">
+
+                        {dede:arclist typeid='top' orderby='pubdate' row=8}
+                        <li>
+                            <a href="[field:arcurl /]" title="[field:title /]"><img src="[field:picname /]" alt="[field:title/]" width="74" height="84" /></a>
+                            <a href="[field:arcurl /]">[field:title/]</a>
+                        </li>
+                        {/dede:arclist}
+
+                    </ul>
+                    <!--/m_3-->
+
+
+                </div>
+                <!--/f_1-->
+
+                <div class="clear"></div>
+
+            </div>
+        </div>
+        <!-- 左侧结束 -->
+
+
+        <!-- 右侧开始 -->
+        <div class="w_730 fr">
+            <div class="t_1">
+                <h3><a>TAG标签</a></h3>
+            </div>
+            <!--/t_1-->
+            <div class="f_1 pa10 pl20 pr20" id="content" style="width:688px;">
+
+                <!-- 内容列表开始 -->
+                {dede:list pagesize ='15'}
+                <div class="news_text_pic">
+                    <div class="list_text_pic">
+                        <div class="img-wrap">
+                            <a title="[field:title/]" target="_blank" href="[field:arcurl/]">
+                                <img alt="[field:title/]" src="[field:picname/]" />
+                            </a>
+                        </div>
+                    </div>
+                    <h5><span class=date>[field:pubdate function="MyDate('Y-m-d',@me)"/]</span>
+                        <a title="[field:title/]" href="[field:arcurl/]">
+                        <font style="color:#000000;">[field:title/]</font>
+                    </a></h5>
+                    <p>[field:description function="cn_substr(@me,300)"/]...
+                        <a title="[field:title/]" href="[field:arcurl/]">[了解更多]</a>
+                    </p>
+
+                    <div class="clear"></div>
+                </div>
+                {/dede:list}
+
+                <div class="blank30"></div>
+
+                <!-- 内容列表分页开始 -->
+                <div class="pages">
+                    <ul>
+                        {dede:pagelist listitem="index,end,pre,next,pageno" listsize="5"/}
+                    </ul>
+                </div><!-- 内容列表分页结束 -->
+
+                <div class="clear"></div>
+            </div>
+            <!--/f_1-->
+
+        </div>
+        <!--/w_730-->
+
+    </div>
+    <!--/box-->
+{dede:include filename="footer.htm"/}
+    <!--/foot-->
+</body>
+
+</html>

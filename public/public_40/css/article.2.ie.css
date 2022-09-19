@@ -1,0 +1,128 @@
+﻿@charset "gb2312";
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;border:0 none;outline:0;}
+table{border-collapse:collapse;border-spacing:0}
+fieldset,img{border:0 none}
+address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}
+strong{font-weight:800}
+ol,ul,li{list-style:none outside none;}
+caption,th{text-align:left}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}
+a{color: #444;text-decoration:none;font-size: 15px;}
+a:hover{ text-decoration:underline}
+strong{font-weight: 800;}
+body{font-size: 12px;float: left;width: 100%;}
+
+.header {float: left;width: 100%;height: 90px;}
+.header_box{width:1100px;margin:auto;}
+.logo {width: 414px;height: 60px;background: url("../img/logo.png") no-repeat;float: left;margin-top: 16px;}
+
+.search{height: 42px;float: right;margin-left: 52px;margin-top: 26px;width: 300px;}
+.searchbar{width: 317px;float: left;height: 36px;padding-left: 10px;border-radius: 6px 0px 0px 6px;border: solid 2px #dbdbdb;}
+.search button{width:40px;height:40px;text-indent:-999px;border:none;background:#1686d4 url(../img/icon.png) -262px 0 no-repeat;outline:0;float: right;}
+.search button:hover{background:#0272c0 url(../img/icon.png) -262px 0 no-repeat}
+.search input{border:1px solid #ccc;height:40px;font-size:14px;background-color:transparent;width:250px;text-indent: 1em;}
+.search input:focus{box-shadow:none;outline:0}
+.search input::-webkit-input-placeholder{color:#bbb;text-overflow:ellipsis}
+.search input:-moz-placeholder{color:#bbb!important;text-overflow:ellipsis}
+.search input::-moz-placeholder{color:#bbb!important;text-overflow:ellipsis}
+.search input:-ms-input-placeholder{color:#bbb!important;text-overflow:ellipsis}
+.results{color: #fff;font-size: 15px;background-color: #b1b1b1;text-align: center;width: 77px;height: 40px;border-radius: 0px 6px 6px 0px;float: left;}
+
+.pd_login{float: right;line-height: 33px;margin-top: 15px;text-align: center;}
+.pd_login a{margin-left: 20px;height: 32px;color: #fff;width: 85px;background: #f60;float: left;line-height: 32px;font-size: 14px;border-radius: 4px;}
+.pd_login .jianyi{background: #3190d4;}
+.pd_login a:hover{color:#ffff;}
+
+.nav{float:left;width: 100%;background: #1686d4;height: 50px;line-height: 50px;overflow: hidden;margin-bottom: 15px;}
+.nav ul{margin: auto;width: 1100px;}
+.nav ul li{float:left;padding: 0px 12px;height: 50px;}
+.nav a {color: #fff;font-size: 15px;float: left;}
+.nav .now{color: #ff6600;}
+
+.pf{width: 1100px;margin:auto;overflow:hidden;padding:0 0 10px 0;}
+.pf .leftbody{width: 720px;float:left;}
+
+.pf .wz{overflow:hidden;padding-right:5px;font-size: 14px;/*position: absolute;*/left: 33%;top: 14px;color: #999;overflow: hidden;    border: 1px solid #e8e8e8;    border-right-color: #0085da;    padding-right: 5px;margin-bottom: 25px;}
+.pf .wz a{color: #ffffff;}
+.pf .wz span{color:#fff;}
+.suiyi{float:left;padding:5px 15px;background-color: #2880c5;    float: left;    padding: 5px 15px;color: #ffffff;}
+.suiyi code{margin-right:5px;color: #fff;}
+.suiyi a{margin-right:5px;}
+.leftbody .article{width:100%;}
+.leftbody .title{text-align: center;font-size: 28px;color: #333;line-height: 30px;font-weight: bold;padding-bottom: 15px;}
+.leftbody .article .miaosu{text-align:center;line-height:22px;font-size:12px;color: #999;}
+.leftbody .article .miaosu span{padding: 0 5px;}
+.leftbody .article .miaosu a{color: #999;}
+
+.leftbody .content{margin-top: 10px;font-size: 15px;width: 100%;color: #333;line-height: 34px;}
+.leftbody .content p{width: 100%;color:#333;line-height: 34px;font-size: 15px;margin-bottom: 10px;}
+.leftbody h3{margin-bottom: 10px;font-weight:bold;font-size: 17px;}
+.leftbody .xg{width: 100%;overflow:hidden;}
+.leftbody .xg li{width:45%;float:left;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;line-height:30px;padding-left:10px;position: relative;}
+.leftbody .xg li:before{display: block;content: "";width: 4px;height: 4px;border-radius: 4px;left: 1px;top: 12px;font-size: 20px;background-color:#0085da ;position: absolute;}
+
+.rightbody{width: 336px;float:right;}
+.rightbody_list{float: left;width: 100%;margin-bottom: 10px;}
+.rightbody h3{background: #f3f3f3;font-size: 17px;color: #f76403;font-weight: 700;height: 34px;line-height: 34px;margin-bottom: 10px;padding-left: 10px;}
+.rightbody ul{width: 100%;}
+.rightbody ul li{text-overflow:ellipsis;white-space:nowrap;overflow:hidden;line-height: 28px;height: 28px;width: 100%;display: inline-block;}
+.rightbody ul  li span{font-size: 12px;color: #ffffff;background: #d2d2d2;height: 17px;margin-right: 11px;line-height: 17px;width: 17px;display: inline-block;text-align: center;border-radius: 4px;}
+.rightbody ul  li:nth-child(1) span{background: #1686d4;}
+.rightbody ul  li:nth-child(2) span{background: #16add4;}
+.rightbody ul  li:nth-child(3) span{background: #ff6600;}
+.rightbody ul  li:nth-child(4) span{background: #ff8600;}
+
+.footer{width:100%;float:left;background-color: #404040;padding: 10px 0;}
+.footer p{float: left;width: 100%;text-align: center;color: #c9c9c9;line-height: 24px;}
+.footer a{color: #c9c9c9;font-size: 12px;padding: 0 4px;}
+.footer a img{width:100%;height:100%;}
+
+.right_fixed {bottom: 0;width: 336px;position: fixed!important;z-index: 300;}
+.related_article_img{float: left;width: 100%;}
+.related_article_img .related_top{height: 30px;width: 100%;border-bottom: 1px solid #EEE;}
+.related_article_img .related_top code{float: left;font-size: 18px;height: 30px;line-height: 30px;color: #333;background: #fff;border-bottom: 2px solid #1c1c1c;font-family: initial;font-weight: 700;}
+.related_article_img ul{margin-top: 13px;width: 100%;float:left;}
+.related_article_img li{overflow: hidden;width: 156px;height: 127px;float: left;margin-right: 1px;margin-left: 10px;text-align: center;}
+.related_article_img li a:hover span{text-decoration: underline;}
+.related_article_img li a img{height: 104px;float: left;width: 100%;border: 1px solid #ddd;}
+.related_article_img li a span{float: left;height: 24px;width: 100%;line-height: 24px;font-size: 16px;color: #2965b1;overflow: hidden;}
+
+/*related_article*/
+.related_about{width: 100%;float: left;overflow: hidden;padding-top: 15px;margin-bottom: 10px;}
+.related_about .related_about_t{float: left;width: 100%;height: 28px;line-height: 28px;color: #494949;font-size: 16px;border-bottom: 1px solid #EEE;margin-bottom: 10px;}
+.related_about .related_about_t code{color: #000;font-size: 18px;float: left;font-family: inherit;border-bottom: 2px solid #000;font-weight: 700;}
+.related_about ul{float: left;width: 100%;}
+.related_about li{float: left;width: 50%;height: 30px;font-size: 16px;overflow: hidden;line-height: 30px;}
+.related_about li a{font-size: 14px;color: #2965b1;}
+.related_about li a:before{float: left;content: "";width: 3px;height: 3px;background: #000;margin-top: 14px;margin-right: 5px;}
+.related_about li a:hover{color: #000;}
+
+.shangxiaye {font-size: 14px;color: #333;overflow: hidden;line-height: 40px;width: 100%;display: inline-block;}
+.shangxiaye div {overflow: hidden;text-overflow: ellipsis;white-space: nowrap;width: 50%;float: left;color: #000;}
+.next {text-align: right;}
+
+h2{display:inline-block}
+u{text-decoration:none;}
+.content a{font-size: 15px;}
+.content h2,.content h2 a,.content h2 a u{text-decoration: none;font-size: 14px;text-align: left;font-weight: bold;line-height: 31px;clear: both;color: #ff0000;margin-top:12px;}
+.content img{max-width: 100%!important;height: auto!important;}
+.content img{border-radius: 10px;}
+.after_height_light~p a {color: #2965b1 !important;}
+
+.zclb-left .yeshu{width:100%;float: left;margin: 15px 0;}
+
+.yeshu ul{width: 100%;float: left;height: 28px;}
+.yeshu ul li{float:left;}
+.thisclass{color: white;border: 1px solid #ccc;padding: 4px 10px;font-size: 14px;background: #1686d4;margin-right: 5px;}
+.yeshu ul a{margin-right: 6px;border: 1px solid #ccc;padding: 4px 10px;font-size: 14px;float: left;color: #7d7d7d;}
+.yeshu ul .word a{font-size:14px;color:#151515;}
+
+
+
+/* 合肥秀站网络科技有限公司 */
+/* 精品与原创织梦模板提供商，一站式建站 */
+/* 主营业务：快速建站、快排、高权重域名、海外服务器 */
+/* 麦站网：Www.Xiuzhanwang.Com */
+/* 主机/服务器：Www.xiuzhanyun.Com */
+/* 域名抢注：Www.xiuzhanmi.Com */
+/* QQ：2361928288  835971066 */

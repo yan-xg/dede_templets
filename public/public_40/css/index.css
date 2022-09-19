@@ -1,0 +1,123 @@
+﻿@charset "gb2312";
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;border:0 none;outline:0;}
+table{border-collapse:collapse;border-spacing:0}
+fieldset,img{border:0 none}
+address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}
+strong{font-weight:800}
+ol,ul,li{list-style:none outside none;}
+caption,th{text-align:left}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}
+a{color: #444;text-decoration:none;font-size: 15px;}
+a:hover{ text-decoration:underline}
+strong{font-weight: 800;}
+body{font-size: 12px;float: left;width: 100%;}
+
+.header {float: left;width: 100%;height: 90px;}
+.header_box{width:1100px;margin:auto;}
+.logo {width: 414px;height: 60px;background: url("../img/logo.png") no-repeat;float: left;margin-top: 16px;}
+
+.search{height: 42px;float: right;margin-left: 52px;margin-top: 26px;width: 300px;}
+.searchbar{width: 317px;float: left;height: 36px;padding-left: 10px;border-radius: 6px 0px 0px 6px;border: solid 2px #dbdbdb;}
+.search button{width:40px;height:40px;text-indent:-999px;border:none;background:#1686d4 url(../img/icon.png) -262px 0 no-repeat;outline:0;float: right;}
+.search button:hover{background:#0272c0 url(../img/icon.png) -262px 0 no-repeat}
+.search input{border:1px solid #ccc;height:40px;font-size:14px;background-color:transparent;width:250px;text-indent: 1em;}
+.search input:focus{box-shadow:none;outline:0}
+.search input::-webkit-input-placeholder{color:#bbb;text-overflow:ellipsis}
+.search input:-moz-placeholder{color:#bbb!important;text-overflow:ellipsis}
+.search input::-moz-placeholder{color:#bbb!important;text-overflow:ellipsis}
+.search input:-ms-input-placeholder{color:#bbb!important;text-overflow:ellipsis}
+.results{color: #fff;font-size: 15px;background-color: #b1b1b1;text-align: center;width: 77px;height: 40px;border-radius: 0px 6px 6px 0px;float: left;}
+
+.pd_login{float: right;line-height: 33px;margin-top: 25px;text-align: center;}
+.pd_login a{font-weight: bold;margin-left: 28px;height: 40px;color: #fff;width: 111px;background: #f60;float: left;line-height: 40px;font-size: 14px;border-radius: 6px;}
+.pd_login .jianyi{background: #3190d4;}
+.pd_login a:hover{color:#ffff;}
+
+.nav{float:left;width: 100%;background: #1686d4;height: 50px;line-height: 50px;overflow: hidden;margin-bottom: 15px;}
+.nav ul{margin: auto;width: 1100px;}
+.nav ul li{float:left;padding: 0 13px;height: 50px;}
+.nav a {color: #fff;font-size: 16px;float: left;}
+.nav .now{color: #ff6600;}
+
+.middle{width: 1100px;margin:auto;}
+.kuai1{float: left;width: 100%;margin-bottom: 15px;}
+.kuai1-left{width: 100%;float:left;margin-bottom: 14px;}
+.kuai1-left .tu{width: 406px;float: left;}
+.kuai1-left .tu a{width:100%;position:relative;display:block;overflow:hidden;}
+.kuai1-left .tu a img{width:100%;height: 252px;display:block;background-size:100%;}
+.kuai1-left .tu-des{position:absolute;color:#fff;background-color: rgba(0, 0, 0, 0.33);bottom: 1px;right:20px;font-size:18px;height: 40px;line-height: 40px;width: 100%;text-align: center;left: 0;}
+.kuai1-left .redian{float: right;width: 63%;}
+.kuai1-left .redian .dianji{color: #1686d4;font-size: 17px;font-weight: 700;height: 34px;line-height: 34px;margin-bottom: 10px;background: #f3f3f3;padding-left: 10px;}
+.kuai1-left .redian ul{width: 100%;float: left;}
+.kuai1-left .redian ul li{width: 46%;height: 36px;float: left;overflow: hidden;margin-left: 23px;line-height: 36px;}
+.kuai1-left .redian ul li a{font-weight:bold;font-size: 15px;padding-left: 7px;}
+.kuai1-left .redian ul li em{float: right;color: #999;font-size: 13px;}
+.kuai1-left .redian ul li span{font-size: 12px;color: #ffffff;background: #c5c4c2;height: 17px;line-height: 17px;width: 17px;display: inline-block;text-align: center;border-radius: 4px;}
+.kuai1-left .redian ul li:nth-child(1) span{background: #1686d4;}
+.kuai1-left .redian ul li:nth-child(2) span{background: #1686d4;}
+.kuai1-left .redian ul li:nth-child(3) span{background: #1686d4;}
+.kuai1-left .redian ul li:nth-child(4) span{background: #1686d4;}
+
+
+.kuai1-right1{width: 406px;float: left;}
+.kuai1-right1 .dianji{color: #1686d4;font-size: 17px;font-weight: 700;height: 34px;line-height: 34px;margin-bottom: 10px;background: #f3f3f3;padding-left: 10px;}
+.kuai1-right1 ul{width:100%;float: left;}
+.kuai1-right1 ul li{width: 50%;height: 33px;overflow: hidden;float: left;line-height: 33px;}
+.kuai1-right1 ul li a p{overflow: hidden;text-overflow: ellipsis;white-space: nowrap;font-size: 14px;}
+.kuai1-right1 ul li a:before{content:"";float: left;background: #ccc;height: 4px;width: 4px;margin-top: 17px;margin-right: 7px;}
+.kuai1-right2{width: 61%;float:right;}
+
+.kuai1-right2 .wntj{background: #f3f3f3;font-size: 17px;color: #f76403;font-weight: 700;height: 34px;line-height: 34px;margin-bottom: 10px;padding-left: 10px;}
+.kuai1-right2 ul{width:100%;overflow:hidden}
+.kuai1-right2 ul li{width:100%;float: left;margin-bottom: 12px;}
+.kuai1-right2 ul img{width: 21%;float:left;height: 100%;margin-right: 15px;}
+.kuai1-right2 ul li p{float: left;width: 75%;height: 57px;line-height: 26px;color: #666;font-size: 14px;overflow: hidden;}
+.kuai1-right2 ul li a{width: 100%;float: left;}
+.kuai1-right2 ul li h2{font-size: 16px;color: #1369ad;font-weight: 700;width: 75%;float: left;line-height: 30px;}
+
+.pd_list{float:left;width: 100%;}
+.lanmu{border-bottom: 2px solid #1686d4;height: 40px;float: left;width: 100%;margin-bottom: 15px;}
+.lanmu h2{font-size: 18px;font-weight:bold;background: #1686d4;padding: 0 18px;color: #fff;display: inline-block;}
+.lanmu a{float: left;width: 100%;height: 40px;line-height: 40px;}
+.lanmu span{height:25px;background-color: #ff6600;margin-left:20px;float: right;color: #fff;padding: 3px 11px;line-height: 25px;margin-top: 6px;font-size: 12px;}
+.pd_l{float:left;width: 13%;}
+.pd_l .l-wrapper1{width: 100%;}
+.pd_l .l-wrapper1:nth-child(2){margin-top:15px;}
+.pd_l .l-wrapper1 a{width:100%;float: left;margin-bottom: 10px;}
+.pd_l .l-wrapper1 a img{width:100%;height: 88px;display:block;background-size:100%;}
+.pd_l .l-wrapper1 a span{float: left;height: 24px;background: #f3f3f3;width: 100%;color: #717171;text-align: center;overflow: hidden;line-height: 24px;}
+
+.pd_m{width: 56%;float:left;margin-left: 15px;}
+.pd_m ul{float: left;width: 100%;}
+.pd_m ul li{height: 33px;line-height: 33px;overflow:hidden;width: 50%;float: left;}
+.pd_m ul li:before{float: left;margin-top: 13px;content: "";background: #cccccc;width: 4px;height: 4px;margin-right: 10px;}
+.pd_m ul li a{font-size: 15px;color: #404040;font-weight: 400;}
+.pd_r{width: 28%;float: right;}
+.pd_r .remen{font-size: 17px;font-weight:bold;color: #ff6600;padding-left: 10px;background: #fff2ef;height: 42px;line-height: 42px;}
+.pd_r ul{width: 100%;float: left;}
+.pd_r ul li{width: 100%;float:left;height: 32px;line-height: 32px;}
+.pd_r ul li a{float: left;width: 63%;height: 32px;overflow: hidden;}
+.pd_r ul li p{font-weight:bold;font-size: 15px;}
+.pd_r ul li em{font-size: 12px;color: #8e8e8e;height: 17px;line-height: 17px;float: right;text-align: center;border-radius: 4px; margin-top:9px}
+.pd_r ul li span{font-size: 12px;color: #ffffff;background: #c5c4c2;height: 17px;line-height: 17px;width: 17px;float: left;text-align: center;border-radius: 4px;margin-right: 10px;margin-top: 9px;}
+.pd_r ul li:nth-child(1) span{background: #1686d4;}
+.pd_r ul li:nth-child(2) span{background: #1686d4;}
+.pd_r ul li:nth-child(3) span{background: #1686d4;}
+.pd_r ul li:nth-child(4) span{background: #1686d4;}
+
+.flink{float:left;width: 98%;background: #f3f3f3;padding: 1%;margin: 15px 0;color: #1686d4;}
+.flink li{float:left;line-height: 24px;padding: 0 10px;}
+.flink li a{float:left;font-size: 13px;color: #666;}
+
+.footer{width:100%;float:left;background-color: #404040;padding: 10px 0;}
+.footer a{color: #c9c9c9;font-size: 12px;padding: 0 4px;}
+.footer p{float: left;width: 100%;text-align: center;color: #c9c9c9;line-height: 24px;}
+.footer a img{width:100%;height:100%;}
+
+/* 合肥秀站网络科技有限公司 */
+/* 精品与原创织梦模板提供商，一站式建站 */
+/* 主营业务：快速建站、快排、高权重域名、海外服务器 */
+/* 麦站网：Www.Xiuzhanwang.Com */
+/* 主机/服务器：Www.xiuzhanyun.Com */
+/* 域名抢注：Www.xiuzhanmi.Com */
+/* QQ：2361928288  835971066 */

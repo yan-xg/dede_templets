@@ -1,0 +1,50 @@
+<div class="header">
+    <div class="logo"><a title="{dede:global.cfg_webname/}" href="{dede:global.cfg_basehost/}/">
+        <img src="{dede:global.cfg_cmspath/}/public/img/logo.png" alt="{dede:global.cfg_webname/}" width="260" /></a>
+    </div>
+</div>
+
+<div class="topmenu">
+    <ul id="navmenu">
+        <li class="one {dede:field name=typeid runphp="yes"}(@me=="0")? @me="topmenu_on":@me="";{/dede:field}"><a title="返回首页" href="{dede:global.cfg_basehost/}/">网站首页</a></li>
+        {dede:channel type='top' currentstyle='<li class="one topmenu_on"><a href="~typelink~">~typename~</a></li>'}
+        <li class="one"><a href="[field:typeurl/]">[field:typename/]</a></li>
+        {/dede:channel}
+    </ul>
+</div>
+
+<div class="menu1">
+    <SCRIPT>
+        /*******************************
+         * @author Mr.Think
+         * @author blog http://mrthink.net/
+         * @2010.08.08
+         * @可自由转载及使用,但请注明版权归属
+         *******************************/
+        $(function () {
+            //单行应用@Mr.Think
+            var _wrap = $('ul.line');//定义滚动区域
+            var _interval = 2000;//定义滚动间隙时间
+            var _moving;//需要清除的动画
+            _wrap.hover(function () {
+                clearInterval(_moving);//当鼠标在滚动区域中时,停止滚动
+            }, function () {
+                _moving = setInterval(function () {
+                    var _field = _wrap.find('li:first');//此变量不可放置于函数起始处,li:first取值是变化的
+                    var _h = _field.height();//取得每次滚动高度
+                    _field.animate({ marginTop: -_h + 'px' }, 600, function () {//通过取负margin值,隐藏第一行
+                        _field.css('marginTop', 0).appendTo(_wrap);//隐藏后,将该行的margin值置零,并插入到最后,实现无缝滚动
+                    })
+                }, _interval)//滚动间隔时间取决于_interval
+            }).trigger('mouseleave');//函数载入时,模拟执行mouseleave,即自动滚动
+        });
+
+    </SCRIPT>
+    <span style="float:left;margin-top:20px;color:white;"><strong>滚动资讯:</strong></span>
+    <ul class="line">
+        {dede:arclist typeid='top' orderby='click' row=10}
+        <li><a href="[field:arcurl /]" title="[field:title/]">[field:title/]</a></li>
+        {/dede:arclist}
+    </UL>
+</div>
+<!--/menu1-->
