@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+<link href="/public/css/style.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="/public/css/layui.css">
+</head>
+<body class="category">
+{dede:include filename="header.htm"/}
+<div class="wrapper">
+	<div class="artlist left publicborder">
+      	<div class="current_nav">
+			<span class="layui-breadcrumb"><a href="/">首页</a><a href="{dede:field.typedir/}/">{dede:field.typename/}</a></span>
+		</div>
+		<ul class="ulcl">
+				{dede:list pagesize='15'}
+			<li>
+			<div class="art">
+				<h3 class="title">
+				<a href="[field:arcurl/]" target="_blank" title="[field:title/]">[field:title/]</a>
+				</h3>
+				<div class="fix item-main">
+					<a href="[field:arcurl/]" title="[field:title/]" target="_blank">
+					<img class="img left" src="[field:picname/]" width="200" height="150" alt="[field:title/]">
+					</a>
+					<div class="info">
+						<p class="desc">
+							[field:description function="cn_substr(@me,200)"/]...
+						</p>
+						<p class="detail">
+							<span>分类：[field:typelink/]</span>
+							<span class="ml30">时间：[field:pubdate function="MyDate('Y-m-d',@me)"/]</span>
+							<a href="[field:arcurl/]" title="[field:title/]" target="_blank" class="btn right">点击阅读</a>
+						</p>
+					</div>
+				</div>
+			</div>
+			</li>
+					{/dede:list}
+		</ul>
+		<div class="fenyes">
+			<div class="layui-box layui-laypage layui-laypage-default">
+					{dede:pagelist listitem="info,index,end,pre,next,pageno"listsize="2"/}
+			</div>
+		</div>
+	</div>
+
+	<div class="sidebar">
+		<ul>
+			<li class="sb_list">
+				<div class="right_con post_right_con right_remen">
+					<div class="hn_title">
+						热门排行
+					</div>
+					<div class="right_remen-list">
+						<ul>
+							{dede:arclist  row='12' orderby='click' titlelen='35'}
+							<li>
+								<i>[field:global name=autoindex/]</i>
+								<a href="[field:arcurl/]" target="_blank" title="[field:title/]" class="g-rank-name">[field:title/]</a>
+							</li>
+							{/dede:arclist}
+						</ul>
+					</div>
+				</div>
+			</li>
+			<li class="sb_list">
+				<div class="right_tag">
+					<div class="hn_title">
+						TAG标签
+					</div>
+					<div class="right_remen-list">
+						<ul style="width:95%;margin:2% auto;">
+							{dede:tag row='50' sort='total'}
+							<a href="/tags/[field:tag /]/" style="padding: 10px 10px;" target="_blank">[field:tag /]</a>
+							{/dede:tag}
+						</ul>
+					</div>
+				</div>
+			</li>
+		</ul>
+		<ul id="crf1">
+			<li class="sb_list">
+				<div class="right_con post_right_con right_remen">
+					<div class="hn_title">
+						最新资讯
+					</div>
+					<div class="right_remen-list">
+						<ul>
+							{dede:arclist typeid='top' orderby='pubdate' row=12}
+							<li>
+								<i>[field:global name=autoindex/]</i>
+								<a href="[field:arcurl/]" target="_blank" title="[field:title/]" class="g-rank-name">[field:title/]</a>
+							</li>
+							{/dede:arclist}
+						</ul>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>
+<script type="text/javascript" src="/public/js/krnet.js"></script>
+{dede:include filename="footer.htm"/}
+</body>
+</html>

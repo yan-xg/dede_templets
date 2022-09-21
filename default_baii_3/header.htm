@@ -1,0 +1,18 @@
+<div class="header">
+
+  <div class="container">
+    <div class="header_logo_l">
+   	 <a href="/"><img src="/public/images/logo.png"></a>
+    </div>
+  </div>
+	<div class="nav  layui-anim">
+		<ul class="layui-nav">
+			<li class="layui-nav-item {dede:field name=typeid runphp="yes"}(@me=="0")? @me="layui-this":@me="";{/dede:field}"><a title="返回首页" href="{dede:global.cfg_basehost/}/">网站首页</a></li>
+			{dede:channel type='top' currentstyle='<li class="layui-nav-item layui-this"><a href="~typelink~">~typename~</a></li>'}
+			<li class="layui-nav-item"><a href="[field:typeurl/]">[field:typename/]</a></li>
+			{/dede:channel}
+		</ul>
+	</div>
+</div>
+
+<div class="wrap">

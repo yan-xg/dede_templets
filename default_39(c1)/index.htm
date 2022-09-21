@@ -1,0 +1,169 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>{dede:global.cfg_webname/}</title>
+    <meta name="description" content="{dede:global.cfg_description/}" />
+    <meta name="keywords" content="{dede:global.cfg_keywords/}" />
+    {dede:include filename="meta.htm"/}
+</head>
+
+<body>
+{dede:include filename="header.htm"/}
+
+    <div class="diyihang box">
+        <div class="diyihang1">
+
+            <script language="javascript">
+                /*******************************
+                 * 幻灯片
+                 * 当前状态时 .current
+                 * start_item 从第几个开始
+                 *******************************/
+                $(document).ready(function () {
+
+                    $.featureList(
+                        $(".slides_nava li"),
+                        $(".slides_boxa div"), {
+                        start_item: 0
+                    }
+                    );
+
+                });
+            </script>
+
+            <!--/t_1-->
+            <div class="slides_boxa">
+                {dede:arclist flag='f' typeid='top' row='5' orderby='pubdate'}
+                <div>
+                    <p><a title="[field:title/]" target="_blank" href="[field:arcurl /]">[field:title/]</a>[field:description function="cn_substr(@me,100)"/]...</p>
+                    <a title="[field:title/]" target="_blank" href="[field:arcurl /]">
+                        <img alt="[field:title/]" src="[field:picname/]" /></a>
+                </div>
+                {/dede:arclist}
+
+                <ul class="slides_nava">
+                    {dede:arclist flag='f' typeid='top' row='5' orderby='pubdate'}
+                    <li></li>
+                    {/dede:arclist}
+                </ul>
+                <!--slides_nav end-->
+            </div>
+                {dede:arclist typeid='top' orderby='click' limit='0,6'}
+                <a href="[field:arcurl /]">[field:title/]</a><br/>
+                {/dede:arclist}
+            <!--slides_box end-->
+        </div>
+        <div class="diyihang2">
+            <div class="title10">
+                <a class="aa" href="#">最新资讯</a>
+                <span>NEWS</span>
+                <a class="more" href="#">More</a>
+            </div>
+
+            {dede:arclist typeid='top' orderby='pubdate' row=1}
+            <dl>
+                <dt><a href="[field:arcurl /]">[field:title/]</a></dt>
+                <dd>[field:description function="cn_substr(@me,100)"/]...</dd>
+            </dl>
+            {/dede:arclist}
+
+            <ul>
+                {dede:arclist typeid='top' orderby='pubdate' limit='1,10'}
+                <li><span>[field:pubdate function="MyDate('Y-m-d',@me)"/]</span><a href="[field:arcurl /]">[field:title/]</a></li>
+                {/dede:arclist}
+            </ul>
+        </div>
+        <div class="diyihang3">
+            <div class="title11">
+                <a class="aa">热门标签</a>
+                <span>LABEL</span>
+            </div>
+            <div class="diyihang3_1 tag-label">
+                <ul>
+                    {dede:tag row='35' sort='total'}
+                    <li><a href="/tags/[field:tag /]/" class="tags[field:id runphp='yes']@me = rand(0,7);[/field:id] tagc[field:highlight /]">[field:tag /]</a></li>
+                    {/dede:tag}
+                </ul>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+    <div class="dierhang box">
+        {dede:channelartlist typeid='1,2'}
+        <div class="dierhang2">
+            <div class="title10">
+                <a class="aa" href="{dede:field name='typedir'/}/">{dede:field name='typename'/}</a>
+                <a class="more" href="{dede:field name='typedir'/}/">More</a>
+            </div>
+            {dede:arclist row='4' titlelen='50' orderby='pubdate'}
+            <dl>
+                <a href="[field:arcurl/]"><img alt="[field:title/]" src="[field:picname/]" width="60" height="60" alt="" /></a>
+                <dt><a href="[field:arcurl/]">
+                    <font style="color:;">[field:title/]</font>
+                </a></dt>
+                <dd>[field:description function="cn_substr(@me,100)"/]...</dd>
+            </dl>
+            {/dede:arclist}
+        </div>
+        {/dede:channelartlist}
+        <div class="clear"></div>
+    </div>
+
+    <div class="disanhang box">
+        {dede:channelartlist typeid='3,4'}
+        <div class="dierhang2">
+            <div class="title10">
+                <a class="aa" href="{dede:field name='typedir'/}/">{dede:field name='typename'/}</a>
+                <a class="more" href="{dede:field name='typedir'/}/">More</a>
+            </div>
+            {dede:arclist row='4' titlelen='50' orderby='pubdate'}
+            <dl>
+                <a href="[field:arcurl/]"><img alt="[field:title/]" src="[field:picname/]" width="60" height="60" alt="" /></a>
+                <dt><a href="[field:arcurl/]">
+                    <font style="color:;">[field:title/]</font>
+                </a></dt>
+                <dd>[field:description function="cn_substr(@me,100)"/]...</dd>
+            </dl>
+            {/dede:arclist}
+        </div>
+        {/dede:channelartlist}
+        <div class="clear"></div>
+    </div>
+
+    <div class="disihang box">
+        {dede:channelartlist typeid='5,6,7'}
+        <div class="disihang1">
+            <div class="title13">
+                <a class="aa" href="{dede:field name='typedir'/}/">{dede:field name='typename'/}</a>
+                <a class="more" href="{dede:field name='typedir'/}/">More</a>
+            </div>
+            {dede:arclist row='10' titlelen='50' orderby='pubdate'}
+            <li><a href="[field:arcurl/]">[field:title/] </a></li>
+            {/dede:arclist}
+        </div>
+        {/dede:channelartlist}
+        <div class="clear"></div>
+    </div>
+
+    <div class="disihang box">
+        {dede:channelartlist typeid='8,9,10'}
+        <div class="disihang1">
+            <div class="title13">
+                <a class="aa" href="{dede:field name='typedir'/}/">{dede:field name='typename'/}</a>
+                <a class="more" href="{dede:field name='typedir'/}/">More</a>
+            </div>
+            {dede:arclist row='10' titlelen='50' orderby='pubdate'}
+            <li><a href="[field:arcurl/]">[field:title/] </a></li>
+            {/dede:arclist}
+        </div>
+        {/dede:channelartlist}
+        <div class="clear"></div>
+    </div>
+
+{dede:include filename="footer.htm"/}
+</body>
+
+</html>
