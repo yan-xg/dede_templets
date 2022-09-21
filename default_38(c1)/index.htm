@@ -1,0 +1,368 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>{dede:global.cfg_webname/}</title>
+    <meta name="description" content="{dede:global.cfg_description/}" />
+    <meta name="keywords" content="{dede:global.cfg_keywords/}" />
+    {dede:include filename="meta.htm"/}
+</head>
+
+<body>
+{dede:include filename="header.htm"/}
+    <div class="box">
+        <div class="w_280 fl">
+
+            <div class="t_1">
+                <h3><a href="#">新闻动态</a>
+                </h3>
+            </div>
+            <!--幻灯片-->
+            <script language="javascript">
+                /*******************************
+                 * 幻灯片
+                 * 当前状态时 .current
+                 * start_item 从第几个开始
+                 *******************************/
+                $(document).ready(function () {
+
+                    $.featureList(
+                        $(".slides_nav li"),
+                        $(".slides_box div"), {
+                        start_item: 0
+                    }
+                    );
+
+                });
+            </script>
+
+            <div class="slides">
+                <div class="slides_box">
+                    {dede:arclist flag='f' typeid='top' row='5' orderby='pubdate'}
+                    <div>
+                        <a href="[field:arcurl /]">
+                            <img alt="[field:title/]" src="[field:picname/]" alt="[field:title/]" width="260" height="180" />
+                        </a>
+                        <a href="[field:arcurl /]">[field:title/]</a>
+                        <p>[field:description function="cn_substr(@me,100)"/]...</p>
+                    </div>
+                    {/dede:arclist}
+                </div>
+                <!--slides_box end-->
+                <ul class="slides_nav">
+                    {dede:arclist flag='f' typeid='top' row='5' orderby='pubdate'}
+                    <li>[field:global name=autoindex runphp="yes"]@me=@me+0;[/field:global]</li>
+                    {/dede:arclist}
+                </ul>
+                <!--slides_nav end-->
+            </div>
+            <!--slides end-->
+        </div>
+        <!--/w_280-->
+        <div class="w_440 fl ml10">
+            <div class="t_1">
+                <h3><a href="#">最新资讯</a></h3>
+            </div>
+            <div class="f_1_a pa10" style="height:330px;">
+                <ul class="m_4">
+                    {dede:arclist typeid='top' orderby='pubdate' row=2}
+                    <li>
+                        <a href="[field:arcurl /]" title="[field:title/]">[field:title/]</a>
+                        <p>[field:description function="cn_substr(@me,100)"/]...</p>
+                    </li>
+                    {/dede:arclist}
+                </ul>
+                <ul class="list_2">
+                    <!-- 最新新闻8条 -->
+                    {dede:arclist typeid='top' orderby='pubdate' limit='2,7'}
+                    <li><span>[field:pubdate function="MyDate('Y-m-d',@me)"/]</span><a href="[field:arcurl /]">[field:title/]</a></li>
+                    {/dede:arclist}
+                </ul>
+
+            </div>
+            <!--/f_1_a-->
+        </div>
+        <!--/w_440-->
+        <div class="w_220 fr">
+            <div class="t_1">
+                <h3>
+                    {dede:type typeid='1'}
+                    <a href="[field:typedir/]/">[field:typename/]</a>
+                    {/dede:type}
+                </h3>
+            </div>
+            <!--/t_1-->
+            <div class="f_1 pa10">
+                <ul class="list_1">
+                    {dede:arclist typeid='1' limit='0,13' orderby='pubdate'}
+                    <li><a href="[field:arcurl /]" target="_blank">[field:title/]</a></li>
+                    {/dede:arclist}
+                </ul>
+                <!--/list_1-->
+            </div>
+            <!--/f_1-->
+        </div>
+        <!--/w_220-->
+
+    </div>
+    <!--/box-->
+
+    <div class="box clear">
+
+        <div class="w_730 fl">
+            <div class="w_280 fl">
+                <div class="t_1">
+                    <h3>
+                        {dede:type typeid='2'}
+                        <a href="[field:typedir/]/">[field:typename/]</a>
+                        {/dede:type}
+                    </h3>
+                </div>
+                <!--/t_1-->
+                <div class="f_1 pa10">
+                    <ul class="list_1">
+                        {dede:arclist typeid='2' limit='0,13' orderby='pubdate'}
+                        <li><a href="[field:arcurl /]" target="_blank">[field:title/]</a></li>
+                        {/dede:arclist}
+                    </ul>
+                    <!--/list_1-->
+                </div>
+                <!--/f_1-->
+            </div>
+            <!--/w_280-->
+            <div class="w_440 fr">
+                <div class="t_1">
+                    <h3>
+                        {dede:type typeid='3'}
+                        <a href="[field:typedir/]/">[field:typename/]</a>
+                        {/dede:type}
+                    </h3>
+
+                </div>
+                <!--/t_1-->
+                <div class="f_1 pa10">
+                    {dede:arclist typeid='3' limit='0,1' orderby='pubdate'}
+                    <dl class="dl100">
+                        <a href="[field:arcurl /]"><img alt="[field:title/] " src="[field:picname/]" /></a>
+                        <dt><a href="[field:arcurl /]">[field:title/]</a></dt>
+                        <dd>[field:description function="cn_substr(@me,100)"/]...</dd>
+                    </dl>
+                    {/dede:arclist}
+
+                    <ul class="list_2 clear">
+                        {dede:arclist typeid='3' orderby='pubdate' limit='1,8'}
+                        <li><span>[field:pubdate function="MyDate('Y-m-d',@me)"/]</span><a href="[field:arcurl /]">[field:title/]</a></li>
+                        {/dede:arclist}
+                    </ul>
+                    <!--/list_1-->
+                </div>
+                <!--/f_1-->
+
+            </div>
+            <!--/w_440-->
+
+            <div class="w_280 fl">
+                <div class="t_1">
+                    <h3>
+                        {dede:type typeid='4'}
+                        <a href="[field:typedir/]/">[field:typename/]</a>
+                        {/dede:type}
+                    </h3>
+                </div>
+                <!--/t_1-->
+                <div class="f_1 pa10">
+                    <ul class="list_1">
+                        {dede:arclist typeid='4' limit='0,13' orderby='pubdate'}
+                        <li><a href="[field:arcurl /]" target="_blank">[field:title/]</a></li>
+                        {/dede:arclist}
+                    </ul>
+                    <!--/list_1-->
+                </div>
+                <!--/f_1-->
+            </div>
+            <!--/w_280-->
+            <div class="w_440 fr">
+                <div class="t_1">
+                    <h3>
+                        {dede:type typeid='5'}
+                        <a href="[field:typedir/]/">[field:typename/]</a>
+                        {/dede:type}
+                    </h3>
+
+                </div>
+                <!--/t_1-->
+                <div class="f_1 pa10">
+                    {dede:arclist typeid='5' limit='0,1' orderby='pubdate'}
+                    <dl class="dl100">
+                        <a href="[field:arcurl /]"><img alt="[field:title/] " src="[field:picname/]" /></a>
+                        <dt><a href="[field:arcurl /]">[field:title/]</a></dt>
+                        <dd>[field:description function="cn_substr(@me,100)"/]...</dd>
+                    </dl>
+                    {/dede:arclist}
+
+                    <ul class="list_2 clear">
+                        {dede:arclist typeid='5' orderby='pubdate' limit='1,8'}
+                        <li>
+                            <a href="[field:typedir/]" class="url_1">[ [field:typename/] ] </a>
+                            <a href="[field:arcurl /]">[field:title/]</a>
+                        </li>
+                        {/dede:arclist}
+                    </ul>
+                    <!--/list_1-->
+                </div>
+                <!--/f_1-->
+
+            </div>
+            <!--/w_440-->
+
+            <div class="w_280 fl">
+                <div class="t_1">
+                    <h3>
+                        {dede:type typeid='6'}
+                        <a href="[field:typedir/]/">[field:typename/]</a>
+                        {/dede:type}
+                    </h3>
+                </div>
+                <!--/t_1-->
+                <div class="f_1 pa10">
+                    <ul class="list_1">
+                        {dede:arclist typeid='6' limit='0,13' orderby='pubdate'}
+                        <li><a href="[field:arcurl /]" target="_blank">[field:title/]</a></li>
+                        {/dede:arclist}
+                    </ul>
+                    <!--/list_1-->
+                </div>
+                <!--/f_1-->
+            </div>
+            <!--/w_280-->
+            <div class="w_440 fr">
+                <div class="t_1">
+                    <h3>
+                        {dede:type typeid='7'}
+                        <a href="[field:typedir/]/">[field:typename/]</a>
+                        {/dede:type}
+                    </h3>
+
+                </div>
+                <!--/t_1-->
+                <div class="f_1 pa10">
+                    {dede:arclist typeid='7' limit='0,1' orderby='pubdate'}
+                    <dl class="dl100">
+                        <a href="[field:arcurl /]"><img alt="[field:title/] " src="[field:picname/]" /></a>
+                        <dt><a href="[field:arcurl /]">[field:title/]</a></dt>
+                        <dd>[field:description function="cn_substr(@me,100)"/]...</dd>
+                    </dl>
+                    {/dede:arclist}
+
+                    <ul class="list_2 clear">
+                        {dede:arclist typeid='7' orderby='pubdate' limit='1,8'}
+                        <li>
+                            <a href="[field:typedir/]" class="url_1">[ [field:typename/] ] </a>
+                            <a href="[field:arcurl /]">[field:title/]</a>
+                        </li>
+                        {/dede:arclist}
+                    </ul>
+                    <!--/list_1-->
+                </div>
+                <!--/f_1-->
+
+            </div>
+            <!--/w_440-->
+
+            <div class="w_280 fl">
+                <div class="t_1">
+                    <h3>
+                        {dede:type typeid='8'}
+                        <a href="[field:typedir/]/">[field:typename/]</a>
+                        {/dede:type}
+                    </h3>
+                </div>
+                <!--/t_1-->
+                <div class="f_1 pa10">
+                    <ul class="list_1">
+                        {dede:arclist typeid='8' limit='0,13' orderby='pubdate'}
+                        <li><a href="[field:arcurl /]" target="_blank">[field:title/]</a></li>
+                        {/dede:arclist}
+                    </ul>
+                    <!--/list_1-->
+                </div>
+                <!--/f_1-->
+            </div>
+            <!--/w_280-->
+            <div class="w_440 fr">
+                <div class="t_1">
+                    <h3>
+                        {dede:type typeid='9'}
+                        <a href="[field:typedir/]/">[field:typename/]</a>
+                        {/dede:type}
+                    </h3>
+
+                </div>
+                <!--/t_1-->
+                <div class="f_1 pa10">
+                    {dede:arclist typeid='9' limit='0,1' orderby='pubdate'}
+                    <dl class="dl100">
+                        <a href="[field:arcurl /]"><img alt="[field:title/] " src="[field:picname/]" /></a>
+                        <dt><a href="[field:arcurl /]">[field:title/]</a></dt>
+                        <dd>[field:description function="cn_substr(@me,100)"/]...</dd>
+                    </dl>
+                    {/dede:arclist}
+
+                    <ul class="list_2 clear">
+                        {dede:arclist typeid='9' orderby='pubdate' limit='1,8'}
+                        <li>
+                            <a href="[field:typedir/]" class="url_1">[ [field:typename/] ] </a>
+                            <a href="[field:arcurl /]">[field:title/]</a>
+                        </li>
+                        {/dede:arclist}
+                    </ul>
+                    <!--/list_1-->
+                </div>
+                <!--/f_1-->
+
+            </div>
+            <!--/w_440-->
+        </div>
+        <!--/w_730-->
+        <div class="w_220 fr">
+
+            <div class="t_1">
+                <h3><a href="#">热门标签</a>
+                </h3>
+            </div>
+            <!--/t_1-->
+            <div class="f_1 tag-label">
+                <ul class="jigou">
+                    {dede:tag row='50' sort='total'}
+                    <li><a href="/tags/[field:tag /]/" class="tags[field:id runphp='yes']@me = rand(0,7);[/field:id] tagc[field:highlight /]">[field:tag /]</a></li>
+                    {/dede:tag}
+                    <div class="clear"></div>
+                </ul>
+                <div class="blank5"></div>
+            </div>
+            <!--/f_1-->
+            <div class="t_1">
+                {dede:type typeid='10'}
+                <h3><a href="[field:typedir/]/">[field:typename/]</a></h3>
+                {/dede:type}
+            </div>
+            <!--/t_1-->
+            <div class="f_1 pa10">
+
+                <ul class="list_1">
+                    {dede:arclist typeid='10' limit='0,13' orderby='pubdate'}
+                    <li><a href="[field:arcurl /]" target="_blank">[field:title/]</a></li>
+                    {/dede:arclist}
+                </ul>
+            </div>
+            <!--/f_1-->
+        </div>
+        <!--/w_220-->
+    </div>
+    <!--/box-->
+
+    {dede:include filename="footer.htm"/}
+    <!--/foot-->
+</body>
+
+</html>
