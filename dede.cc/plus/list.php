@@ -15,6 +15,26 @@ require_once(dirname(__FILE__)."/../include/common.inc.php");
 
 //$t1 = ExecTime();
 
+/**
+ * 新增(根据目录获取栏目id)
+ */
+$typedir = isset($typedir) ? '/'.trim($typedir,'/') : '';
+
+if($typedir == ''){
+    ShowMsg('Typedir Error!', '/404.html');
+    exit();
+}
+
+$typeInfo = $dsql->GetOne("SELECT id,typedir FROM `#@__arctype` where typedir = '$typedir' limit 1");
+if(!is_array($typeInfo)){
+    ShowMsg('No typedir in the column!', '/404.html');
+    exit();
+}
+$tid = $typeInfo['id'];
+/**
+ * 结束
+ */
+
 $tid = (isset($tid) && is_numeric($tid) ? $tid : 0);
 
 $channelid = (isset($channelid) && is_numeric($channelid) ? $channelid : 0);

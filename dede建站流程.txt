@@ -24,6 +24,53 @@ UPDATE dede_arcrank set adminrank=1 where membername='开放浏览';
      }
 
 6、创建栏目，生成对应伪静态规则，检查模板中url规则是否与伪静态对应
+  a、通用伪静态规则（前提修改好`plus`和`m`目录下的list.php文件，默认压缩包已改好）修改如下：
+     找到  $tid = (isset($tid) && is_numeric($tid) ? $tid : 0);
+     在上方添加一下代码
+
+/**
+ * 新增(根据目录获取栏目id)
+*/
+$typedir = isset($typedir) ? '/'.trim($typedir,'/') : '';
+
+if($typedir == ''){
+    ShowMsg('Typedir Error!', '/404.html');
+    exit();
+}
+
+$typeInfo = $dsql->GetOne("SELECT id,typedir FROM `#@__arctype` where typedir = '$typedir' limit 1");
+if(!is_array($typeInfo)){
+    ShowMsg('No typedir in the column!', '/404.html');
+    exit();
+}
+$tid = $typeInfo['id'];
+/**
+ * 结束
+*/
+
+   b、规则使用时只需修改内容页伪静态
+
+if ($host = 'm.huaihe163.com') {
+  rewrite ^/$ /m/index.php last;
+  rewrite ^/index.html$ /m/index.php last;
+  rewrite ^/index.php /m/index.php last;
+
+  rewrite "^/([A-Za-z0-9]+)/$" /m/list.php?typedir=$1 last;
+  rewrite "^/([A-Za-z0-9]+)$" /m/list.php?typedir=$1 last;
+  rewrite "^/([A-Za-z0-9]+)/list_([0-9]+)_([0-9]+).html$" /m/list.php?typedir=$1&PageNo=$3 last;
+  rewrite "^/([A-Za-z0-9]+)/([0-9]+)/([0-9]+)/([0-9]+).html$" /m/view.php?aid=$4 last;
+}
+
+rewrite ^/$ /index.php last;
+rewrite "^/index.html$" /index.php last;
+rewrite "^/sitemap.xml$" /sitemap.php last;
+rewrite "^/tags/(.+)" /tags.php?/$1 last;
+
+rewrite "^/([A-Za-z0-9]+)/$" /plus/list.php?typedir=$1 last;
+rewrite "^/([A-Za-z0-9]+)$" /plus/list.php?typedir=$1 last;
+rewrite "^/([A-Za-z0-9]+)/list_([0-9]+)_([0-9]+).html$" /plus/list.php?typedir=$1&PageNo=$3 last;
+rewrite "^/([A-Za-z0-9]+)/([0-9]+)/([0-9]+)/([0-9]+).html$" /plus/view.php?aid=$4 last;
+
 
 7、如果出现标题展示不完整，在/include/taglib/arclist.lib.php里
      找到  $titlelen = AttDef($titlelen,30);
@@ -33,7 +80,7 @@ UPDATE dede_arcrank set adminrank=1 where membername='开放浏览';
 下载站
 软件模型->添加新字段->版本(version)->varchar(15)
 
-url规则
+url规则示例
     1. {typedir}/{Y}/{M}{D}/{aid}.html  dede默认
     2. {typedir}/{Y}{M}{D}/{aid}.html
     3. {typedir}/{Y}_{M}{D}/{aid}.html
