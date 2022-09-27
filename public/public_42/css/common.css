@@ -1,0 +1,93 @@
+body,h1,h2,h3,h4,h5,h6,dl,dt,dd,ul,ol,li,th,td,p,blockquote,pre,fieldset,form,legend,input,button,textarea,hr{margin:0;padding:0}li{list-style:none}fieldset,img{border:0}q:before,q:after{content:''}abbr[title]{border-bottom:1px dotted;cursor:help}address,cite,dfn,em,var{font-style:normal}legend{color:#000}code,kbd,samp{font-family:"Courier New",monospace}hr{border:none;height:1px}body,button,input,select,textarea{font:12px/1.5 SimSun,Arial,Tahoma,Helvetica,san-serif}body{background:#cfebfa url(../img/bg.png) repeat-x;color:#414141}.clear{clear:both;font-size:0;height:0;line-height:0;visibility:hidden}.clearfix:after{clear:both;content:".";display:block;height:0;visibility:hidden}* html .clearfix{height:1%}a{color:#414141;text-decoration:none}a:hover{color:#f7941d;text-decoration:none}.fl{float:left}.fr{float:right}.mt{margin-top:8px}
+
+.header{margin:0 auto; width:1003px}
+.container,.footer{margin:0 auto;padding:10px; width:983px; background:#FFF}
+
+.header .top{height:197px; background:url(../img/top.jpg) no-repeat}
+/* .header .nav{ height:52px;background:url(../img/nav.png)} */
+.header .nav ul{
+    display: flex;
+}
+.header .nav ul li{
+        /* float:left; */
+     margin:0; 
+     display:inline; 
+     text-align:center;
+     /* border: 1px solid #666; */
+     box-sizing: border-box;
+     /* background-color: #1084d3; */
+    }
+.header .nav ul li a{display:block; height:52px;color:#fff; font-size:16px;line-height: 52px;}
+
+.header .logo{ height: 80px;}
+.header .logo img{ height: 100%;}
+
+.nav li.a1,.nav li.a1_current,.nav li.a1 a{width:88px}
+.nav li.a2,.nav li.a2_current,.nav li.a2 a{width:124px}
+.nav li.a3,.nav li.a3_current,.nav li.a3 a{width:124px}
+.nav li.a4,.nav li.a4_current,.nav li.a4 a{width:124px}
+.nav li.a5,.nav li.a5_current,.nav li.a5 a{width:124px}
+.nav li.a6,.nav li.a6_current,.nav li.a6 a{width:124px}
+.nav li.a7,.nav li.a7_current,.nav li.a7 a{width:124px}
+.nav li.a8,.nav li.a8_current,.nav li.a8 a{width:124px}
+.nav li.a9,.nav li.a9_current,.nav li.a9 a{width:124px}
+.nav li.a10,.nav li.a10_current,.nav li.a10 a{width:124px}
+
+/* .nav li.a1 a:hover,.nav li.a1_current a{background:url(../img/nav.png) no-repeat 0 -52px} */
+/* .nav li.a2 a:hover,.nav li.a2_current a{background:url(../img/nav.png) no-repeat -128px -52px} */
+/* .nav li.a3 a:hover,.nav li.a3_current a{background:url(../img/nav.png) no-repeat -252px -52px} */
+/* .nav li.a4 a:hover,.nav li.a4_current a{background:url(../img/nav.png) no-repeat -376px -52px} */
+/* .nav li.a5 a:hover,.nav li.a5_current a{background:url(../img/nav.png) no-repeat -500px -52px} */
+/* .nav li.a6 a:hover,.nav li.a6_current a{background:url(../img/nav.png) no-repeat -624px -52px} */
+/* .nav li.a7 a:hover,.nav li.a7_current a{background:url(../img/nav.png) no-repeat -748px -52px} */
+/* .nav li.a8 a:hover,.nav li.a8_current a{background:url(../img/nav.png) no-repeat -872px -52px} */
+/* .nav li.a9 a:hover,.nav li.a9_current a{background:url(../img/nav.png) no-repeat -795px -52px} */
+/* .nav li.a10 a:hover,.nav li.a10_current a{background:url(../img/nav.png) no-repeat -897px -52px} */
+/* .nav ul li a span{display:none} */
+.nav ul li a:hover{
+    color: #f7941d;
+}
+.nav ul{
+    background: #1956A7;
+}
+.nav_bottom{height:30px;background:url(../img/gray_bg.gif) repeat-x}
+.keyword{width:160px; height:18px;}
+.announcement{font-weight:700; color:#F00}
+
+/* 底部 */
+.footer{height:83px;background: #d4eaf8 url(../img/footer_bg.png) repeat-x; color:#999999}
+.footer .copyright {padding:15px 0 10px; color:#000; text-align:center}
+.webdesigner,.webdesigner a {color:#666}
+.webdesigner a:hover{color:#f00}
+.slides_box{
+    position: relative;
+}
+.slides_box img{
+    width: 100%;
+    height: 219px;
+}
+
+.slides_nav {
+    text-align: center;
+    position: absolute;
+    right: 20px;
+    bottom: 40px;
+    z-index: 99999;
+}
+
+.slides_nav li {
+    cursor: pointer;
+    padding: 3px 4px;
+    color: #ffffff;
+    background-color: #ccc;
+    margin: 1px;
+    display: inline;
+    font-weight: bold;
+    font-size: 12px;
+    border-radius: 3px 3px 3px 3px;
+}
+
+.slides_nav .current {
+    background-color: #0099ff;
+    color: #ffffff;
+}

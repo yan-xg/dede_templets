@@ -1,0 +1,145 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>{dede:global.cfg_webname/}</title>
+    <meta name="description" content="{dede:global.cfg_description/}" />
+    <meta name="keywords" content="{dede:global.cfg_keywords/}" />
+    <script>var webroot = "/";</script>
+    <link href="{dede:global.cfg_cmspath/}/public/css/common.css" rel="stylesheet" type="text/css">
+    <link href="{dede:global.cfg_cmspath/}/public/css/index.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="{dede:global.cfg_cmspath/}/public/css/tags_style.css" type="text/css" />
+    <script type="text/javascript" src="{dede:global.cfg_cmspath/}/public/js/jquery.min.js"></script>
+    <script type="text/javascript" src="{dede:global.cfg_cmspath/}/public/js/common.js"></script>
+    <script type="text/javascript" src="{dede:global.cfg_cmspath/}/public/js/jquery.featureList-1.0.0.js"></script>
+</head>
+
+<body>
+{dede:include filename="header.htm"/}
+
+    <div class="container">
+        <div class="mod01">
+            <div class="slides_box">
+                {dede:arclist flag='f' typeid='top' row='5' orderby='pubdate'}
+                <div>
+                    <a href="[field:arcurl /]" title="[field:title/]">
+                        <img src="[field:picname/]" alt="[field:title/]" />
+                    </a>
+                </div>
+                {/dede:arclist}
+                <ul class="slides_nav">
+                    {dede:arclist flag='f' typeid='top' row='5' orderby='pubdate'}
+                    <li>[field:global name=autoindex runphp="yes"]@me=@me+0;[/field:global]</li>
+                    {/dede:arclist}
+                </ul>
+                <!--slides_nav end-->
+            </div>
+        </div>
+
+        <div class="mod02">
+            <div class="hd">
+                <ul class="tab">
+                    <li><a id="aa_btn_0" href="#" onmouseover="tabit(this, 2)" class="postion">最新资讯</a></li>
+                    <li><a id="aa_btn_1" href="#" onmouseover="tabit(this, 2)">热门资讯</a></li>
+                </ul>
+            </div>
+            <div class="bd">
+                <div class="block_03" id="aa_div_0" style="display: block;">
+                    <ul class="list">
+                        {dede:arclist typeid='top' orderby='pubdate' row=6}
+                        <li>
+                            <span>[field:pubdate function="MyDate('Y-m-d',@me)"/]</span>
+                            <a href="[field:arcurl /]" title="[field:title/]">[field:title/]</a>
+                        </li>
+                        {/dede:arclist}
+                    </ul>
+                </div>
+                <div class="block_03" id="aa_div_1" style="display: none;">
+                    <ul class="list">
+                        {dede:arclist typeid='top' orderby='click' limit='0,6'}
+                        <li>
+                            <span>[field:pubdate function="MyDate('Y-m-d',@me)"/]</span>
+                            <a href="[field:arcurl /]" title="[field:title/]">[field:title/]</a>
+                        </li>
+                        {/dede:arclist}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+
+        <div style="float:left; width:763px; margin-top: 12px;">
+            {dede:channelartlist typeid='top'}
+            <div class="mod03 {dede:global name=itemindex runphp='yes'}if(@me%2==0) @me=fr; else @me=fl;{/dede:global}">
+                <div class="hd"><span><a href="{dede:field name='typedir'/}/">更多&gt;&gt;</a></span>
+                    <h2>{dede:field name='typename'/}</h2>
+                </div>
+                <div class="bd">
+                    {dede:arclist orderby='pubdate' limit='0,1'}
+                    <div class="icon">
+                        <a href="[field:arcurl/]" title="[field:title/]">
+                            <img src="[field:picname/]" width="96" height="96" alt="[field:title/]">
+                        </a>
+                    </div>
+                    {/dede:arclist}
+                    <ul class="list">
+                        {dede:arclist orderby='pubdate' limit='1,5'}
+                        <li><a href="[field:arcurl/]" title="[field:title/]">[field:title/]</a></li>
+                        {/dede:arclist}
+                    </ul>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            {/dede:channelartlist}
+            <div class="clear"></div>
+        </div>
+
+        <div style="float:right; width:210px;margin-top: 20px;">
+            <div class="mod04">
+                <div class="hd">
+                    <h2>热门标签</h2>
+                </div>
+                <div class="bd tag-label">
+                    <ul class="list">
+                        {dede:tag row='40' sort='total'}
+                        <li><a href="/tags/[field:tag /]/" class="tags[field:id runphp='yes']@me = rand(0,7);[/field:id] tagc[field:highlight /]">[field:tag /]</a></li>
+                        {/dede:tag}
+                    </ul>
+                </div>
+            </div>
+            <div class="mod05">
+                <div class="hd">
+                    <h2>图文资讯</h2>
+                </div>
+                <div class="bd">
+                    <ul class="list">
+                        {dede:arclist flag='p' typeid='top' orderby='pubdate' row=15}
+                        <li><a href="[field:arcurl/]" title="[field:title/]">[field:title/]</a></li>
+                        {/dede:arclist}
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div class="friendLinks">
+            <div class="hd">
+                <ul>
+                    <li><a href="javascript:void(0);" id="menu1_3" class="normal">友情链接</a></li>
+                </ul>
+            </div>
+            <div class="bd">
+                <div id="tab1_3">
+                    {dede:flink titlelen='20' row='20' type='text'}
+                    [field:link /]
+                    {/dede:flink}
+                </div>
+            </div>
+        </div>
+    </div>
+{dede:include filename="footer.htm"/}
+</body>
+
+</html>
