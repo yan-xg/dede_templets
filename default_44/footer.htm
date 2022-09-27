@@ -1,0 +1,26 @@
+<div class="footer">
+  <div class="cont">
+    <div class="f_tit">
+      <h6>友情链接</h6>
+    </div>
+    <div class="ft_cont">
+      {dede:flink titlelen='20' row='20' type='text'}
+      [field:link /]
+      {/dede:flink}
+    </div>
+    <div class="fb_cont">
+      <span>本站涵盖的内容、图片、视频等模板演示数据，部分未能与原作者取得联系。若涉及版权问题，请及时通知我们并提供相关证明材料，我们将及时予以删除！谢谢大家的理解与支持！ </span><br/>
+      <span> Copyright &copy; 2015-{dede:php runphp='yes'} $ntime = time(); @me=MyDate('Y',$ntime); {/dede:php} <a href="http://beian.miit.gov.cn" target="_blank" rel="nofollow">{dede:global.cfg_beian/}</a> &nbsp;联系方式：{dede:global.cfg_lianxi/}</span>
+    </div>
+  </div>
+</div>
+<script src="{dede:global.cfg_cmspath/}/public/js/jquery-1.11.0.min.js"></script>
+<script src="{dede:global.cfg_cmspath/}/public/js/jquery.lazyload.min.js"></script>
+<script src="{dede:global.cfg_cmspath/}/public/js/swiper-4.3.3.min.js"></script>
+<script src="{dede:global.cfg_cmspath/}/public/js/index.js"></script>
+<script>
+  $(function () {
+    $("img.lazy").lazyload({ effect: "fadeIn" });
+    $(".ls_cr img.lazy").lazyload({ effect: "fadeIn" });
+  });
+</script>

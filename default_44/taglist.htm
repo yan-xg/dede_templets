@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+    <meta name="keywords" content="{dede:field name='keywords'/}" />
+    <meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <link rel="stylesheet" href="{dede:global.cfg_cmspath/}/public/css/reset.css">
+    <link rel="stylesheet" href="{dede:global.cfg_cmspath/}/public/css/common.css">
+    <link rel="stylesheet" href="{dede:global.cfg_cmspath/}/public/css/style.css">
+    <link rel="stylesheet" href="{dede:global.cfg_cmspath/}/public/css/swiper-4.3.3.min.css">
+    <link rel="stylesheet" href="{dede:global.cfg_cmspath/}/public/css/index.css">
+    <script src="{dede:global.cfg_cmspath/}/public/js/jquery-1.11.0.min.js"></script>
+    <style>
+        .pages ul li{display:inline;}
+    </style>
+</head>
+
+<body>
+{dede:include filename="header.htm"/}
+
+    <div class="ls_main">
+        <div class="breadcrumbs"> <i>当前位置：</i><a href="/">首页</a> &gt; <a href='#'>TAG标签</a> &gt; {dede:field.title /}</div>
+        <div class="ls_cont clearfix">
+            <div class="ls_cl">
+
+                <div class="ls_zx_wz">
+                    <div class="ls_cnt_tit">
+                        <h5>{dede:field.title/}</h5>
+                    </div>
+                    <ul>
+                        {dede:list pagesize ='10'}
+                        <li class="clearfix">
+                            <a class="lzw_img" href="[field:arcurl/]"><img class="lazy" src="[field:picname/]" data-original="[field:picname/]" title="[field:title/]"> </a>
+                            <div class="lzw_cont">
+                                <h6><a href="[field:arcurl/]">[field:title/]</a></h6>
+                                <p>[field:description/]...</p>
+                            </div>
+                        </li>
+                        {/dede:list}
+                    </ul>
+                </div>
+                <div class="pages">
+                    <ul>
+                        {dede:pagelist listitem="index,end,pre,next,pageno" listsize="5"/}
+                    </ul>
+                </div>
+            </div>
+            <div class="ls_cr">
+                <div class="ls_qt_zt">
+                    <div class="ls_cnt_tit">
+                        <h5>最新文章</h5>
+                    </div>
+                    <ul>
+                        {dede:arclist typeid='top' orderby='pubdate' row=10}
+                        <li> <a class="lqz_img" href="[field:arcurl /]">
+                            <img class="lazy" src="[field:picname/]" data-original="[field:picname/]"> </a>
+                            <a class="lqz_txt" href="[field:arcurl /]">[field:title /]</a>
+                        </li>
+                        {/dede:arclist}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--footer-->
+{dede:include filename="footer.htm"/}
+</body>
+</html>

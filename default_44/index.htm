@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>{dede:global.cfg_webname/}</title>
+    <meta name="description" content="{dede:global.cfg_description/}" />
+    <meta name="keywords" content="{dede:global.cfg_keywords/}" />
+    <link rel="stylesheet" href="{dede:global.cfg_cmspath/}/public/css/reset.css">
+    <link rel="stylesheet" href="{dede:global.cfg_cmspath/}/public/css/common.css">
+    <link rel="stylesheet" href="{dede:global.cfg_cmspath/}/public/css/style.css">
+    <link rel="stylesheet" href="{dede:global.cfg_cmspath/}/public/css/swiper-4.3.3.min.css">
+    <link rel="stylesheet" href="{dede:global.cfg_cmspath/}/public/css/index.css">
+    <link rel="stylesheet" href="{dede:global.cfg_cmspath/}/public/css/tags_style.css">
+    <script src="{dede:global.cfg_cmspath/}/public/js/jquery-1.11.0.min.js"></script>
+</head>
+<body>
+{dede:include filename="header.htm"/}
+
+    <div class="index_main">
+        <div class="ls_zt"></div>
+        <!--最新资讯-->
+        <div class="zx_zx">
+            {dede:arclist flag='f' typeid='top' row='1' orderby='pubdate'}
+            <div class="zz_l">
+                <a href="[field:arcurl /]"> <img src="[field:picname/]" title="[field:title/]">
+                    <p>[field:title/]</p>
+                </a>
+            </div>
+            {/dede:arclist}
+            <div class="zz_c">
+                <dl>
+                    <dt> <em></em>
+                        <p>最新资讯</p>
+                        <em></em>
+                    </dt>
+                    {dede:arclist typeid='top' orderby='pubdate' row=10}
+                    <dd><a href="[field:arcurl /]">[field:title/]</a></dd>
+                    {/dede:arclist}
+                </dl>
+            </div>
+            <div class="zz_r tag-label">
+                <div class="ls_tit">
+                    <h4>热门标签</h4>
+                </div>
+                <ul>
+                    {dede:tag row='38' sort='total'}
+                    <li><a href="/tags/[field:tag /]/" class="tags[field:id runphp='yes']@me = rand(0,7);[/field:id] tagc[field:highlight /]">[field:tag /]</a></li>
+                    {/dede:tag}
+                </ul>
+            </div>
+        </div>
+
+        <div class="ils_cont">
+            <div class="ils_tit">
+                <h3></h3>
+            </div>
+            <div class="ils_top">
+                <div class="ils_tl">
+                    <div class="swiper-container" id="swiper-container1">
+                        <div class="swiper-wrapper">
+                            {dede:arclist typeid='1' flag='p' row='5' orderby='pubdate'}
+                            <div class="swiper-slide">
+                                <a href="[field:arcurl /]" title="[field:title/]">
+                                    <img src="[field:picname/]"> <span>[field:title/]</span>
+                                </a>
+                            </div>
+                            {/dede:arclist}
+                        </div>
+                        <!-- Add Arrows -->
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+                <div class="ils_tc">
+                    <div class="ls_tit">
+                        {dede:type typeid='1'}
+                        <h4>最新[field:typename/]资讯</h4>
+                        {/dede:type}
+                    </div>
+                    <ul>
+                        {dede:arclist typeid='1' limit='0,8' orderby='pubdate'}
+                        <li><a href="[field:arcurl /]" title="[field:title/]">[field:title/]</a></li>
+                        {/dede:arclist}
+                    </ul>
+                </div>
+                <div class="ils_tc">
+                    <div class="ls_tit">
+                        {dede:type typeid='1'}
+                        <h4>热门[field:typename/]资讯</h4>
+                        {/dede:type}
+                    </div>
+                    <ul>
+                        {dede:arclist typeid='1' limit='0,8' orderby='click'}
+                        <li><a href="[field:arcurl /]" title="[field:title/]">[field:title/]</a></li>
+                        {/dede:arclist}
+                    </ul>
+                </div>
+            </div>
+
+            <div class="ils_center">
+                <div class="ls_tit">
+                    {dede:type typeid='2'}
+                    <h4>最新[field:typename/]资讯</h4>
+                    {/dede:type}
+                </div>
+                <ul>
+                    {dede:arclist typeid='2' flag='p' row='4' orderby='pubdate'}
+                    <li> <a href="[field:arcurl /]" title="[field:title/]">
+                        <img class="lazy" src="[field:picname/]" data-original="[field:picname/]" title="[field:title/]"></a>
+                    </li>
+                    {/dede:arclist}
+
+                </ul>
+            </div>
+            <div class="ils_bottom">
+                <ul>
+                    {dede:arclist typeid='2' row='24' orderby='pubdate'}
+                    <li> <a href="[field:arcurl /]" title="[field:title/]">[field:title/]</a> </li>
+                    {/dede:arclist}
+                </ul>
+            </div>
+        </div>
+        <div class="ils_cont">
+            <div class="ils_tit">
+                <h3></h3>
+            </div>
+            <div class="ils_top">
+                <div class="ils_tl">
+                    <div class="swiper-container" id="swiper-container1">
+                        <div class="swiper-wrapper">
+                            {dede:arclist typeid='3' flag='p' row='5' orderby='pubdate'}
+                            <div class="swiper-slide">
+                                <a href="[field:arcurl /]" title="[field:title/]">
+                                    <img src="[field:picname/]"> <span>[field:title/]</span>
+                                </a>
+                            </div>
+                            {/dede:arclist}
+                        </div>
+                        <!-- Add Arrows -->
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+                <div class="ils_tc">
+                    <div class="ls_tit">
+                        {dede:type typeid='3'}
+                        <h4>最新[field:typename/]资讯</h4>
+                        {/dede:type}
+                    </div>
+                    <ul>
+                        {dede:arclist typeid='3' limit='0,8' orderby='pubdate'}
+                        <li><a href="[field:arcurl /]" title="[field:title/]">[field:title/]</a></li>
+                        {/dede:arclist}
+                    </ul>
+                </div>
+                <div class="ils_tc">
+                    <div class="ls_tit">
+                        {dede:type typeid='3'}
+                        <h4>热门[field:typename/]资讯</h4>
+                        {/dede:type}
+                    </div>
+                    <ul>
+                        {dede:arclist typeid='3' limit='0,8' orderby='click'}
+                        <li><a href="[field:arcurl /]" title="[field:title/]">[field:title/]</a></li>
+                        {/dede:arclist}
+                    </ul>
+                </div>
+            </div>
+
+            <div class="ils_center">
+                <div class="ls_tit">
+                    {dede:type typeid='4'}
+                    <h4>最新[field:typename/]资讯</h4>
+                    {/dede:type}
+                </div>
+                <ul>
+                    {dede:arclist typeid='4' flag='p' row='4' orderby='pubdate'}
+                    <li> <a href="[field:arcurl /]" title="[field:title/]">
+                        <img class="lazy" src="[field:picname/]" data-original="[field:picname/]" title="[field:title/]"></a>
+                    </li>
+                    {/dede:arclist}
+
+                </ul>
+            </div>
+            <div class="ils_bottom">
+                <ul>
+                    {dede:arclist typeid='2' row='24' orderby='pubdate'}
+                    <li> <a href="[field:arcurl /]" title="[field:title/]">[field:title/]</a> </li>
+                    {/dede:arclist}
+                </ul>
+            </div>
+        </div>
+        <div class="ils_cont">
+            <div class="ils_tit">
+                <h3></h3>
+            </div>
+            <div class="ils_top">
+                <div class="ils_tl">
+                    <div class="swiper-container" id="swiper-container1">
+                        <div class="swiper-wrapper">
+                            {dede:arclist typeid='5' flag='p' row='5' orderby='pubdate'}
+                            <div class="swiper-slide">
+                                <a href="[field:arcurl /]" title="[field:title/]">
+                                    <img src="[field:picname/]"> <span>[field:title/]</span>
+                                </a>
+                            </div>
+                            {/dede:arclist}
+                        </div>
+                        <!-- Add Arrows -->
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+                <div class="ils_tc">
+                    <div class="ls_tit">
+                        {dede:type typeid='5'}
+                        <h4>最新[field:typename/]资讯</h4>
+                        {/dede:type}
+                    </div>
+                    <ul>
+                        {dede:arclist typeid='5' limit='0,8' orderby='pubdate'}
+                        <li><a href="[field:arcurl /]" title="[field:title/]">[field:title/]</a></li>
+                        {/dede:arclist}
+                    </ul>
+                </div>
+                <div class="ils_tc">
+                    <div class="ls_tit">
+                        {dede:type typeid='5'}
+                        <h4>热门[field:typename/]资讯</h4>
+                        {/dede:type}
+                    </div>
+                    <ul>
+                        {dede:arclist typeid='5' limit='0,8' orderby='click'}
+                        <li><a href="[field:arcurl /]" title="[field:title/]">[field:title/]</a></li>
+                        {/dede:arclist}
+                    </ul>
+                </div>
+            </div>
+
+            <div class="ils_center">
+                <div class="ls_tit">
+                    {dede:type typeid='6'}
+                    <h4>最新[field:typename/]资讯</h4>
+                    {/dede:type}
+                </div>
+                <ul>
+                    {dede:arclist typeid='6' flag='p' row='4' orderby='pubdate'}
+                    <li> <a href="[field:arcurl /]" title="[field:title/]">
+                        <img class="lazy" src="[field:picname/]" data-original="[field:picname/]" title="[field:title/]"></a>
+                    </li>
+                    {/dede:arclist}
+
+                </ul>
+            </div>
+            <div class="ils_bottom">
+                <ul>
+                    {dede:arclist typeid='6' row='24' orderby='pubdate'}
+                    <li> <a href="[field:arcurl /]" title="[field:title/]">[field:title/]</a> </li>
+                    {/dede:arclist}
+                </ul>
+            </div>
+        </div>
+        <div class="ils_cont">
+            <div class="ils_tit">
+                <h3></h3>
+            </div>
+            <div class="ils_top">
+                <div class="ils_tl">
+                    <div class="swiper-container" id="swiper-container1">
+                        <div class="swiper-wrapper">
+                            {dede:arclist typeid='7' flag='p' row='5' orderby='pubdate'}
+                            <div class="swiper-slide">
+                                <a href="[field:arcurl /]" title="[field:title/]">
+                                    <img src="[field:picname/]"> <span>[field:title/]</span>
+                                </a>
+                            </div>
+                            {/dede:arclist}
+                        </div>
+                        <!-- Add Arrows -->
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+                <div class="ils_tc">
+                    <div class="ls_tit">
+                        {dede:type typeid='7'}
+                        <h4>最新[field:typename/]资讯</h4>
+                        {/dede:type}
+                    </div>
+                    <ul>
+                        {dede:arclist typeid='7' limit='0,8' orderby='pubdate'}
+                        <li><a href="[field:arcurl /]" title="[field:title/]">[field:title/]</a></li>
+                        {/dede:arclist}
+                    </ul>
+                </div>
+                <div class="ils_tc">
+                    <div class="ls_tit">
+                        {dede:type typeid='7'}
+                        <h4>热门[field:typename/]资讯</h4>
+                        {/dede:type}
+                    </div>
+                    <ul>
+                        {dede:arclist typeid='7' limit='0,8' orderby='click'}
+                        <li><a href="[field:arcurl /]" title="[field:title/]">[field:title/]</a></li>
+                        {/dede:arclist}
+                    </ul>
+                </div>
+            </div>
+
+            <div class="ils_center">
+                <div class="ls_tit">
+                    {dede:type typeid='8'}
+                    <h4>最新[field:typename/]资讯</h4>
+                    {/dede:type}
+                </div>
+                <ul>
+                    {dede:arclist typeid='8' flag='p' row='4' orderby='pubdate'}
+                    <li> <a href="[field:arcurl /]" title="[field:title/]">
+                        <img class="lazy" src="[field:picname/]" data-original="[field:picname/]" title="[field:title/]"></a>
+                    </li>
+                    {/dede:arclist}
+
+                </ul>
+            </div>
+            <div class="ils_bottom">
+                <ul>
+                    {dede:arclist typeid='8' row='24' orderby='pubdate'}
+                    <li> <a href="[field:arcurl /]" title="[field:title/]">[field:title/]</a> </li>
+                    {/dede:arclist}
+                </ul>
+            </div>
+        </div>
+        <div class="ils_cont">
+            <div class="ils_tit">
+                <h3></h3>
+            </div>
+            <div class="ils_top">
+                <div class="ils_tl">
+                    <div class="swiper-container" id="swiper-container1">
+                        <div class="swiper-wrapper">
+                            {dede:arclist typeid='9' flag='p' row='5' orderby='pubdate'}
+                            <div class="swiper-slide">
+                                <a href="[field:arcurl /]" title="[field:title/]">
+                                    <img src="[field:picname/]"> <span>[field:title/]</span>
+                                </a>
+                            </div>
+                            {/dede:arclist}
+                        </div>
+                        <!-- Add Arrows -->
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+                <div class="ils_tc">
+                    <div class="ls_tit">
+                        {dede:type typeid='9'}
+                        <h4>最新[field:typename/]资讯</h4>
+                        {/dede:type}
+                    </div>
+                    <ul>
+                        {dede:arclist typeid='9' limit='0,8' orderby='pubdate'}
+                        <li><a href="[field:arcurl /]" title="[field:title/]">[field:title/]</a></li>
+                        {/dede:arclist}
+                    </ul>
+                </div>
+                <div class="ils_tc">
+                    <div class="ls_tit">
+                        {dede:type typeid='9'}
+                        <h4>热门[field:typename/]资讯</h4>
+                        {/dede:type}
+                    </div>
+                    <ul>
+                        {dede:arclist typeid='9' limit='0,8' orderby='click'}
+                        <li><a href="[field:arcurl /]" title="[field:title/]">[field:title/]</a></li>
+                        {/dede:arclist}
+                    </ul>
+                </div>
+            </div>
+
+            <div class="ils_center">
+                <div class="ls_tit">
+                    {dede:type typeid='10'}
+                    <h4>最新[field:typename/]资讯</h4>
+                    {/dede:type}
+                </div>
+                <ul>
+                    {dede:arclist typeid='10' flag='p' row='4' orderby='pubdate'}
+                    <li> <a href="[field:arcurl /]" title="[field:title/]">
+                        <img class="lazy" src="[field:picname/]" data-original="[field:picname/]" title="[field:title/]"></a>
+                    </li>
+                    {/dede:arclist}
+
+                </ul>
+            </div>
+            <div class="ils_bottom">
+                <ul>
+                    {dede:arclist typeid='8' row='24' orderby='pubdate'}
+                    <li> <a href="[field:arcurl /]" title="[field:title/]">[field:title/]</a> </li>
+                    {/dede:arclist}
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+<!--footer-->
+{dede:include filename="footer.htm"/}
+</body>
+</html>
