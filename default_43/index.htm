@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
+	<meta name="renderer" content="webkit">
+	<!--国产浏览器高速模式-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>{dede:global.cfg_webname/}</title>
+	<meta name="description" content="{dede:global.cfg_description/}" />
+	<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+	<!-- 基础样式文件 开始 -->
+	<link href="{dede:global.cfg_cmspath/}/public/css/bootstrap.css" rel="stylesheet" type="text/css">
+	<link href="{dede:global.cfg_cmspath/}/public/css/base.css" rel="stylesheet" type="text/css">
+	<link href="{dede:global.cfg_cmspath/}/public/css/index.css" rel="stylesheet" type="text/css">
+	<link href="{dede:global.cfg_cmspath/}/public/css/tags_style.css" rel="stylesheet" type="text/css">
+	<!-- 基础样式文件结束 -->
+	<!-- 基础JS文件 开始 -->
+	<script type="text/javascript" src="{dede:global.cfg_cmspath/}/public/js/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="{dede:global.cfg_cmspath/}/public/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="{dede:global.cfg_cmspath/}/public/js/base.js"></script>
+	<script type="text/javascript" src="{dede:global.cfg_cmspath/}/public/js/index.js"></script>
+	<!-- 轮播图 开始 -->
+	<script type="text/javascript" src="{dede:global.cfg_cmspath/}/public/js/lb_jcfc.js"></script>
+	<link href="{dede:global.cfg_cmspath/}/public/css/lbt1.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="{dede:global.cfg_cmspath/}/public/js/lbt1.js"></script>
+	<!-- 基础JS文件 结束 -->
+</head>
+<body>
+
+<!-- main 开始 -->
+<div class="main">
+	<div class="main_box">
+		{dede:include filename="header.htm"/}
+
+		<!-- 新闻 开始 -->
+		<div class="news">
+			<div class="news_box1">
+				<div class="news_lb">
+					<div id="playBox">
+						<div class="pre"></div>
+						<div class="next"></div>
+						<div class="smalltitle">
+							<ul>
+								{dede:arclist flag='f' typeid='top' row='5' orderby='pubdate'}
+								<li class="[field:global name=autoindex runphp="yes"]if(@me==1) @me=thistitle; [/field:global]"></li>
+								{/dede:arclist}
+							</ul>
+						</div>
+						<ul class="oUlplay">
+							{dede:arclist flag='f' typeid='top' row='5' orderby='pubdate'}
+							<li><a href="[field:arcurl /]" target="_blank"><img src="[field:picname/]" ><p>[field:title/]</p></a></li>
+							{/dede:arclist}
+						</ul>
+					</div>
+				</div>
+				<div class="news_tzgg">
+					<div class="news_tzgg_title">
+						<font>热门资讯</font><span>
+					</div>
+					<div class="news_tzgg_content">
+						<ul>
+							{dede:arclist typeid='top' orderby='click' limit='0,7'}
+							<li>
+								<a href="[field:arcurl /]"><img src="/public/img/news_list_ico.png">[field:title/]</a><span>[field:pubdate function="MyDate('Y-m-d',@me)"/]</span>
+							</li>
+							{/dede:arclist}
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="news_box2">
+				<div class="news_jfxw">
+					<div class="news_jfxw_title">
+						<font>最新资讯</font><span>
+					</div>
+					<div class="news_jfxw_content">
+						{dede:arclist typeid='top' orderby='pubdate' row=1}
+						<div class="focus">
+							<p class="title">[field:title/]</p>
+							<p class="con">[field:description function="cn_substr(@me,100)"/]...<a href="[field:arcurl /]">[详细]</a></p>
+						</div>
+						{/dede:arclist}
+
+						<ul>
+							{dede:arclist typeid='top' orderby='pubdate' limit='1,14'}
+							<li>
+								<a href="[field:arcurl /]"><img src="/public/img/news_list_ico.png">[field:title/]</a><span>[field:pubdate function="MyDate('m-d',@me)"/]</span>
+							</li>
+							{/dede:arclist}
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="news_box3">
+				<div class="news_gwzx">
+					<div class="news_gwzx_title">
+						热门标签
+					</div>
+					<div class="news_gwzx_content tag-label">
+						<ul>
+							{dede:tag row='45' sort='total'}
+							<li><a href="/tags/[field:tag /]/" class="tags[field:id runphp='yes']@me = rand(0,7);[/field:id] tagc[field:highlight /]">[field:tag /]</a></li>
+							{/dede:tag}
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 新闻 结束 -->
+
+		<div class="words11">
+			{dede:channelartlist typeid='1,2,3'}
+			<div class="words11_zzgz_xfgz" style="{dede:global.itemindex runphp='yes'}if(@me > 1){@me = 'margin-left: 15px;';}else{@me = '';}{/dede:global.itemindex}">
+				<div class="words11_zzgz_xfgz_title">
+					<font style="border-bottom: 2px solid #0e5298;">{dede:field name='typename'/}</font>
+					<span><a href="{dede:field name='typedir'/}/">更多</a></span>
+				</div>
+				<div class="words11_zzgz_xfgz_content">
+					<div class="box">
+						{dede:arclist limit='0,1' orderby='pubdate'}
+						<div class="focus">
+							<a href="[field:arcurl /]" title="[field:title/]"><img src="[field:picname/]"></a>
+							<a href="[field:arcurl /]" title="[field:title/]">[field:title/]</a>
+						</div>
+						{/dede:arclist}
+						<ul>
+							{dede:arclist limit='1,5' orderby='pubdate'}
+							<li>
+								<a href="[field:arcurl /]" title="[field:title/]"><img src="/public/img/words11_list_ico.png">[field:title/]</a><span>[field:pubdate function="MyDate('m-d',@me)"/]</span>
+							</li>
+							{/dede:arclist}
+						</ul>
+					</div>
+				</div>
+			</div>
+			{/dede:channelartlist}
+		</div>
+
+		<div class="ad_other">
+			<div class="ad_other_box2" style="margin-left: 15px;">
+				<div class="ad_other_mjsh_tw">
+					<div class="ad_other_mjsh_tw_title">
+						{dede:type typeid='4'}
+						<font style="border-bottom: 2px solid #0e5298;">[field:typename/]</font><span><a href="[field:typeurl/]">更多</a></span>
+						{/dede:type}
+					</div>
+					<div class="ad_other_mjsh_tw_content">
+						{dede:arclist typeid='4' limit='0,1' orderby='pubdate'}
+						<a class="mjsh_tw_img" href="[field:arcurl /]"><img src="[field:picname/]"></a>
+						<div>
+							<a href="[field:arcurl /]"><p class="title">[field:title/]</p></a>
+							<p class="con">[field:description function="cn_substr(@me,150)"/]...</p>
+						</div>
+						{/dede:arclist}
+						<ul>
+							{dede:arclist typeid='4' limit='1,5' orderby='pubdate'}
+							<li>
+								<a href="[field:arcurl /]" title="[field:title/]"><img src="/public/img/words11_list_ico.png">[field:title/]</a><span>[field:pubdate function="MyDate('m-d',@me)"/]</span>
+							</li>
+							{/dede:arclist}
+						</ul>
+					</div>
+				</div>
+				<div class="ad_other_mjsh">
+					<div class="ad_other_mjsh_title">
+						{dede:type typeid='6'}
+						<font style="border-bottom: 2px solid #0e5298;">[field:typename/]</font><span><a href="[field:typeurl/]">更多</a></span>
+						{/dede:type}
+					</div>
+					<div class="ad_other_mjsh_content">
+						<div class="box">
+							<ul>
+								{dede:arclist typeid='6' limit='0,6' orderby='pubdate'}
+								<li>
+									<a href="[field:arcurl /]" title="[field:title/]"><img src="/public/img/words11_list_ico.png">[field:title/]</a><span>[field:pubdate function="MyDate('m-d',@me)"/]</span>
+								</li>
+								{/dede:arclist}
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="ad_other_box2" style="margin-left: 15px; float: right;">
+				<div class="ad_other_mjsh_tw">
+					<div class="ad_other_mjsh_tw_title">
+						{dede:type typeid='5'}
+						<font style="border-bottom: 2px solid #0e5298;">[field:typename/]</font><span><a href="[field:typeurl/]">更多</a></span>
+						{/dede:type}
+					</div>
+					<div class="ad_other_mjsh_tw_content">
+						{dede:arclist typeid='5' limit='0,1' orderby='pubdate'}
+						<a class="mjsh_tw_img" href="[field:arcurl /]"><img src="[field:picname/]"></a>
+						<div>
+							<a href="[field:arcurl /]"><p class="title">[field:title/]</p></a>
+							<p class="con">[field:description function="cn_substr(@me,150)"/]...</p>
+						</div>
+						{/dede:arclist}
+						<ul>
+							{dede:arclist typeid='5' limit='1,5' orderby='pubdate'}
+							<li>
+								<a href="[field:arcurl /]" title="[field:title/]"><img src="/public/img/words11_list_ico.png">[field:title/]</a><span>[field:pubdate function="MyDate('m-d',@me)"/]</span>
+							</li>
+							{/dede:arclist}
+						</ul>
+					</div>
+				</div>
+				<div class="ad_other_mjsh">
+					<div class="ad_other_mjsh_title">
+						{dede:type typeid='7'}
+						<font style="border-bottom: 2px solid #0e5298;">[field:typename/]</font><span><a href="[field:typeurl/]">更多</a></span>
+						{/dede:type}
+					</div>
+					<div class="ad_other_mjsh_content">
+						<div class="box">
+							<ul>
+								{dede:arclist typeid='7' limit='0,6' orderby='pubdate'}
+								<li>
+									<a href="[field:arcurl /]" title="[field:title/]"><img src="/public/img/words11_list_ico.png">[field:title/]</a><span>[field:pubdate function="MyDate('m-d',@me)"/]</span>
+								</li>
+								{/dede:arclist}
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="ad_other" id="ad_other2">
+			{dede:channelartlist typeid='8,9,10'}
+			<div class="ad_other_mjsh" style="float: left; width: 320px; {dede:global.itemindex runphp='yes'}if(@me > 1){@me = 'margin-left: 15px;';}else{@me = '';}{/dede:global.itemindex}">
+				<div class="ad_other_mjsh_title">
+					<font style="border-bottom: 2px solid #0e5298;">{dede:field name='typename'/}</font>
+					<span><a href="{dede:field name='typedir'/}/">更多</a></span>
+				</div>
+				<div class="ad_other_mjsh_content">
+					<div class="box">
+						<ul>
+							{dede:arclist limit='0,8' orderby='pubdate'}
+							<li>
+								<a href="[field:arcurl /]" title="[field:title/]"><img src="/public/img/words11_list_ico.png">[field:title/]</a><span>[field:pubdate function="MyDate('m-d',@me)"/]</span>
+							</li>
+							{/dede:arclist}
+						</ul>
+					</div>
+				</div>
+			</div>
+			{/dede:channelartlist}
+		</div>
+
+		<div class="bottom_banner">
+			<ul>
+				<li class="right_border">友情链接：</li>
+				{dede:flink titlelen='20' row='20' type='text'}
+				<li class="right_border">[field:link /]</li>
+				{/dede:flink}
+			</ul>
+		</div>
+
+		{dede:include filename="footer.htm"/}
+	</div>
+</div>
+<!-- main 结束 -->
+
+</body>
+
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
+	<meta name="renderer" content="webkit">
+	<!--国产浏览器高速模式-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+	<meta name="keywords" content="{dede:field name='keywords'/}" />
+	<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+	<link href="{dede:global.cfg_cmspath/}/public/css/bootstrap.css" rel="stylesheet" type="text/css">
+	<link href="{dede:global.cfg_cmspath/}/public/css/base.css" rel="stylesheet" type="text/css">
+	<link href="{dede:global.cfg_cmspath/}/public/css/list_wz.css" rel="stylesheet" type="text/css">
+	<!-- 基础样式文件结束 -->
+	<!-- 基础JS文件 开始 -->
+	<script type="text/javascript" src="{dede:global.cfg_cmspath/}/public/js/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="{dede:global.cfg_cmspath/}/public/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="{dede:global.cfg_cmspath/}/public/js/base.js"></script>
+	<!-- 基础JS文件 结束 -->
+</head>
+<body>
+<!-- main 开始 -->
+<div class="main">
+	<div class="main_box">
+		{dede:include filename="header.htm"/}
+
+		<!-- address 开始 -->
+		<div class="address">当前位置 :<a href="/">首页</a> &gt; <a href='#'>TAG标签</a> &gt; {dede:field.title /}</div>
+		<!-- address 结束 -->
+
+		<!-- list_main 开始 -->
+		<div class="list_main">
+			<!-- hot 开始 -->
+			<div class="hot">
+				<div class="hot_title">
+					最新资讯
+				</div>
+				<div class="hot_content">
+					<div class="hot_content_box">
+						<div class="hot_content_box_content">
+							<ul>
+								{dede:arclist typeid='top' orderby='pubdate' row=10}
+								<li><a href="[field:arcurl /]">[field:title /] </a></li>
+								{/dede:arclist}
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="hot_title">
+					热门资讯
+				</div>
+				<div class="hot_content">
+					<div class="hot_content_box">
+						<div class="hot_content_box_content">
+							<ul>
+								{dede:arclist typeid='top' orderby='click' row=10}
+								<li><a href="[field:arcurl /]">[field:title /] </a></li>
+								{/dede:arclist}
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- hot 结束 -->
+			<!-- list_con 开始 -->
+			<div class="list_pic_con">
+				<div class="list_pic_con_title">
+					<font>{dede:field.typename/}</font>
+				</div>
+				<div class="list_pic_con_content">
+					<ul>
+						{dede:list pagesize ='10'}
+						<li>
+							<img src="[field:picname/]">
+							<p class="title"><a href="[field:arcurl/]">[field:title/]</a></p>
+							<p class="time">时间：[field:pubdate function="MyDate('Y-m-d',@me)"/]</p>
+							<p class="con">[field:description/]...<a href="[field:arcurl/]">【查看全文】</a></p>
+							</p>
+						</li>
+						{/dede:list}
+					</ul>
+					<div class="page">
+						<ul>
+							{dede:pagelist listitem="index,end,pre,next,pageno" listsize="5"/}
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- hot 结束 -->
+		</div>
+		<!-- list_main 结束 -->
+
+		<div class="bottom_banner">
+			<ul>
+				<li class="right_border">友情链接：</li>
+				{dede:flink titlelen='20' row='20' type='text'}
+				<li class="right_border">[field:link /]</li>
+				{/dede:flink}
+			</ul>
+		</div>
+
+		{dede:include filename="footer.htm"/}
+	</div>
+</div>
+<!-- main 结束 -->
+
+</body>
+
+</html>

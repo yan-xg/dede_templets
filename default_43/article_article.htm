@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
+	<meta name="renderer" content="webkit">
+	<!--国产浏览器高速模式-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>{dede:field.title/}_{dede:field name='typename'/} - {dede:global.cfg_webname/}</title>
+	<meta name="keywords" content="{dede:field.keywords/}" />
+	<meta name="description" content="{dede:field.description function='html2text(@me)'/}" />
+	<!-- 基础样式文件 开始 -->
+	<link href="{dede:global.cfg_cmspath/}/public/css/bootstrap.css" rel="stylesheet" type="text/css">
+	<link href="{dede:global.cfg_cmspath/}/public/css/base.css" rel="stylesheet" type="text/css">
+	<link href="{dede:global.cfg_cmspath/}/public/css/list_wz.css" rel="stylesheet" type="text/css">
+	<!-- 基础样式文件结束 -->
+	<!-- 基础JS文件 开始 -->
+	<script type="text/javascript" src="{dede:global.cfg_cmspath/}/public/js/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="{dede:global.cfg_cmspath/}/public/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="{dede:global.cfg_cmspath/}/public/js/base.js"></script>
+	<!-- 基础JS文件 结束 -->
+</head>
+<body>
+<!-- main 开始 -->
+<div class="main">
+	<div class="main_box">
+
+		{dede:include filename="header.htm"/}
+
+		<!-- address 开始 -->
+		<div class="address">当前位置 :<a href="/">首页</a>&nbsp;>&nbsp;<a href="{dede:field.typedir/}/">{dede:field.typename/}</a>&nbsp;>&nbsp;文章正文</div>
+		<!-- address 结束 -->
+
+		<!-- list_main 开始 -->
+		<div class="content_main">
+			<div class="content_main_title">
+				{dede:field.title/}
+			</div>
+			<div class="content_main_dis">
+				发布时间：{dede:field.pubdate function="MyDate('Y-m-d H:i',@me)"/}&nbsp;&nbsp; 浏览：
+				<script src="{dede:field name='phpurl'/}/count.php?view=yes&aid={dede:field name='id'/}&mid={dede:field name='mid'/}" type='text/javascript' language="javascript"></script>次
+			</div>
+			<div class="content_main_con">
+				{dede:field.body/}
+			</div>
+			<div class="content_main_con">
+				<div class="fr tag"> 标签：
+					{dede:tag row='30' sort='new' getall='0'}<a href='/tags/[field:tag /]/'>[field:tag /]</a>&nbsp;/&nbsp;{/dede:tag}
+				</div>
+			</div>
+			<div class="content_main_next">
+				<ul>
+					<li>{dede:prenext get='next' /}</li>
+					<li>{dede:prenext get='pre'/}</li>
+				</ul>
+			</div>
+			<div class="content_main_qylist">
+				<ul>
+					<li><a href="">最新资讯</a></li>
+				</ul>
+				<div class="qylist_box">
+					<table>
+						{dede:arclist typeid='top' orderby='pubdate' row=6}
+						<tr>
+							<td width="600">[field:title /]</td>
+							<td width="80" align="right">发布时间：</td>
+							<td width="160">[field:pubdate function="MyDate('Y-m-d',@me)"/]</td>
+						</tr>
+						{/dede:arclist}
+
+
+
+					</table>
+				</div>
+			</div>
+		</div>
+		<!-- list_main 结束 -->
+
+		<div class="bottom_banner">
+			<ul>
+				<li class="right_border">友情链接：</li>
+				{dede:flink titlelen='20' row='20' type='text'}
+				<li class="right_border">[field:link /]</li>
+				{/dede:flink}
+			</ul>
+		</div>
+
+		{dede:include filename="footer.htm"/}
+	</div>
+</div>
+<!-- main 结束 -->
+
+</body>
+
+</html>
