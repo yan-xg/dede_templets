@@ -1,0 +1,17 @@
+<!--head-->
+<div class="w1200 head clearfix">
+    <h1 class="fl logo mt33"><a href="/" target="_blank" title="{dede:global.cfg_webname/}">{dede:global.cfg_webname/}</a></h1>
+</div>
+<!--head-->
+<!--nav-->
+<div class="nav_wrap">
+    <div class="w1200 nav mb20">
+        <ul class="clearfix">
+            <li><a href="{dede:global.cfg_basehost/}/" class='{dede:field name=typeid runphp="yes"}(@me=="0")? @me="cur":@me="";{/dede:field}'>首页</a></li>
+            {dede:channel type='top' currentstyle='<li><a href="~typelink~" class="cur">~typename~</a></li>'}
+            <li><a href="[field:typeurl/]">[field:typename/]</a></li>
+            {/dede:channel}
+        </ul>
+    </div>
+</div>
+<!--/nav-->

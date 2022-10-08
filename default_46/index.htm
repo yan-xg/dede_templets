@@ -1,0 +1,248 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!--自动选择更好的浏览器-->
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>{dede:global.cfg_webname/}</title>
+    <meta name="description" content="{dede:global.cfg_description/}" />
+    <meta name="keywords" content="{dede:global.cfg_keywords/}" />
+    <!--css-->
+    <link type="text/css" rel="stylesheet" href="{dede:global.cfg_cmspath/}/public/css/base.css">
+    <link type="text/css" rel="stylesheet" href="{dede:global.cfg_cmspath/}/public/css/index.css">
+    <script src="{dede:global.cfg_cmspath/}/public/js/jquery-1.8.3.min.js"></script>
+    <script src="{dede:global.cfg_cmspath/}/public/js/jquery.SuperSlide.2.1.1.js"></script>
+    <style>
+        .nav ul li{width: 100px!important;}
+        .news_right .kuaibao{height: 460px!important;}
+        .market_right .title span{width: 100px!important;}
+    </style>
+</head>
+
+<body>
+{dede:include filename="header.htm"/}
+    <!--news-->
+    <div class="news w1200 mb20 clearfix">
+        <!--newsleft-->
+        <div class="news_left fl">
+            <div class="focus" style="margin:0 auto">
+                <div class="news_pic">
+                    <ul>
+                        {dede:arclist flag='f' typeid='top' row='5' orderby='pubdate'}
+                        <li><a href="[field:arcurl /]" target="_blank"><img src="[field:picname/]"></a></li>
+                        {/dede:arclist}
+                    </ul>
+                </div>
+                <div class="ifocus_tx">
+                    <ul>
+                        {dede:arclist flag='f' typeid='top' row='5' orderby='pubdate'}
+                        <li><a href="[field:arcurl /]" target="_blank">[field:title/]</a></li>
+                        {/dede:arclist}
+                    </ul>
+                </div>
+                <div class="tip">
+                    <ul>
+                        {dede:arclist flag='f' typeid='top' row='5' orderby='pubdate'}
+                        <li></li>
+                        {/dede:arclist}
+                    </ul>
+                </div>
+                <div class="btn">
+                    <ul>
+                        <li class="prev" id="focus_btn_left"></li>
+                        <li class="next" id="focus_btn_right"></li>
+                    </ul>
+                </div>
+            </div>
+            <ul class="mt25 news_left_bottom">
+                {dede:arclist flag='p' typeid='top' limit='0,4' orderby='pubdate'}
+                <li class="clearfix"><a href="[field:arcurl /]" class="fl"> [field:title/]</a>
+                    <span class="fr">[field:pubdate function="MyDate('m-d',@me)"/]</span>
+                </li>
+                {/dede:arclist}
+            </ul>
+        </div>
+        <!--newsleft-->
+        <!--news_center-->
+        <div class="news_center ml30 fl">
+            <dl class="dl1">
+                {dede:arclist typeid='top' limit='0,1' orderby='pubdate'}
+                <dt class="first"><a href="[field:arcurl /]">[field:title /]</a></dt>
+                {/dede:arclist}
+
+                {dede:arclist typeid='top' limit='1,2' orderby='pubdate'}
+                <dd><a href="[field:arcurl /]">[field:title /]</a></dd>
+                {/dede:arclist}
+            </dl>
+            <dl class="dl2 mt10">
+                {dede:arclist typeid='top' limit='3,1' orderby='pubdate'}
+                <dt><a href="[field:arcurl /]">[field:title /]</a></dt>
+                {/dede:arclist}
+                {dede:arclist typeid='top' limit='4,5' orderby='pubdate'}
+                <dd><a href="[field:arcurl /]">[field:title /]</a></dd>
+                {/dede:arclist}
+            </dl>
+            <dl class="mt10">
+                {dede:arclist typeid='top' limit='9,1' orderby='pubdate'}
+                <dt><a href="[field:arcurl /]">[field:title /]</a></dt>
+                {/dede:arclist}
+                {dede:arclist typeid='top' limit='10,4' orderby='pubdate'}
+                <dd><a href="[field:arcurl /]">[field:title /]</a></dd>
+                {/dede:arclist}
+            </dl>
+        </div>
+        <!--/news_center-->
+        <div class="news_right fr">
+            <div class="kuaibao">
+                <div class="title clearfix">
+                    <a href="javascript:;" class="fl a1"> 快报</a>
+                </div>
+                <ul class="mt20">
+                    {dede:arclist typeid='top' limit='0,8' orderby='pubdate'}
+                    <li><a href="[field:arcurl /]">[field:title /]</a>
+                        <div>[field:pubdate function="MyDate('m:d',@me)"/]</div><i></i>
+                    </li>
+                    {/dede:arclist}
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <!--/news-->
+    <!--market-->
+    <div class="market clearfix w1200">
+        <div class="market_left fl">
+            <div class="title clearfix mb20">
+                <ul class="tabItem clearfix mb10 fl">
+                    {dede:type typeid='1'}
+                    <li class="on"><a href="[field:typedir/]/">[field:typename/]</a></li>
+                    {/dede:type}
+                </ul>
+                <ul class="tit fr tabCon1 mr10">
+                    <li style="display:block;" class="content1">
+                        {dede:type typeid='1'}
+                            <a href="[field:typedir/]/">更多</a>
+                        {/dede:type}
+                    </li>
+                </ul>
+            </div>
+            <ul class="tabCon">
+                <li style="display:block;" class="content">
+                    <div class="fl left">
+                        {dede:arclist flag='p' typeid='1' row='1' orderby='pubdate'}
+                        <div class="top">
+                            <a href="[field:arcurl /]"><img src="[field:picname/]">
+                                <p>[field:title /]</p>
+                            </a>
+                        </div>
+                        {/dede:arclist}
+
+                        <ul class="clearfix bottom mt20">
+                            {dede:arclist flag='p' typeid='1' limit='1,2' orderby='pubdate'}
+                            <li class="fl">
+                                <a href="[field:arcurl /]"><img src="[field:picname/]">
+                                    <p>[field:title /]</p>
+                                </a>
+                            </a></li>
+                            {/dede:arclist}
+                        </ul>
+                    </div>
+                    <div class="fl right ml30">
+                        <dl>
+                            {dede:arclist typeid='1' row='1' orderby='pubdate'}
+                            <dt><a href="[field:arcurl /]">[field:title /]</a></dt>
+                            {/dede:arclist}
+
+                            {dede:arclist typeid='1' limit='1,12' orderby='pubdate'}
+                            <dd><a href="[field:arcurl /]">[field:title /]</a></dd>
+                            {/dede:arclist}
+                        </dl>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!--market_right-->
+        <div class="market_right fr">
+            <div class="clearfix title mb20">
+                <span class="fl">图文资讯</span>
+            </div>
+            <div class="focus">
+                <div class="news_pic">
+                    <ul>
+                        {dede:arclist flag='p' typeid='top' limit='0,5' orderby='pubdate'}
+                        <li><a href="[field:arcurl /]" target="_blank"><img src="[field:picname/]"></a></li>
+                        {/dede:arclist}
+                    </ul>
+                </div>
+                <div class="ifocus_tx">
+                    <ul>
+                        {dede:arclist flag='p' typeid='top' limit='0,5' orderby='pubdate'}
+                        <li><a href="[field:arcurl /]" target="_blank">[field:title /]</a></li>
+                        {/dede:arclist}
+                    </ul>
+                </div>
+                <div class="tip">
+                    <ul>
+                        {dede:arclist flag='p' typeid='top' limit='0,5' orderby='pubdate'}
+                        <li></li>
+                        {/dede:arclist}
+                    </ul>
+                </div>
+                <div class="btn">
+                    <ul>
+                        <li class="prev" id="focus_btn_left"></li>
+                        <li class="next" id="focus_btn_right"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--/market_right-->
+    </div>
+    <!--flink-->
+    <div class="flink w1200 mt20">
+        <div class="hd clearfix">
+            <span class="fl">友情链接</span>
+        </div>
+        <div class="bd">
+            <div class="li_list">
+
+                <li>{dede:flink row='24' type='text' titlelen="24"  typeid="0"}
+                    [field:link /]
+                    {/dede:flink}
+                </li>
+            </div>
+        </div>
+    </div>
+    <!--/flink-->
+
+    <script src="{dede:global.cfg_cmspath/}/public/js/js.js"></script>
+    <script>
+        $(function () {
+            jQuery(".news_left .focus").slide({ titCell: ".tip li", mainCell: ".news_pic ul", effect: "left", autoPlay: true, delayTime: 200 });
+            //文字切换
+            jQuery(".news_left .focus").slide({ titCell: ".tip li", mainCell: ".ifocus_tx ul", effect: "left", autoPlay: true, delayTime: 200 });
+            //market 标题切换
+            tab(".market_left .tabItem li", ".market_left  .tabCon1 .content1");
+            //market 内容切换
+            tab(".market_left .tabItem li", ".market_left  .tabCon .content");
+            //专题切换
+            jQuery(".focus").slide({ titCell: ".tip li", mainCell: ".news_pic ul", effect: "left", autoPlay: true, delayTime: 200 });
+            //专题文字切换
+            jQuery(".focus").slide({ titCell: ".tip li", mainCell: ".ifocus_tx ul", effect: "left", autoPlay: true, delayTime: 200 });
+            //家装tab切换
+            jQuery(".home").slide({ titCell: ".tab-hd li", mainCell: ".tab-bd", delayTime: 0 });
+            jQuery(".home").slide({ titCell: ".tab-hd li", mainCell: ".tab-bd1", delayTime: 0 });
+            //热文榜
+            jQuery(".hot").slide({ titCell: ".tab-hd li", mainCell: ".tab-bd2", delayTime: 0 });
+            //链接切换
+            jQuery(".flink .bd li").each(function (i) { jQuery(".flink .bd li").slice(i * 2, i * 2 + 2).wrapAll("<ul></ul>"); });
+            jQuery(".flink").slide({ mainCell: ".bd .li_list", autoPage: true, effect: "leftLoop", autoPlay: false });
+
+            //
+        })
+    </script>
+</body>
+
+</html>

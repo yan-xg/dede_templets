@@ -1,0 +1,158 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!--自动选择更好的浏览器-->
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+    <meta name="keywords" content="{dede:field name='keywords'/}" />
+    <meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+    <!--css-->
+    <link type="text/css" rel="stylesheet" href="{dede:global.cfg_cmspath/}/public/css/base.css">
+    <link type="text/css" rel="stylesheet" href="{dede:global.cfg_cmspath/}/public/css/index.css">
+    <script src="{dede:global.cfg_cmspath/}/public/js/jquery-1.8.3.min.js"></script>
+    <script src="{dede:global.cfg_cmspath/}/public/js/jquery.SuperSlide.2.1.1.js"></script>
+    <style>
+        .nav ul li{width: 100px!important;}
+        .news_right .kuaibao{height: 460px!important;}
+        .market_right .title span{width: 100px!important;}
+        .column_center{width: 860px!important;}
+        .li_list .clearfix img{width: 300px!important;height: 200px!important;}
+        .shopping{height: auto!important;}
+    </style>
+</head>
+
+<body>
+{dede:include filename="header.htm"/}
+    <div class="column_market w1200 pt20 clearfix">
+        <!--center-->
+        <div class="fl column_center">
+            <!-- address 开始 -->
+            <div class="address">当前位置 :<a href="/">首页</a>&nbsp;>&nbsp;<a href="{dede:field.typedir/}/">{dede:field.typename/}</a></div>
+            <!-- address 结束 -->
+            <ul class="li_list">
+                <h4><a href="#">{dede:field.typename/}</a></h4>
+
+                {dede:list pagesize ='10'}
+                <li class="clearfix">
+                    <img src="[field:picname /]" class="fl">
+                    <div class="right fr">
+                        <div class="top">
+                            <p class="p1"><a href="[field:arcurl /]">[field:title /]</a></p>
+                            <p class="p2">
+                                <a href="[field:arcurl /]">[field:description /]...</a></p>
+                        </div>
+                        <div class="clearfix bottom">
+                            <span class="time fr">[field:pubdate function="MyDate('Y-m-d',@me)"/]</span>
+                        </div>
+                    </div>
+                </li>
+                {/dede:list}
+            </ul>
+            <ul class="clearfix list_page pt40 pb20">
+                <ul>
+                    {dede:pagelist listitem="index,end,pre,next,pageno" listsize="5"/}
+                </ul>
+            </ul>
+        </div>
+        <!--/center-->
+        <!--right-->
+        <div class="right fr">
+
+            <div class="market_right">
+                <div class="clearfix title mb20">
+                    <span class="fl">图文资讯</span>
+                </div>
+                <div class="focus">
+                    <div class="news_pic">
+                        <ul>
+                            {dede:arclist flag='p' typeid='top' limit='0,5' orderby='pubdate'}
+                            <li><a href="[field:arcurl /]" target="_blank"><img src="[field:picname/]"></a></li>
+                            {/dede:arclist}
+                        </ul>
+                    </div>
+                    <div class="ifocus_tx">
+                        <ul>
+                            {dede:arclist flag='p' typeid='top' limit='0,5' orderby='pubdate'}
+                            <li><a href="[field:arcurl /]" target="_blank">[field:title /]</a></li>
+                            {/dede:arclist}
+                        </ul>
+                    </div>
+                    <div class="tip">
+                        <ul>
+                            {dede:arclist flag='p' typeid='top' limit='0,5' orderby='pubdate'}
+                            <li></li>
+                            {/dede:arclist}
+                        </ul>
+                    </div>
+                    <div class="btn">
+                        <ul>
+                            <li class="prev" id="focus_btn_left"></li>
+                            <li class="next" id="focus_btn_right"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--导购/测评-->
+            <div class="shopping fl pt20">
+                <div class="clearfix title">
+                    <div class="tab-hd clearfix fl">
+                        <ul class="tab-nav clearfix">
+                            <li class="on"><a href="javascript:;" target="_blank">最新资讯</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tab-bd">
+                    <div class="tab-pal">
+                        <div class="clearfix top">
+                            <ul class="bottom">
+                                {dede:arclist typeid='top' orderby='pubdate' row=10}
+                                <li><a href="[field:arcurl /]"><span>•</span>[field:title /]</a></li>
+                                {/dede:arclist}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--热文榜-->
+            <div class="classify pt10">
+                <div class="hot">
+                    <div class="title">热文榜</div>
+                    <div class="tab-bd2">
+                        <div class="tab-pal">
+                            <ul>
+                                {dede:arclist typeid='top' orderby='click' row=12}
+                                <li><span class="on">[field:global name=autoindex runphp="yes"]@me=@me+0;[/field:global]</span><a href="[field:arcurl /]" class="h">[field:title /]</a></li>
+                                {/dede:arclist}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--/热文榜-->
+        </div>
+        <!--/right-->
+    </div>
+
+{dede:include filename="footer.htm"/}
+
+    <script src="{dede:global.cfg_cmspath/}/public/js/js.js"></script>
+    <script>
+        $(function () {
+
+            //专题切换
+            jQuery(".focus").slide({ titCell: ".tip li", mainCell: ".news_pic ul", effect: "left", autoPlay: true, delayTime: 200 });
+            //专题文字切换
+            jQuery(".focus").slide({ titCell: ".tip li", mainCell: ".ifocus_tx ul", effect: "left", autoPlay: true, delayTime: 200 });
+            //家装tab切换
+            jQuery(".shopping").slide({ titCell: ".tab-hd li", mainCell: ".tab-bd", delayTime: 0 });
+            jQuery(".shopping").slide({ titCell: ".tab-hd li", mainCell: ".tab-bd1", delayTime: 0 });
+            //热文榜
+            jQuery(".hot").slide({ titCell: ".tab-hd li", mainCell: ".tab-bd2", delayTime: 0 });
+        })
+    </script>
+</body>
+
+</html>
