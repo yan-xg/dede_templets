@@ -1,0 +1,18 @@
+<header>
+	<div class="inner">
+		<div class="top-logo">
+			<a href="{dede:global.cfg_basehost/}/" title="{dede:global.cfg_webname/}" id="web_logo">
+				<img src="{dede:global.cfg_cmspath/}/public/images/logo.png" alt="{dede:global.cfg_webname/}" title="{dede:global.cfg_webname/}" style="margin:20px 0px 0px 0px;" />
+			</a>
+		</div>
+
+		<nav>
+			<ul class="list-none">
+				<li style='width:89px;' class='{dede:field name=typeid runphp="yes"}(@me=="0")? @me="navdown":@me="";{/dede:field}'><a href="{dede:global.cfg_basehost/}/">首页</a></li>
+				{dede:channel type='top' currentstyle='<li style="width:89px;" class="navdown"><a href="~typelink~">~typename~</a></li>'}
+				<li style='width:89px;'><a href="[field:typeurl/]" class='hover-none nav'>[field:typename/]</a></li>
+				{/dede:channel}
+			</ul>
+		</nav>
+	</div>
+</header>

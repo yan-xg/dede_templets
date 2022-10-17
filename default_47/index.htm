@@ -1,0 +1,160 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>{dede:global.cfg_webname/}</title>
+    <meta name="description" content="{dede:global.cfg_description/}" />
+    <meta name="keywords" content="{dede:global.cfg_keywords/}" />
+    <link href="{dede:global.cfg_cmspath/}/public/css/index.css" rel="stylesheet">
+</head>
+
+<body>
+{dede:include filename="header.htm"/}
+    <div class="box">
+        <div class="news left">
+            {dede:type typeid='1'}
+            <h2><span class="more"><a href="[field:typedir/]/" target="_blank">更多..</a></span>[field:typename/]</h2>
+            {/dede:type}
+            <ul>
+                <div class="pic_news left">
+                    {dede:arclist flag='f' typeid='top' row='1' orderby='pubdate'}
+                    <a href="[field:arcurl /]" title="[field:title /]"><img src="[field:picname/]" alt="[field:title /]" style="width: 300px;height: 230px;"></a>
+                    {/dede:arclist}
+                </div>
+
+                <div class="center_news right">
+                    <section class="c_n_top">
+                        {dede:arclist typeid='1' row='1' orderby='pubdate'}
+                        <h3>[field:title /]</h3>
+                        <p>[field:description function="cn_substr(@me,150)"/]...[<a href="[field:arcurl /]" target="_blank">详情</a>]</p>
+                        {/dede:arclist}
+                    </section>
+                    <ul>
+                        {dede:arclist typeid='1' limit='1,5' orderby='pubdate'}
+                        <li><a href="[field:arcurl /]" target="_blank">[field:title /]</a></li>
+                        {/dede:arclist}
+                    </ul>
+                </div>
+            </ul>
+        </div>
+        <div class="announce right">
+            <h2><a href="#">热门资讯</a></h2>
+            <ul>
+                <marquee onmouseover="this.stop()" onmouseout="this.start()" scrollamount="2" direction="up" height="240">
+                    {dede:arclist typeid='top' limit='0,10' orderby='click'}
+                    <li><a href="[field:arcurl /]" target="_blank" title="[field:title/]">[field:title/]</a></li>
+                    {/dede:arclist}
+                </marquee>
+            </ul>
+        </div>
+        <div class="blank"></div>
+
+        <div class="linews left">
+            {dede:type typeid='2'}
+            <h3><span><a href="[field:typedir/]/" class="more">更多..</a></span>[field:typename/]</h3>
+            {/dede:type}
+            <ul>
+                {dede:arclist typeid='2' row='6' orderby='pubdate'}
+                <li><a href="[field:arcurl /]" target="_blank">[field:title /]</a></li>
+                {/dede:arclist}
+            </ul>
+        </div>
+        <div class="linews left ln">
+            {dede:type typeid='3'}
+            <h3><span><a href="[field:typedir/]/" class="more">更多..</a></span>[field:typename/]</h3>
+            {/dede:type}
+            <ul>
+                {dede:arclist typeid='3' row='6' orderby='pubdate'}
+                <li><a href="[field:arcurl /]" target="_blank">[field:title /]</a></li>
+                {/dede:arclist}
+            </ul>
+        </div>
+        <div class="linews right">
+            {dede:type typeid='4'}
+            <h3><span><a href="[field:typedir/]/" class="more">更多..</a></span>[field:typename/]</h3>
+            {/dede:type}
+            <ul>
+                {dede:arclist typeid='4' row='6' orderby='pubdate'}
+                <li><a href="[field:arcurl /]" target="_blank">[field:title /]</a></li>
+                {/dede:arclist}
+            </ul>
+        </div>
+        <div class="blank"></div>
+
+        <div class="linews left">
+            {dede:type typeid='5'}
+            <h3><span><a href="[field:typedir/]/" class="more">更多..</a></span>[field:typename/]</h3>
+            {/dede:type}
+            <ul>
+                {dede:arclist typeid='5' row='6' orderby='pubdate'}
+                <li><a href="[field:arcurl /]" target="_blank">[field:title /]</a></li>
+                {/dede:arclist}
+            </ul>
+        </div>
+        <div class="linews left ln">
+            {dede:type typeid='6'}
+            <h3><span><a href="[field:typedir/]/" class="more">更多..</a></span>[field:typename/]</h3>
+            {/dede:type}
+            <ul>
+                {dede:arclist typeid='6' row='6' orderby='pubdate'}
+                <li><a href="[field:arcurl /]" target="_blank">[field:title /]</a></li>
+                {/dede:arclist}
+            </ul>
+        </div>
+        <div class="linews right">
+            {dede:type typeid='7'}
+            <h3><span><a href="[field:typedir/]/" class="more">更多..</a></span>[field:typename/]</h3>
+            {/dede:type}
+            <ul>
+                {dede:arclist typeid='7' row='6' orderby='pubdate'}
+                <li><a href="[field:arcurl /]" target="_blank">[field:title /]</a></li>
+                {/dede:arclist}
+            </ul>
+        </div>
+        <div class="blank"></div>
+
+        <div class="zhishu left">
+            <h3>最新资讯</h3>
+            <section>
+                <div id="content">
+                    <ul style="display:block;">
+                        <div class="zs_pic left">
+                            {dede:arclist typeid='top' flag='p' limit='0,1' orderby='pubdate'}
+                            <a href="[field:arcurl /]" title="[field:title /]"><img src="[field:picname/]" alt="[field:title /]" style="width: 230px;height: 180px;"></a>
+                            {/dede:arclist}
+                        </div>
+                        <div class="zs_news right">
+                            <ol>
+                                {dede:arclist typeid='top' limit='0,7' orderby='pubdate'}
+                                <li><a href="[field:arcurl /]" target="_blank"><span>[field:pubdate function="MyDate('Y-m-d',@me)"/]</span>[field:title /]</a></li>
+                                {/dede:arclist}
+                            </ol>
+                        </div>
+                    </ul>
+                </div>
+            </section>
+        </div>
+        <!--
+        <div class="hd right">
+            <h3>标签列表</h3>
+            <ul>
+                <li><a href="/">标签1</a></li>
+                <li><a href="/">标签2</a></li>
+            </ul>
+        </div>
+        -->
+        <div class="blank"></div>
+        <div class="links">
+            <p>相关链接:</p>
+            <ul>
+                {dede:flink row='24' type='text' titlelen="24"  typeid="0"}
+                <li>[field:link /]</li>
+                {/dede:flink}
+            </ul>
+        </div>
+    </div>
+    {dede:include filename="footer.htm"/}
+</body>
+
+</html>

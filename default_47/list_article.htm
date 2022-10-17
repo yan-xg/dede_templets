@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+    <meta name="keywords" content="{dede:field name='keywords'/}" />
+    <meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+    <link href="{dede:global.cfg_cmspath/}/public/css/index.css" rel="stylesheet">
+    <link href="{dede:global.cfg_cmspath/}/public/css/main.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="{dede:global.cfg_cmspath/}/public/js/modernizr.js"></script>
+    <![endif]-->
+    <!--[if IE 6]>
+     <script src="{dede:global.cfg_cmspath/}/public/js/png.js"></script>
+     <script type="text/javascript">
+        EvPNG.fix('.logo');
+     </script>
+    <![endif]-->
+    <style>
+        .listl h2{color: #000000;}
+        .listl ul li a{text-align:left;margin-left:5px;display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 1;overflow: hidden;}
+        .page li {float: left;margin-left: 5px;display:inline;}
+    </style>
+</head>
+
+<body>
+{dede:include filename="header.htm"/}
+    <div class="contain">
+        <div class="listl left">
+            <h2>最新资讯</h2>
+            <ul>
+                {dede:arclist typeid='top' orderby='pubdate' row=10}
+                <li><a href="[field:arcurl /]" title="[field:title /]">[field:title /]</a></li>
+                {/dede:arclist}
+            </ul>
+        </div>
+        <div class="listr right">
+            <h2><span>您现在的位置: <a href="/">首页</a>&nbsp;>&nbsp;<a href="{dede:field.typedir/}/">{dede:field.typename/}</a></span>{dede:field.typename/}</h2>
+            <ul>
+                {dede:list pagesize ='20'}
+                <li><a href="[field:arcurl /]"><span>[field:pubdate function="MyDate('Y-m-d',@me)"/]</span>[field:title /]</a></li>
+                {/dede:list}
+            </ul>
+            <div class="blank"></div>
+            <div class="page">
+                {dede:pagelist listitem="index,end,pre,next,pageno" listsize="5"/}
+            </div>
+        </div>
+    </div>
+{dede:include filename="footer.htm"/}
+</body>
